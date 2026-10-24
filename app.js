@@ -41,7 +41,7 @@ london:{ja:false,cur:'£',priceBreaks:[3500,4500,5500,7000,9000,12000],countBrea
 // North West: one page for Manchester, Liverpool and their surroundings; the "Go to" row picks a city.
 EDITIONS.northwest={...EDITIONS.london,priceBreaks:[1500,2000,2500,3000,3500,4500],homeArea:undefined,outer:undefined,region:'Area',view:[53.5,-2.5,9],
   homeBox:[[53.30,-3.10],[53.65,-2.00]],home:'Manchester Piccadilly',
-  cities:[{key:'manchester',label:'Manchester',box:[[53.38,-2.35],[53.56,-2.12]],home:'Manchester Piccadilly'},{key:'liverpool',label:'Liverpool',box:[[53.33,-3.05],[53.50,-2.85]],home:'Liverpool Lime Street'},{key:'preston',label:'Preston',box:[[53.72,-2.78],[53.81,-2.64]],home:'Preston'},{key:'blackpool',label:'Blackpool',box:[[53.75,-3.08],[53.88,-2.98]],home:'Blackpool North'}],
+  cities:[{key:'manchester',label:'Manchester',box:[[53.38,-2.35],[53.56,-2.12]],home:'Manchester Piccadilly'},{key:'liverpool',label:'Liverpool',box:[[53.33,-3.05],[53.50,-2.85]],home:'Liverpool Lime Street'},{key:'blackpool',label:'Blackpool',box:[[53.75,-3.08],[53.88,-2.98]],home:'Blackpool North'}],
   headline:()=>`${fmt(D.coverage.counts.in_windows)} sales with floor areas · ${fmt(D.stations.length)} stations · Manchester, Liverpool and the North West`,
   presets:[['Biggest risers since 2014–15',{metric:'growth',baseline:4,sortKey:'change',sortDir:-1}],['Flats only',{type:1}],['Terraced houses',{type:2}],['Built before 1900',{age:1}],['Cheapest on Metrolink',{line:'metrolink',sortKey:'price',sortDir:1}],['Busiest markets',{metric:'count',sortKey:'sales',sortDir:-1}]]};
 const japanHeadline=area=>()=>`${fmt(japanRecords())} source records · ${fmt(D.stations.length)} stations · ${area}`;
