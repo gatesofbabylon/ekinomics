@@ -17,8 +17,8 @@ const PALETTE={light:{ramp:['#f2b106','#f68704','#f5582c','#e0305e','#c00079','#
 const EDITIONS={
 tokyo:{ja:true,cur:'¥',priceBreaks:[300000,450000,600000,800000,1000000,1500000],countBreaks:[3,10,20,50,100,200],short:b=>b>=1e6?`${b/1e6}m`:`${b/1e3}k`,
   chartDiv:10000,chartStep:200000,chartUnit:'¥10k per m²',chartAria:'ten thousand yen',region:'Prefecture',dims:['type','size','age'],ranges:{type:3,size:4,age:4},home:'横浜',
-  // Types: 0 apartments and houses, 1 apartments (the default, held in data.json), 2 houses, 3 land (own scale, no size or age).
-  defaultType:1,baseType:1,landType:3,
+  // Types: 0 all homes, apartments and houses (the default, held in data.json), 1 apartments, 2 houses, 3 land (own scale, no size or age).
+  defaultType:0,baseType:0,landType:3,
   // Starting view: the urban core (south-west and north-east corners); everything else stays on the map, off-screen at first.
   homeBox:[[35.34,139.42],[35.90,140.13]],
   // "Go to" cities: each opens the map on its core ([south-west], [north-east]) and selects its main station; ?focus= keeps the choice in links.
@@ -28,7 +28,7 @@ tokyo:{ja:true,cur:'¥',priceBreaks:[300000,450000,600000,800000,1000000,1500000
   legend:()=>['Home','Apartment','House','Land'][state.type]+(state.type===3?' price per m² of plot (¥)':' price per m² (¥)'),attribution:'Geography: <a href="https://nlftp.mlit.go.jp/ksj/">MLIT</a> (adapted, CC BY 4.0)',
   headline:()=>`${fmt(japanRecords())} source records · ${fmt(D.stations.length)} stations · Tokyo, Kanagawa, Saitama, Chiba`,
   scope:'The map shows Tokyo, Kanagawa, Saitama and Chiba (一都三県). Ibaraki, Tochigi and Gunma are processed too but not shown: too few apartments sell there for station medians.',
-  presets:[['Biggest risers since 2014–15',{metric:'growth',baseline:4,sortKey:'change',sortDir:-1}],['Family flats, 60–79 m²',{size:3}],['Cheapest station areas',{sortKey:'price',sortDir:1}],['Built in the last 10 years',{age:1}],['Cheapest on the Yamanote Line',{line:'東日本旅客鉄道 / 山手線',sortKey:'price',sortDir:1}],['Busiest markets',{metric:'count',sortKey:'sales',sortDir:-1}]]},
+  presets:[['Biggest risers since 2014–15',{metric:'growth',baseline:4,sortKey:'change',sortDir:-1}],['Family flats, 60–79 m²',{type:1,size:3}],['Cheapest station areas',{sortKey:'price',sortDir:1}],['Built in the last 10 years',{age:1}],['Cheapest on the Yamanote Line',{line:'東日本旅客鉄道 / 山手線',sortKey:'price',sortDir:1}],['Busiest markets',{metric:'count',sortKey:'sales',sortDir:-1}]]},
 london:{ja:false,cur:'£',priceBreaks:[3500,4500,5500,7000,9000,12000],countBreaks:[10,30,100,200,400,700],short:b=>`${b/1e3}k`,
   chartDiv:1000,chartStep:3000,chartUnit:'£ thousand per m²',chartAria:'thousand pounds',region:'Area',homeArea:s=>s.pref.startsWith('E09'),mixLabels:['Flats','Terraced','Semi-detached','Detached'],outer:['Greater London','Commuter belt'],dims:['type','size','age'],ranges:{type:4,size:4,age:5},home:'Clapham Junction',view:[51.5,-0.12,10],
   stats:[['New builds',v=>`${fmt(v)}%`,'New-build share %'],['Median distance to station',v=>`${fmt(v)} m`,'Median distance to station (m)']],
@@ -47,11 +47,11 @@ EDITIONS.northwest={...EDITIONS.london,priceBreaks:[1500,2000,2500,3000,3500,450
 const japanHeadline=area=>()=>`${fmt(japanRecords())} source records · ${fmt(D.stations.length)} stations · ${area}`;
 EDITIONS.osaka={...EDITIONS.tokyo,priceBreaks:[200000,300000,400000,500000,650000,800000],landBreaks:[50000,80000,120000,180000,250000,350000],home:'新大阪',view:[34.72,135.5,9],homeBox:[[34.45,135.15],[35.05,135.85]],
   cities:[{key:'osaka',label:'Osaka',box:[[34.60,135.40],[34.77,135.60]],home:'大阪'},{key:'kyoto',label:'Kyoto',box:[[34.92,135.68],[35.07,135.82]],home:'京都'},{key:'kobe',label:'Kobe',box:[[34.64,135.10],[34.76,135.30]],home:'三ノ宮'},{key:'nara',label:'Nara',box:[[34.64,135.76],[34.72,135.86]],home:'近鉄奈良'},{key:'sakai',label:'Sakai',box:[[34.52,135.43],[34.62,135.55]],home:'堺東'}],headline:japanHeadline('Osaka, Kyoto, Hyogo, Nara'),
-  scope:'The map shows Osaka, Kyoto, Hyogo and Nara. Shiga and Wakayama are processed too but not shown: too few apartments sell there for station medians.',presets:[['Biggest risers since 2014–15',{metric:'growth',baseline:4,sortKey:'change',sortDir:-1}],['Family flats, 60–79 m²',{size:3}],['Cheapest station areas',{sortKey:'price',sortDir:1}],['Built in the last 10 years',{age:1}],['Cheapest on the Osaka Loop Line',{line:'西日本旅客鉄道 / 大阪環状線',sortKey:'price',sortDir:1}],['Busiest markets',{metric:'count',sortKey:'sales',sortDir:-1}]]};
+  scope:'The map shows Osaka, Kyoto, Hyogo and Nara. Shiga and Wakayama are processed too but not shown: too few apartments sell there for station medians.',presets:[['Biggest risers since 2014–15',{metric:'growth',baseline:4,sortKey:'change',sortDir:-1}],['Family flats, 60–79 m²',{type:1,size:3}],['Cheapest station areas',{sortKey:'price',sortDir:1}],['Built in the last 10 years',{age:1}],['Cheapest on the Osaka Loop Line',{line:'西日本旅客鉄道 / 大阪環状線',sortKey:'price',sortDir:1}],['Busiest markets',{metric:'count',sortKey:'sales',sortDir:-1}]]};
 EDITIONS.nagoya={...EDITIONS.osaka,priceBreaks:[150000,200000,300000,400000,550000,700000],landBreaks:[40000,60000,90000,130000,180000,250000],home:'丸の内',view:[35.17,136.9,9],homeBox:[[34.95,136.75],[35.30,137.20]],
   cities:[{key:'nagoya',label:'Nagoya',box:[[35.10,136.84],[35.22,136.98]],home:'名古屋'},{key:'toyota',label:'Toyota',box:[[35.03,137.10],[35.13,137.20]],home:'豊田市'}],headline:japanHeadline('Aichi'),
   scope:'The map shows Aichi. Gifu and Mie are processed too but not shown: too few apartments sell there for station medians.',
-  presets:[['Biggest risers since 2014–15',{metric:'growth',baseline:4,sortKey:'change',sortDir:-1}],['Family flats, 60–79 m²',{size:3}],['Cheapest station areas',{sortKey:'price',sortDir:1}],['Built in the last 10 years',{age:1}],['Cheapest on the Higashiyama Line',{line:'名古屋市 / 1号線東山線',sortKey:'price',sortDir:1}],['Busiest markets',{metric:'count',sortKey:'sales',sortDir:-1}]]};
+  presets:[['Biggest risers since 2014–15',{metric:'growth',baseline:4,sortKey:'change',sortDir:-1}],['Family flats, 60–79 m²',{type:1,size:3}],['Cheapest station areas',{sortKey:'price',sortDir:1}],['Built in the last 10 years',{age:1}],['Cheapest on the Higashiyama Line',{line:'名古屋市 / 1号線東山線',sortKey:'price',sortDir:1}],['Busiest markets',{metric:'count',sortKey:'sales',sortDir:-1}]]};
 let E=EDITIONS.tokyo,PRICE_BREAKS,COUNT_BREAKS;
 const isLand=()=>E.landType!=null&&state.type===E.landType,priceBreaks=()=>isLand()&&E.landBreaks?E.landBreaks:PRICE_BREAKS;const GROWTH_BREAKS=[0,25,50,100],RANK_MIN=30,FULL_MIN=10,EMPTY=[0,null,null,null,null,null,null];
 // Source records across the apartment and house-and-land extracts of the shown prefectures.
@@ -148,7 +148,7 @@ let loadedTypes={0:true};
 async function ensureType(t){if(loadedTypes[t])return;const rows=await getJSON(`cells-${t}.json`);rows.forEach((c,i)=>Object.assign(D.stations[i].cells,c));loadedTypes[t]=true}
 // Each deploy stamps ?v= on the script URL; data URLs carry the same stamp and are revalidated on every load, so a
 // visitor never pairs a cached script with newer data. DATA_FORMAT changes whenever the data's shape does.
-const VERSION=(document.currentScript&&new URL(document.currentScript.src).searchParams.get('v'))||'',DATA_FORMAT=3;
+const VERSION=(document.currentScript&&new URL(document.currentScript.src).searchParams.get('v'))||'',DATA_FORMAT=4;
 async function getJSON(p){const r=await fetch(VERSION?`${p}?v=${VERSION}`:p,{cache:'no-cache'});if(!r.ok)throw Error(`Could not load ${p}`);return r.json()}
 async function applyPreset(name,set){track('select_preset',{preset:name});state={...DEFAULTS,...set};await ensureType(state.type);syncControls();render();fitVisible();activePreset=name;markPreset();writeURL()}
 

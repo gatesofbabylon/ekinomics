@@ -16,9 +16,9 @@ The price per m² of homes sold around every railway station, in two-year window
 
 **Japan** (in English and Japanese): observed medians from MLIT's real estate transaction price survey, in four views:
 
-- **Apartments** (the default): second-hand condominiums (中古マンション等), per m² of floor area.
+- **All homes** (the default): apartments and houses combined.
+- **Apartments**: second-hand condominiums (中古マンション等), per m² of floor area.
 - **Houses**: land sold with a building used as a home, per m² of floor area.
-- **Apartments and houses**: the two combined.
 - **Land**: residential plots, per m² of plot area.
 
 **United Kingdom**: observed medians from HM Land Registry standard sales, per m² of floor area from Energy Performance Certificates. Shown for all homes, flats, terraced, semi-detached and detached. Each sale counts at the nearest station within 1.2 km of its postcode.
