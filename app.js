@@ -61,6 +61,21 @@ EDITIONS.birmingham={...EDITIONS.northwest,priceBreaks:[2000,2400,2800,3200,3600
   cities:[{key:'birmingham',label:'Birmingham',box:[[52.42,-1.98],[52.53,-1.80]],home:'Birmingham New Street'},{key:'coventry',label:'Coventry',box:[[52.36,-1.60],[52.45,-1.44]],home:'Coventry'},{key:'wolverhampton',label:'Wolverhampton',box:[[52.55,-2.18],[52.62,-2.06]],home:'Wolverhampton'},{key:'stoke',label:'Stoke',box:[[52.96,-2.25],[53.06,-2.12]],home:'Stoke-on-Trent'}],
   headline:()=>`${fmt(D.coverage.counts.in_windows)} sales with floor areas · ${fmt(D.stations.length)} stations · Birmingham, the Black Country and Coventry`,
   presets:ukPresets('Cheapest on the West Midlands Metro','wm-metro')};
+EDITIONS.southwales={...EDITIONS.northwest,priceBreaks:[1400,1700,2000,2400,2800,3300],view:[51.6,-3.3,9],
+  homeBox:[[51.42,-3.55],[51.75,-2.95]],home:'Cardiff Central',
+  cities:[{key:'cardiff',label:'Cardiff',box:[[51.44,-3.27],[51.53,-3.12]],home:'Cardiff Central'},{key:'newport',label:'Newport',box:[[51.55,-3.05],[51.62,-2.93]],home:'Newport'},{key:'swansea',label:'Swansea',box:[[51.59,-4.02],[51.66,-3.88]],home:'Swansea'}],
+  headline:()=>`${fmt(D.coverage.counts.in_windows)} sales with floor areas · ${fmt(D.stations.length)} stations · Cardiff, the Valleys, Newport and Swansea`,
+  presets:ukPresets('Cheapest on Transport for Wales','transport-for-wales')};
+EDITIONS.bristol={...EDITIONS.northwest,priceBreaks:[3200,3600,4000,4400,4800,5400],view:[51.45,-2.6,10],
+  homeBox:[[51.40,-2.70],[51.52,-2.50]],home:'Bristol Temple Meads',
+  cities:[{key:'bristol',label:'Bristol',box:[[51.40,-2.70],[51.52,-2.50]],home:'Bristol Temple Meads'},{key:'bath',label:'Bath',box:[[51.36,-2.41],[51.40,-2.32]],home:'Bath Spa'},{key:'weston',label:'Weston-super-Mare',box:[[51.32,-3.00],[51.37,-2.93]],home:'Weston-super-Mare'}],
+  headline:()=>`${fmt(D.coverage.counts.in_windows)} sales with floor areas · ${fmt(D.stations.length)} stations · Bristol, Bath and Weston-super-Mare`,
+  presets:ukPresets('Cheapest on Great Western Railway','great-western-railway')};
+EDITIONS.nottingham={...EDITIONS.northwest,priceBreaks:[1800,2100,2400,2700,3000,3500],view:[52.95,-1.2,10],
+  homeBox:[[52.87,-1.30],[53.06,-1.05]],home:'Nottingham',
+  cities:[{key:'nottingham',label:'Nottingham',box:[[52.90,-1.25],[53.00,-1.08]],home:'Nottingham'},{key:'derby',label:'Derby',box:[[52.88,-1.53],[52.95,-1.42]],home:'Derby'},{key:'mansfield',label:'Mansfield',box:[[53.12,-1.24],[53.17,-1.15]],home:'Mansfield'}],
+  headline:()=>`${fmt(D.coverage.counts.in_windows)} sales with floor areas · ${fmt(D.stations.length)} stations · Nottingham, Derby and Mansfield`,
+  presets:ukPresets('Cheapest on the NET tram','net')};
 const japanHeadline=area=>()=>`${fmt(japanRecords())} source records · ${fmt(D.stations.length)} stations · ${area}`;
 EDITIONS.osaka={...EDITIONS.tokyo,priceBreaks:[200000,300000,400000,500000,650000,800000],landBreaks:[50000,80000,120000,180000,250000,350000],home:'新大阪',view:[34.72,135.5,9],homeBox:[[34.45,135.15],[35.05,135.85]],
   cities:[{key:'osaka',label:'Osaka',box:[[34.60,135.40],[34.77,135.60]],home:'大阪'},{key:'kyoto',label:'Kyoto',box:[[34.92,135.68],[35.07,135.82]],home:'京都'},{key:'kobe',label:'Kobe',box:[[34.64,135.10],[34.76,135.30]],home:'三ノ宮'},{key:'nara',label:'Nara',box:[[34.64,135.76],[34.72,135.86]],home:'近鉄奈良'},{key:'sakai',label:'Sakai',box:[[34.52,135.43],[34.62,135.55]],home:'堺東'}],headline:japanHeadline('Osaka, Kyoto, Hyogo, Nara, Shiga, Wakayama'),

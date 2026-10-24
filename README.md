@@ -2,7 +2,7 @@
 
 Station price atlas: https://ekinomics.com
 
-The price per m² of homes sold around every railway station, in two-year windows, for eight regions:
+The price per m² of homes sold around every railway station, in two-year windows, for eleven regions:
 
 | Region | Page | Covers | Years |
 |---|---|---|---|
@@ -11,9 +11,12 @@ The price per m² of homes sold around every railway station, in two-year window
 | Greater Nagoya 中京圏 | [/nagoya/](https://ekinomics.com/nagoya/) | Aichi, Gifu and Mie | 2006–2025 |
 | Greater London | [/london/](https://ekinomics.com/london/) | Greater London and the commuter belt: Kent, Essex, Hertfordshire, Bedfordshire, Buckinghamshire, Berkshire, Surrey, East and West Sussex, Hampshire, Oxfordshire and Cambridgeshire | 2006–2023 |
 | Greater Birmingham | [/birmingham/](https://ekinomics.com/birmingham/) | The West Midlands county and its commuter belt: Warwickshire, Worcestershire and Staffordshire | 2006–2023 |
+| Greater Bristol | [/bristol/](https://ekinomics.com/bristol/) | Bristol, Bath and North East Somerset, South Gloucestershire and North Somerset | 2006–2023 |
+| Greater Nottingham | [/nottingham/](https://ekinomics.com/nottingham/) | Nottinghamshire, and Derbyshire except High Peak | 2006–2023 |
 | North West England | [/northwest/](https://ekinomics.com/northwest/) | Greater Manchester, Merseyside, Cheshire, Lancashire and High Peak | 2006–2023 |
 | Yorkshire | [/yorkshire/](https://ekinomics.com/yorkshire/) | West, South and North Yorkshire, York, Hull and the East Riding | 2006–2023 |
 | North East England | [/northeast/](https://ekinomics.com/northeast/) | Tyne and Wear, Northumberland, County Durham and the Tees Valley | 2006–2023 |
+| South Wales | [/southwales/](https://ekinomics.com/southwales/) | Cardiff Capital Region, Swansea and Neath Port Talbot | 2006–2023 |
 
 ## What the prices are
 
@@ -24,7 +27,7 @@ The price per m² of homes sold around every railway station, in two-year window
 - **Houses**: land sold with a building used as a home, per m² of floor area.
 - **Land**: residential plots, per m² of plot area.
 
-**United Kingdom**: observed medians from HM Land Registry standard sales, per m² of floor area from Energy Performance Certificates. Shown for all homes, flats, terraced, semi-detached and detached. Each sale counts at the nearest station within 1.2 km of its postcode.
+**United Kingdom** (England and Wales): observed medians from HM Land Registry standard sales, per m² of floor area from Energy Performance Certificates. Shown for all homes, flats, terraced, semi-detached and detached. Each sale counts at the nearest station within 1.2 km of its postcode.
 
 A price needs at least 5 sales in a window; prices from 5–9 sales are marked indicative. These are observed medians, not quality-adjusted price indices: a change can reflect a different mix of homes sold.
 
