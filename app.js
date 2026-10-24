@@ -133,7 +133,10 @@ function fitVisible(){const ss=D.stations.filter(visible);if((state.pref||state.
 // London property types load on first use: one cells file per type.
 let loadedTypes={0:true};
 async function ensureType(t){if(loadedTypes[t])return;const rows=await getJSON(`cells-${t}.json`);rows.forEach((c,i)=>Object.assign(D.stations[i].cells,c));loadedTypes[t]=true}
-async function getJSON(p){const r=await fetch(p);if(!r.ok)throw Error(`Could not load ${p}`);return r.json()}
+// Each deploy stamps ?v= on the script URL; data URLs carry the same stamp and are revalidated on every load, so a
+// visitor never pairs a cached script with newer data. DATA_FORMAT changes whenever the data's shape does.
+const VERSION=(document.currentScript&&new URL(document.currentScript.src).searchParams.get('v'))||'',DATA_FORMAT=2;
+async function getJSON(p){const r=await fetch(VERSION?`${p}?v=${VERSION}`:p,{cache:'no-cache'});if(!r.ok)throw Error(`Could not load ${p}`);return r.json()}
 async function applyPreset(name,set){state={...DEFAULTS,...set};await ensureType(state.type);syncControls();render();fitVisible();activePreset=name;markPreset();writeURL()}
 
 function showStation(idx,pan=false,user=false){selected=idx;const s=D.stations[idx],c=cell(s),g=growth(s),base=cell(s,state.baseline),ev=s.events||[];
@@ -164,7 +167,7 @@ $('mapCount').textContent=`${fmt(priced)} / ${fmt(n)} stations with price data`;
 // English matches ignore macrons, hyphens and spaces, so "omiya" finds Ōmiya and "shinyokohama" finds Shin-Yokohama.
 function search(){const q=$('search').value.trim(),f=fold(q);if(!q){$('results').innerHTML='';return}const hit=s=>s.name.includes(q)||(f&&fold(label(s)).includes(f))||s.lines.some(l=>l.includes(q)||(f&&fold(lineEn(l)[0]).includes(f)));const pre=s=>Boolean((f&&fold(label(s)).startsWith(f))||s.name.startsWith(q));const hits=D.stations.map((s,i)=>({s,i})).filter(({s})=>hit(s)).sort((a,b)=>pre(b.s)-pre(a.s)).slice(0,15);$('results').innerHTML=hits.length?hits.map(({s,i})=>`<button data-result="${i}">${both(s)} <small>${D.prefectures[s.pref]}</small></button>`).join(''):'<p class="muted">No matches. Try the English or Japanese station name.</p>';document.querySelectorAll('[data-result]').forEach(b=>b.onclick=()=>{const idx=+b.dataset.result;state.pref='';state.line='';$('pref').value='';$('line').value='';render();showStation(idx,true,true);$('results').innerHTML='';$('search').value=label(D.stations[idx])})}
 
-async function start(){const [d,boundaries,rails]=await Promise.all([getJSON('data.json'),getJSON('boundaries.json'),getJSON('rails.json')]);D=d;
+async function start(){const [d,boundaries,rails]=await Promise.all([getJSON('data.json'),getJSON('boundaries.json'),getJSON('rails.json')]);D=d;if(D.format!==DATA_FORMAT)throw Error('This page was updated while you had it open');
 E=EDITIONS[D.edition||'tokyo'];PRICE_BREAKS=E.priceBreaks;COUNT_BREAKS=E.countBreaks;DEFAULTS.period=D.periods.length-1;DEFAULTS.type=E.defaultType||0;loadedTypes={[E.baseType||0]:true};state={...DEFAULTS};$('period').max=DEFAULTS.period;$('headline').textContent=E.headline();
 D.stations.forEach((s,i)=>{let k=slug(label(s))||s.id;while(BY_SLUG[k]!=null)k+='-2';SLUG[i]=k;BY_SLUG[k]=i});
 const prefs=Object.entries(D.prefectures).sort((a,b)=>E.ja?a[0].localeCompare(b[0]):a[1].localeCompare(b[1]));
