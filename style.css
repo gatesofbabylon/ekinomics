@@ -206,3 +206,8 @@ main{display:flex;flex-direction:column}.workspace{display:contents}.toolbar{ord
 .legend{left:12px;bottom:28px;min-width:210px;padding:10px 12px;font-size:10px}
 aside{border-left:0;border-top:1px solid var(--line);padding:22px 16px}.explore{padding:20px 16px}.sectionhead h2{font-size:20px}
 .timebar,.viewbar{padding:14px 16px}footer{padding:18px 16px;gap:12px;flex-direction:column}dialog{max-width:96vw;padding:16px}}
+/* Six cities don't fit one row on a phone: the city switch becomes a 3 × 2 grid there. */
+@media(max-width:720px){.headtools .editions{display:grid;grid-template-columns:repeat(3,1fr);height:auto;width:100%}.editions a{justify-content:center;min-height:40px}.editions a:nth-child(3n+1){border-left:0}.editions a:nth-child(n+4){border-top:1px solid var(--border)}}
+.goto{display:flex;align-items:center;gap:8px;padding:0 24px 12px;flex-wrap:wrap;background:var(--surface)}.goto[hidden]{display:none}.goto>span{font-size:12px;font-weight:600;color:var(--ink-2);margin-right:4px}
+.goto button{-webkit-appearance:none;appearance:none;border:1px solid var(--border);background:var(--surface);color:var(--ink-2);font-size:13px;font-weight:500;padding:0 12px;height:30px;line-height:1}.goto button[aria-pressed="true"]{background:var(--ink);color:var(--page);border-color:var(--ink)}
+@media(max-width:720px){.goto{padding:0 16px 12px}}
