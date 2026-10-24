@@ -2,7 +2,7 @@
 
 Station price atlas: https://ekinomics.com
 
-The price per m² of homes sold around every railway station, in two-year windows, for five regions:
+The price per m² of homes sold around every railway station, in two-year windows, for eight regions:
 
 | Region | Page | Covers | Years |
 |---|---|---|---|
@@ -10,7 +10,10 @@ The price per m² of homes sold around every railway station, in two-year window
 | Greater Osaka 関西圏 | [/osaka/](https://ekinomics.com/osaka/) | Osaka, Kyoto, Hyogo and Nara | 2006–2025 |
 | Greater Nagoya 中京圏 | [/nagoya/](https://ekinomics.com/nagoya/) | Aichi | 2006–2025 |
 | Greater London | [/london/](https://ekinomics.com/london/) | Greater London and the commuter belt: Kent, Essex, Hertfordshire, Bedfordshire, Buckinghamshire, Berkshire, Surrey, East and West Sussex, Hampshire, Oxfordshire and Cambridgeshire | 2006–2023 |
+| Greater Birmingham | [/birmingham/](https://ekinomics.com/birmingham/) | The West Midlands county and its commuter belt: Warwickshire, Worcestershire and Staffordshire | 2006–2023 |
 | North West England | [/northwest/](https://ekinomics.com/northwest/) | Greater Manchester, Merseyside, Cheshire, Lancashire and High Peak | 2006–2023 |
+| Yorkshire | [/yorkshire/](https://ekinomics.com/yorkshire/) | West, South and North Yorkshire, York, Hull and the East Riding | 2006–2023 |
+| North East England | [/northeast/](https://ekinomics.com/northeast/) | Tyne and Wear, Northumberland, County Durham and the Tees Valley | 2006–2023 |
 
 ## What the prices are
 
@@ -43,6 +46,7 @@ This repository holds only the built static site; GitHub Pages serves it as-is.
 - Stations: NaPTAN, Department for Transport, Open Government Licence.
 - Rail lines: Powered by TfL Open Data; contains OS data © Crown copyright and database rights 2016 and Geomni UK Map data © and database rights [2019].
 - Metrolink: contains Transport for Greater Manchester data (Open Government Licence).
+- Tyne and Wear Metro, Sheffield Supertram and West Midlands Metro timetables: Bus Open Data Service, Department for Transport, Open Government Licence.
 
 ### All pages
 

@@ -44,6 +44,23 @@ EDITIONS.northwest={...EDITIONS.london,priceBreaks:[1500,2000,2500,3000,3500,450
   cities:[{key:'manchester',label:'Manchester',box:[[53.38,-2.35],[53.56,-2.12]],home:'Manchester Piccadilly'},{key:'liverpool',label:'Liverpool',box:[[53.33,-3.05],[53.50,-2.85]],home:'Liverpool Lime Street'},{key:'blackpool',label:'Blackpool',box:[[53.75,-3.08],[53.88,-2.98]],home:'Blackpool North'}],
   headline:()=>`${fmt(D.coverage.counts.in_windows)} sales with floor areas · ${fmt(D.stations.length)} stations · Manchester, Liverpool and the North West`,
   presets:[['Biggest risers since 2014–15',{metric:'growth',baseline:4,sortKey:'change',sortDir:-1}],['Flats only',{type:1}],['Terraced houses',{type:2}],['Built before 1900',{age:1}],['Cheapest on Metrolink',{line:'metrolink',sortKey:'price',sortDir:1}],['Busiest markets',{metric:'count',sortKey:'sales',sortDir:-1}]]};
+// North East England, Yorkshire and Greater Birmingham follow the North West page; each opens on its urban core.
+const ukPresets=(label,line)=>[['Biggest risers since 2014–15',{metric:'growth',baseline:4,sortKey:'change',sortDir:-1}],['Flats only',{type:1}],['Terraced houses',{type:2}],['Built before 1900',{age:1}],[label,{line,sortKey:'price',sortDir:1}],['Busiest markets',{metric:'count',sortKey:'sales',sortDir:-1}]];
+EDITIONS.northeast={...EDITIONS.northwest,priceBreaks:[1200,1500,1800,2100,2400,2800],view:[54.9,-1.6,9],
+  homeBox:[[54.52,-1.75],[55.06,-1.20]],home:'Newcastle',
+  cities:[{key:'newcastle',label:'Newcastle',box:[[54.93,-1.72],[55.04,-1.52]],home:'Newcastle'},{key:'sunderland',label:'Sunderland',box:[[54.86,-1.47],[54.95,-1.33]],home:'Sunderland'},{key:'durham',label:'Durham',box:[[54.74,-1.64],[54.81,-1.52]],home:'Durham'},{key:'middlesbrough',label:'Middlesbrough',box:[[54.51,-1.36],[54.62,-1.12]],home:'Middlesbrough'}],
+  headline:()=>`${fmt(D.coverage.counts.in_windows)} sales with floor areas · ${fmt(D.stations.length)} stations · Tyneside, Wearside, Durham and Teesside`,
+  presets:ukPresets('Cheapest on the Metro Yellow line','tw-yellow')};
+EDITIONS.yorkshire={...EDITIONS.northwest,priceBreaks:[1600,1900,2200,2500,2800,3200],view:[53.7,-1.4,9],
+  homeBox:[[53.33,-1.80],[54.00,-1.00]],home:'Leeds',
+  cities:[{key:'leeds',label:'Leeds',box:[[53.74,-1.65],[53.86,-1.45]],home:'Leeds'},{key:'sheffield',label:'Sheffield',box:[[53.33,-1.56],[53.45,-1.35]],home:'Sheffield'},{key:'york',label:'York',box:[[53.92,-1.16],[54.00,-1.00]],home:'York'},{key:'bradford',label:'Bradford',box:[[53.75,-1.85],[53.84,-1.70]],home:'Bradford Interchange'},{key:'hull',label:'Hull',box:[[53.71,-0.45],[53.79,-0.25]],home:'Hull'}],
+  headline:()=>`${fmt(D.coverage.counts.in_windows)} sales with floor areas · ${fmt(D.stations.length)} stations · Leeds, Sheffield, York and Hull`,
+  presets:ukPresets('Cheapest on the Supertram Blue route','st-blue')};
+EDITIONS.birmingham={...EDITIONS.northwest,priceBreaks:[2000,2400,2800,3200,3600,4200],view:[52.5,-1.9,9],
+  homeBox:[[52.36,-2.20],[52.64,-1.45]],home:'Birmingham New Street',
+  cities:[{key:'birmingham',label:'Birmingham',box:[[52.42,-1.98],[52.53,-1.80]],home:'Birmingham New Street'},{key:'coventry',label:'Coventry',box:[[52.36,-1.60],[52.45,-1.44]],home:'Coventry'},{key:'wolverhampton',label:'Wolverhampton',box:[[52.55,-2.18],[52.62,-2.06]],home:'Wolverhampton'},{key:'stoke',label:'Stoke',box:[[52.96,-2.25],[53.06,-2.12]],home:'Stoke-on-Trent'}],
+  headline:()=>`${fmt(D.coverage.counts.in_windows)} sales with floor areas · ${fmt(D.stations.length)} stations · Birmingham, the Black Country and Coventry`,
+  presets:ukPresets('Cheapest on the West Midlands Metro','wm-metro')};
 const japanHeadline=area=>()=>`${fmt(japanRecords())} source records · ${fmt(D.stations.length)} stations · ${area}`;
 EDITIONS.osaka={...EDITIONS.tokyo,priceBreaks:[200000,300000,400000,500000,650000,800000],landBreaks:[50000,80000,120000,180000,250000,350000],home:'新大阪',view:[34.72,135.5,9],homeBox:[[34.45,135.15],[35.05,135.85]],
   cities:[{key:'osaka',label:'Osaka',box:[[34.60,135.40],[34.77,135.60]],home:'大阪'},{key:'kyoto',label:'Kyoto',box:[[34.92,135.68],[35.07,135.82]],home:'京都'},{key:'kobe',label:'Kobe',box:[[34.64,135.10],[34.76,135.30]],home:'三ノ宮'},{key:'nara',label:'Nara',box:[[34.64,135.76],[34.72,135.86]],home:'近鉄奈良'},{key:'sakai',label:'Sakai',box:[[34.52,135.43],[34.62,135.55]],home:'堺東'}],headline:japanHeadline('Osaka, Kyoto, Hyogo, Nara'),
