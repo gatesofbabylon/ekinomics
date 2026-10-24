@@ -1,8 +1,8 @@
 # Ekinomics
 
-Kantō station price atlas: https://ekinomics.com
+Greater Tokyo station price atlas: https://ekinomics.com
 
-The observed median price per m² of second-hand apartments sold near every railway station in Kantō's seven prefectures, in two-year windows from 2006 to 2025, in English and Japanese.
+The observed median price per m² of second-hand apartments sold near every railway station in Greater Tokyo (Tokyo, Kanagawa, Saitama and Chiba), in two-year windows from 2006 to 2025, in English and Japanese.
 
 This repository holds only the built static site; GitHub Pages serves it as-is.
 
