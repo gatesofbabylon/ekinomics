@@ -26,8 +26,8 @@ tokyo:{ja:true,cur:'¥',priceBreaks:[300000,450000,600000,800000,1000000,1500000
   stats:[['Median age at sale',v=>`${fmt(v)} years`,'Median age at sale'],['Median station walk',v=>`${fmt(v)} min`,'Median walk (min)']],
   note:'Gaps mean fewer than 5 sales; hollow points are indicative (5–9 sales). Age and walking-time summaries use known numeric values. Prices reflect the mix of homes sold.',pooled:'Nearby same-name platforms are pooled into one price area.',
   legend:()=>['Home','Apartment','House','Land'][state.type]+(state.type===3?' price per m² of plot (¥)':' price per m² (¥)'),attribution:'Geography: <a href="https://nlftp.mlit.go.jp/ksj/">MLIT</a> (adapted, CC BY 4.0)',
-  headline:()=>`${fmt(japanRecords())} source records · ${fmt(D.stations.length)} stations · Tokyo, Kanagawa, Saitama, Chiba`,
-  scope:'The map shows Tokyo, Kanagawa, Saitama and Chiba (一都三県). Ibaraki, Tochigi and Gunma are processed too but not shown: too few apartments sell there for station medians.',
+  headline:()=>`${fmt(japanRecords())} source records · ${fmt(D.stations.length)} stations · Tokyo and the six Kantō prefectures around it`,
+  scope:'The map shows all seven Kantō prefectures: Tokyo, Kanagawa, Saitama and Chiba (一都三県), with Ibaraki, Tochigi and Gunma.',
   presets:[['Biggest risers since 2014–15',{metric:'growth',baseline:4,sortKey:'change',sortDir:-1}],['Family flats, 60–79 m²',{type:1,size:3}],['Cheapest station areas',{sortKey:'price',sortDir:1}],['Built in the last 10 years',{age:1}],['Cheapest on the Yamanote Line',{line:'東日本旅客鉄道 / 山手線',sortKey:'price',sortDir:1}],['Busiest markets',{metric:'count',sortKey:'sales',sortDir:-1}]]},
 london:{ja:false,cur:'£',priceBreaks:[3500,4500,5500,7000,9000,12000],countBreaks:[10,30,100,200,400,700],short:b=>`${b/1e3}k`,
   chartDiv:1000,chartStep:3000,chartUnit:'£ thousand per m²',chartAria:'thousand pounds',region:'Area',homeArea:s=>s.pref.startsWith('E09'),mixLabels:['Flats','Terraced','Semi-detached','Detached'],outer:['Greater London','Commuter belt'],dims:['type','size','age'],ranges:{type:4,size:4,age:5},home:'Clapham Junction',view:[51.5,-0.12,10],
@@ -63,11 +63,11 @@ EDITIONS.birmingham={...EDITIONS.northwest,priceBreaks:[2000,2400,2800,3200,3600
   presets:ukPresets('Cheapest on the West Midlands Metro','wm-metro')};
 const japanHeadline=area=>()=>`${fmt(japanRecords())} source records · ${fmt(D.stations.length)} stations · ${area}`;
 EDITIONS.osaka={...EDITIONS.tokyo,priceBreaks:[200000,300000,400000,500000,650000,800000],landBreaks:[50000,80000,120000,180000,250000,350000],home:'新大阪',view:[34.72,135.5,9],homeBox:[[34.45,135.15],[35.05,135.85]],
-  cities:[{key:'osaka',label:'Osaka',box:[[34.60,135.40],[34.77,135.60]],home:'大阪'},{key:'kyoto',label:'Kyoto',box:[[34.92,135.68],[35.07,135.82]],home:'京都'},{key:'kobe',label:'Kobe',box:[[34.64,135.10],[34.76,135.30]],home:'三ノ宮'},{key:'nara',label:'Nara',box:[[34.64,135.76],[34.72,135.86]],home:'近鉄奈良'},{key:'sakai',label:'Sakai',box:[[34.52,135.43],[34.62,135.55]],home:'堺東'}],headline:japanHeadline('Osaka, Kyoto, Hyogo, Nara'),
-  scope:'The map shows Osaka, Kyoto, Hyogo and Nara. Shiga and Wakayama are processed too but not shown: too few apartments sell there for station medians.',presets:[['Biggest risers since 2014–15',{metric:'growth',baseline:4,sortKey:'change',sortDir:-1}],['Family flats, 60–79 m²',{type:1,size:3}],['Cheapest station areas',{sortKey:'price',sortDir:1}],['Built in the last 10 years',{age:1}],['Cheapest on the Osaka Loop Line',{line:'西日本旅客鉄道 / 大阪環状線',sortKey:'price',sortDir:1}],['Busiest markets',{metric:'count',sortKey:'sales',sortDir:-1}]]};
+  cities:[{key:'osaka',label:'Osaka',box:[[34.60,135.40],[34.77,135.60]],home:'大阪'},{key:'kyoto',label:'Kyoto',box:[[34.92,135.68],[35.07,135.82]],home:'京都'},{key:'kobe',label:'Kobe',box:[[34.64,135.10],[34.76,135.30]],home:'三ノ宮'},{key:'nara',label:'Nara',box:[[34.64,135.76],[34.72,135.86]],home:'近鉄奈良'},{key:'sakai',label:'Sakai',box:[[34.52,135.43],[34.62,135.55]],home:'堺東'}],headline:japanHeadline('Osaka, Kyoto, Hyogo, Nara, Shiga, Wakayama'),
+  scope:'The map shows all six Kinki prefectures: Osaka, Kyoto, Hyogo, Nara, Shiga and Wakayama.',presets:[['Biggest risers since 2014–15',{metric:'growth',baseline:4,sortKey:'change',sortDir:-1}],['Family flats, 60–79 m²',{type:1,size:3}],['Cheapest station areas',{sortKey:'price',sortDir:1}],['Built in the last 10 years',{age:1}],['Cheapest on the Osaka Loop Line',{line:'西日本旅客鉄道 / 大阪環状線',sortKey:'price',sortDir:1}],['Busiest markets',{metric:'count',sortKey:'sales',sortDir:-1}]]};
 EDITIONS.nagoya={...EDITIONS.osaka,priceBreaks:[150000,200000,300000,400000,550000,700000],landBreaks:[40000,60000,90000,130000,180000,250000],home:'丸の内',view:[35.17,136.9,9],homeBox:[[34.95,136.75],[35.30,137.20]],
-  cities:[{key:'nagoya',label:'Nagoya',box:[[35.10,136.84],[35.22,136.98]],home:'名古屋'},{key:'toyota',label:'Toyota',box:[[35.03,137.10],[35.13,137.20]],home:'豊田市'}],headline:japanHeadline('Aichi'),
-  scope:'The map shows Aichi. Gifu and Mie are processed too but not shown: too few apartments sell there for station medians.',
+  cities:[{key:'nagoya',label:'Nagoya',box:[[35.10,136.84],[35.22,136.98]],home:'名古屋'},{key:'toyota',label:'Toyota',box:[[35.03,137.10],[35.13,137.20]],home:'豊田市'}],headline:japanHeadline('Aichi, Gifu, Mie'),
+  scope:'The map shows Aichi, Gifu and Mie.',
   presets:[['Biggest risers since 2014–15',{metric:'growth',baseline:4,sortKey:'change',sortDir:-1}],['Family flats, 60–79 m²',{type:1,size:3}],['Cheapest station areas',{sortKey:'price',sortDir:1}],['Built in the last 10 years',{age:1}],['Cheapest on the Higashiyama Line',{line:'名古屋市 / 1号線東山線',sortKey:'price',sortDir:1}],['Busiest markets',{metric:'count',sortKey:'sales',sortDir:-1}]]};
 let E=EDITIONS.tokyo,PRICE_BREAKS,COUNT_BREAKS;
 const isLand=()=>E.landType!=null&&state.type===E.landType,priceBreaks=()=>isLand()&&E.landBreaks?E.landBreaks:PRICE_BREAKS;const GROWTH_BREAKS=[0,25,50,100],RANK_MIN=30,FULL_MIN=10,EMPTY=[0,null,null,null,null,null,null];
@@ -159,7 +159,8 @@ function markPreset(){document.querySelectorAll('#presets button').forEach(b=>b.
 function changed(){activePreset='';markPreset();writeURL()}
 const CONTROLS=['pref','line','type','size','age','baseline'];
 function syncControls(){for(const id of CONTROLS)if($(id))$(id).value=state[id];for(const id of ['size','age'])if($(id))$(id).disabled=isLand();$('period').value=state.period;document.querySelectorAll('#metric button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.v===state.metric)))}
-function fitVisible(){const ss=D.stations.filter(visible);if((state.pref||state.line)&&ss.length)map.fitBounds(L.latLngBounds(ss.map(s=>[s.lat,s.lon])),{padding:[30,30],maxZoom:12});else map.fitBounds(homeBounds,{padding:[25,25]})}
+// Leaflet drops a zoom requested while another is animating, so the start-up fits run without animation.
+function fitVisible(animate=true){const ss=D.stations.filter(visible);if((state.pref||state.line)&&ss.length)map.fitBounds(L.latLngBounds(ss.map(s=>[s.lat,s.lon])),{padding:[30,30],maxZoom:12,animate});else map.fitBounds(homeBounds,{padding:[25,25],animate})}
 // London property types load on first use: one cells file per type.
 let loadedTypes={0:true};
 async function ensureType(t){if(loadedTypes[t])return;const rows=await getJSON(`cells-${t}.json`);rows.forEach((c,i)=>Object.assign(D.stations[i].cells,c));loadedTypes[t]=true}
@@ -215,8 +216,8 @@ labelPane=map.createPane('labels');measure=document.createElement('canvas').getC
 if(document.fonts)document.fonts.ready.then(()=>{widths.clear();drawLabels()});
 const fromURL=readURL();await ensureType(state.type);syncControls();applyTheme();
 // Open on stations that have a price, so the first view is one zoom closer than the faint outer fringes.
-const priced=D.stations.filter(s=>cell(s)[1]!=null&&(!E.homeArea||E.homeArea(s)));homeBounds=E.homeBox?L.latLngBounds(E.homeBox):L.latLngBounds((priced.length?priced:D.stations).map(s=>[s.lat,s.lon]));map.fitBounds(homeBounds,{padding:[25,25]});
-selected=fromURL!=null?fromURL:Math.max(0,D.stations.findIndex(s=>s.name===E.home));render();if(fromURL!=null)map.setView([D.stations[fromURL].lat,D.stations[fromURL].lon],12);else if(state.pref||state.line)fitVisible();
+const priced=D.stations.filter(s=>cell(s)[1]!=null&&(!E.homeArea||E.homeArea(s)));homeBounds=E.homeBox?L.latLngBounds(E.homeBox):L.latLngBounds((priced.length?priced:D.stations).map(s=>[s.lat,s.lon]));map.fitBounds(homeBounds,{padding:[25,25],animate:false});
+selected=fromURL!=null?fromURL:Math.max(0,D.stations.findIndex(s=>s.name===E.home));render();if(fromURL!=null)map.setView([D.stations[fromURL].lat,D.stations[fromURL].lon],12);else if(state.pref||state.line)fitVisible(false);
 $('resetMap').onclick=()=>map.fitBounds(homeBounds,{padding:[25,25]});
 if(E.cities){const g=$('goto');g.hidden=false;const mark=()=>g.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(!!E.city&&b.dataset.city===E.city.key)));
 for(const c of E.cities){const b=document.createElement('button');b.type='button';b.textContent=c.label;b.dataset.city=c.key;b.onclick=()=>{E.city=c;homeBounds=L.latLngBounds(c.box);map.fitBounds(homeBounds,{padding:[25,25]});const idx=D.stations.findIndex(s=>s.name===c.home);if(idx>=0)showStation(idx,false,true);mark();track('select_city',{city:c.key});changed()};g.append(b)}mark()}$('mapFull').hidden=!canFull;$('mapFull').onclick=()=>toggleFull($('mapPanel'));document.addEventListener('fullscreenchange',()=>setTimeout(()=>map.invalidateSize(),50));

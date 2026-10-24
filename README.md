@@ -6,9 +6,9 @@ The price per m² of homes sold around every railway station, in two-year window
 
 | Region | Page | Covers | Years |
 |---|---|---|---|
-| Greater Tokyo 首都圏 | [ekinomics.com](https://ekinomics.com/) | Tokyo, Kanagawa, Saitama and Chiba | 2006–2025 |
-| Greater Osaka 関西圏 | [/osaka/](https://ekinomics.com/osaka/) | Osaka, Kyoto, Hyogo and Nara | 2006–2025 |
-| Greater Nagoya 中京圏 | [/nagoya/](https://ekinomics.com/nagoya/) | Aichi | 2006–2025 |
+| Greater Tokyo 首都圏 | [ekinomics.com](https://ekinomics.com/) | Tokyo, Kanagawa, Saitama, Chiba, Ibaraki, Tochigi and Gunma | 2006–2025 |
+| Greater Osaka 関西圏 | [/osaka/](https://ekinomics.com/osaka/) | Osaka, Kyoto, Hyogo, Nara, Shiga and Wakayama | 2006–2025 |
+| Greater Nagoya 中京圏 | [/nagoya/](https://ekinomics.com/nagoya/) | Aichi, Gifu and Mie | 2006–2025 |
 | Greater London | [/london/](https://ekinomics.com/london/) | Greater London and the commuter belt: Kent, Essex, Hertfordshire, Bedfordshire, Buckinghamshire, Berkshire, Surrey, East and West Sussex, Hampshire, Oxfordshire and Cambridgeshire | 2006–2023 |
 | Greater Birmingham | [/birmingham/](https://ekinomics.com/birmingham/) | The West Midlands county and its commuter belt: Warwickshire, Worcestershire and Staffordshire | 2006–2023 |
 | North West England | [/northwest/](https://ekinomics.com/northwest/) | Greater Manchester, Merseyside, Cheshire, Lancashire and High Peak | 2006–2023 |
