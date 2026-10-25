@@ -2,11 +2,11 @@
 
 Station price atlas: https://ekinomics.com
 
-The price per m² of homes sold around every railway station, in two-year windows, for 37 cities on 23 maps. Every page can be read in English or Japanese (日本語); UK station and place names stay in English:
+The price per m² of homes sold around every railway station, in two-year windows, for 37 cities on 23 maps, starting from the homepage at [ekinomics.com](https://ekinomics.com/), which maps every city's price change since 2014–15. Every page can be read in English or Japanese (日本語); UK station and place names stay in English:
 
 | Cities | Map | Covers | Years |
 |---|---|---|---|
-| Tokyo, Yokohama 東京・横浜 | [ekinomics.com](https://ekinomics.com/) | Tokyo, Kanagawa, Saitama, Chiba, Ibaraki, Tochigi and Gunma | 2006–2025 |
+| Tokyo, Yokohama 東京・横浜 | [/tokyo/](https://ekinomics.com/tokyo/) | Tokyo, Kanagawa, Saitama, Chiba, Ibaraki, Tochigi and Gunma | 2006–2025 |
 | Osaka, Kobe, Kyoto 大阪・神戸・京都 | [/osaka/](https://ekinomics.com/osaka/) | Osaka, Kyoto, Hyogo, Nara, Shiga and Wakayama | 2006–2025 |
 | Nagoya 名古屋 | [/nagoya/](https://ekinomics.com/nagoya/) | Aichi, Gifu and Mie | 2006–2025 |
 | Sapporo, Hakodate 札幌・函館 | [/hokkaido/](https://ekinomics.com/hokkaido/) | All of Hokkaido: Sapporo, Asahikawa, Hakodate, Obihiro and Kushiro | 2006–2025 |
