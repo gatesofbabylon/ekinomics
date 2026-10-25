@@ -9,8 +9,8 @@ const DEFAULTS={period:9,type:0,size:0,age:0,pref:'',line:'',metric:'price',base
 // Japanese operators by group. Third-sector companies are part-owned by prefectures or municipalities (第三セクター);
 // everything not listed is a private railway.
 const LINE_GROUPS=[['grp:jr','All JR lines','すべてのJR線'],['grp:subway','All subway and municipal lines','すべての地下鉄・公営線'],['grp:third','All third-sector lines','すべての第三セクター線'],['grp:private','All private railways','すべての私鉄']],
-  JR_OPS=['東日本旅客鉄道','東海旅客鉄道','西日本旅客鉄道','九州旅客鉄道','JR東海交通事業'],SUBWAY_OPS=['東京地下鉄','東京都','横浜市','大阪市高速電気軌道','京都市','神戸市','名古屋市','福岡市','こうべ未来都市機構'],
-  THIRD_OPS=['いすみ鉄道','ひたちなか海浜鉄道','ゆりかもめ','わたらせ渓谷鐵道','北総鉄道','千葉都市モノレール','埼玉新都市交通','埼玉高速鉄道','多摩都市モノレール','宇都宮ライトレール','東京臨海高速鉄道','東葉高速鉄道','横浜シーサイドライン','横浜高速鉄道','真岡鐵道','芝山鉄道','野岩鉄道','首都圏新都市鉄道','鹿島臨海鉄道',
+  JR_OPS=['東日本旅客鉄道','東海旅客鉄道','西日本旅客鉄道','九州旅客鉄道','四国旅客鉄道','JR東海交通事業'],SUBWAY_OPS=['東京地下鉄','東京都','横浜市','大阪市高速電気軌道','京都市','神戸市','名古屋市','福岡市','こうべ未来都市機構','仙台市','熊本市'],
+  THIRD_OPS=['いすみ鉄道','くま川鉄道','井原鉄道','仙台空港鉄道','南阿蘇鉄道','広島高速交通','水島臨海鉄道','沖縄都市モノレール','肥薩おれんじ鉄道','阿武隈急行','ひたちなか海浜鉄道','ゆりかもめ','わたらせ渓谷鐵道','北総鉄道','千葉都市モノレール','埼玉新都市交通','埼玉高速鉄道','多摩都市モノレール','宇都宮ライトレール','東京臨海高速鉄道','東葉高速鉄道','横浜シーサイドライン','横浜高速鉄道','真岡鐵道','芝山鉄道','野岩鉄道','首都圏新都市鉄道','鹿島臨海鉄道',
     '信楽高原鐵道','北条鉄道','大阪モノレール','智頭急行','神戸新交通','伊勢鉄道','名古屋ガイドウェイバス','名古屋臨海高速鉄道','四日市あすなろう鉄道','天竜浜名湖鉄道','愛知環状鉄道','愛知高速交通','明知鉄道','樽見鉄道','長良川鉄道','伊賀鉄道','平成筑豊鉄道','甘木鉄道','北九州高速鉄道'],
   lineGroup=l=>{const op=l.split(' / ')[0];return JR_OPS.includes(op)?'grp:jr':SUBWAY_OPS.includes(op)?'grp:subway':THIRD_OPS.includes(op)?'grp:third':'grp:private'},LINE_GROUP={};
 let showText=true;
@@ -109,6 +109,31 @@ EDITIONS.fukuoka={...EDITIONS.osaka,priceBreaks:[100000,150000,200000,300000,400
   cities:[{key:'fukuoka',label:'Fukuoka',ja:'福岡',box:[[33.55,130.33],[33.63,130.45]],home:'博多'},{key:'kitakyushu',label:'Kitakyushu',ja:'北九州',box:[[33.83,130.80],[33.92,130.92]],home:'小倉'},{key:'kurume',label:'Kurume',ja:'久留米',box:[[33.29,130.48],[33.34,130.55]],home:'久留米'}],headline:japanHeadline({en:'Fukuoka prefecture',ja:'福岡県'}),
   scope:{en:'The map shows Fukuoka prefecture: Fukuoka, Kitakyushu, Kurume and the towns around them.',ja:'地図は福岡県（福岡・北九州・久留米とその周辺）を表示します。'},
   presets:japanPresets({en:'Cheapest on the Kūkō Line',ja:'空港線で価格の安い駅'},'福岡市 / 1号線(空港線)')};
+// One-prefecture pages added 2026-10-25, each opening on its prefectural capital (Naha: Omoromachi, the busiest priced stop).
+EDITIONS.sendai={...EDITIONS.fukuoka,priceBreaks:[50000, 100000, 200000, 250000, 300000, 400000],landBreaks:[10000, 20000, 30000, 70000, 100000, 150000],home:'仙台',view:[38.26, 140.88, 11],homeBox:[[38.2, 140.8], [38.33, 140.95]],
+  cities:[{key:'sendai',label:'Sendai',ja:'仙台',box:[[38.22, 140.84], [38.3, 140.92]],home:'仙台'},{key:'ishinomaki',label:'Ishinomaki',ja:'石巻',box:[[38.41, 141.27], [38.46, 141.33]],home:'石巻'}],headline:japanHeadline({en:'Miyagi prefecture',ja:'宮城県'}),
+  scope:{en:"The map shows Miyagi prefecture: Sendai, Ishinomaki and the towns around them.",ja:'地図は宮城県（仙台・石巻とその周辺）を表示します。'},
+  presets:japanPresets({en:'Cheapest on the Namboku Line',ja:'南北線で価格の安い駅'},'仙台市 / 南北線')};
+EDITIONS.hiroshima={...EDITIONS.fukuoka,priceBreaks:[50000, 100000, 150000, 200000, 250000, 350000],landBreaks:[20000, 30000, 45000, 60000, 100000, 170000],home:'広島',view:[34.4, 132.47, 11],homeBox:[[34.33, 132.38], [34.46, 132.53]],
+  cities:[{key:'hiroshima',label:'Hiroshima',ja:'広島',box:[[34.36, 132.42], [34.42, 132.5]],home:'広島'},{key:'fukuyama',label:'Fukuyama',ja:'福山',box:[[34.46, 133.33], [34.51, 133.39]],home:'福山'},{key:'kure',label:'Kure',ja:'呉',box:[[34.22, 132.53], [34.27, 132.59]],home:'呉'},{key:'higashihiroshima',label:'Higashi-Hiroshima',ja:'東広島',box:[[34.41, 132.72], [34.45, 132.77]],home:'西条'}],headline:japanHeadline({en:'Hiroshima prefecture',ja:'広島県'}),
+  scope:{en:"The map shows Hiroshima prefecture: Hiroshima, Fukuyama, Kure, Higashi-Hiroshima and the towns around them.",ja:'地図は広島県（広島・福山・呉・東広島とその周辺）を表示します。'},
+  presets:japanPresets({en:'Cheapest on the Astram Line',ja:'アストラムラインで価格の安い駅'},'広島高速交通 / 広島新交通1号線')};
+EDITIONS.shizuoka={...EDITIONS.fukuoka,priceBreaks:[50000, 80000, 100000, 150000, 200000, 250000],landBreaks:[15000, 20000, 30000, 40000, 55000, 70000],home:'静岡',view:[34.97, 138.39, 11],homeBox:[[34.93, 138.33], [35.02, 138.45]],
+  cities:[{key:'shizuoka',label:'Shizuoka',ja:'静岡',box:[[34.95, 138.35], [35.0, 138.43]],home:'静岡'},{key:'hamamatsu',label:'Hamamatsu',ja:'浜松',box:[[34.68, 137.7], [34.73, 137.77]],home:'浜松'},{key:'numazu',label:'Numazu',ja:'沼津',box:[[35.08, 138.83], [35.12, 138.89]],home:'沼津'},{key:'fuji',label:'Fuji',ja:'富士',box:[[35.13, 138.62], [35.17, 138.68]],home:'富士'}],headline:japanHeadline({en:'Shizuoka prefecture',ja:'静岡県'}),
+  scope:{en:"The map shows Shizuoka prefecture: Shizuoka, Hamamatsu, Numazu, Fuji and the towns around them.",ja:'地図は静岡県（静岡・浜松・沼津・富士とその周辺）を表示します。'},
+  presets:japanPresets({en:'Cheapest on the Tōkaidō Line',ja:'東海道線で価格の安い駅'},'東海旅客鉄道 / 東海道線')};
+EDITIONS.okayama={...EDITIONS.fukuoka,priceBreaks:[25000, 50000, 80000, 130000, 200000, 250000],landBreaks:[12000, 20000, 30000, 40000, 55000, 80000],home:'岡山',view:[34.66, 133.92, 11],homeBox:[[34.62, 133.85], [34.71, 133.98]],
+  cities:[{key:'okayama',label:'Okayama',ja:'岡山',box:[[34.64, 133.89], [34.69, 133.95]],home:'岡山'},{key:'kurashiki',label:'Kurashiki',ja:'倉敷',box:[[34.58, 133.74], [34.62, 133.79]],home:'倉敷'},{key:'tsuyama',label:'Tsuyama',ja:'津山',box:[[35.04, 133.98], [35.07, 134.03]],home:'津山'}],headline:japanHeadline({en:'Okayama prefecture',ja:'岡山県'}),
+  scope:{en:"The map shows Okayama prefecture: Okayama, Kurashiki, Tsuyama and the towns around them.",ja:'地図は岡山県（岡山・倉敷・津山とその周辺）を表示します。'},
+  presets:japanPresets({en:'Cheapest on the Uno Line',ja:'宇野線で価格の安い駅'},'西日本旅客鉄道 / 宇野線')};
+EDITIONS.kumamoto={...EDITIONS.fukuoka,priceBreaks:[40000, 70000, 100000, 150000, 200000, 250000],landBreaks:[8000, 13000, 18000, 35000, 50000, 70000],home:'熊本',view:[32.8, 130.71, 11],homeBox:[[32.75, 130.65], [32.84, 130.77]],
+  cities:[{key:'kumamoto',label:'Kumamoto',ja:'熊本',box:[[32.77, 130.67], [32.82, 130.74]],home:'熊本'},{key:'yatsushiro',label:'Yatsushiro',ja:'八代',box:[[32.49, 130.6], [32.52, 130.64]],home:'八代'}],headline:japanHeadline({en:'Kumamoto prefecture',ja:'熊本県'}),
+  scope:{en:"The map shows Kumamoto prefecture: Kumamoto, Yatsushiro and the towns around them.",ja:'地図は熊本県（熊本・八代とその周辺）を表示します。'},
+  presets:japanPresets({en:'Cheapest on the Hōhi Line',ja:'豊肥線で価格の安い駅'},'九州旅客鉄道 / 豊肥線')};
+EDITIONS.naha={...EDITIONS.fukuoka,priceBreaks:[300000, 350000, 400000, 450000, 500000, 600000],landBreaks:[100000, 125000, 150000, 175000, 200000, 250000],home:'おもろまち',view:[26.22, 127.69, 12],homeBox:[[26.19, 127.66], [26.25, 127.74]],
+  cities:[{key:'naha',label:'Naha',ja:'那覇',box:[[26.2, 127.67], [26.23, 127.71]],home:'おもろまち'},{key:'shuri',label:'Shuri',ja:'首里',box:[[26.21, 127.71], [26.23, 127.74]],home:'首里'}],headline:japanHeadline({en:'Okinawa Island',ja:'沖縄本島'}),
+  scope:{en:"The map shows Okinawa Island. The prefecture's only railway is the Yui Rail monorail, through Naha and Urasoe.",ja:'地図は沖縄本島を表示します。県内唯一の鉄道は、那覇と浦添を走るゆいレールです。'},
+  presets:japanPresets({en:'Cheapest on Yui Rail',ja:'ゆいレールで価格の安い駅'},'沖縄都市モノレール / 沖縄都市モノレール線')};
 let E=EDITIONS.tokyo,PRICE_BREAKS,COUNT_BREAKS;
 const isLand=()=>E.landType!=null&&state.type===E.landType,priceBreaks=()=>isLand()&&E.landBreaks?E.landBreaks:PRICE_BREAKS;const GROWTH_BREAKS=[0,25,50,100],RANK_MIN=30,FULL_MIN=10,EMPTY=[0,null,null,null,null,null,null];
 // Source records across the apartment and house-and-land extracts of the shown prefectures.
