@@ -26,7 +26,7 @@ const EDITIONS={
 tokyo:{ja:true,cur:'¥',priceBreaks:[300000,450000,600000,800000,1000000,1500000],countBreaks:[3,10,20,50,100,200],short:b=>b>=1e6?`${b/1e6}m`:`${b/1e3}k`,
   chartDiv:10000,chartStep:200000,chartUnit:'¥10k per m²',chartAria:'ten thousand yen',region:'Prefecture',dims:['type','size','age'],ranges:{type:3,size:4,age:4},home:'新宿',
   // Types: 0 all homes, apartments and houses (the default, held in data.json), 1 apartments, 2 houses, 3 land (own scale, no size or age).
-  defaultType:0,baseType:0,landType:3,
+  defaultType:0,landType:3,
   // Starting view: the urban core (south-west and north-east corners); everything else stays on the map, off-screen at first.
   homeBox:[[35.34,139.42],[35.90,140.13]],
   // "Go to" cities: each opens the map on its core ([south-west], [north-east]) and selects its main station; ?focus= keeps the choice in links.
@@ -196,14 +196,15 @@ const CONTROLS=['pref','line','type','size','age','baseline'];
 function syncControls(){for(const id of CONTROLS)if($(id))$(id).value=state[id];for(const id of ['size','age'])if($(id))$(id).disabled=isLand();$('period').value=state.period;document.querySelectorAll('#metric button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.v===state.metric)))}
 // Leaflet drops a zoom requested while another is animating, so the start-up fits run without animation.
 function fitVisible(animate=true){const ss=D.stations.filter(visible);if((state.pref||state.line)&&ss.length)map.fitBounds(L.latLngBounds(ss.map(s=>[s.lat,s.lon])),{padding:[30,30],maxZoom:12,animate});else map.fitBounds(homeBounds,{padding:[25,25],animate})}
-// London property types load on first use: one cells file per type.
-let loadedTypes={0:true};
-async function ensureType(t){if(loadedTypes[t])return;const rows=await getJSON(`cells-${t}.json`);rows.forEach((c,i)=>Object.assign(D.stations[i].cells,c));loadedTypes[t]=true}
+// data.json holds the opening view only: all homes at every size and age together. The size and age bands of all homes
+// (cells-0.json) and each other property type (cells-1.json…) load the first time a filter needs them.
+let loadedCells={};
+async function ensureCells(){const f=state.type?state.type:state.size||state.age?0:null;if(f==null||loadedCells[f])return;const rows=await getJSON(`cells-${f}.json`);rows.forEach((c,i)=>Object.assign(D.stations[i].cells,c));loadedCells[f]=true}
 // Each deploy stamps ?v= on the script URL; data URLs carry the same stamp and are revalidated on every load, so a
 // visitor never pairs a cached script with newer data. DATA_FORMAT changes whenever the data's shape does.
-const VERSION=(document.currentScript&&new URL(document.currentScript.src).searchParams.get('v'))||'',DATA_FORMAT=4;
+const VERSION=(document.currentScript&&new URL(document.currentScript.src).searchParams.get('v'))||'',DATA_FORMAT=5;
 async function getJSON(p){const r=await fetch(VERSION?`${p}?v=${VERSION}`:p,{cache:'no-cache'});if(!r.ok)throw Error(`Could not load ${p}`);return r.json()}
-async function applyPreset(name,set){track('select_preset',{preset:name});state={...DEFAULTS,...set};await ensureType(state.type);syncControls();render();fitVisible();activePreset=name;markPreset();writeURL()}
+async function applyPreset(name,set){track('select_preset',{preset:name});state={...DEFAULTS,...set};await ensureCells();syncControls();render();fitVisible();activePreset=name;markPreset();writeURL()}
 
 function showStation(idx,pan=false,user=false){selected=idx;if(user)track('select_station',{station:label(D.stations[idx])});const s=D.stations[idx],c=cell(s),g=growth(s),base=cell(s,state.baseline),ev=s.events||[];
 const mix=s.mix&&state.type===0&&state.size===0&&state.age===0?s.mix[state.period]:null,mixTotal=mix?mix.reduce((a,b)=>a+b,0):0;
@@ -234,7 +235,7 @@ $('mapCount').textContent=`${fmt(priced)} / ${fmt(n)} stations with price data${
 function search(){const q=$('search').value.trim(),f=fold(q);if(!q){$('results').innerHTML='';return}const hit=s=>s.name.includes(q)||(f&&fold(label(s)).includes(f))||s.lines.some(l=>l.includes(q)||(f&&fold(lineEn(l)[0]).includes(f)));const pre=s=>Boolean((f&&fold(label(s)).startsWith(f))||s.name.startsWith(q));const hits=D.stations.map((s,i)=>({s,i})).filter(({s})=>hit(s)).sort((a,b)=>pre(b.s)-pre(a.s)).slice(0,15);$('results').innerHTML=hits.length?hits.map(({s,i})=>`<button data-result="${i}">${both(s)} <small>${D.prefectures[s.pref]}</small></button>`).join(''):'<p class="muted">No matches. Try the English or Japanese station name.</p>';document.querySelectorAll('[data-result]').forEach(b=>b.onclick=()=>{const idx=+b.dataset.result;track('search',{search_term:$('search').value.trim()});state.pref='';state.line='';$('pref').value='';$('line').value='';render();pickStation(idx,true);$('results').innerHTML='';$('search').value=label(D.stations[idx])})}
 
 async function start(){const [d,boundaries,rails]=await Promise.all([getJSON('data.json'),getJSON('boundaries.json'),getJSON('rails.json')]);D=d;if(D.format!==DATA_FORMAT)throw Error('This page was updated while you had it open');
-E=EDITIONS[D.edition||'tokyo'];if(E.cities){const f=new URLSearchParams(location.search).get('focus');E={...E,city:E.cities.find(c=>c.key===f)||null};if(E.city){E.homeBox=E.city.box;E.home=E.city.home}}PRICE_BREAKS=E.priceBreaks;COUNT_BREAKS=E.countBreaks;DEFAULTS.period=D.periods.length-1;DEFAULTS.type=E.defaultType||0;loadedTypes={[E.baseType||0]:true};state={...DEFAULTS};$('period').max=DEFAULTS.period;$('headline').textContent=E.headline();
+E=EDITIONS[D.edition||'tokyo'];if(E.cities){const f=new URLSearchParams(location.search).get('focus');E={...E,city:E.cities.find(c=>c.key===f)||null};if(E.city){E.homeBox=E.city.box;E.home=E.city.home}}PRICE_BREAKS=E.priceBreaks;COUNT_BREAKS=E.countBreaks;DEFAULTS.period=D.periods.length-1;DEFAULTS.type=E.defaultType||0;loadedCells={};state={...DEFAULTS};$('period').max=DEFAULTS.period;$('headline').textContent=E.headline();
 D.stations.forEach((s,i)=>{let k=slug(label(s))||s.id;while(BY_SLUG[k]!=null)k+='-2';SLUG[i]=k;BY_SLUG[k]=i});
 const prefs=Object.entries(D.prefectures).sort((a,b)=>E.ja?a[0].localeCompare(b[0]):a[1].localeCompare(b[1]));
 if(D.pref_groups){const core=E.outer&&E.outer[0],groups=[...new Set(Object.values(D.pref_groups))].sort((a,b)=>(b===core)-(a===core)||a.localeCompare(b));(E.outer||[]).forEach(g=>$('pref').add(new Option(`${g} (all)`,'g:'+g)));
@@ -251,7 +252,7 @@ markers=D.stations.map((s,i)=>L.circleMarker([s.lat,s.lon],{renderer:stationRend
 const reach=matchMedia('(pointer: coarse)').matches?32:12;map.on('click',e=>{let best=null,bd=Infinity;markers.forEach((m,i)=>{if(!map.hasLayer(m))return;const d=map.latLngToContainerPoint(m.getLatLng()).distanceTo(e.containerPoint)+(color(D.stations[i])?0:8);if(d<bd){bd=d;best=i}});if(best!=null&&bd<=reach)pickStation(best,false)});
 labelPane=map.createPane('labels');measure=document.createElement('canvas').getContext('2d');map.on('zoomstart',()=>labelPane.hidden=true);map.on('moveend',()=>{labelPane.hidden=false;drawLabels()});map.on('zoomend',()=>markers.forEach((m,i)=>m.setStyle(markerStyle(i))));
 if(document.fonts)document.fonts.ready.then(()=>{widths.clear();drawLabels()});
-const fromURL=readURL();await ensureType(state.type);syncControls();applyTheme();
+const fromURL=readURL();await ensureCells();syncControls();applyTheme();
 // Open on stations that have a price, so the first view is one zoom closer than the faint outer fringes.
 const priced=D.stations.filter(s=>cell(s)[1]!=null&&(!E.homeArea||E.homeArea(s)));homeBounds=E.homeBox?L.latLngBounds(E.homeBox):L.latLngBounds((priced.length?priced:D.stations).map(s=>[s.lat,s.lon]));map.fitBounds(homeBounds,{padding:[25,25],animate:false});
 selected=fromURL!=null?fromURL:Math.max(0,D.stations.findIndex(s=>s.name===E.home));render();if(fromURL!=null)map.setView([D.stations[fromURL].lat,D.stations[fromURL].lon],12);else if(state.pref||state.line)fitVisible(false);
@@ -268,7 +269,7 @@ const lg=$('legend'),flipLegend=()=>{if(!phone.matches)return;const o=!lg.classL
 const det=$('detail'),sh=document.createElement('div');sh.id='sheet';sh.innerHTML='<div id="sheetbar"><button type="button" class="grab" aria-label="Expand details"></button><button type="button" class="sheetclose" aria-label="Close details">×</button></div>';det.before(sh);sh.append(det);
 const grab=sh.querySelector('.grab'),expand=on=>{sh.classList.toggle('expanded',on);grab.setAttribute('aria-label',on?'Collapse details':'Expand details')};grab.onclick=()=>expand(!sh.classList.contains('expanded'));sh.querySelector('.sheetclose').onclick=closeSheet;
 let y0=null;const hb=$('sheetbar');hb.addEventListener('touchstart',e=>{y0=e.touches[0].clientY},{passive:true});hb.addEventListener('touchend',e=>{if(y0==null)return;const dy=e.changedTouches[0].clientY-y0;y0=null;if(dy<-25)expand(true);else if(dy>25){if(sh.classList.contains('expanded'))expand(false);else closeSheet()}},{passive:true})}
-for(const id of CONTROLS)if($(id))$(id).onchange=async()=>{state[id]=['type','size','age','baseline'].includes(id)?+$(id).value:$(id).value;track('change_filter',{filter:id,value:String(state[id])});if(id==='type'){await ensureType(state.type);if(isLand()){state.size=0;state.age=0}syncControls()}render();if(['pref','line'].includes(id))fitVisible();changed()};
+for(const id of CONTROLS)if($(id))$(id).onchange=async()=>{state[id]=['type','size','age','baseline'].includes(id)?+$(id).value:$(id).value;track('change_filter',{filter:id,value:String(state[id])});if(id==='type'&&isLand()){state.size=0;state.age=0;syncControls()}await ensureCells();render();if(['pref','line'].includes(id))fitVisible();changed()};
 $('period').oninput=()=>{state.period=+$('period').value;render();changed()};$('period').onchange=()=>track('change_period',{period:D.periods[state.period]});
 document.querySelectorAll('#metric button').forEach(b=>b.onclick=()=>{state.metric=b.dataset.v;track('change_view',{view:state.metric});syncControls();render();changed()});
 document.querySelectorAll('th button[data-sort]').forEach(b=>b.onclick=()=>{const k=b.dataset.sort;if(state.sortKey===k)state.sortDir*=-1;else{state.sortKey=k;state.sortDir=k==='name'||k==='pref'?1:-1}renderRanking();changed()});
