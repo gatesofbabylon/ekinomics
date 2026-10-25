@@ -27,6 +27,10 @@ body{margin:0;background:var(--page);color:var(--ink);font:14px/1.5 var(--sans);
 a{color:var(--link)}
 .eyebrow{font-size:12px;font-weight:600;letter-spacing:.32px;margin:0;color:var(--ink-2)}
 h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:0}
+/* Interface language: static text comes as an English and a Japanese span, and <html lang> shows one. Japanese text
+   takes Plex Sans JP, as Plex Serif has no Japanese. */
+html[lang="ja"] .l-en,html:not([lang="ja"]) .l-ja{display:none!important}
+html[lang="ja"] body,html[lang="ja"] h2,html[lang="ja"] h3,html[lang="ja"] .intro p{font-family:var(--ja)}
 h1{font-size:28px;line-height:1.15;margin:2px 0 0}
 h2{font-size:22px;line-height:1.2;margin:4px 0 8px}
 h3{font-size:18px;margin:20px 0 6px}
@@ -38,7 +42,8 @@ button:hover{background:var(--hover)}
 
 header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:20px 32px;border-bottom:1px solid var(--line)}
 .brand{display:flex;gap:14px;align-items:center}
-.symbol{background:var(--ink);color:var(--page);font:600 30px/1 var(--ja);padding:9px 10px}
+/* The 駅 mark: a fixed square with the glyph centred in it, whatever the font's own spacing. */
+.symbol{background:var(--ink);color:var(--page);font:600 30px/1 var(--ja);width:50px;height:50px;flex:none;display:flex;align-items:center;justify-content:center}
 .headtools{display:flex;align-items:center;gap:8px;flex-wrap:wrap;position:relative}
 .withicon{display:inline-flex;align-items:center;gap:7px}
 .toast{position:absolute;right:0;top:calc(100% + 8px);z-index:2000;background:var(--ink);color:var(--page);font-size:12px;padding:8px 12px;white-space:nowrap;max-width:90vw;overflow:hidden;text-overflow:ellipsis}
@@ -65,7 +70,7 @@ aside{border-left:1px solid var(--line);padding:22px;background:var(--surface)}
 label,.fieldlabel{display:flex;flex-direction:column;gap:5px;font-size:12px;color:var(--ink-2);letter-spacing:.32px}
 .field{display:flex;flex-direction:column;gap:5px}
 select{background:var(--field);color:var(--ink);border:0;border-bottom:1px solid var(--border);padding:8px 28px 8px 10px;max-width:250px}
-.linefilter{flex:1}
+.linefilter{flex:1;min-width:160px}
 .linefilter select{width:100%}
 
 .mapwrap{position:relative;height:540px;background:var(--water);display:flex;flex-direction:column}
@@ -146,8 +151,8 @@ td button .ja{display:block;font-size:11px;font-weight:400;color:var(--muted)}
 #results small{float:right;color:var(--muted)}
 #results .ja,#compareChips .ja,.leaflet-tooltip .ja{color:var(--muted);margin-left:3px}
 .stationtitle{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 12px;margin:4px 0 8px}
-.stationtitle .en{font:600 29px/1.15 var(--serif)}
-.stationtitle .ja{font-size:24px;font-weight:600}
+.stationtitle .nm{font:600 29px/1.15 var(--serif)}
+.stationtitle .nm[lang="ja"]{font:600 26px/1.2 var(--ja)}
 .linechips{color:var(--muted);font-size:12px;line-height:1.5;margin-bottom:20px;max-height:112px;overflow:auto}
 .linechips .ja{margin-left:3px}
 .bigprice{font:600 38px/1.1 var(--serif);margin:8px 0 0;font-variant-numeric:tabular-nums}
@@ -191,7 +196,9 @@ td button .ja{display:block;font-size:11px;font-weight:400;color:var(--muted)}
 .maplabel.place,.maplabel.pref{text-align:center;color:var(--ink-2)}
 .maplabel.place b{font:italic 400 11px/12px var(--serif)}
 .maplabel.pref b{font:600 13px/15px var(--serif);letter-spacing:2.5px}
-.maplabel.pref span{letter-spacing:2px;line-height:13px}
+.maplabel b[lang="ja"]{font-family:var(--ja)}
+.maplabel.place b[lang="ja"]{font-style:normal;font-weight:500}
+.maplabel.pref b[lang="ja"]{letter-spacing:2px}
 .leaflet-container{font-family:var(--sans)}
 .leaflet-tooltip{font:12px/1.5 var(--sans);background:var(--surface);color:var(--ink);border:1px solid var(--border);border-radius:0;box-shadow:none}
 .leaflet-tooltip-top:before{border-top-color:var(--border)}
@@ -212,7 +219,7 @@ dialog p{font-size:14px}
 @media(pointer:coarse){td button{display:block;width:100%;min-height:44px;padding:6px 0}#results button{padding:12px 10px}#compareChips button,.textbtn,.mapreset,.seg button{min-height:40px}.seg,.headtools>button{height:42px}.tool{width:40px;height:40px}input[type=range]{height:36px}.leaflet-touch .leaflet-bar a,.mapctl .tool{width:40px;height:40px;line-height:40px}}
 @media(min-width:1500px){main{grid-template-columns:minmax(0,1fr) 400px}.mapwrap{height:610px}}
 @media(max-width:1000px){main{grid-template-columns:minmax(0,1fr) 300px}.toolbar{gap:9px;padding:12px}.linefilter{flex:initial}.toolbar select{max-width:170px}.viewbar{flex-wrap:wrap}.viewbar p{margin:0;max-width:none}.intro{align-items:flex-start;flex-direction:column;gap:4px}}
-@media(max-width:720px){header{padding:16px}h1{font-size:23px}.symbol{font-size:24px}.headtools{width:100%}.withicon span{display:none}.toast{left:0;right:auto}
+@media(max-width:720px){header{padding:16px}h1{font-size:23px}.symbol{font-size:24px;width:42px;height:42px}.headtools{width:100%}.withicon span{display:none}.toast{left:0;right:auto}
 .intro{padding:12px 16px}.intro p{font-size:17px}.presets{padding:10px 16px}
 main{display:flex;flex-direction:column}.workspace{display:contents}.mobilebar{order:1}.toolbar{order:2}.mapwrap{order:3}.timebar{order:4}.viewbar{order:5}aside{order:6}.explore{order:7}
 .toolbar{display:none;grid-template-columns:1fr 1fr;padding:4px 16px 12px}.toolbar.open{display:grid}.toolbar select{max-width:none;width:100%}
@@ -237,14 +244,14 @@ aside{border-left:0;border-top:1px solid var(--line);padding:22px 16px}.explore{
 /* Place menu: one button naming the region; it opens the regions grouped by country, Japanese ones with their kanji name. */
 .places{position:relative}
 .picker{-webkit-appearance:none;appearance:none;height:34px;box-sizing:border-box;display:inline-flex;align-items:center;gap:10px;margin:0;padding:0 12px;border:1px solid var(--ink);background:var(--ink);color:var(--page);font:500 13px/1 var(--sans);cursor:pointer}
-.picker span[lang]{opacity:.75;font-weight:400;margin-left:3px}
+.picker span[lang]:not(.l-ja){opacity:.75;font-weight:400;margin-left:3px}
 .picker svg{flex:none;transition:transform .15s}.picker[aria-expanded="true"] svg{transform:rotate(180deg)}
 .placemenu{position:absolute;top:calc(100% + 4px);left:0;z-index:1100;min-width:260px;padding:4px 0 6px;background:var(--surface);border:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,.18)}
 .placemenu[hidden]{display:none}
 .placemenu p{margin:0;padding:10px 16px 4px;font-size:12px;font-weight:600;letter-spacing:.32px;color:var(--ink-2)}
 .placemenu a+p{margin-top:6px;border-top:1px solid var(--line);padding-top:12px}
 .placemenu a{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:9px 16px;font-size:14px;color:var(--ink);text-decoration:none}
-.placemenu a span{color:var(--muted);font-size:13px}
+.placemenu a span:not(.l-en):not(.l-ja){color:var(--muted);font-size:13px}
 .placemenu a:hover,.placemenu a:focus-visible{background:var(--hover)}
 .placemenu a[aria-current]{font-weight:600;box-shadow:inset 3px 0 0 var(--accent)}
 @media(pointer:coarse){.picker{height:42px}.placemenu a{padding:12px 16px}}

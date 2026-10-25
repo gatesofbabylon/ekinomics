@@ -2,7 +2,7 @@
 
 Station price atlas: https://ekinomics.com
 
-The price per m² of homes sold around every railway station, in two-year windows, for eleven regions:
+The price per m² of homes sold around every railway station, in two-year windows, for eleven regions. Every page can be read in English or Japanese (日本語); UK station and place names stay in English:
 
 | Region | Page | Covers | Years |
 |---|---|---|---|
@@ -20,7 +20,7 @@ The price per m² of homes sold around every railway station, in two-year window
 
 ## What the prices are
 
-**Japan** (in English and Japanese): observed medians from MLIT's real estate transaction price survey, in four views:
+**Japan**: observed medians from MLIT's real estate transaction price survey, in four views:
 
 - **All homes** (the default): apartments and houses combined.
 - **Apartments**: second-hand condominiums (中古マンション等), per m² of floor area.
