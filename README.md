@@ -2,20 +2,25 @@
 
 Station price atlas: https://ekinomics.com
 
-The price per m² of homes sold around every railway station, in two-year windows, for eighteen regions. Every page can be read in English or Japanese (日本語); UK station and place names stay in English:
+The price per m² of homes sold around every railway station, in two-year windows, for twenty-three regions. Every page can be read in English or Japanese (日本語); UK station and place names stay in English:
 
 | Region | Page | Covers | Years |
 |---|---|---|---|
 | Greater Tokyo 首都圏 | [ekinomics.com](https://ekinomics.com/) | Tokyo, Kanagawa, Saitama, Chiba, Ibaraki, Tochigi and Gunma | 2006–2025 |
 | Greater Osaka 関西圏 | [/osaka/](https://ekinomics.com/osaka/) | Osaka, Kyoto, Hyogo, Nara, Shiga and Wakayama | 2006–2025 |
 | Greater Nagoya 中京圏 | [/nagoya/](https://ekinomics.com/nagoya/) | Aichi, Gifu and Mie | 2006–2025 |
-| Greater Fukuoka 福岡県 | [/fukuoka/](https://ekinomics.com/fukuoka/) | Fukuoka prefecture, with Kitakyushu and Kurume | 2006–2025 |
+| Greater Fukuoka 福岡圏 | [/fukuoka/](https://ekinomics.com/fukuoka/) | Fukuoka prefecture, with Kitakyushu and Kurume | 2006–2025 |
 | Shizuoka 静岡県 | [/shizuoka/](https://ekinomics.com/shizuoka/) | Shizuoka prefecture, with Hamamatsu, Numazu and Fuji | 2006–2025 |
-| Greater Hiroshima 広島県 | [/hiroshima/](https://ekinomics.com/hiroshima/) | Hiroshima prefecture, with Fukuyama, Kure and Higashi-Hiroshima | 2006–2025 |
-| Greater Sendai 宮城県 | [/sendai/](https://ekinomics.com/sendai/) | Miyagi prefecture, with Ishinomaki | 2006–2025 |
-| Greater Okayama 岡山県 | [/okayama/](https://ekinomics.com/okayama/) | Okayama prefecture, with Kurashiki and Tsuyama | 2006–2025 |
-| Greater Kumamoto 熊本県 | [/kumamoto/](https://ekinomics.com/kumamoto/) | Kumamoto prefecture, with Yatsushiro | 2006–2025 |
-| Greater Naha 沖縄県 | [/naha/](https://ekinomics.com/naha/) | Okinawa Island and its Yui Rail monorail | 2006–2025 |
+| Greater Hiroshima 広島圏 | [/hiroshima/](https://ekinomics.com/hiroshima/) | Hiroshima prefecture, with Fukuyama, Kure and Higashi-Hiroshima | 2006–2025 |
+| Greater Sendai 仙台圏 | [/sendai/](https://ekinomics.com/sendai/) | Miyagi prefecture, with Ishinomaki | 2006–2025 |
+| Greater Okayama 岡山圏 | [/okayama/](https://ekinomics.com/okayama/) | Okayama prefecture, with Kurashiki and Tsuyama | 2006–2025 |
+| Greater Kumamoto 熊本圏 | [/kumamoto/](https://ekinomics.com/kumamoto/) | Kumamoto prefecture, with Yatsushiro | 2006–2025 |
+| Greater Naha 那覇圏 | [/naha/](https://ekinomics.com/naha/) | Okinawa Island and its Yui Rail monorail | 2006–2025 |
+| Hokkaido 北海道 | [/hokkaido/](https://ekinomics.com/hokkaido/) | All of Hokkaido: Sapporo, Asahikawa, Hakodate, Obihiro and Kushiro | 2006–2025 |
+| Hokuriku 北陸 | [/hokuriku/](https://ekinomics.com/hokuriku/) | Toyama, Ishikawa and Fukui: Kanazawa, Toyama, Fukui and Takaoka | 2006–2025 |
+| Shikoku 四国 | [/shikoku/](https://ekinomics.com/shikoku/) | Kagawa, Ehime and Kōchi: Takamatsu, Matsuyama and Kōchi | 2006–2025 |
+| Nagasaki 長崎県 | [/nagasaki/](https://ekinomics.com/nagasaki/) | Nagasaki prefecture, with Sasebo and Isahaya | 2006–2025 |
+| Greater Kagoshima 鹿児島圏 | [/kagoshima/](https://ekinomics.com/kagoshima/) | Kagoshima prefecture, with Kirishima | 2006–2025 |
 | Greater London | [/london/](https://ekinomics.com/london/) | Greater London and the commuter belt: Kent, Essex, Hertfordshire, Bedfordshire, Buckinghamshire, Berkshire, Surrey, East and West Sussex, Hampshire, Oxfordshire and Cambridgeshire | 2006–2023 |
 | Greater Birmingham | [/birmingham/](https://ekinomics.com/birmingham/) | The West Midlands county and its commuter belt: Warwickshire, Worcestershire and Staffordshire | 2006–2023 |
 | Greater Bristol | [/bristol/](https://ekinomics.com/bristol/) | Bristol, Bath and North East Somerset, South Gloucestershire and North Somerset | 2006–2023 |

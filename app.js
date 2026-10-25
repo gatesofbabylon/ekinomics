@@ -9,8 +9,8 @@ const DEFAULTS={period:9,type:0,size:0,age:0,pref:'',line:'',metric:'price',base
 // Japanese operators by group. Third-sector companies are part-owned by prefectures or municipalities (第三セクター);
 // everything not listed is a private railway.
 const LINE_GROUPS=[['grp:jr','All JR lines','すべてのJR線'],['grp:subway','All subway and municipal lines','すべての地下鉄・公営線'],['grp:third','All third-sector lines','すべての第三セクター線'],['grp:private','All private railways','すべての私鉄']],
-  JR_OPS=['東日本旅客鉄道','東海旅客鉄道','西日本旅客鉄道','九州旅客鉄道','四国旅客鉄道','JR東海交通事業'],SUBWAY_OPS=['東京地下鉄','東京都','横浜市','大阪市高速電気軌道','京都市','神戸市','名古屋市','福岡市','こうべ未来都市機構','仙台市','熊本市'],
-  THIRD_OPS=['いすみ鉄道','くま川鉄道','井原鉄道','仙台空港鉄道','南阿蘇鉄道','広島高速交通','水島臨海鉄道','沖縄都市モノレール','肥薩おれんじ鉄道','阿武隈急行','ひたちなか海浜鉄道','ゆりかもめ','わたらせ渓谷鐵道','北総鉄道','千葉都市モノレール','埼玉新都市交通','埼玉高速鉄道','多摩都市モノレール','宇都宮ライトレール','東京臨海高速鉄道','東葉高速鉄道','横浜シーサイドライン','横浜高速鉄道','真岡鐵道','芝山鉄道','野岩鉄道','首都圏新都市鉄道','鹿島臨海鉄道',
+  JR_OPS=['東日本旅客鉄道','東海旅客鉄道','西日本旅客鉄道','九州旅客鉄道','四国旅客鉄道','北海道旅客鉄道','JR東海交通事業'],SUBWAY_OPS=['東京地下鉄','東京都','横浜市','大阪市高速電気軌道','京都市','神戸市','名古屋市','福岡市','こうべ未来都市機構','仙台市','熊本市','札幌市','函館市','鹿児島市','一般社団法人札幌市交通事業振興公社'],
+  THIRD_OPS=['いすみ鉄道','あいの風とやま鉄道','IRいしかわ鉄道','ハピラインふくい','のと鉄道','万葉線','えちぜん鉄道','道南いさりび鉄道','土佐くろしお鉄道','阿佐海岸鉄道','松浦鉄道','とさでん交通','くま川鉄道','井原鉄道','仙台空港鉄道','南阿蘇鉄道','広島高速交通','水島臨海鉄道','沖縄都市モノレール','肥薩おれんじ鉄道','阿武隈急行','ひたちなか海浜鉄道','ゆりかもめ','わたらせ渓谷鐵道','北総鉄道','千葉都市モノレール','埼玉新都市交通','埼玉高速鉄道','多摩都市モノレール','宇都宮ライトレール','東京臨海高速鉄道','東葉高速鉄道','横浜シーサイドライン','横浜高速鉄道','真岡鐵道','芝山鉄道','野岩鉄道','首都圏新都市鉄道','鹿島臨海鉄道',
     '信楽高原鐵道','北条鉄道','大阪モノレール','智頭急行','神戸新交通','伊勢鉄道','名古屋ガイドウェイバス','名古屋臨海高速鉄道','四日市あすなろう鉄道','天竜浜名湖鉄道','愛知環状鉄道','愛知高速交通','明知鉄道','樽見鉄道','長良川鉄道','伊賀鉄道','平成筑豊鉄道','甘木鉄道','北九州高速鉄道'],
   lineGroup=l=>{const op=l.split(' / ')[0];return JR_OPS.includes(op)?'grp:jr':SUBWAY_OPS.includes(op)?'grp:subway':THIRD_OPS.includes(op)?'grp:third':'grp:private'},LINE_GROUP={};
 let showText=true;
@@ -134,6 +134,27 @@ EDITIONS.naha={...EDITIONS.fukuoka,priceBreaks:[300000, 350000, 400000, 450000, 
   cities:[{key:'naha',label:'Naha',ja:'那覇',box:[[26.2, 127.67], [26.23, 127.71]],home:'おもろまち'},{key:'shuri',label:'Shuri',ja:'首里',box:[[26.21, 127.71], [26.23, 127.74]],home:'首里'}],headline:japanHeadline({en:'Okinawa Island',ja:'沖縄本島'}),
   scope:{en:"The map shows Okinawa Island. The prefecture's only railway is the Yui Rail monorail, through Naha and Urasoe.",ja:'地図は沖縄本島を表示します。県内唯一の鉄道は、那覇と浦添を走るゆいレールです。'},
   presets:japanPresets({en:'Cheapest on Yui Rail',ja:'ゆいレールで価格の安い駅'},'沖縄都市モノレール / 沖縄都市モノレール線')};
+// Region pages added 2026-10-25 (Hokkaido, Hokuriku, Shikoku, Nagasaki) and Greater Kagoshima; Shikoku opens on Takamatsu.
+EDITIONS.hokkaido={...EDITIONS.fukuoka,priceBreaks:[30000, 50000, 80000, 130000, 200000, 300000],landBreaks:[4000, 7000, 15000, 35000, 65000, 120000],home:'札幌',view:[43.06, 141.35, 11],homeBox:[[43.0, 141.25], [43.12, 141.45]],
+  cities:[{key:'sapporo',label:'Sapporo',ja:'札幌',box:[[43.03, 141.3], [43.1, 141.4]],home:'札幌'},{key:'asahikawa',label:'Asahikawa',ja:'旭川',box:[[43.74, 142.32], [43.79, 142.4]],home:'旭川'},{key:'hakodate',label:'Hakodate',ja:'函館',box:[[41.75, 140.7], [41.8, 140.78]],home:'函館'},{key:'obihiro',label:'Obihiro',ja:'帯広',box:[[42.9, 143.17], [42.94, 143.23]],home:'帯広'},{key:'kushiro',label:'Kushiro',ja:'釧路',box:[[42.97, 144.35], [43.01, 144.41]],home:'釧路'}],headline:japanHeadline({en:'Hokkaido',ja:'北海道'}),
+  scope:{en:"The map shows all of Hokkaido: Sapporo, Asahikawa, Hakodate, Obihiro, Kushiro and the towns between them.",ja:'地図は北海道全域（札幌・旭川・函館・帯広・釧路など）を表示します。'},
+  presets:japanPresets({en:'Cheapest on the Tōzai Line',ja:'東西線で価格の安い駅'},'札幌市 / 東西線')};
+EDITIONS.hokuriku={...EDITIONS.fukuoka,priceBreaks:[25000, 40000, 75000, 110000, 140000, 200000],landBreaks:[12000, 18000, 25000, 32000, 40000, 55000],home:'金沢',view:[36.57, 136.65, 11],homeBox:[[36.5, 136.55], [36.64, 136.75]],
+  cities:[{key:'kanazawa',label:'Kanazawa',ja:'金沢',box:[[36.54, 136.6], [36.6, 136.69]],home:'金沢'},{key:'toyama',label:'Toyama',ja:'富山',box:[[36.67, 137.18], [36.73, 137.25]],home:'富山'},{key:'fukui',label:'Fukui',ja:'福井',box:[[36.04, 136.19], [36.09, 136.25]],home:'福井'},{key:'takaoka',label:'Takaoka',ja:'高岡',box:[[36.72, 136.99], [36.76, 137.05]],home:'高岡'}],headline:japanHeadline({en:'Toyama, Ishikawa, Fukui',ja:'富山・石川・福井'}),
+  scope:{en:"The map shows Toyama, Ishikawa and Fukui: Kanazawa, Toyama, Fukui, Takaoka and the towns around them.",ja:'地図は富山・石川・福井（金沢・富山・福井・高岡とその周辺）を表示します。'},
+  presets:japanPresets({en:'Cheapest on the Ainokaze Toyama Railway',ja:'あいの風とやま鉄道線で価格の安い駅'},'あいの風とやま鉄道 / あいの風とやま鉄道線')};
+EDITIONS.shikoku={...EDITIONS.fukuoka,priceBreaks:[40000, 60000, 90000, 140000, 180000, 230000],landBreaks:[15000, 20000, 30000, 40000, 60000, 90000],home:'高松',view:[34.34, 134.04, 11],homeBox:[[34.28, 133.97], [34.4, 134.12]],
+  cities:[{key:'takamatsu',label:'Takamatsu',ja:'高松',box:[[34.32, 134.02], [34.36, 134.08]],home:'高松'},{key:'matsuyama',label:'Matsuyama',ja:'松山',box:[[33.82, 132.73], [33.86, 132.79]],home:'本町六丁目'},{key:'kochi',label:'Kōchi',ja:'高知',box:[[33.54, 133.51], [33.58, 133.57]],home:'高知'}],headline:japanHeadline({en:'Kagawa, Ehime, Kōchi',ja:'香川・愛媛・高知'}),
+  scope:{en:"The map shows Kagawa, Ehime and Kōchi: Takamatsu, Matsuyama, Kōchi and the towns around them. Tokushima is not included yet.",ja:'地図は香川・愛媛・高知（高松・松山・高知とその周辺）を表示します。徳島県はまだ含みません。'},
+  presets:japanPresets({en:'Cheapest on the Yosan Line',ja:'予讃線で価格の安い駅'},'四国旅客鉄道 / 予讃線')};
+EDITIONS.nagasaki={...EDITIONS.fukuoka,priceBreaks:[50000, 80000, 120000, 150000, 190000, 230000],landBreaks:[15000, 25000, 30000, 40000, 50000, 60000],home:'長崎',view:[32.76, 129.87, 12],homeBox:[[32.7, 129.82], [32.82, 129.93]],
+  cities:[{key:'nagasaki',label:'Nagasaki',ja:'長崎',box:[[32.73, 129.85], [32.79, 129.89]],home:'長崎'},{key:'sasebo',label:'Sasebo',ja:'佐世保',box:[[33.15, 129.71], [33.18, 129.75]],home:'佐世保'},{key:'isahaya',label:'Isahaya',ja:'諫早',box:[[32.83, 130.02], [32.87, 130.06]],home:'諫早'}],headline:japanHeadline({en:'Nagasaki prefecture',ja:'長崎県'}),
+  scope:{en:"The map shows Nagasaki prefecture: Nagasaki, Sasebo, Isahaya and the towns around them.",ja:'地図は長崎県（長崎・佐世保・諫早とその周辺）を表示します。'},
+  presets:japanPresets({en:'Cheapest on the Nagasaki Line',ja:'長崎線で価格の安い駅'},'九州旅客鉄道 / 長崎線')};
+EDITIONS.kagoshima={...EDITIONS.fukuoka,priceBreaks:[30000, 50000, 75000, 100000, 130000, 200000],landBreaks:[6000, 10000, 15000, 20000, 30000, 80000],home:'鹿児島中央',view:[31.58, 130.54, 12],homeBox:[[31.52, 130.48], [31.64, 130.6]],
+  cities:[{key:'kagoshima',label:'Kagoshima',ja:'鹿児島',box:[[31.55, 130.52], [31.61, 130.58]],home:'鹿児島中央'},{key:'kirishima',label:'Kirishima',ja:'霧島',box:[[31.73, 130.75], [31.76, 130.78]],home:'国分'}],headline:japanHeadline({en:'Kagoshima prefecture',ja:'鹿児島県'}),
+  scope:{en:"The map shows Kagoshima prefecture: Kagoshima, Kirishima and the towns around them.",ja:'地図は鹿児島県（鹿児島・霧島とその周辺）を表示します。'},
+  presets:japanPresets({en:'Cheapest on the Ibusuki Makurazaki Line',ja:'指宿枕崎線で価格の安い駅'},'九州旅客鉄道 / 指宿枕崎線')};
 let E=EDITIONS.tokyo,PRICE_BREAKS,COUNT_BREAKS;
 const isLand=()=>E.landType!=null&&state.type===E.landType,priceBreaks=()=>isLand()&&E.landBreaks?E.landBreaks:PRICE_BREAKS;const GROWTH_BREAKS=[0,25,50,100],RANK_MIN=30,FULL_MIN=10,EMPTY=[0,null,null,null,null,null,null];
 // Source records across the apartment and house-and-land extracts of the shown prefectures.
