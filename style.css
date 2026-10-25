@@ -284,7 +284,7 @@ html:not([lang="ja"]) .placemenu .mgroup[data-c="uk"]>p,html[lang="ja"] .placeme
 .hmap[data-c="jp"]{flex:520 1 0;max-width:540px}.hmap[data-c="uk"]{flex:360 1 0;max-width:380px}.hmap svg{width:100%}
 html[lang="ja"] .hmap[data-c="jp"],html:not([lang="ja"]) .hmap[data-c="uk"]{order:-1}
 .hmap svg{max-width:100%;height:auto}.hmap .hout{fill:var(--land-out);stroke:var(--page);stroke-width:.6}.hmap .hin{fill:var(--land);stroke:var(--land-edge);stroke-width:.4}
-.hmap .hinset{fill:none;stroke:var(--border)}.hmap circle{stroke:var(--page);stroke-width:1.2}.hmap a:hover circle,.hmap a:focus circle{stroke:var(--ink);stroke-width:2}
+.hmap .hinset{fill:none;stroke:var(--border)}.hmap circle{stroke:var(--page);stroke-width:1.2}.hmap circle.hsub{stroke-width:.8}.hmap a:hover circle,.hmap a:focus circle{stroke:var(--ink);stroke-width:2}
 .hmap .hlab text{font:11px var(--sans);fill:var(--ink-2);paint-order:stroke;stroke:var(--water);stroke-width:3px}
 .g0{--gc:var(--g0)}.g1{--gc:var(--g1)}.g2{--gc:var(--g2)}.g3{--gc:var(--g3)}.g4{--gc:var(--g4)}.gx{--gc:var(--muted)}
 .hmap circle,.hlegend i{fill:var(--gc);background:var(--gc)}
