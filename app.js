@@ -9,9 +9,9 @@ const DEFAULTS={period:9,type:0,size:0,age:0,pref:'',line:'',metric:'price',base
 // Japanese operators by group. Third-sector companies are part-owned by prefectures or municipalities (第三セクター);
 // everything not listed is a private railway.
 const LINE_GROUPS=[['grp:jr','All JR lines','すべてのJR線'],['grp:subway','All subway and municipal lines','すべての地下鉄・公営線'],['grp:third','All third-sector lines','すべての第三セクター線'],['grp:private','All private railways','すべての私鉄']],
-  JR_OPS=['東日本旅客鉄道','東海旅客鉄道','西日本旅客鉄道','JR東海交通事業'],SUBWAY_OPS=['東京地下鉄','東京都','横浜市','大阪市高速電気軌道','京都市','神戸市','名古屋市','こうべ未来都市機構'],
+  JR_OPS=['東日本旅客鉄道','東海旅客鉄道','西日本旅客鉄道','九州旅客鉄道','JR東海交通事業'],SUBWAY_OPS=['東京地下鉄','東京都','横浜市','大阪市高速電気軌道','京都市','神戸市','名古屋市','福岡市','こうべ未来都市機構'],
   THIRD_OPS=['いすみ鉄道','ひたちなか海浜鉄道','ゆりかもめ','わたらせ渓谷鐵道','北総鉄道','千葉都市モノレール','埼玉新都市交通','埼玉高速鉄道','多摩都市モノレール','宇都宮ライトレール','東京臨海高速鉄道','東葉高速鉄道','横浜シーサイドライン','横浜高速鉄道','真岡鐵道','芝山鉄道','野岩鉄道','首都圏新都市鉄道','鹿島臨海鉄道',
-    '信楽高原鐵道','北条鉄道','大阪モノレール','智頭急行','神戸新交通','伊勢鉄道','名古屋ガイドウェイバス','名古屋臨海高速鉄道','四日市あすなろう鉄道','天竜浜名湖鉄道','愛知環状鉄道','愛知高速交通','明知鉄道','樽見鉄道','長良川鉄道','伊賀鉄道'],
+    '信楽高原鐵道','北条鉄道','大阪モノレール','智頭急行','神戸新交通','伊勢鉄道','名古屋ガイドウェイバス','名古屋臨海高速鉄道','四日市あすなろう鉄道','天竜浜名湖鉄道','愛知環状鉄道','愛知高速交通','明知鉄道','樽見鉄道','長良川鉄道','伊賀鉄道','平成筑豊鉄道','甘木鉄道','北九州高速鉄道'],
   lineGroup=l=>{const op=l.split(' / ')[0];return JR_OPS.includes(op)?'grp:jr':SUBWAY_OPS.includes(op)?'grp:subway':THIRD_OPS.includes(op)?'grp:third':'grp:private'},LINE_GROUP={};
 let showText=true;
 let D,map,railLayer,landLayer,homeBounds,markers=[],selected=null,compare=[],state={...DEFAULTS},activePreset='';
@@ -104,6 +104,11 @@ EDITIONS.nagoya={...EDITIONS.osaka,priceBreaks:[150000,200000,300000,400000,5500
   cities:[{key:'nagoya',label:'Nagoya',ja:'名古屋',box:[[35.10,136.84],[35.22,136.98]],home:'名古屋'},{key:'toyota',label:'Toyota',ja:'豊田',box:[[35.03,137.10],[35.13,137.20]],home:'豊田市'}],headline:japanHeadline({en:'Aichi, Gifu, Mie',ja:'愛知・岐阜・三重'}),
   scope:{en:'The map shows Aichi, Gifu and Mie.',ja:'地図は愛知・岐阜・三重を表示します。'},
   presets:japanPresets({en:'Cheapest on the Higashiyama Line',ja:'東山線で価格の安い駅'},'名古屋市 / 1号線東山線')};
+// Greater Fukuoka: all of Fukuoka prefecture, opening on Fukuoka city; Kitakyushu and Kurume are Go-to links.
+EDITIONS.fukuoka={...EDITIONS.osaka,priceBreaks:[100000,150000,200000,300000,400000,550000],landBreaks:[20000,40000,60000,90000,150000,250000],home:'博多',view:[33.59,130.4,11],homeBox:[[33.53,130.30],[33.66,130.46]],
+  cities:[{key:'fukuoka',label:'Fukuoka',ja:'福岡',box:[[33.55,130.33],[33.63,130.45]],home:'博多'},{key:'kitakyushu',label:'Kitakyushu',ja:'北九州',box:[[33.83,130.80],[33.92,130.92]],home:'小倉'},{key:'kurume',label:'Kurume',ja:'久留米',box:[[33.29,130.48],[33.34,130.55]],home:'久留米'}],headline:japanHeadline({en:'Fukuoka prefecture',ja:'福岡県'}),
+  scope:{en:'The map shows Fukuoka prefecture: Fukuoka, Kitakyushu, Kurume and the towns around them.',ja:'地図は福岡県（福岡・北九州・久留米とその周辺）を表示します。'},
+  presets:japanPresets({en:'Cheapest on the Kūkō Line',ja:'空港線で価格の安い駅'},'福岡市 / 1号線(空港線)')};
 let E=EDITIONS.tokyo,PRICE_BREAKS,COUNT_BREAKS;
 const isLand=()=>E.landType!=null&&state.type===E.landType,priceBreaks=()=>isLand()&&E.landBreaks?E.landBreaks:PRICE_BREAKS;const GROWTH_BREAKS=[0,25,50,100],RANK_MIN=30,FULL_MIN=10,EMPTY=[0,null,null,null,null,null,null];
 // Source records across the apartment and house-and-land extracts of the shown prefectures.
