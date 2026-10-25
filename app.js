@@ -1,10 +1,13 @@
 'use strict';
 const $=id=>document.getElementById(id), fmt=n=>n==null?'—':Math.round(n).toLocaleString('en-US'), esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const DEFAULTS={period:9,type:0,size:0,age:0,pref:'',line:'',metric:'price',baseline:4,sortKey:'price',sortDir:-1};
-// Japanese operators by group; everything not listed is private or third-sector.
-const LINE_GROUPS=[['grp:jr','All JR lines'],['grp:subway','All subway and municipal lines'],['grp:private','All private railways']],
-  JR_OPS=['東日本旅客鉄道','東海旅客鉄道','西日本旅客鉄道','JR東海交通事業'],SUBWAY_OPS=['東京地下鉄','東京都','横浜市','大阪市高速電気軌道','京都市','神戸市','名古屋市'],
-  lineGroup=l=>{const op=l.split(' / ')[0];return JR_OPS.includes(op)?'grp:jr':SUBWAY_OPS.includes(op)?'grp:subway':'grp:private'},LINE_GROUP={};
+// Japanese operators by group. Third-sector companies are part-owned by prefectures or municipalities (第三セクター);
+// everything not listed is a private railway.
+const LINE_GROUPS=[['grp:jr','All JR lines'],['grp:subway','All subway and municipal lines'],['grp:third','All third-sector lines'],['grp:private','All private railways']],
+  JR_OPS=['東日本旅客鉄道','東海旅客鉄道','西日本旅客鉄道','JR東海交通事業'],SUBWAY_OPS=['東京地下鉄','東京都','横浜市','大阪市高速電気軌道','京都市','神戸市','名古屋市','こうべ未来都市機構'],
+  THIRD_OPS=['いすみ鉄道','ひたちなか海浜鉄道','ゆりかもめ','わたらせ渓谷鐵道','北総鉄道','千葉都市モノレール','埼玉新都市交通','埼玉高速鉄道','多摩都市モノレール','宇都宮ライトレール','東京臨海高速鉄道','東葉高速鉄道','横浜シーサイドライン','横浜高速鉄道','真岡鐵道','芝山鉄道','野岩鉄道','首都圏新都市鉄道','鹿島臨海鉄道',
+    '信楽高原鐵道','北条鉄道','大阪モノレール','智頭急行','神戸新交通','伊勢鉄道','名古屋ガイドウェイバス','名古屋臨海高速鉄道','四日市あすなろう鉄道','天竜浜名湖鉄道','愛知環状鉄道','愛知高速交通','明知鉄道','樽見鉄道','長良川鉄道','伊賀鉄道'],
+  lineGroup=l=>{const op=l.split(' / ')[0];return JR_OPS.includes(op)?'grp:jr':SUBWAY_OPS.includes(op)?'grp:subway':THIRD_OPS.includes(op)?'grp:third':'grp:private'},LINE_GROUP={};
 let showText=true;
 let D,map,railLayer,landLayer,homeBounds,markers=[],selected=null,compare=[],state={...DEFAULTS},activePreset='';
 const tableView={station:false,compare:false};
@@ -27,7 +30,7 @@ tokyo:{ja:true,cur:'¥',priceBreaks:[300000,450000,600000,800000,1000000,1500000
   // Starting view: the urban core (south-west and north-east corners); everything else stays on the map, off-screen at first.
   homeBox:[[35.34,139.42],[35.90,140.13]],
   // "Go to" cities: each opens the map on its core ([south-west], [north-east]) and selects its main station; ?focus= keeps the choice in links.
-  cities:[{key:'tokyo',label:'Tokyo',box:[[35.55,139.60],[35.80,139.92]],home:'新宿'},{key:'yokohama',label:'Yokohama',box:[[35.36,139.50],[35.58,139.72]],home:'横浜'},{key:'kawasaki',label:'Kawasaki',box:[[35.51,139.55],[35.62,139.76]],home:'川崎'},{key:'saitama',label:'Saitama',box:[[35.82,139.56],[35.97,139.74]],home:'大宮'},{key:'chiba',label:'Chiba',box:[[35.56,140.04],[35.70,140.18]],home:'千葉'}],landBreaks:[50000,100000,200000,300000,500000,800000],mixLabels:['Apartments','Houses'],view:[36,139.7,8],
+  cities:[{key:'tokyo',label:'Tokyo',box:[[35.55,139.60],[35.80,139.92]],home:'新宿'},{key:'yokohama',label:'Yokohama',box:[[35.36,139.50],[35.58,139.72]],home:'横浜'},{key:'kawasaki',label:'Kawasaki',box:[[35.51,139.55],[35.62,139.76]],home:'川崎'},{key:'saitama',label:'Saitama',box:[[35.82,139.56],[35.97,139.74]],home:'大宮'},{key:'chiba',label:'Chiba',box:[[35.56,140.04],[35.70,140.18]],home:'千葉'}],landBreaks:[50000,100000,200000,300000,500000,800000],mixLabels:['Apartments','Houses'],view:[36,139.7,8],homeBox:[[35.35,139.45],[35.95,140.2]],
   stats:[['Median age at sale',v=>`${fmt(v)} years`,'Median age at sale'],['Median station walk',v=>`${fmt(v)} min`,'Median walk (min)']],
   note:'Gaps mean fewer than 5 sales; hollow points are indicative (5–9 sales). Age and walking-time summaries use known numeric values. Prices reflect the mix of homes sold.',pooled:'Nearby same-name platforms are pooled into one price area.',
   legend:()=>['Home','Apartment','House','Land'][state.type]+(state.type===3?' price per m² of plot (¥)':' price per m² (¥)'),attribution:'Geography: <a href="https://nlftp.mlit.go.jp/ksj/">MLIT</a> (adapted, CC BY 4.0)',
@@ -41,7 +44,7 @@ london:{ja:false,cur:'£',
   stats:[['New builds',v=>`${fmt(v)}%`,'New-build share %'],['Median distance to station',v=>`${fmt(v)} m`,'Median distance to station (m)']],
   note:'Gaps mean fewer than 5 sales; hollow points are indicative (5–9 sales). Each sale counts at the nearest station within 1.2 km of its postcode. Prices reflect the mix of homes sold.',pooled:'Stations of one interchange share one price area.',noSales:'No home is nearer this station than another one, so it has no sales of its own.',
   legend:()=>['Home','Flat','Terraced house','Semi-detached house','Detached house'][state.type]+' price per m² (£)',
-  attribution:'Contains OS data © Crown copyright and database right 2024 · Powered by TfL Open Data',
+  attribution:'Contains OS data © Crown copyright and database right 2026 · Powered by TfL Open Data',
   headline:()=>`${fmt(D.coverage.counts.in_windows)} sales with floor areas · ${fmt(D.stations.length)} stations · London and the commuter belt`,
   presets:[['Biggest risers since 2014–15',{metric:'growth',baseline:4,sortKey:'change',sortDir:-1}],['Flats only',{type:1}],['Terraced houses',{type:2}],['Built before 1900',{age:1}],['Cheapest on the Elizabeth line',{line:'elizabeth',sortKey:'price',sortDir:1}],['Busiest markets',{metric:'count',sortKey:'sales',sortDir:-1}]]}};
 // Greater Osaka uses the same MLIT survey and layout as Tokyo; only its framing and price breaks differ.
