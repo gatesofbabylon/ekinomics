@@ -255,7 +255,13 @@ aside{border-left:0;border-top:1px solid var(--line);padding:22px 16px}.explore{
 .placemenu a span:not(.l-en):not(.l-ja){color:var(--muted);font-size:13px}
 .placemenu a:hover,.placemenu a:focus-visible{background:var(--hover)}
 .placemenu a[aria-current]{font-weight:600;box-shadow:inset 3px 0 0 var(--accent)}
-@media(pointer:coarse){.picker{height:42px}.placemenu a{padding:12px 16px}}
+/* City menu: one row per map, its cities on the left and the map's region as a grey tag; a shared row means a shared map and colour scale. */
+.placemenu{min-width:320px}.placemenu .mrow{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:3px 12px;border-top:1px solid var(--line)}
+.placemenu p+.mrow{border-top:0}.placemenu .mrow+p{margin-top:6px;border-top:1px solid var(--line);padding-top:12px}
+.placemenu .mcities{display:flex;flex-wrap:wrap;align-items:baseline}.placemenu .mcities i{font-style:normal;color:var(--muted)}
+.placemenu .mcities a{display:inline-block;padding:6px 4px;font-weight:500}.placemenu .mcities a[aria-current]{font-weight:600;box-shadow:inset 0 -2px 0 var(--accent)}
+.placemenu .mtag{flex:none;font-size:12px;color:var(--muted);text-align:right}
+@media(pointer:coarse){.picker{height:42px}.placemenu a{padding:12px 16px}.placemenu .mcities a{padding:10px 6px}}
 @media(max-width:720px){.places{flex:1 1 100%}.picker{width:100%;justify-content:space-between}.placemenu{right:0}}
 .goto{display:flex;align-items:center;gap:8px;padding:0 24px 12px;flex-wrap:wrap;background:var(--surface)}.goto[hidden]{display:none}.goto>span{font-size:12px;font-weight:600;color:var(--ink-2);margin-right:4px}
 .goto button{-webkit-appearance:none;appearance:none;border:1px solid var(--border);background:var(--surface);color:var(--ink-2);font-size:13px;font-weight:500;padding:0 12px;height:30px;line-height:1}.goto button[aria-pressed="true"]{background:var(--ink);color:var(--page);border-color:var(--ink)}
