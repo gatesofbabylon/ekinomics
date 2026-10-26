@@ -2,7 +2,7 @@
 
 Station price atlas: https://ekinomics.com
 
-The price per m² of homes sold around every railway station, in two-year windows, for 37 cities on 23 maps, starting from the homepage at [ekinomics.com](https://ekinomics.com/), which maps every city's price change since 2014–15. Every page can be read in English or Japanese (日本語); UK station and place names stay in English:
+The price per m² of homes sold around every railway station (per home in Scotland), in two-year windows, for 39 cities on 24 maps, starting from the homepage at [ekinomics.com](https://ekinomics.com/), which maps every city's price change since 2014–15. Every page can be read in English or Japanese (日本語); UK station and place names stay in English:
 
 | Cities | Map | Covers | Years |
 |---|---|---|---|
@@ -24,6 +24,7 @@ The price per m² of homes sold around every railway station, in two-year window
 | London, Brighton | [/london/](https://ekinomics.com/london/) | Greater London and the commuter belt: Kent, Essex, Hertfordshire, Bedfordshire, Buckinghamshire, Berkshire, Surrey, East and West Sussex, Hampshire, Oxfordshire and Cambridgeshire | 2006–2023 |
 | Birmingham | [/birmingham/](https://ekinomics.com/birmingham/) | The West Midlands county and its commuter belt: Warwickshire, Worcestershire and Staffordshire | 2006–2023 |
 | Leeds, Sheffield | [/yorkshire/](https://ekinomics.com/yorkshire/) | West, South and North Yorkshire, York, Hull and the East Riding | 2006–2023 |
+| Glasgow, Edinburgh | [/scotland/](https://ekinomics.com/scotland/) | The Glasgow and Edinburgh city regions (including Fife and the Scottish Borders) and Falkirk | 2006–2023 |
 | Manchester, Liverpool | [/northwest/](https://ekinomics.com/northwest/) | Greater Manchester, Merseyside, Cheshire, Lancashire and High Peak | 2006–2023 |
 | Bristol | [/bristol/](https://ekinomics.com/bristol/) | Bristol, Bath and North East Somerset, South Gloucestershire and North Somerset | 2006–2023 |
 | Cardiff | [/southwales/](https://ekinomics.com/southwales/) | Cardiff Capital Region, Swansea and Neath Port Talbot | 2006–2023 |
@@ -40,6 +41,8 @@ The price per m² of homes sold around every railway station, in two-year window
 - **Land**: residential plots, per m² of plot area.
 
 **United Kingdom** (England and Wales): observed medians from HM Land Registry standard sales, per m² of floor area from Energy Performance Certificates. Shown for all homes, flats, terraced, semi-detached and detached. Each sale counts at the nearest station within 1.2 km of its postcode.
+
+**Scotland**: Registers of Scotland publish sales by data zone (small areas of 500 to 1,000 residents), not individual sales with floor areas, so the Glasgow and Edinburgh map shows the median price per home: each data zone counts at the nearest station within 1.2 km of its population-weighted centre, and a station's price is the median of its zones' medians, each counted once per sale. These prices are not comparable with the per-m² maps.
 
 A price needs at least 5 sales in a window; prices from 5–9 sales are marked indicative. These are observed medians, not quality-adjusted price indices: a change can reflect a different mix of homes sold.
 
@@ -58,6 +61,7 @@ This repository holds only the built static site; GitHub Pages serves it as-is.
 - Contains HM Land Registry data © Crown copyright and database right 2024. This data is licensed under the Open Government Licence v3.0.
 - Floor areas: Chi, Dennett, Oléron-Evans and Morphet (2025), [House Price Per Square Metre in England and Wales, 1995–2024](https://doi.org/10.5255/UKDA-SN-857911), UK Data Service, CC BY 4.0, which links Land Registry sales to Energy Performance Certificates (MHCLG, Open Government Licence).
 - Postcodes and boundaries: Office for National Statistics, Open Government Licence; contains OS data © Crown copyright and database right 2024, Royal Mail data © Royal Mail copyright and database right 2024 and GeoPlace data © Local Government Information House Limited copyright and database right 2024.
+- Scotland: contains Registers of Scotland data © Crown copyright and database right 2026, licensed under the Open Government Licence v3.0; data zone centroids: Scottish Government, Open Government Licence.
 - Stations: NaPTAN, Department for Transport, Open Government Licence.
 - Rail lines: Powered by TfL Open Data; contains OS data © Crown copyright and database rights 2016 and Geomni UK Map data © and database rights [2019].
 - Metrolink: contains Transport for Greater Manchester data (Open Government Licence).
