@@ -2,7 +2,7 @@
 
 Station price atlas: https://ekinomics.com
 
-The price per m² of homes sold around every railway station (per home in Scotland), in two-year windows, for 39 cities on 24 maps, starting from the homepage at [ekinomics.com](https://ekinomics.com/), which maps every city's price change since 2014–15. Every page can be read in English or Japanese (日本語); UK station and place names stay in English:
+The price per m² of homes sold around every railway station (per home in Scotland), in two-year windows, for 43 cities on 26 maps, starting from the homepage at [ekinomics.com](https://ekinomics.com/), which maps every city's price change since 2014–15. Every page can be read in English or Japanese (日本語); UK station and place names stay in English:
 
 | Cities | Map | Covers | Years |
 |---|---|---|---|
@@ -21,11 +21,13 @@ The price per m² of homes sold around every railway station (per home in Scotla
 | Kanazawa, Toyama, Fukui 金沢・富山・福井 | [/hokuriku/](https://ekinomics.com/hokuriku/) | Toyama, Ishikawa and Fukui: Kanazawa, Toyama, Fukui and Takaoka | 2006–2025 |
 | Nagasaki 長崎 | [/nagasaki/](https://ekinomics.com/nagasaki/) | Nagasaki prefecture, with Sasebo and Isahaya | 2006–2025 |
 | Naha 那覇 | [/naha/](https://ekinomics.com/naha/) | Okinawa Island and its Yui Rail monorail | 2006–2025 |
-| London, Brighton | [/london/](https://ekinomics.com/london/) | Greater London and the commuter belt: Kent, Essex, Hertfordshire, Bedfordshire, Buckinghamshire, Berkshire, Surrey, East and West Sussex, Hampshire, Oxfordshire and Cambridgeshire | 2006–2023 |
+| London, Brighton | [/london/](https://ekinomics.com/london/) | Greater London and the commuter belt: Kent, Essex, Hertfordshire, Bedfordshire, Buckinghamshire, Berkshire, Surrey, East and West Sussex, north Hampshire, Oxfordshire and Cambridgeshire | 2006–2023 |
 | Birmingham | [/birmingham/](https://ekinomics.com/birmingham/) | The West Midlands county and its commuter belt: Warwickshire, Worcestershire and Staffordshire | 2006–2023 |
 | Leeds, Sheffield | [/yorkshire/](https://ekinomics.com/yorkshire/) | West, South and North Yorkshire, York, Hull and the East Riding | 2006–2023 |
 | Glasgow, Edinburgh | [/scotland/](https://ekinomics.com/scotland/) | The Glasgow and Edinburgh city regions (including Fife and the Scottish Borders) and Falkirk | 2006–2023 |
 | Manchester, Liverpool | [/northwest/](https://ekinomics.com/northwest/) | Greater Manchester, Merseyside, Cheshire, Lancashire and High Peak | 2006–2023 |
+| Bournemouth, Southampton, Portsmouth | [/wessex/](https://ekinomics.com/wessex/) | Bournemouth, Christchurch and Poole, Dorset, and south Hampshire: Southampton, Portsmouth, Eastleigh, Fareham, Gosport, Havant, Test Valley, Winchester, East Hampshire and the New Forest | 2006–2023 |
+| Leicester | [/leicester/](https://ekinomics.com/leicester/) | Leicester and Leicestershire | 2006–2023 |
 | Bristol | [/bristol/](https://ekinomics.com/bristol/) | Bristol, Bath and North East Somerset, South Gloucestershire and North Somerset | 2006–2023 |
 | Cardiff | [/southwales/](https://ekinomics.com/southwales/) | Cardiff Capital Region, Swansea and Neath Port Talbot | 2006–2023 |
 | Nottingham | [/nottingham/](https://ekinomics.com/nottingham/) | Nottinghamshire, and Derbyshire except High Peak | 2006–2023 |
