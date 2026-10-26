@@ -269,6 +269,7 @@ aside{border-left:0;border-top:1px solid var(--line);padding:22px 16px}.explore{
 @media(max-width:720px){.goto{padding:0 16px 12px}}
 .nearlink a{display:inline-block;white-space:nowrap;font:500 12px/1 var(--sans);color:var(--ink-2);background:var(--surface);border:1px solid var(--border);padding:5px 8px;text-decoration:none;transform:translateX(-50%)}
 .nearlink a:hover,.nearlink a:focus-visible{color:var(--ink);border-color:var(--ink)}
+.nearlink.e a{transform:none}.nearlink.w a{transform:translateX(-100%)}
 
 /* Links home: the EKI mark and the title on every map page. */
 .brand a{color:inherit;text-decoration:none}a.symbol{color:var(--page)}
