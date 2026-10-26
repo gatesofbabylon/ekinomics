@@ -196,12 +196,39 @@ const free=(b,own)=>!boxes.some(o=>!(own!=null&&o[4]===own)&&b[0]<o[2]&&b[2]>o[0
 const ja=JN(),put=(x,y,w,h,cls,text,force,own)=>{const b=[x-pad,y-pad,x+w+pad,y+h+pad];if(!force&&!free(b,own))return false;boxes.push(b);out.push(`<div class="maplabel ${cls}" style="left:${Math.round(x+off.x)}px;top:${Math.round(y+off.y)}px;width:${Math.ceil(w)+1}px"><b${ja?' lang="ja"':''}>${esc(text)}</b></div>`);return true};
 // One line per label: Japanese names on a Japanese page in Japanese, English otherwise.
 const LH=13,sname=s=>ja?s.name:s.en||s.name,sw=s=>textWidth(sname(s),ja?LABEL_FONT.ja:LABEL_FONT.en);
-const S=selected!=null&&D.stations[selected];if(S&&visible(S)){const p=map.latLngToContainerPoint([S.lat,S.lon]);put(p.x+11,p.y-LH/2,sw(S),LH,'station selected',sname(S),true)}
+const S=selected!=null&&D.stations[selected];if(S&&visible(S)&&z<11){const p=map.latLngToContainerPoint([S.lat,S.lon]);put(p.x+11,p.y-LH/2,sw(S),LH,'station selected',sname(S),true)}
 if(z<=8)for(const [code,[jp,lon,lat]] of Object.entries(D.pref_labels)){if(!prefMatch(code))continue;const p=map.latLngToContainerPoint([lat,lon]),text=ja?jp:D.prefectures[code].toUpperCase(),w=ja?textWidth(text,LABEL_FONT.prefJa)+text.length*2:textWidth(text,LABEL_FONT.pref)+text.length*2.5;put(p.x-w/2,p.y-8,w,16,'pref',text)}
 if(z>=11){const cand=D.stations.map((s,i)=>({s,i,c:cell(s),p:map.latLngToContainerPoint([s.lat,s.lon])})).filter(x=>visible(x.s)&&inView(x.p));
+// Coloured stations and other labels are hard obstacles. Railway lines and grey stations are softer ones: of the four spots
+// beside a dot (right, left, above, below), a label takes the first clear of dots, labels and lines, or else the one crossing
+// the fewest line segments; the four diagonals are tried only when no side spot is free, so labels stay beside their dots
+// and no busier label is pushed into a neighbour's place. Lines come from Leaflet's projected parts, in a 40 px grid.
 for(const x of cand)if(color(x.s)){const r=6.5;boxes.push([x.p.x-r,x.p.y-r,x.p.x+r,x.p.y+r,x.i])}
+// With a line picked, only its highlighted track counts: the dimmed lines barely show. UK track (kind) always counts.
+const lit=f=>!state.line||f.properties.kind||onLine(f.properties.line)||(f.properties.also||[]).some(onLine);
+const G=40,grid=new Map(),segs=[];if(railLayer)railLayer.eachLayer(l=>lit(l.feature)&&(l._parts||[]).forEach(part=>{for(let k=1;k<part.length;k++){const a=part[k-1].subtract(off),b=part[k].subtract(off);if(Math.max(a.x,b.x)<-80||Math.min(a.x,b.x)>size.x+80||Math.max(a.y,b.y)<-40||Math.min(a.y,b.y)>size.y+40)continue;const n=segs.push([a.x,a.y,b.x,b.y])-1;for(let gx=Math.floor(Math.min(a.x,b.x)/G);gx<=Math.floor(Math.max(a.x,b.x)/G);gx++)for(let gy=Math.floor(Math.min(a.y,b.y)/G);gy<=Math.floor(Math.max(a.y,b.y)/G);gy++){const key=gx+','+gy;if(!grid.has(key))grid.set(key,[]);grid.get(key).push(n)}}}));
+// Grey (unpriced) stations count like line crossings: avoided where possible, never enough to drop a label. Each is a
+// zero-length segment, which the clip test treats as a point.
+for(const x of cand)if(!color(x.s)){const n=segs.push([x.p.x,x.p.y,x.p.x,x.p.y])-1,key=Math.floor(x.p.x/G)+','+Math.floor(x.p.y/G);if(!grid.has(key))grid.set(key,[]);grid.get(key).push(n)}
+// Liang–Barsky: does a segment cross the box?
+const cuts=([x1,y1,x2,y2],[l,tp,r,bt])=>{let t0=0,t1=1;const dx=x2-x1,dy=y2-y1;for(const [p,q] of [[-dx,x1-l],[dx,r-x1],[-dy,y1-tp],[dy,bt-y1]]){if(p===0){if(q<0)return false}else{const u=q/p;if(p<0){if(u>t1)return false;if(u>t0)t0=u}else{if(u<t0)return false;if(u<t1)t1=u}}}return true};
+const crossings=b=>{const seen=new Set();let n=0;for(let gx=Math.floor(b[0]/G);gx<=Math.floor(b[2]/G);gx++)for(let gy=Math.floor(b[1]/G);gy<=Math.floor(b[3]/G);gy++)for(const i of grid.get(gx+','+gy)||[]){if(seen.has(i))continue;seen.add(i);if(cuts(segs[i],b))n++}return n};
+// The selected station's label goes first and always shows, on whichever side crosses the fewest lines (right on a tie).
+if(S&&visible(S)){const p=map.latLngToContainerPoint([S.lat,S.lon]),w=sw(S),sp=[[p.x+11,p.y-LH/2],[p.x-11-w,p.y-LH/2],[p.x-w/2,p.y-LH-10],[p.x-w/2,p.y+10]];let b=sp[0],bn=Infinity;for(const s of sp){const n=crossings([s[0],s[1],s[0]+w,s[1]+LH]);if(n<bn){bn=n;b=s}}put(b[0],b[1],w,LH,'station selected',sname(S),true)}
 const rank=x=>color(x.s)?1+x.c[0]:0;cand.sort((a,b)=>rank(b)-rank(a));
-for(const x of cand){const priced=!!color(x.s);if(x.i===selected||(!priced&&z<13))continue;const text=sname(x.s),w=sw(x.s),cls='station'+(priced?'':' faint');put(x.p.x+8,x.p.y-LH/2,w,LH,cls,text,0,x.i)||put(x.p.x-8-w,x.p.y-LH/2,w,LH,cls,text,0,x.i)||put(x.p.x-w/2,x.p.y-LH-8,w,LH,cls+' above',text,0,x.i)||put(x.p.x-w/2,x.p.y+8,w,LH,cls+' above',text,0,x.i)}}
+// Three passes, so the line-avoiding placement never costs a station the label it had: (1) choose which stations get a label
+// exactly as before (first free spot to the right, left, above, below); (2) re-place those labels, busiest first, each on the side
+// crossing the fewest lines and grey stations, never in a spot still reserved for another; (3) add labels for the rest wherever
+// one fits, diagonals included.
+const L0=cand.filter(x=>x.i!==selected&&(color(x.s)||z>=13)).map(x=>({x,text:sname(x.s),w:sw(x.s),cls:'station'+(color(x.s)?'':' faint')}));
+const sides=(o,X,Y)=>[[X+8,Y-LH/2,o.cls],[X-8-o.w,Y-LH/2,o.cls],[X-o.w/2,Y-LH-8,o.cls+' above'],[X-o.w/2,Y+8,o.cls+' above']],
+  diagonals=(o,X,Y)=>[[X+6,Y-LH-5,o.cls],[X+6,Y+5,o.cls],[X-6-o.w,Y-LH-5,o.cls],[X-6-o.w,Y+5,o.cls]],box=(o,s)=>[s[0]-pad,s[1]-pad,s[0]+o.w+pad,s[1]+LH+pad];
+const sim=boxes.slice(),simFree=(b,own)=>!sim.some(q=>!(own!=null&&q[4]===own)&&b[0]<q[2]&&b[2]>q[0]&&b[1]<q[3]&&b[3]>q[1]),reserved=new Map();
+for(const o of L0){const s=sides(o,o.x.p.x,o.x.p.y).find(s=>simFree(box(o,s),o.x.i));if(s){reserved.set(o.x.i,box(o,s));sim.push(box(o,s))}}
+const done=new Set(),clear=(b,own)=>free(b,own)&&![...reserved].some(([k,q])=>k!==own&&b[0]<q[2]&&b[2]>q[0]&&b[1]<q[3]&&b[3]>q[1]);
+const pick=(o,spots,ok)=>{let best=null;for(const s of spots){if(!ok(box(o,s),o.x.i))continue;const n=crossings([s[0],s[1],s[0]+o.w,s[1]+LH]);if(!best||n<best.n)best={s,n};if(!n)break}return best&&best.s};
+for(const o of L0)if(reserved.has(o.x.i)){const X=o.x.p.x,Y=o.x.p.y,s=pick(o,sides(o,X,Y),clear)||sides(o,X,Y).find(s=>box(o,s).every((v,k)=>v===reserved.get(o.x.i)[k]));reserved.delete(o.x.i);if(s){put(s[0],s[1],o.w,LH,s[2],o.text,1,o.x.i);done.add(o.x.i)}}
+for(const o of L0)if(!done.has(o.x.i)){const X=o.x.p.x,Y=o.x.p.y,s=pick(o,sides(o,X,Y),free)||pick(o,diagonals(o,X,Y),free);if(s)put(s[0],s[1],o.w,LH,s[2],o.text,0,o.x.i)}}
 if(z>=9&&z<=11)for(const [pc,jp,en,lon,lat] of [...D.place_labels].sort((a,b)=>b[5]-a[5])){const text=ja?jp:en;if(!text||!prefMatch(pc))continue;const p=map.latLngToContainerPoint([lat,lon]);if(!inView(p))continue;const w=textWidth(text,ja?LABEL_FONT.placeJa:LABEL_FONT.place);put(p.x-w/2,p.y-LH/2,w,LH,'place',text)}
 labelPane.innerHTML=out.join('')}
 function legendSteps(cols,breaks,f){const grid=`style="grid-template-columns:repeat(${cols.length},1fr)"`;return `<div class="steps" ${grid}>${cols.map(c=>`<i style="background:${c}"></i>`).join('')}</div><div class="stepLabels" ${grid}><span></span>${breaks.map(b=>`<span>${f(b)}</span>`).join('')}</div>`}
