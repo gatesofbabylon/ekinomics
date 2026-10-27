@@ -248,6 +248,8 @@ aside{border-left:0;border-top:1px solid var(--line);padding:22px 16px}.explore{
 /* Place menu: one button naming the region; it opens the regions grouped by country, Japanese ones with their kanji name. */
 .places{position:relative}
 .picker{-webkit-appearance:none;appearance:none;height:34px;box-sizing:border-box;display:inline-flex;align-items:center;gap:10px;margin:0;padding:0 12px;border:1px solid var(--ink);background:var(--ink);color:var(--page);font:500 13px/1 var(--sans);cursor:pointer}
+/* Its own hover: the general button:hover (a pale grey) outranks .picker and left page-coloured text on it, unreadable in either theme. */
+.picker:hover{background:var(--ink-2);border-color:var(--ink-2)}
 .picker span[lang]:not(.l-ja){opacity:.75;font-weight:400;margin-left:3px}
 .picker svg{flex:none;transition:transform .15s}.picker[aria-expanded="true"] svg{transform:rotate(180deg)}
 .placemenu{position:absolute;top:calc(100% + 4px);left:0;z-index:1100;min-width:260px;padding:4px 0 6px;background:var(--surface);border:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,.18)}
