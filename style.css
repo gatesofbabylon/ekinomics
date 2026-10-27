@@ -228,6 +228,8 @@ main{display:flex;flex-direction:column}.workspace{display:contents}.mobilebar{o
 .mapwrap{height:min(560px,68vh);height:calc(100svh - 108px);min-height:360px}.timebar{padding:8px 16px 4px}.timebar label{font-size:13px}.timebar input[type=range]{margin-top:0}.mapheading{padding:6px 12px}.mapheading strong{font-size:18px}.mapheading .eyebrow{font-size:10px}.mapheading small{width:100%;margin-left:0;font-size:11px}
 .legend{left:12px;bottom:28px;min-width:210px;padding:10px 12px;font-size:10px;cursor:pointer}
 .legend:not(.open){min-width:0;width:170px;padding:6px 8px;bottom:22px}.legend:not(.open) b,.legend:not(.open) small{display:none}
+/* Folded, the legend is too narrow for every label: it keeps the first and last, and opens in full when tapped. */
+.legend:not(.open) .stepLabels span:not(:nth-child(2)):not(:last-child){visibility:hidden}
 .mobilebar{display:flex;gap:8px;padding:10px 16px;background:var(--surface)}
 .mobilebar button,.mobilebar select{flex:1;height:40px;max-width:none;font-size:14px}
 .mobilebar button{border:1px solid var(--border);background:var(--surface);color:var(--ink);font-weight:500}
