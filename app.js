@@ -207,8 +207,9 @@ function markerStyle(i){const fill=color(D.stations[i]),sel=i===selected,z=map.g
 
 // Theme: Auto follows the device; Light and Dark are remembered. Map and chart colours come from the CSS tokens.
 const THEME_KEY='ekinomics-theme';
-// A second look on trial (Phil, 2026-10-27): each page's head script sets <html class="alt"> from ?ui=new, remembered in the browser; ?ui=current turns it off.
-const UI_KEY='ekinomics-ui',UI=(()=>{try{return localStorage.getItem(UI_KEY)}catch(e){return null}})(),ALT=document.documentElement.classList.contains('alt'),ALT_WIDE=ALT&&matchMedia('(min-width:1200px)').matches;
+// The look (Phil, 2026-10-27): each page's head script sets <html class="alt">, the default since the trial; ?ui=current shows the
+// look before it, whose code stays for a roll-back (AGENTS.md).
+const ALT=document.documentElement.classList.contains('alt'),ALT_WIDE=ALT&&matchMedia('(min-width:1200px)').matches;
 // Wide screens in the trial look: the controls, time slider and station details float over a map that fills the screen
 // below the header; the intro line moves below the map. Both panels fold, and views fit and centre in the clear area between them.
 if(ALT_WIDE){const root=document.documentElement,p=$('mapPanel'),panel=document.createElement('div'),aside=document.querySelector('main>aside'),q=s=>document.querySelector(s);
@@ -332,11 +333,12 @@ function fitVisible(animate=true){const ss=D.stations.filter(visible);if((state.
 // data.json holds the opening view only: all homes at every size and age together. The size and age bands of all homes
 // (cells-0.json) and each other property type (cells-1.json…) load the first time a filter needs them.
 let loadedCells={};
-async function ensureCells(){const f=state.type?state.type:state.size||state.age?0:null;if(f==null||loadedCells[f])return;const rows=await getJSON(`cells-${f}.json`);rows.forEach((c,i)=>Object.assign(D.stations[i].cells,c));loadedCells[f]=true}
+async function ensureCells(){const f=state.type?state.type:state.size||state.age?0:null;if(f==null||loadedCells[f])return;const {keys,rows}=await getJSON(`cells-${f}.json`);rows.forEach((c,i)=>Object.assign(D.stations[i].cells,unpackCells(keys,c)));loadedCells[f]=true}
 // Each deploy stamps ?v= on the script URL; data URLs carry the same stamp and are revalidated on every load, so a
 // visitor never pairs a cached script with newer data. DATA_FORMAT changes whenever the data's shape does.
-const VERSION=(document.currentScript&&new URL(document.currentScript.src).searchParams.get('v'))||'',DATA_FORMAT=5;
-async function getJSON(p){const r=await fetch(VERSION?`${p}?v=${VERSION}`:p,{cache:'no-cache'});if(!r.ok)throw Error(J(`Could not load ${p}`,`${p} を読み込めなかった`));return r.json()}
+const VERSION=(document.currentScript&&new URL(document.currentScript.src).searchParams.get('v'))||'',DATA_FORMAT=6;
+// Files stamped at deploy are new at every build, so the browser may keep them; a local build's literal BUILD stamp always asks.
+async function getJSON(p){const r=await fetch(VERSION?`${p}?v=${VERSION}`:p,VERSION&&VERSION!=='BUILD'?{}:{cache:'no-cache'});if(!r.ok)throw Error(J(`Could not load ${p}`,`${p} を読み込めなかった`));return r.json()}
 async function applyPreset(k){const [name,set]=E.presets[k];track('select_preset',{preset:name.en});state={...DEFAULTS,...set};await ensureCells();syncControls();render();fitVisible();activePreset=String(k);markPreset();writeURL()}
 
 function showStation(idx,pan=false,user=false){selected=idx;if(user)track('select_station',{station:label(D.stations[idx])});const s=D.stations[idx],c=cell(s),g=growth(s),base=cell(s,state.baseline),ev=s.events||[];
@@ -394,7 +396,11 @@ function textButton(){const b=$('mapText');if(!b)return;tip(b,showText?J('Hide m
 // the arrow first and sit left of their point, eastward ones right of it, north and south ones centred on it.
 let NEAR=[],MAP_ROOT=location.pathname;const nearIcon=f=>{const p=f.properties,n=esc(JN()&&p.name_ja||p.name),w=/[←↖↙]/.test(p.arrow),e=/[→↗↘]/.test(p.arrow);
   return L.divIcon({className:'nearlink'+(w?' w':e?' e':''),html:`<a href="${esc(p.href)}">${w?p.arrow+' '+n:n+' '+p.arrow}</a>`,iconSize:null,iconAnchor:[0,10]})};
-async function start(){const [d,boundaries,rails,links]=await Promise.all([getJSON('data.json'),getJSON('boundaries.json'),getJSON('rails.json'),getJSON('links.json').catch(()=>[])]);D=d;if(D.format!==DATA_FORMAT)throw Error(J('This page was updated while you had it open','このページは開いている間に更新された'));
+// Cells come packed (scripts/common.py pack_cells): for each cell the step to its key in the table, then its 7 values or minus its count.
+function unpackCells(keys,a){const o={};for(let i=0,k=0;i<a.length;){k+=a[i++];if(a[i]<0)o[keys[k]]=-a[i++];else{o[keys[k]]=a.slice(i,i+7);i+=7}}return o}
+// Shapes come packed (scripts/common.py pack_geo): each line or ring as whole-number steps on a 1/scale degree grid.
+function unpack(fc){const s=fc.scale;if(!s)return fc;const ring=c=>{const o=[];let x=0,y=0;for(let i=0;i<c.length;i+=2){x+=c[i];y+=c[i+1];o.push([x/s,y/s])}return o},walk=c=>!c.length||typeof c[0]==='number'?ring(c):c.map(walk),geom=g=>!g?g:g.type==='GeometryCollection'?{...g,geometries:g.geometries.map(geom)}:{...g,coordinates:g.type==='Point'?[g.coordinates[0]/s,g.coordinates[1]/s]:walk(g.coordinates)};fc.features.forEach(f=>f.geometry=geom(f.geometry));return fc}
+async function start(){const [d,boundaries,rails,links]=await Promise.all([getJSON('data.json'),getJSON('boundaries.json').then(unpack),getJSON('rails.json').then(unpack),getJSON('links.json').catch(()=>[])]);D=d;if(D.format!==DATA_FORMAT)throw Error(J('This page was updated while you had it open','このページは開いている間に更新された'));D.stations.forEach(s=>s.cells=unpackCells(D.cell_keys,s.cells));
 E=EDITIONS[D.edition||'tokyo'];if(E.cities){const seg=location.pathname.split('/').filter(Boolean),last=seg[seg.length-1],onCity=E.cities.some(c=>c.key===last);
   // A city page (/shutoken/yokohama/) names its city in the address; the map's own address is the part before it.
   MAP_ROOT=onCity?location.pathname.replace(/[^/]+\/?$/,''):location.pathname.replace(/([^/])$/,'$1/');const f=onCity?last:new URLSearchParams(location.search).get('focus');E={...E,city:E.cities.find(c=>c.key===f)||null};if(E.city){E.homeBox=E.city.box;E.home=E.city.home}}PRICE_BREAKS=E.priceBreaks;COUNT_BREAKS=E.countBreaks;DEFAULTS.period=D.periods.length-1;DEFAULTS.type=E.defaultType||0;loadedCells={};state={...DEFAULTS};$('period').max=DEFAULTS.period;$('headline').textContent=E.headline();
@@ -436,8 +442,6 @@ document.querySelectorAll('#metric button').forEach(b=>b.onclick=()=>{state.metr
 document.querySelectorAll('th button[data-sort]').forEach(b=>b.onclick=()=>{const k=b.dataset.sort;if(state.sortKey===k)state.sortDir*=-1;else{state.sortKey=k;state.sortDir=k==='name'||k==='pref'?1:-1}renderRanking();changed()});
 E.presets.forEach(([name],k)=>{const b=document.createElement('button');b.type='button';b.dataset.preset=k;b.textContent=T(name);b.setAttribute('aria-pressed','false');b.onclick=()=>applyPreset(k);$('presets').append(b)});
 document.querySelectorAll('[data-theme-choice]').forEach(b=>b.onclick=()=>setTheme(b.dataset.themeChoice));matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{if(!document.documentElement.dataset.theme)applyTheme()});
-// Once the trial look has been tried, a header switch flips between the two; it reloads the page, which keeps its address.
-if(UI){$('copyLink').insertAdjacentHTML('beforebegin','<div class="seg" id="ui" role="group" aria-label="Look" data-ja-label="デザイン"><button type="button" data-ui="current"><span class="l-en">Current</span><span class="l-ja" lang="ja">現行</span></button><button type="button" data-ui="new"><span class="l-en">New</span><span class="l-ja" lang="ja">新</span></button></div>');document.querySelectorAll('[data-ui]').forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.ui===(ALT?'new':'current')));b.onclick=()=>{try{localStorage.setItem(UI_KEY,b.dataset.ui)}catch(e){}writeURL();location.reload()}})}
 if(ALT&&document.fonts)document.fonts.ready.then(drawLabels);
 $('copyLink').onclick=copyLink;$('search').oninput=search;$('clearCompare').onclick=()=>{compare=[];renderCompare();if(selected!=null)showStation(selected);changed()};$('about').onclick=()=>$('method').showModal();$('closeMethod').onclick=()=>$('method').close();document.addEventListener('click',closeMenus);document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMenus();closeSheet();if($('mapPanel').classList.contains('expanded'))expandMap(false)}});
 $('coverage').innerHTML=(E.coverage||(E.ja?japanCoverage:londonCoverage))()}
