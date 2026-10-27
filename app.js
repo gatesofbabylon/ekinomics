@@ -207,6 +207,8 @@ function markerStyle(i){const fill=color(D.stations[i]),sel=i===selected,z=map.g
 
 // Theme: Auto follows the device; Light and Dark are remembered. Map and chart colours come from the CSS tokens.
 const THEME_KEY='ekinomics-theme';
+// A second look on trial (Phil, 2026-10-27): each page's head script sets <html class="alt"> from ?ui=new, remembered in the browser; ?ui=current turns it off.
+const UI_KEY='ekinomics-ui',UI=(()=>{try{return localStorage.getItem(UI_KEY)}catch(e){return null}})(),ALT=document.documentElement.classList.contains('alt');
 function themeChoice(){try{return localStorage.getItem(THEME_KEY)||'auto'}catch(e){return 'auto'}}
 function markTheme(c){document.querySelectorAll('[data-theme-choice]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.themeChoice===c)))}
 function setTheme(c){track('change_theme',{theme:c});try{c==='auto'?localStorage.removeItem(THEME_KEY):localStorage.setItem(THEME_KEY,c)}catch(e){}if(c==='auto')delete document.documentElement.dataset.theme;else document.documentElement.dataset.theme=c;markTheme(c);applyTheme()}
@@ -215,7 +217,7 @@ if(landLayer)landLayer.setStyle(f=>f.properties.href?{color:css('--land-near-edg
 
 // Map labels: prefectures when zoomed out, municipalities in between, then stations wherever a label
 // fits beside its dot without touching another label or coloured dot. Busier stations claim space first.
-const LABEL_FONT={en:'600 11px "IBM Plex Sans",sans-serif',ja:'600 11px "IBM Plex Sans JP",sans-serif',place:'italic 11px "IBM Plex Serif",serif',placeJa:'500 11px "IBM Plex Sans JP",sans-serif',pref:'600 13px "IBM Plex Serif",serif',prefJa:'600 13px "IBM Plex Sans JP",sans-serif'};
+const LABEL_FONT={en:'600 11px "IBM Plex Sans",sans-serif',ja:'600 11px "IBM Plex Sans JP",sans-serif',place:'italic 11px "IBM Plex Serif",serif',placeJa:'500 11px "IBM Plex Sans JP",sans-serif',pref:'600 13px "IBM Plex Serif",serif',prefJa:'600 13px "IBM Plex Sans JP",sans-serif'};if(ALT)for(const k in LABEL_FONT)LABEL_FONT[k]=LABEL_FONT[k].replace('"IBM Plex Sans"','Inter').replace('"IBM Plex Serif"','Fraunces');
 let labelPane,measure;const widths=new Map();
 function textWidth(t,font){const k=font+t;if(!widths.has(k)){measure.font=font;widths.set(k,measure.measureText(t).width)}return widths.get(k)}
 function drawLabels(){if(!labelPane)return;if(!showText){labelPane.innerHTML='';return}const z=map.getZoom(),size=map.getSize(),off=map.containerPointToLayerPoint([0,0]),boxes=[],out=[],pad=4;
@@ -290,7 +292,7 @@ function pickStation(idx,pan){showStation(idx,pan,true);if(phone.matches)openShe
 function openSheet(){const sh=$('sheet');document.body.classList.add('sheetopen');sh.classList.remove('expanded');sh.scrollTop=0;requestAnimationFrame(()=>{const s=D.stations[selected],top=sh.getBoundingClientRect().top,r=map.getContainer().getBoundingClientRect(),y=r.top+map.latLngToContainerPoint([s.lat,s.lon]).y;if(top>r.top+80&&y>top-40)map.panBy([0,y-(r.top+top)/2])})}
 function closeSheet(){document.body.classList.remove('sheetopen')}
 // Without the Fullscreen API (iPhone) the map expands to fill the window instead; either way the time slider goes with it.
-function withTime(on){const t=document.querySelector('.timebar'),p=$('mapPanel');if(on)p.append(t);else p.after(t)}
+function withTime(on){const t=document.querySelector('.timebar'),p=$('mapPanel');if(on||document.documentElement.classList.contains('alt-wide'))p.append(t);else p.after(t)}
 function expandMap(on){const p=$('mapPanel'),b=$('mapFull'),t=on?J('Close expanded map','地図の拡大を閉じる'):J('Expand map','地図を拡大');p.classList.toggle('expanded',on);document.body.classList.toggle('mapopen',on);withTime(on);b.setAttribute('aria-pressed',String(on));b.dataset.tip=t;b.setAttribute('aria-label',t);setTimeout(()=>map.invalidateSize(),50)}
 function updateFilters(){const b=$('filtersButton');if(!b)return;const n=['pref','line','type','size','age'].filter(k=>state[k]!==DEFAULTS[k]).length;b.textContent=n?J(`Filters · ${n} set`,`絞り込み · ${n}件`):J('Filters','絞り込み')}
 
@@ -419,6 +421,11 @@ document.querySelectorAll('#metric button').forEach(b=>b.onclick=()=>{state.metr
 document.querySelectorAll('th button[data-sort]').forEach(b=>b.onclick=()=>{const k=b.dataset.sort;if(state.sortKey===k)state.sortDir*=-1;else{state.sortKey=k;state.sortDir=k==='name'||k==='pref'?1:-1}renderRanking();changed()});
 E.presets.forEach(([name],k)=>{const b=document.createElement('button');b.type='button';b.dataset.preset=k;b.textContent=T(name);b.setAttribute('aria-pressed','false');b.onclick=()=>applyPreset(k);$('presets').append(b)});
 document.querySelectorAll('[data-theme-choice]').forEach(b=>b.onclick=()=>setTheme(b.dataset.themeChoice));matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{if(!document.documentElement.dataset.theme)applyTheme()});
+// Once the trial look has been tried, a header switch flips between the two; it reloads the page, which keeps its address.
+if(UI){$('copyLink').insertAdjacentHTML('beforebegin','<div class="seg" id="ui" role="group" aria-label="Look" data-ja-label="デザイン"><button type="button" data-ui="current"><span class="l-en">Current</span><span class="l-ja" lang="ja">現行</span></button><button type="button" data-ui="new"><span class="l-en">New</span><span class="l-ja" lang="ja">新</span></button></div>');document.querySelectorAll('[data-ui]').forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.ui===(ALT?'new':'current')));b.onclick=()=>{try{localStorage.setItem(UI_KEY,b.dataset.ui)}catch(e){}writeURL();location.reload()}})}
+// Wide screens in the trial look: the controls, time slider and station details float over the map.
+if(ALT&&matchMedia('(min-width:1200px)').matches){const p=$('mapPanel'),panel=document.createElement('div');panel.className='altpanel';panel.append(document.querySelector('.toolbar'),document.querySelector('.viewbar'),$('goto'));p.append(panel,document.querySelector('.timebar'),document.querySelector('main>aside'));document.documentElement.classList.add('alt-wide');map.invalidateSize()}
+if(ALT&&document.fonts)document.fonts.ready.then(drawLabels);
 $('copyLink').onclick=copyLink;$('search').oninput=search;$('clearCompare').onclick=()=>{compare=[];renderCompare();if(selected!=null)showStation(selected);changed()};$('about').onclick=()=>$('method').showModal();$('closeMethod').onclick=()=>$('method').close();document.addEventListener('click',closeMenus);document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMenus();closeSheet();if($('mapPanel').classList.contains('expanded'))expandMap(false)}});
 $('coverage').innerHTML=(E.coverage||(E.ja?japanCoverage:londonCoverage))()}
 // Exclusion reasons as the builds record them, in Japanese.

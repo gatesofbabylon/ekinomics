@@ -306,3 +306,49 @@ html[lang="ja"] .hsec[data-c="jp"],html:not([lang="ja"]) .hsec[data-c="uk"]{orde
 @media(max-width:720px){.home main{padding:16px 16px 20px}.hhero{font-size:14.5px}.hmap .hlab{display:none}.hgrid{gap:8px}
   .hcard{padding:10px 11px;gap:3px}.htop{display:block}.htop b{font-size:15px}.hother{margin-left:5px;font-size:12px}.htag{display:block;margin:1px 0 0;font-size:11px}
   .hprice{font-size:18px}.hbottom{flex-direction:column;align-items:stretch;gap:2px}.hspark{width:100%;height:28px}.hch small{display:none}}
+
+/* A second look on trial (Phil, 2026-10-27), on when <html> has the alt class: 3rd cultures' type, Fraunces and Inter, in
+   Ekinomics' own colours, with rounded panels; on wide screens they float over a full-width map (design draft 7). */
+html.alt{--sans:Inter,"IBM Plex Sans JP",system-ui,-apple-system,"Segoe UI",sans-serif;--serif:Fraunces,Georgia,serif;--shadow:0 2px 10px rgba(0,0,0,.1)}
+html.alt :is(h1,h2,h3,.stationtitle .nm,.bigprice,.mapheading strong,.hprice,.maplabel.pref b){font-weight:500}
+html.alt h1{font-size:30px;font-weight:400;letter-spacing:-.01em}
+html.alt .bigprice{font-size:40px;font-variant-numeric:lining-nums tabular-nums}
+html.alt .stationtitle .nm:not([lang="ja"]){font-size:32px}
+html.alt .timebar strong{font:500 18px var(--serif);color:var(--ink)}
+html.alt .maplabel:not(.place):not(.pref) b:not([lang="ja"]){font-family:Inter,sans-serif}
+html.alt header{background:var(--surface)}
+html.alt :is(.seg,.picker,.headtools>button,.textbtn,.mapreset,.comparebutton,.mobilebar :is(button,select),#compareChips button,.toast,.menu,.placemenu,.leaflet-tooltip){border-radius:10px}
+html.alt .seg{overflow:hidden;border-color:var(--line)}
+html.alt :is(.presets button,.goto button){border-radius:999px;border:1px solid var(--line)}
+html.alt :is(.presets,.goto) button[aria-pressed="true"]{border-color:var(--ink)}
+html.alt :is(select,.search input){border:1px solid var(--line);border-radius:8px}
+/* Map colours as chips, the active one outlined in the accent. */
+html.alt #metric{border:0;background:none;gap:6px;height:auto;flex-wrap:wrap}
+html.alt #metric button{height:32px;border:1px solid var(--line);border-radius:999px}
+html.alt #metric button[aria-pressed="true"]{background:transparent;color:var(--accent);border-color:var(--accent)}
+html.alt .legend{border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
+html.alt .nearlink a{border-radius:999px;border-color:var(--line);box-shadow:var(--shadow)}
+html.alt .leaflet-bar{border-radius:10px!important;overflow:hidden;border-color:var(--line)!important;box-shadow:var(--shadow)!important}
+html.alt .mapctl .tool{border-radius:0}
+html.alt dialog{border-radius:16px}
+html.alt :is(.hcard,.hmap){border-radius:12px;overflow:hidden}
+@media(min-width:1200px){html.alt .mapwrap{height:max(600px,calc(100vh - 202px))}}
+/* On wide screens app.js moves the controls, time slider and station details into the map (html.alt-wide). */
+html.alt-wide main{display:block;border-top:0}
+html.alt-wide #map{isolation:isolate}
+html.alt-wide :is(.altpanel>*,.mapwrap>.timebar,.mapwrap>aside){background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);pointer-events:auto}
+html.alt-wide .altpanel{position:absolute;z-index:2;left:16px;top:16px;bottom:16px;width:300px;overflow:auto;display:flex;flex-direction:column;gap:10px;pointer-events:none;scrollbar-width:thin}
+html.alt-wide .altpanel>*{flex:none}
+html.alt-wide .toolbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:14px}
+html.alt-wide .toolbar :is(label:first-child,.linefilter){grid-column:1/-1}
+html.alt-wide :is(.toolbar,.viewbar) select{max-width:none;width:100%}
+html.alt-wide .viewbar{flex-direction:column;align-items:stretch;gap:12px;padding:14px}
+html.alt-wide .viewbar p{margin:0;max-width:none}
+html.alt-wide .goto{padding:12px 14px}
+html.alt-wide .legend{left:332px;bottom:118px}
+html.alt-wide .mapwrap>.timebar{position:absolute;z-index:2;left:332px;right:392px;bottom:16px;padding:12px 18px}
+html.alt-wide .mapwrap>aside{position:absolute;z-index:2;top:16px;right:16px;width:360px;max-height:calc(100% - 32px);overflow:auto;padding:20px 22px}
+html.alt-wide .mapheading{position:absolute;top:16px;left:calc(50% - 30px);transform:translateX(-50%);z-index:1;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);white-space:nowrap}
+html.alt-wide .leaflet-top.leaflet-right{right:376px}
+html.alt-wide .mapreset{right:392px;bottom:130px}
+html.alt-wide .explore{margin:16px;border-radius:14px}
