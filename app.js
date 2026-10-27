@@ -208,7 +208,22 @@ function markerStyle(i){const fill=color(D.stations[i]),sel=i===selected,z=map.g
 // Theme: Auto follows the device; Light and Dark are remembered. Map and chart colours come from the CSS tokens.
 const THEME_KEY='ekinomics-theme';
 // A second look on trial (Phil, 2026-10-27): each page's head script sets <html class="alt"> from ?ui=new, remembered in the browser; ?ui=current turns it off.
-const UI_KEY='ekinomics-ui',UI=(()=>{try{return localStorage.getItem(UI_KEY)}catch(e){return null}})(),ALT=document.documentElement.classList.contains('alt');
+const UI_KEY='ekinomics-ui',UI=(()=>{try{return localStorage.getItem(UI_KEY)}catch(e){return null}})(),ALT=document.documentElement.classList.contains('alt'),ALT_WIDE=ALT&&matchMedia('(min-width:1200px)').matches;
+// Wide screens in the trial look: the controls, time slider and station details float over a map that fills the screen
+// below the header; the intro line moves below the map. Both panels fold, and views fit and centre in the clear area between them.
+if(ALT_WIDE){const root=document.documentElement,p=$('mapPanel'),panel=document.createElement('div'),aside=document.querySelector('main>aside'),q=s=>document.querySelector(s);
+  panel.className='altpanel';panel.innerHTML='<button type="button" class="altfold" aria-expanded="true"><span class="l-en">Map settings</span><span class="l-ja" lang="ja">地図の設定</span></button>';
+  panel.append(q('.toolbar'),q('.viewbar'),$('goto'),$('presets'));p.append(panel,q('.timebar'),aside);q('.explore').before(q('.intro'));root.classList.add('alt-wide');
+  const fold=(el,b,on)=>{el.classList.toggle('folded',on);b.setAttribute('aria-expanded',String(!on))},pb=panel.firstChild;pb.onclick=()=>fold(panel,pb,!panel.classList.contains('folded'));
+  aside.insertAdjacentHTML('afterbegin','<button type="button" class="asidefold" aria-expanded="true" aria-label="Station details" data-ja-label="駅の詳細"></button>');const ab=aside.firstChild;ab.onclick=()=>fold(aside,ab,!aside.classList.contains('folded'));
+  let shown='';new MutationObserver(()=>{const n=$('detail').querySelector('.nm');if(n&&n.textContent!==shown){shown=n.textContent;fold(aside,ab,false)}}).observe($('detail'),{childList:true,subtree:true});
+  const more=()=>panel.classList.toggle('more',panel.scrollTop+panel.clientHeight<panel.scrollHeight-4),mo=new MutationObserver(more);panel.addEventListener('scroll',more);addEventListener('resize',more);mo.observe(panel,{childList:true,subtree:true,attributes:true,attributeFilter:['hidden','class']});
+  const top=()=>root.style.setProperty('--top',document.querySelector('header').offsetHeight+'px');top();addEventListener('resize',top)}
+function clearPad(px){if(!ALT_WIDE)return {padding:[px,px]};const m=$('mapPanel').getBoundingClientRect(),r=s=>document.querySelector(s).getBoundingClientRect();
+  return {paddingTopLeft:[r('.altpanel>:first-child').right-m.left+px,r('.mapheading').bottom-m.top+px],paddingBottomRight:[m.right-r('.mapwrap>aside').left+px,m.bottom-r('.mapwrap>.timebar').top+px]}}
+function clearShift(){const p=clearPad(0);return p.padding?null:L.point((p.paddingTopLeft[0]-p.paddingBottomRight[0])/2,(p.paddingTopLeft[1]-p.paddingBottomRight[1])/2)}
+function centre(ll,z){const d=clearShift();map.setView(d?map.unproject(map.project(ll,z).subtract(d),z):ll,z)}
+function viewCentre(){const d=clearShift();return d?map.containerPointToLatLng(map.getSize().divideBy(2).add(d)):map.getCenter()}
 function themeChoice(){try{return localStorage.getItem(THEME_KEY)||'auto'}catch(e){return 'auto'}}
 function markTheme(c){document.querySelectorAll('[data-theme-choice]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.themeChoice===c)))}
 function setTheme(c){track('change_theme',{theme:c});try{c==='auto'?localStorage.removeItem(THEME_KEY):localStorage.setItem(THEME_KEY,c)}catch(e){}if(c==='auto')delete document.documentElement.dataset.theme;else document.documentElement.dataset.theme=c;markTheme(c);applyTheme()}
@@ -313,7 +328,7 @@ function changed(){activePreset='';markPreset();writeURL()}
 const CONTROLS=['pref','line','type','size','age','baseline'];
 function syncControls(){for(const id of CONTROLS)if($(id))$(id).value=state[id];for(const id of ['size','age'])if($(id))$(id).disabled=isLand();$('period').value=state.period;document.querySelectorAll('#metric button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.v===state.metric)))}
 // Leaflet drops a zoom requested while another is animating, so the start-up fits run without animation.
-function fitVisible(animate=true){const ss=D.stations.filter(visible);if((state.pref||state.line)&&ss.length)map.fitBounds(L.latLngBounds(ss.map(s=>[s.lat,s.lon])),{padding:[30,30],maxZoom:12,animate});else map.fitBounds(homeBounds,{padding:[25,25],animate})}
+function fitVisible(animate=true){const ss=D.stations.filter(visible);if((state.pref||state.line)&&ss.length)map.fitBounds(L.latLngBounds(ss.map(s=>[s.lat,s.lon])),{...clearPad(30),maxZoom:12,animate});else map.fitBounds(homeBounds,{...clearPad(25),animate})}
 // data.json holds the opening view only: all homes at every size and age together. The size and age bands of all homes
 // (cells-0.json) and each other property type (cells-1.json…) load the first time a filter needs them.
 let loadedCells={};
@@ -331,7 +346,7 @@ $('detail').innerHTML=`<p class="eyebrow">${where}</p><h2 class="stationtitle">$
 const flip=()=>{tableView.station=!tableView.station;showStation(idx)};
 panelTools($('stationTools'),{button:{icon:'table',label:viewLabel(tableView.station),pressed:tableView.station,onClick:flip},menu:[{label:viewLabel(tableView.station),onClick:flip},{label:J('Download CSV','CSVをダウンロード'),onClick:()=>downloadCsv(`ekinomics-${SLUG[idx]}.csv`,stationRows(idx))},{label:J('Download PNG','PNGをダウンロード'),hide:tableView.station,onClick:()=>svgPng($('stationChart').querySelector('svg'),`ekinomics-${SLUG[idx]}`)},{label:J('Full screen','全画面'),hide:!canFull,onClick:()=>toggleFull($('detail'))}]});
 $('addCompare').onclick=()=>{if(compare.includes(idx)||compare.length>=3)return;track('add_comparison',{station:label(s)});compare.push(idx);renderCompare();showStation(idx);changed()};
-markers.forEach((m,i)=>m.setStyle(markerStyle(i)));markers[idx].bringToFront();if(pan)map.setView([s.lat,s.lon],Math.max(map.getZoom(),12));drawLabels();if(user)changed()}
+markers.forEach((m,i)=>m.setStyle(markerStyle(i)));markers[idx].bringToFront();if(pan)centre([s.lat,s.lon],Math.max(map.getZoom(),12));drawLabels();if(user)changed()}
 function renderCompare(){$('compareChips').innerHTML=compare.map((i,j)=>`<button data-remove="${i}" style="border-left-color:${colours[j]}">${both(D.stations[i])} ×</button>`).join('');$('compareChart').innerHTML=compare.length?(tableView.compare?chartTable(compareRows()):`<div class="chartbar"><b>${T(E.chartUnit)}</b></div>${drawChart(compare)}`):'';
 document.querySelectorAll('[data-remove]').forEach(b=>b.onclick=()=>{compare=compare.filter(i=>i!==+b.dataset.remove);renderCompare();if(selected!=null)showStation(selected);changed()});
 const flip=()=>{tableView.compare=!tableView.compare;renderCompare()};
@@ -388,7 +403,7 @@ for(const l of new Set(D.stations.flatMap(s=>s.lines))){const [en,op]=lineEn(l);
 if(E.ja){for(const l of Object.keys(D.lines_en))LINE_GROUP[l]=lineGroup(l);for(const [k,en] of LINE_GROUPS){LINE_SLUG[k]=slug(en);SLUG_LINE[slug(en)]=k}}
 buildSelects();D.periods.forEach((p,i)=>$('baseline').add(new Option(p,i)));
 markTheme(new URLSearchParams(location.search).get('theme')||themeChoice());applyTheme();
-const land=L.geoJSON(boundaries);map=L.map('map',{preferCanvas:true,zoomSnap:.25,renderer:L.canvas({tolerance:3}),zoomControl:false,minZoom:7,maxZoom:16,maxBounds:land.getBounds().pad(.02),maxBoundsViscosity:1}).setView(E.view.slice(0,2),E.view[2]);L.control.zoom({position:'topright'}).addTo(map);map.attributionControl.addAttribution(E.attribution);landLayer=L.geoJSON(boundaries,{interactive:false}).addTo(map);
+const land=L.geoJSON(boundaries);map=L.map('map',{preferCanvas:true,zoomSnap:.25,renderer:L.canvas({tolerance:3}),zoomControl:false,minZoom:7,maxZoom:16,maxBounds:land.getBounds().pad(ALT_WIDE?.1:.02),maxBoundsViscosity:1}).setView(E.view.slice(0,2),E.view[2]);L.control.zoom({position:'topright'}).addTo(map);map.attributionControl.addAttribution(E.attribution);landLayer=L.geoJSON(boundaries,{interactive:false}).addTo(map);
 // Neighbouring pages sit a shade darker in the grey; links to other maps sit where the line to their city leaves this one.
 NEAR=links.map(l=>({f:{properties:l},m:L.marker([l.label[1],l.label[0]],{icon:nearIcon({properties:l}),keyboard:false}).addTo(map)}));railLayer=L.geoJSON(rails,{interactive:false}).addTo(map);
 // Stations get their own canvas above the land and rails, so sending a no-data dot to the back never hides it under the land.
@@ -396,15 +411,15 @@ map.createPane('stations').style.zIndex=420;const stationRenderer=L.canvas({pane
 markers=D.stations.map((s,i)=>L.circleMarker([s.lat,s.lon],{renderer:stationRenderer,radius:1.8,stroke:false,fillColor:TC.empty,fillOpacity:.5}).bindTooltip(esc(label(s)),{direction:'top'}).addTo(map));
 // A tap selects the nearest station within finger reach, preferring coloured dots, so small dots stay easy to hit.
 const reach=matchMedia('(pointer: coarse)').matches?32:12;map.on('click',e=>{let best=null,bd=Infinity;markers.forEach((m,i)=>{if(!map.hasLayer(m))return;const d=map.latLngToContainerPoint(m.getLatLng()).distanceTo(e.containerPoint)+(color(D.stations[i])?0:8);if(d<bd){bd=d;best=i}});if(best!=null&&bd<=reach)pickStation(best,false)});
-labelPane=map.createPane('labels');measure=document.createElement('canvas').getContext('2d');map.on('zoomstart',()=>labelPane.hidden=true);map.on('moveend',()=>{labelPane.hidden=false;drawLabels();if(E.cities){const c=cityAt(map.getCenter());if(c&&c!==E.city){E.city=c;showCity(c);writeURL()}}});map.on('zoomend',()=>markers.forEach((m,i)=>m.setStyle(markerStyle(i))));
+labelPane=map.createPane('labels');measure=document.createElement('canvas').getContext('2d');map.on('zoomstart',()=>labelPane.hidden=true);map.on('moveend',()=>{labelPane.hidden=false;drawLabels();if(E.cities){const c=cityAt(viewCentre());if(c&&c!==E.city){E.city=c;showCity(c);writeURL()}}});map.on('zoomend',()=>markers.forEach((m,i)=>m.setStyle(markerStyle(i))));
 if(document.fonts)document.fonts.ready.then(()=>{widths.clear();drawLabels()});
 const fromURL=readURL();await ensureCells();syncControls();applyTheme();
 // Open on stations that have a price, so the first view is one zoom closer than the faint outer fringes.
-const priced=D.stations.filter(s=>cell(s)[1]!=null&&(!E.homeArea||E.homeArea(s)));homeBounds=E.homeBox?L.latLngBounds(E.homeBox):L.latLngBounds((priced.length?priced:D.stations).map(s=>[s.lat,s.lon]));map.fitBounds(homeBounds,{padding:[25,25],animate:false});
-selected=fromURL!=null?fromURL:Math.max(0,D.stations.findIndex(s=>s.name===E.home));render();if(fromURL!=null)map.setView([D.stations[fromURL].lat,D.stations[fromURL].lon],12);else if(state.pref||state.line)fitVisible(false);
-$('resetMap').onclick=()=>map.fitBounds(homeBounds,{padding:[25,25]});
+const priced=D.stations.filter(s=>cell(s)[1]!=null&&(!E.homeArea||E.homeArea(s)));homeBounds=E.homeBox?L.latLngBounds(E.homeBox):L.latLngBounds((priced.length?priced:D.stations).map(s=>[s.lat,s.lon]));map.fitBounds(homeBounds,{...clearPad(25),animate:false});
+selected=fromURL!=null?fromURL:Math.max(0,D.stations.findIndex(s=>s.name===E.home));render();if(fromURL!=null)centre([D.stations[fromURL].lat,D.stations[fromURL].lon],12);else if(state.pref||state.line)fitVisible(false);
+$('resetMap').onclick=()=>map.fitBounds(homeBounds,{...clearPad(25)});
 if(E.cities){const g=$('goto');g.hidden=false;const mark=()=>g.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(!!E.city&&b.dataset.city===E.city.key)));
-for(const c of E.cities){const b=document.createElement('button');b.type='button';b.textContent=cityLabel(c);b.dataset.city=c.key;b.onclick=()=>{E.city=c;homeBounds=L.latLngBounds(c.box);map.fitBounds(homeBounds,{padding:[25,25]});const idx=D.stations.findIndex(s=>s.name===c.home);if(idx>=0)showStation(idx,false,true);mark();showCity(c);track('select_city',{city:c.key});changed()};g.append(b)}mark();showCity(E.city||cityAt(map.getCenter())||E.cities[0])}$('mapFull').hidden=!canFull&&!phone.matches;if(!canFull)expandMap(false);
+for(const c of E.cities){const b=document.createElement('button');b.type='button';b.textContent=cityLabel(c);b.dataset.city=c.key;b.onclick=()=>{E.city=c;homeBounds=L.latLngBounds(c.box);map.fitBounds(homeBounds,{...clearPad(25)});const idx=D.stations.findIndex(s=>s.name===c.home);if(idx>=0)showStation(idx,false,true);mark();showCity(c);track('select_city',{city:c.key});changed()};g.append(b)}mark();showCity(E.city||cityAt(viewCentre())||E.cities[0])}$('mapFull').hidden=!canFull&&!phone.matches;if(!canFull)expandMap(false);
 // Map text (station, place and prefecture labels, links to neighbouring pages) can be hidden to read the colours alone.
 // Reset, text and full-screen buttons sit in their own bar under the zoom buttons.
 {const b=document.createElement('button');b.type='button';b.id='mapText';b.className='tool';b.innerHTML=ICON.text;textButton();b.onclick=()=>{showText=!showText;textButton();drawLabels();track('toggle_text',{shown:showText});writeURL()};const ctl=L.control({position:'topright'});ctl.onAdd=()=>{const d=L.DomUtil.create('div','leaflet-bar mapctl');const r=$('resetMap');r.className='tool';r.innerHTML=ICON.home;tip(r,J('Reset view','表示をリセット'));d.append(r,b,$('mapFull'));L.DomEvent.disableClickPropagation(d);return d};ctl.addTo(map)}$('mapFull').onclick=()=>canFull?toggleFull($('mapPanel')):expandMap(!$('mapPanel').classList.contains('expanded'));document.addEventListener('fullscreenchange',()=>{withTime(document.fullscreenElement===$('mapPanel'));setTimeout(()=>map.invalidateSize(),50)});
@@ -423,8 +438,6 @@ E.presets.forEach(([name],k)=>{const b=document.createElement('button');b.type='
 document.querySelectorAll('[data-theme-choice]').forEach(b=>b.onclick=()=>setTheme(b.dataset.themeChoice));matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{if(!document.documentElement.dataset.theme)applyTheme()});
 // Once the trial look has been tried, a header switch flips between the two; it reloads the page, which keeps its address.
 if(UI){$('copyLink').insertAdjacentHTML('beforebegin','<div class="seg" id="ui" role="group" aria-label="Look" data-ja-label="デザイン"><button type="button" data-ui="current"><span class="l-en">Current</span><span class="l-ja" lang="ja">現行</span></button><button type="button" data-ui="new"><span class="l-en">New</span><span class="l-ja" lang="ja">新</span></button></div>');document.querySelectorAll('[data-ui]').forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.ui===(ALT?'new':'current')));b.onclick=()=>{try{localStorage.setItem(UI_KEY,b.dataset.ui)}catch(e){}writeURL();location.reload()}})}
-// Wide screens in the trial look: the controls, time slider and station details float over the map.
-if(ALT&&matchMedia('(min-width:1200px)').matches){const p=$('mapPanel'),panel=document.createElement('div');panel.className='altpanel';panel.append(document.querySelector('.toolbar'),document.querySelector('.viewbar'),$('goto'));p.append(panel,document.querySelector('.timebar'),document.querySelector('main>aside'));document.documentElement.classList.add('alt-wide');map.invalidateSize()}
 if(ALT&&document.fonts)document.fonts.ready.then(drawLabels);
 $('copyLink').onclick=copyLink;$('search').oninput=search;$('clearCompare').onclick=()=>{compare=[];renderCompare();if(selected!=null)showStation(selected);changed()};$('about').onclick=()=>$('method').showModal();$('closeMethod').onclick=()=>$('method').close();document.addEventListener('click',closeMenus);document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMenus();closeSheet();if($('mapPanel').classList.contains('expanded'))expandMap(false)}});
 $('coverage').innerHTML=(E.coverage||(E.ja?japanCoverage:londonCoverage))()}

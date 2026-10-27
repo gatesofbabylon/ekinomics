@@ -332,23 +332,39 @@ html.alt .leaflet-bar{border-radius:10px!important;overflow:hidden;border-color:
 html.alt .mapctl .tool{border-radius:0}
 html.alt dialog{border-radius:16px}
 html.alt :is(.hcard,.hmap){border-radius:12px;overflow:hidden}
-@media(min-width:1200px){html.alt .mapwrap{height:max(600px,calc(100vh - 202px))}}
-/* On wide screens app.js moves the controls, time slider and station details into the map (html.alt-wide). */
+html.alt :is(.statgrid,.chart-table){border-radius:10px;overflow:hidden}
+html.alt .tablewrap{border:1px solid var(--line);border-radius:10px}
+html.alt .events .ev{border-radius:4px}
+/* On wide screens app.js moves the controls, time slider and station details into the map, the intro below it (html.alt-wide). */
 html.alt-wide main{display:block;border-top:0}
+html.alt-wide .mapwrap{height:calc(100vh - var(--top,90px));min-height:520px}
 html.alt-wide #map{isolation:isolate}
 html.alt-wide :is(.altpanel>*,.mapwrap>.timebar,.mapwrap>aside){background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);pointer-events:auto}
-html.alt-wide .altpanel{position:absolute;z-index:2;left:16px;top:16px;bottom:16px;width:300px;overflow:auto;display:flex;flex-direction:column;gap:10px;pointer-events:none;scrollbar-width:thin}
+html.alt-wide .altpanel{position:absolute;z-index:2;left:6px;top:6px;bottom:6px;width:320px;padding:10px;overflow:auto;display:flex;flex-direction:column;gap:10px;pointer-events:none;scrollbar-width:thin}
+/* A fade at the panel's foot says there is more below. */
+html.alt-wide .altpanel.more{-webkit-mask-image:linear-gradient(#000 calc(100% - 36px),transparent);mask-image:linear-gradient(#000 calc(100% - 36px),transparent)}
 html.alt-wide .altpanel>*{flex:none}
+html.alt-wide .altpanel.folded>:not(.altfold){display:none!important}
+html.alt-wide .altfold{display:flex;justify-content:space-between;align-items:center;width:100%;padding:10px 14px;font-weight:600;font-size:13px;text-align:left}
+html.alt-wide .altfold::after,html.alt-wide .asidefold::after{content:"\25B4";color:var(--muted)}
+html.alt-wide :is(.altfold,.asidefold)[aria-expanded="false"]::after{content:"\25BE"}
 html.alt-wide .toolbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:14px}
 html.alt-wide .toolbar :is(label:first-child,.linefilter){grid-column:1/-1}
 html.alt-wide :is(.toolbar,.viewbar) select{max-width:none;width:100%}
 html.alt-wide .viewbar{flex-direction:column;align-items:stretch;gap:12px;padding:14px}
 html.alt-wide .viewbar p{margin:0;max-width:none}
 html.alt-wide .goto{padding:12px 14px}
+html.alt-wide .altpanel .presets{flex-wrap:wrap;white-space:normal;overflow:visible;padding:12px 14px}
 html.alt-wide .legend{left:332px;bottom:118px}
 html.alt-wide .mapwrap>.timebar{position:absolute;z-index:2;left:332px;right:392px;bottom:16px;padding:12px 18px}
 html.alt-wide .mapwrap>aside{position:absolute;z-index:2;top:16px;right:16px;width:360px;max-height:calc(100% - 32px);overflow:auto;padding:20px 22px}
-html.alt-wide .mapheading{position:absolute;top:16px;left:calc(50% - 30px);transform:translateX(-50%);z-index:1;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);white-space:nowrap}
+html.alt-wide .mapwrap>aside.folded{padding-bottom:6px}
+html.alt-wide aside.folded>:not(.search):not(.asidefold){display:none}
+html.alt-wide aside.folded .search{border-bottom:0;margin-bottom:0}
+html.alt-wide .asidefold{position:absolute;top:10px;right:10px;width:32px;height:32px;padding:0;border:0;border-radius:8px}
+/* The map heading sits at the left of the clear area, clear of the zoom buttons at its right. */
+html.alt-wide .mapheading{position:absolute;top:16px;left:332px;max-width:calc(100% - 780px);z-index:1;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
 html.alt-wide .leaflet-top.leaflet-right{right:376px}
 html.alt-wide .mapreset{right:392px;bottom:130px}
+html.alt-wide .intro{margin:16px 16px 0;padding:0 4px}
 html.alt-wide .explore{margin:16px;border-radius:14px}
