@@ -213,26 +213,39 @@ function markerStyle(i){const fill=color(D.stations[i]),sel=i===selected,z=map.g
 const THEME_KEY='ekinomics-theme';
 // The look (Phil, 2026-10-27): each page's head script sets <html class="alt">, the default since the trial; ?ui=current shows the
 // look before it, whose code stays for a roll-back (AGENTS.md).
-const ALT=document.documentElement.classList.contains('alt'),ALT_WIDE=ALT&&matchMedia('(min-width:1200px)').matches;
+const ALT=document.documentElement.classList.contains('alt'),WIDE_Q=matchMedia('(min-width:1200px)'),PHONE_Q=matchMedia('(max-width:720px)');
+// Layout by screen width, redone whenever the width crosses 720 or 1200 px (a phone turned, a window resized), so no arrangement
+// sticks. Every element it moves has a marker at its own place in the page; each pass puts them all back, then arranges for the width.
+// Wide screens: the controls (Go-to first), time slider and station details float over a map that fills the screen below the header;
+// the intro goes below the map; both panels fold, and views fit and centre in the clear area between them (clearPad, centre).
 // Phones (Phil, 2026-10-27): the header keeps its mark and wordmark, with a menu beside them for language, theme, link and notes and
 // the city button below; the intro goes below the time slider and "Start with" into the filters, so the map starts 252 px down, not 522.
-const COMPACT=ALT&&matchMedia('(max-width:720px)').matches;
-if(COMPACT){const ht=document.querySelector('.headtools');document.documentElement.classList.add('compact');
-  ht.insertAdjacentHTML('beforeend','<button type="button" class="headmore" aria-expanded="false" aria-label="Settings" data-ja-label="設定"><svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><circle cx="4" cy="9" r="1.6"/><circle cx="9" cy="9" r="1.6"/><circle cx="14" cy="9" r="1.6"/></svg></button><div class="headmenu" hidden></div>');
-  const btn=ht.querySelector('.headmore'),menu=ht.querySelector('.headmenu'),shut=()=>{menu.hidden=true;btn.setAttribute('aria-expanded','false')};menu.append($('lang'),$('theme'),$('copyLink'),$('about'));
-  btn.onclick=e=>{e.stopPropagation();const o=menu.hidden;menu.hidden=!o;btn.setAttribute('aria-expanded',String(o))};document.addEventListener('click',e=>{if(!menu.hidden&&!menu.contains(e.target))shut()});
-  document.querySelector('.timebar').after(document.querySelector('.intro'));document.querySelector('.toolbar').append($('presets'))}
-// Wide screens in the trial look: the controls, time slider and station details float over a map that fills the screen
-// below the header; the intro line moves below the map. Both panels fold, and views fit and centre in the clear area between them.
-if(ALT_WIDE){const root=document.documentElement,p=$('mapPanel'),panel=document.createElement('div'),aside=document.querySelector('main>aside'),q=s=>document.querySelector(s);
-  panel.className='altpanel';panel.innerHTML='<button type="button" class="altfold" aria-expanded="true"><span class="l-en">Map settings</span><span class="l-ja" lang="ja">地図の設定</span></button>';
-  panel.append($('goto'),q('.toolbar'),q('.viewbar'),$('presets'));p.append(panel,q('.timebar'),aside);q('.explore').before(q('.intro'));root.classList.add('alt-wide');
+const LAYOUT=(()=>{const q=s=>document.querySelector(s),home={};
+  for(const [k,s] of Object.entries({goto:'#goto',toolbar:'.toolbar',viewbar:'.viewbar',presets:'#presets',timebar:'.timebar',aside:'main>aside',intro:'.intro',lang:'#lang',theme:'#theme',copyLink:'#copyLink',about:'#about'})){
+    const el=q(s),mark=document.createComment(k);el.before(mark);home[k]={el,mark}}
+  const panel=document.createElement('div'),aside=home.aside.el,ht=q('.headtools');panel.className='altpanel';
+  panel.innerHTML='<button type="button" class="altfold" aria-expanded="true"><span class="l-en">Map settings</span><span class="l-ja" lang="ja">地図の設定</span></button>';
   const fold=(el,b,on)=>{el.classList.toggle('folded',on);b.setAttribute('aria-expanded',String(!on))},pb=panel.firstChild;pb.onclick=()=>fold(panel,pb,!panel.classList.contains('folded'));
   aside.insertAdjacentHTML('afterbegin','<button type="button" class="asidefold" aria-expanded="true" aria-label="Station details" data-ja-label="駅の詳細"></button>');const ab=aside.firstChild;ab.onclick=()=>fold(aside,ab,!aside.classList.contains('folded'));
   let shown='';new MutationObserver(()=>{const n=$('detail').querySelector('.nm');if(n&&n.textContent!==shown){shown=n.textContent;fold(aside,ab,false)}}).observe($('detail'),{childList:true,subtree:true});
-  const more=()=>panel.classList.toggle('more',panel.scrollTop+panel.clientHeight<panel.scrollHeight-4),mo=new MutationObserver(more);panel.addEventListener('scroll',more);addEventListener('resize',more);mo.observe(panel,{childList:true,subtree:true,attributes:true,attributeFilter:['hidden','class']});
-  const top=()=>root.style.setProperty('--top',document.querySelector('header').offsetHeight+'px');top();addEventListener('resize',top)}
-function clearPad(px){if(!ALT_WIDE)return {padding:[px,px]};const m=$('mapPanel').getBoundingClientRect(),r=s=>document.querySelector(s).getBoundingClientRect();
+  const more=()=>panel.classList.toggle('more',panel.scrollTop+panel.clientHeight<panel.scrollHeight-4);panel.addEventListener('scroll',more);addEventListener('resize',more);new MutationObserver(more).observe(panel,{childList:true,subtree:true,attributes:true,attributeFilter:['hidden','class']});
+  const top=()=>document.documentElement.style.setProperty('--top',q('header').offsetHeight+'px');addEventListener('resize',top);
+  ht.insertAdjacentHTML('beforeend','<button type="button" class="headmore" aria-expanded="false" aria-label="Settings" data-ja-label="設定"><svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><circle cx="4" cy="9" r="1.6"/><circle cx="9" cy="9" r="1.6"/><circle cx="14" cy="9" r="1.6"/></svg></button><div class="headmenu" hidden></div>');
+  const btn=ht.querySelector('.headmore'),menu=ht.querySelector('.headmenu'),shut=()=>{menu.hidden=true;btn.setAttribute('aria-expanded','false')};
+  btn.onclick=e=>{e.stopPropagation();const o=menu.hidden;menu.hidden=!o;btn.setAttribute('aria-expanded',String(o))};document.addEventListener('click',e=>{if(!menu.hidden&&!menu.contains(e.target))shut()});
+  const run=()=>{const root=document.documentElement,wide=ALT&&WIDE_Q.matches,compact=ALT&&PHONE_Q.matches;
+    for(const {el,mark} of Object.values(home))mark.after(el);panel.remove();shut();
+    root.classList.toggle('alt-wide',wide);root.classList.toggle('compact',compact);
+    if(wide){panel.append(home.goto.el,home.toolbar.el,home.viewbar.el,home.presets.el);$('mapPanel').append(panel,home.timebar.el,aside);q('.explore').before(home.intro.el);top()}
+    else fold(aside,ab,false);
+    if(compact){menu.append(home.lang.el,home.theme.el,home.copyLink.el,home.about.el);home.timebar.el.after(home.intro.el);home.toolbar.el.append(home.presets.el)}
+    // A map expanded or in full screen keeps its time slider inside it (withTime).
+    if($('mapPanel').classList.contains('expanded')||document.fullscreenElement)$('mapPanel').append(home.timebar.el);
+    if(map)map.invalidateSize()};
+  // Width-change notices drive it; a resize that changes the layout also redoes it, for browsers that miss a notice.
+  let last='';const go=()=>{const m=`${WIDE_Q.matches}${PHONE_Q.matches}`;if(m!==last){last=m;run()}};
+  go();WIDE_Q.addEventListener('change',go);PHONE_Q.addEventListener('change',go);addEventListener('resize',go);return run})();
+function clearPad(px){if(!document.documentElement.classList.contains('alt-wide'))return {padding:[px,px]};const m=$('mapPanel').getBoundingClientRect(),r=s=>document.querySelector(s).getBoundingClientRect();
   return {paddingTopLeft:[r('.altpanel>:first-child').right-m.left+px,r('.mapheading').bottom-m.top+px],paddingBottomRight:[m.right-r('.mapwrap>aside').left+px,m.bottom-r('.mapwrap>.timebar').top+px]}}
 function clearShift(){const p=clearPad(0);return p.padding?null:L.point((p.paddingTopLeft[0]-p.paddingBottomRight[0])/2,(p.paddingTopLeft[1]-p.paddingBottomRight[1])/2)}
 function centre(ll,z){const d=clearShift();map.setView(d?map.unproject(map.project(ll,z).subtract(d),z):ll,z)}
@@ -421,7 +434,7 @@ for(const l of new Set(D.stations.flatMap(s=>s.lines))){const [en,op]=lineEn(l);
 if(E.ja){for(const l of Object.keys(D.lines_en))LINE_GROUP[l]=lineGroup(l);for(const [k,en] of LINE_GROUPS){LINE_SLUG[k]=slug(en);SLUG_LINE[slug(en)]=k}}
 buildSelects();D.periods.forEach((p,i)=>$('baseline').add(new Option(p,i)));
 markTheme(new URLSearchParams(location.search).get('theme')||themeChoice());applyTheme();
-const land=L.geoJSON(boundaries);map=L.map('map',{preferCanvas:true,zoomSnap:.25,renderer:L.canvas({tolerance:3}),zoomControl:false,minZoom:7,maxZoom:16,maxBounds:land.getBounds().pad(ALT_WIDE?.1:.02),maxBoundsViscosity:1}).setView(E.view.slice(0,2),E.view[2]);L.control.zoom({position:'topright'}).addTo(map);map.attributionControl.addAttribution(E.attribution);landLayer=L.geoJSON(boundaries,{interactive:false}).addTo(map);
+const land=L.geoJSON(boundaries);map=L.map('map',{preferCanvas:true,zoomSnap:.25,renderer:L.canvas({tolerance:3}),zoomControl:false,minZoom:7,maxZoom:16,maxBounds:land.getBounds().pad(ALT?.1:.02),maxBoundsViscosity:1}).setView(E.view.slice(0,2),E.view[2]);L.control.zoom({position:'topright'}).addTo(map);map.attributionControl.addAttribution(E.attribution);landLayer=L.geoJSON(boundaries,{interactive:false}).addTo(map);
 // Neighbouring pages sit a shade darker in the grey; links to other maps sit where the line to their city leaves this one.
 NEAR=links.map(l=>({f:{properties:l},m:L.marker([l.label[1],l.label[0]],{icon:nearIcon({properties:l}),keyboard:false}).addTo(map)}));railLayer=L.geoJSON(rails,{interactive:false}).addTo(map);
 // Stations get their own canvas above the land and rails, so sending a no-data dot to the back never hides it under the land.
@@ -444,9 +457,14 @@ for(const c of E.cities){const b=document.createElement('button');b.type='button
 // Phones: the filters fold behind one button, Go to becomes a menu, the legend opens on tap and station details open in a sheet.
 {const tb=document.querySelector('.toolbar'),bar=document.createElement('div');tb.id='filters';bar.className='mobilebar';bar.innerHTML='<button type="button" id="filtersButton" aria-expanded="false" aria-controls="filters">Filters</button>';const fb=bar.firstChild;fb.onclick=()=>{const o=!tb.classList.contains('open');tb.classList.toggle('open',o);fb.setAttribute('aria-expanded',String(o))};
 if(E.cities){const s=document.createElement('select');s.id='gotoMenu';s.setAttribute('aria-label',J('Go to','移動'));s.add(new Option(J('Go to…','移動…'),''));for(const c of E.cities)s.add(new Option(cityLabel(c),c.key));s.onchange=()=>{const b=document.querySelector(`#goto [data-city="${s.value}"]`);if(b)b.click();s.value=''};bar.append(s)}tb.before(bar);updateFilters();
-const lg=$('legend'),flipLegend=()=>{if(!phone.matches)return;const o=!lg.classList.contains('open');lg.classList.toggle('open',o);lg.setAttribute('aria-expanded',String(o))};lg.onclick=flipLegend;if(phone.matches){lg.setAttribute('role','button');lg.tabIndex=0;lg.setAttribute('aria-label',J('Legend','凡例'));lg.setAttribute('aria-expanded','false');lg.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();flipLegend()}};
-  // On a phone the map credits can wrap to several lines (the UK maps'), so the legend sits just above them.
-  const lift=()=>{const at=document.querySelector('.leaflet-control-attribution');if(at)lg.style.bottom=(at.offsetHeight+8)+'px'};lift();addEventListener('resize',lift)}
+const lg=$('legend'),flipLegend=()=>{if(!phone.matches)return;const o=!lg.classList.contains('open');lg.classList.toggle('open',o);lg.setAttribute('aria-expanded',String(o))};lg.onclick=flipLegend;lg.onkeydown=e=>{if(phone.matches&&(e.key==='Enter'||e.key===' ')){e.preventDefault();flipLegend()}};
+  // On a phone the legend opens on tap and sits just above the map credits, which can wrap to several lines (the UK maps'); both are
+  // set and undone as the width crosses 720 px, with the full-screen button and an open details sheet.
+  const lift=()=>{const at=document.querySelector('.leaflet-control-attribution');if(at)lg.style.bottom=(at.offsetHeight+8)+'px'};
+  const phoneMode=()=>{if(phone.matches){lg.setAttribute('role','button');lg.tabIndex=0;lg.setAttribute('aria-label',J('Legend','凡例'));lg.setAttribute('aria-expanded',String(lg.classList.contains('open')));lift()}
+    else{for(const at of ['role','tabindex','aria-label','aria-expanded'])lg.removeAttribute(at);lg.classList.remove('open');lg.style.bottom='';if($('sheet'))closeSheet()}
+    $('mapFull').hidden=!canFull&&!phone.matches};
+  phoneMode();phone.addEventListener('change',phoneMode);addEventListener('resize',()=>{if(phone.matches)lift()});
 const det=$('detail'),sh=document.createElement('div');sh.id='sheet';sh.innerHTML=`<div id="sheetbar"><button type="button" class="grab" aria-label="${J('Expand details','詳細を広げる')}"></button><button type="button" class="sheetclose" aria-label="${J('Close details','詳細を閉じる')}">×</button></div>`;det.before(sh);sh.append(det);
 const grab=sh.querySelector('.grab'),expand=on=>{sh.classList.toggle('expanded',on);grab.setAttribute('aria-label',on?J('Collapse details','詳細を縮める'):J('Expand details','詳細を広げる'))};grab.onclick=()=>expand(!sh.classList.contains('expanded'));sh.querySelector('.sheetclose').onclick=closeSheet;
 let y0=null;const hb=$('sheetbar');hb.addEventListener('touchstart',e=>{y0=e.touches[0].clientY},{passive:true});hb.addEventListener('touchend',e=>{if(y0==null)return;const dy=e.changedTouches[0].clientY-y0;y0=null;if(dy<-25)expand(true);else if(dy>25){if(sh.classList.contains('expanded'))expand(false);else closeSheet()}},{passive:true})}
