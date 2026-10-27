@@ -475,7 +475,10 @@ const sh=$('sheet');if(sh){sh.querySelector('.sheetclose').setAttribute('aria-la
 if($('legend').getAttribute('role'))$('legend').setAttribute('aria-label',J('Legend','凡例'))}
 function applyLang(){document.documentElement.lang=JA?'ja':'en';markLang();applyStatic();const eb=document.querySelector(`.brand .eyebrow .l-${JA?'ja':'en'}`);if(eb)document.title='Ekinomics · '+eb.textContent;
 if(!D||!map)return;buildSelects();syncControls();controlLabels();$('headline').textContent=E.headline();$('coverage').innerHTML=(E.coverage||(E.ja?japanCoverage:londonCoverage))();render()}
-function setLang(l){JA=l==='ja';try{localStorage.setItem(LANG_KEY,l)}catch(e){}track('change_language',{language:l});applyLang();if(D)writeURL()}
+// The Japanese font's stylesheet (90 KB, mostly Plex Sans JP's pieces) loads only for the Japanese interface: each page's head
+// script adds it for a Japanese first view, and switching to Japanese adds it here.
+function jaFont(){if(!document.querySelector('link[data-ja-font]'))document.head.insertAdjacentHTML('beforeend','<link rel="stylesheet" data-ja-font href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;600&display=swap">')}
+function setLang(l){JA=l==='ja';if(JA)jaFont();try{localStorage.setItem(LANG_KEY,l)}catch(e){}track('change_language',{language:l});applyLang();if(D)writeURL()}
 // Analytics: Google Analytics 4 as on 3rdcultures.com, loaded only on the live domain (not staging or local copies).
 // The address changes on every interaction to keep links shareable, so the GA stream's "page changes based on browser
 // history events" setting must stay off; interactions are counted as the few named events below instead.
