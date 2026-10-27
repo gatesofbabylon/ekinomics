@@ -25,11 +25,12 @@ const lineEn=l=>D.lines_en[l]||[l,''], fold=t=>t.normalize('NFD').replace(/[̀-�
 const slug=t=>t.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'], monYear=m=>JA?`${m.slice(0,4)}年${+m.slice(5,7)}月`:`${MONTHS[+m.slice(5,7)-1]} ${m.slice(0,4)}`;
 // Colour scales per theme. Class breaks stay fixed across periods, so moving the slider shows change instead of rescaling.
+// The light ramp's cheapest step is #efab0a, just deep enough for 2:1 on white land (it was #f2b106 at 1.9:1; Phil, 2026-10-27).
 // The dark ramp keeps the light ramp's hue order with lightness falling evenly (ΔL ≥ .054) and ≥ 3.3:1 on dark land.
 // Change keeps its warm colours and rise bands (Phil, 2026-10-27, after trying seven-band palettes), with falls split at −20%: today's
 // blue for bigger falls and a softer blue for 0–20%, so a slip and a slump differ where falls are common (regional Japan). A small fall
 // sits near a small rise in lightness in either theme.
-const PALETTE={light:{ramp:['#f2b106','#f68704','#f5582c','#e0305e','#c00079','#841495','#432088'],growth:['#037eaf','#7cbde6','#e3c470','#f3821d','#e23248','#8e107e'],series:['#008c8c','#e8542f','#773ac1']},
+const PALETTE={light:{ramp:['#efab0a','#f68704','#f5582c','#e0305e','#c00079','#841495','#432088'],growth:['#037eaf','#7cbde6','#e3c470','#f3821d','#e23248','#8e107e'],series:['#008c8c','#e8542f','#773ac1']},
   dark:{ramp:['#ffde8d','#fec288','#fea484','#ff8087','#f458a8','#c555ca','#7565d8'],growth:['#4aa8e8','#a9d6f5','#e8c86a','#f59a4a','#ff6b7a','#d873c9'],series:['#1dbcb5','#fb784f','#b082f7']}};
 // Editions: Greater Tokyo (MLIT survey, yen, Japanese names alongside) and London (Land Registry with EPC floor areas, pounds).
 // Cells are keyed by window plus each filter dimension; London adds property type and uses building era for "age".

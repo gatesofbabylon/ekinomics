@@ -217,6 +217,10 @@ dialog::backdrop{background:rgba(22,22,22,.5)}
 .dialoghead{display:flex;align-items:center;justify-content:space-between;gap:20px}
 dialog p{font-size:14px}
 #error{padding:18px;padding-bottom:calc(18px + env(safe-area-inset-bottom,0px));background:#fff1f1;color:#a2191f;position:fixed;bottom:0;z-index:10000;width:100%}
+/* Dark mode: search hints at 4.9:1 on the field (#8d8d8d gave 3.5), and the error banner in deep red. */
+input::placeholder{color:var(--muted);opacity:1}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) input::placeholder{color:#a8a8a8}:root:not([data-theme="light"]) #error{background:#3a0a0d;color:#ffb3b8}}
+:root[data-theme="dark"] input::placeholder{color:#a8a8a8}:root[data-theme="dark"] #error{background:#3a0a0d;color:#ffb3b8}
 
 @media(pointer:coarse){td button{display:block;width:100%;min-height:44px;padding:6px 0}#results button{padding:12px 10px}#compareChips button,.textbtn,.mapreset,.seg button{min-height:40px}.seg,.headtools>button{height:42px}.tool{width:40px;height:40px}input[type=range]{height:36px}.leaflet-touch .leaflet-bar a,.mapctl .tool{width:40px;height:40px;line-height:40px}}
 @media(min-width:1500px){main{grid-template-columns:minmax(0,1fr) 400px}.mapwrap{height:610px}}
