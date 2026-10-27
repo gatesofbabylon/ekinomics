@@ -212,6 +212,7 @@ footer{padding:20px 32px;border-top:1px solid var(--line);display:flex;flex-wrap
 .credit{flex-basis:100%;margin:6px 0 0;line-height:1.6}
 .credit span{display:block}
 .credit a{color:inherit}
+.looklink a{color:inherit}
 dialog{border:0;padding:26px;max-width:800px;max-height:85vh;background:var(--surface);color:var(--ink);box-shadow:0 10px 50px rgba(0,0,0,.35)}
 dialog::backdrop{background:rgba(22,22,22,.5)}
 .dialoghead{display:flex;align-items:center;justify-content:space-between;gap:20px}
@@ -322,6 +323,13 @@ html.alt .seg{overflow:hidden;border-color:var(--line)}
 html.alt :is(.presets button,.goto button){border-radius:999px;border:1px solid var(--line)}
 html.alt :is(.presets,.goto) button[aria-pressed="true"]{border-color:var(--ink)}
 html.alt :is(select,.search input){border:1px solid var(--line);border-radius:8px}
+/* Menus drawn by the page, not the browser: the same 12 px inset each side of the text and the arrow, one height. */
+html.alt{--chev:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2712%27 height=%2712%27 viewBox=%270 0 12 12%27%3E%3Cpath d=%27M2.5 4.5L6 8l3.5-3.5%27 fill=%27none%27 stroke=%27%23525252%27 stroke-width=%271.5%27/%3E%3C/svg%3E")}
+@media (prefers-color-scheme:dark){html.alt:not([data-theme="light"]){--chev:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2712%27 height=%2712%27 viewBox=%270 0 12 12%27%3E%3Cpath d=%27M2.5 4.5L6 8l3.5-3.5%27 fill=%27none%27 stroke=%27%23c6c6c6%27 stroke-width=%271.5%27/%3E%3C/svg%3E")}}
+html.alt[data-theme="dark"]{--chev:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2712%27 height=%2712%27 viewBox=%270 0 12 12%27%3E%3Cpath d=%27M2.5 4.5L6 8l3.5-3.5%27 fill=%27none%27 stroke=%27%23c6c6c6%27 stroke-width=%271.5%27/%3E%3C/svg%3E")}
+html.alt select{-webkit-appearance:none;appearance:none;height:36px;padding:0 34px 0 12px;background:var(--field) var(--chev) no-repeat right 12px center/12px 12px;color:var(--ink);line-height:34px;text-overflow:ellipsis}
+html.alt label,html.alt .fieldlabel{gap:6px}
+@media(pointer:coarse){html.alt select{height:42px;line-height:40px}}
 /* Map colours as chips, the active one outlined in the accent. */
 html.alt #metric{border:0;background:none;gap:6px;height:auto;flex-wrap:wrap}
 html.alt #metric button{height:32px;border:1px solid var(--line);border-radius:999px}
@@ -348,7 +356,7 @@ html.alt-wide .altpanel.folded>:not(.altfold){display:none!important}
 html.alt-wide .altfold{display:flex;justify-content:space-between;align-items:center;width:100%;padding:10px 14px;font-weight:600;font-size:13px;text-align:left}
 html.alt-wide .altfold::after,html.alt-wide .asidefold::after{content:"\25B4";color:var(--muted)}
 html.alt-wide :is(.altfold,.asidefold)[aria-expanded="false"]::after{content:"\25BE"}
-html.alt-wide .toolbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:14px}
+html.alt-wide .toolbar{display:grid;grid-template-columns:1fr 1fr;gap:14px 10px;padding:14px}
 html.alt-wide .toolbar :is(label:first-child,.linefilter){grid-column:1/-1}
 html.alt-wide :is(.toolbar,.viewbar) select{max-width:none;width:100%}
 html.alt-wide .viewbar{flex-direction:column;align-items:stretch;gap:12px;padding:14px}
@@ -364,7 +372,21 @@ html.alt-wide aside.folded .search{border-bottom:0;margin-bottom:0}
 html.alt-wide .asidefold{position:absolute;top:10px;right:10px;width:32px;height:32px;padding:0;border:0;border-radius:8px}
 /* The map heading sits at the left of the clear area, clear of the zoom buttons at its right. */
 html.alt-wide .mapheading{position:absolute;top:16px;left:332px;max-width:calc(100% - 780px);z-index:1;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
-html.alt-wide .leaflet-top.leaflet-right{right:376px}
+/* The zoom buttons' top lines up with the station card's and the heading's, 16 px down (Leaflet's own margin is 10). */
+html.alt-wide .leaflet-top.leaflet-right{right:376px;top:6px}
 html.alt-wide .mapreset{right:392px;bottom:130px}
 html.alt-wide .intro{margin:16px 16px 0;padding:0 4px}
 html.alt-wide .explore{margin:16px;border-radius:14px}
+
+/* Colour roles (Phil, 2026-10-27, from the colour audit): Carbon blue, as in the finance tracker, for what you can press and
+   for links; names and figures in ink. Colour is otherwise left to the data: the pink accent and teal links had sat a few
+   ΔE from price and Change colours. The look before this keeps its own colours (rules outside html.alt). */
+html.alt{--accent:#0f62fe;--accent-ink:#ffffff;--link:#0f62fe}
+@media (prefers-color-scheme:dark){html.alt:not([data-theme="light"]){--accent:#78a9ff;--accent-ink:#161616;--link:#78a9ff}}
+html.alt[data-theme="dark"]{--accent:#78a9ff;--accent-ink:#161616;--link:#78a9ff}
+html.alt td button{color:var(--ink)}html.alt td button:hover{text-decoration:underline}
+html.alt :is(.up,.down){color:var(--ink)}
+/* Change scale on trial: ?colours=carbon (web/app.js), dark red for falls and teal to navy for rises, to be tuned. */
+html.carbon{--g0:#a2191f;--g1:#08bdba;--g2:#1192e8;--g3:#0043ce;--g4:#001d6c}
+@media (prefers-color-scheme:dark){html.carbon:not([data-theme="light"]){--g0:#da1e28;--g1:#3ddbd9;--g2:#33b1ff;--g3:#4589ff;--g4:#0f62fe}}
+html.carbon[data-theme="dark"]{--g0:#da1e28;--g1:#3ddbd9;--g2:#33b1ff;--g3:#4589ff;--g4:#0f62fe}

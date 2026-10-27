@@ -28,6 +28,9 @@ const MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov',
 // The dark ramp keeps the light ramp's hue order with lightness falling evenly (ΔL ≥ .054) and ≥ 3.3:1 on dark land.
 const PALETTE={light:{ramp:['#f2b106','#f68704','#f5582c','#e0305e','#c00079','#841495','#432088'],growth:['#037eaf','#e3c470','#f3821d','#e23248','#8e107e'],series:['#008c8c','#e8542f','#773ac1']},
   dark:{ramp:['#ffde8d','#fec288','#fea484','#ff8087','#f458a8','#c555ca','#7565d8'],growth:['#4aa8e8','#e8c86a','#f59a4a','#ff6b7a','#d873c9'],series:['#1dbcb5','#fb784f','#b082f7']}};
+// Change scale on trial (Phil, 2026-10-27): ?colours=carbon shows a cool scale of its own, dark red for falls and teal to navy for rises.
+const CARBON=new URLSearchParams(location.search).get('colours')==='carbon';
+if(CARBON){document.documentElement.classList.add('carbon');PALETTE.light.growth=['#a2191f','#08bdba','#1192e8','#0043ce','#001d6c'];PALETTE.dark.growth=['#da1e28','#3ddbd9','#33b1ff','#4589ff','#0f62fe']}
 // Editions: Greater Tokyo (MLIT survey, yen, Japanese names alongside) and London (Land Registry with EPC floor areas, pounds).
 // Cells are keyed by window plus each filter dimension; London adds property type and uses building era for "age".
 const japanPresets=(cheap,line)=>[[{en:'Biggest risers since 2014–15',ja:'2014〜15年からの上昇率上位'},{metric:'growth',baseline:4,sortKey:'change',sortDir:-1}],[{en:'Family flats, 60–79 m²',ja:'ファミリー向けマンション（60〜79㎡）'},{type:1,size:3}],[{en:'Cheapest station areas',ja:'価格の安い駅エリア'},{sortKey:'price',sortDir:1}],[{en:'Built in the last 10 years',ja:'築10年未満'},{age:1}],[cheap,{line,sortKey:'price',sortDir:1}],[{en:'Busiest markets',ja:'取引の多いエリア'},{metric:'count',sortKey:'sales',sortDir:-1}]];
@@ -210,6 +213,8 @@ const THEME_KEY='ekinomics-theme';
 // The look (Phil, 2026-10-27): each page's head script sets <html class="alt">, the default since the trial; ?ui=current shows the
 // look before it, whose code stays for a roll-back (AGENTS.md).
 const ALT=document.documentElement.classList.contains('alt'),ALT_WIDE=ALT&&matchMedia('(min-width:1200px)').matches;
+// The look before this one stays a footer link away (Phil, 2026-10-27); each page's head script remembers the choice.
+{const c=document.querySelector('footer .credit');if(c)c.insertAdjacentHTML('beforebegin',`<span class="looklink"><a href="${location.pathname}?ui=${ALT?'current':'new'}">${ALT?'<span class="l-en">Previous design</span><span class="l-ja" lang="ja">旧デザイン</span>':'<span class="l-en">New design</span><span class="l-ja" lang="ja">新デザイン</span>'}</a></span>`)}
 // Wide screens in the trial look: the controls, time slider and station details float over a map that fills the screen
 // below the header; the intro line moves below the map. Both panels fold, and views fit and centre in the clear area between them.
 if(ALT_WIDE){const root=document.documentElement,p=$('mapPanel'),panel=document.createElement('div'),aside=document.querySelector('main>aside'),q=s=>document.querySelector(s);
