@@ -214,11 +214,19 @@ const THEME_KEY='ekinomics-theme';
 // The look (Phil, 2026-10-27): each page's head script sets <html class="alt">, the default since the trial; ?ui=current shows the
 // look before it, whose code stays for a roll-back (AGENTS.md).
 const ALT=document.documentElement.classList.contains('alt'),ALT_WIDE=ALT&&matchMedia('(min-width:1200px)').matches;
+// Phones (Phil, 2026-10-27): the header keeps its mark and wordmark, with a menu beside them for language, theme, link and notes and
+// the city button below; the intro goes below the time slider and "Start with" into the filters, so the map starts 252 px down, not 522.
+const COMPACT=ALT&&matchMedia('(max-width:720px)').matches;
+if(COMPACT){const ht=document.querySelector('.headtools');document.documentElement.classList.add('compact');
+  ht.insertAdjacentHTML('beforeend','<button type="button" class="headmore" aria-expanded="false" aria-label="Settings" data-ja-label="設定"><svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><circle cx="4" cy="9" r="1.6"/><circle cx="9" cy="9" r="1.6"/><circle cx="14" cy="9" r="1.6"/></svg></button><div class="headmenu" hidden></div>');
+  const btn=ht.querySelector('.headmore'),menu=ht.querySelector('.headmenu'),shut=()=>{menu.hidden=true;btn.setAttribute('aria-expanded','false')};menu.append($('lang'),$('theme'),$('copyLink'),$('about'));
+  btn.onclick=e=>{e.stopPropagation();const o=menu.hidden;menu.hidden=!o;btn.setAttribute('aria-expanded',String(o))};document.addEventListener('click',e=>{if(!menu.hidden&&!menu.contains(e.target))shut()});
+  document.querySelector('.timebar').after(document.querySelector('.intro'));document.querySelector('.toolbar').append($('presets'))}
 // Wide screens in the trial look: the controls, time slider and station details float over a map that fills the screen
 // below the header; the intro line moves below the map. Both panels fold, and views fit and centre in the clear area between them.
 if(ALT_WIDE){const root=document.documentElement,p=$('mapPanel'),panel=document.createElement('div'),aside=document.querySelector('main>aside'),q=s=>document.querySelector(s);
   panel.className='altpanel';panel.innerHTML='<button type="button" class="altfold" aria-expanded="true"><span class="l-en">Map settings</span><span class="l-ja" lang="ja">地図の設定</span></button>';
-  panel.append(q('.toolbar'),q('.viewbar'),$('goto'),$('presets'));p.append(panel,q('.timebar'),aside);q('.explore').before(q('.intro'));root.classList.add('alt-wide');
+  panel.append($('goto'),q('.toolbar'),q('.viewbar'),$('presets'));p.append(panel,q('.timebar'),aside);q('.explore').before(q('.intro'));root.classList.add('alt-wide');
   const fold=(el,b,on)=>{el.classList.toggle('folded',on);b.setAttribute('aria-expanded',String(!on))},pb=panel.firstChild;pb.onclick=()=>fold(panel,pb,!panel.classList.contains('folded'));
   aside.insertAdjacentHTML('afterbegin','<button type="button" class="asidefold" aria-expanded="true" aria-label="Station details" data-ja-label="駅の詳細"></button>');const ab=aside.firstChild;ab.onclick=()=>fold(aside,ab,!aside.classList.contains('folded'));
   let shown='';new MutationObserver(()=>{const n=$('detail').querySelector('.nm');if(n&&n.textContent!==shown){shown=n.textContent;fold(aside,ab,false)}}).observe($('detail'),{childList:true,subtree:true});
