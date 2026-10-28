@@ -231,11 +231,12 @@ function pct(v){return v==null?'—':`${v>=0?'+':''}${v.toFixed(0)}%`}
 function color(s){let c=cell(s),v=state.metric==='growth'?growth(s):state.metric==='count'?c[0]:c[1];if(v==null||!c[0])return null;if(state.metric==='growth')return GROWTH[step(v,GROWTH_BREAKS)];return RAMP[step(v,state.metric==='count'?COUNT_BREAKS:priceBreaks())]}
 // Stations without a value shrink to faint dots so the priced network reads first.
 // Dot size follows how far apart the stations in view sit on screen (Phil, 2026-10-28; density is relative): 0.3 of the median
-// distance from each coloured dot in view to its nearest neighbour, in half-pixel steps between 3 and 6.5 px, remeasured when
-// the view settles or the filters change. Sparse views get bigger dots, dense ones smaller, so dots seldom pile up.
+// distance from each coloured dot in view to its nearest neighbour, in half-pixel steps between 4.5 and 6.5 px, remeasured
+// when the view settles or the filters change. Sparse views get bigger dots; dense ones keep about the old size, as 3 px
+// left London's overview looking empty (Phil, 2026-10-28).
 let DOT=4.5,drawOrder='';const dotR=()=>DOT,selR=()=>Math.max(8,DOT+3);
 function sizeDots(){const b=map.getBounds(),pts=D.stations.filter(s=>visible(s)&&color(s)&&b.contains([s.lat,s.lon])).map(s=>map.latLngToContainerPoint([s.lat,s.lon]));if(!pts.length)return false;
-  pts.sort((a,b)=>a.x-b.x);const gaps=pts.map((p,i)=>{let m=Infinity;for(let j=i-1;j>=0&&p.x-pts[j].x<m;j--)m=Math.min(m,p.distanceTo(pts[j]));for(let j=i+1;j<pts.length&&pts[j].x-p.x<m;j++)m=Math.min(m,p.distanceTo(pts[j]));return m}).sort((a,b)=>a-b),r=Math.max(3,Math.min(6.5,Math.round(.6*gaps[gaps.length>>1])/2)),moved=r!==DOT;DOT=r;return moved}
+  pts.sort((a,b)=>a.x-b.x);const gaps=pts.map((p,i)=>{let m=Infinity;for(let j=i-1;j>=0&&p.x-pts[j].x<m;j--)m=Math.min(m,p.distanceTo(pts[j]));for(let j=i+1;j<pts.length&&pts[j].x-p.x<m;j++)m=Math.min(m,p.distanceTo(pts[j]));return m}).sort((a,b)=>a-b),r=Math.max(4.5,Math.min(6.5,Math.round(.6*gaps[gaps.length>>1])/2)),moved=r!==DOT;DOT=r;return moved}
 function markerStyle(i){const fill=color(D.stations[i]),sel=i===selected,R=dotR();if(!fill&&!sel)return {stroke:false,fillColor:TC.empty,fillOpacity:.6,radius:Math.max(1.6,.45*R)};const r=sel?selR():R;if(fill&&state.metric==='price'&&thin(cell(D.stations[i])))return {stroke:true,fillColor:sel?fill:TC.ring,fillOpacity:sel?.45:.95,color:sel?TC.ink:fill,weight:sel?3:2,radius:r};return {stroke:true,fillColor:fill||TC.empty,fillOpacity:.95,color:sel?TC.ink:TC.ring,weight:sel?3:1,radius:r}}
 
 // Theme: Auto follows the device; Light and Dark are remembered. Map and chart colours come from the CSS tokens.
