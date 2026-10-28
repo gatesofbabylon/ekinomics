@@ -100,6 +100,10 @@ select{background:var(--field);color:var(--ink);border:0;border-bottom:1px solid
 .stepLabels span{transform:translateX(-50%);white-space:nowrap;text-align:center}
 .legend small{display:block;color:var(--muted);margin-top:6px}
 .nodata{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--dot-empty);margin:0 6px 0 2px;vertical-align:1px}
+.flowdot{display:inline-block;width:5px;height:5px;border-radius:50%;margin:0 6px 0 2px;vertical-align:1px}
+/* The Commute view has one census year: the time slider steps aside (it keeps its space). */
+.cm .timebar{visibility:hidden}
+.cmnote{margin:4px 0 14px}
 .hollow{display:inline-block;width:8px;height:8px;border-radius:50%;border:2px solid var(--ink-2);margin:0 6px 0 2px;vertical-align:0;box-sizing:border-box}
 .chart circle.ind{fill:var(--surface);stroke-width:1.5px}
 td.ind{font-style:italic;color:var(--ink-2)}
