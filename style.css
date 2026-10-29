@@ -418,3 +418,14 @@ html.alt :is(.up,.down){color:var(--ink)}
   html.compact .toolbar .presets{grid-column:1/-1;flex-wrap:wrap;white-space:normal;overflow:visible;padding:4px 0 0;border:0;background:none}
 }
 html.alt #unit button:disabled{opacity:.4;cursor:default}
+/* Magnification ladder (×16 to ×1) with its readout, and the scale bar, in the map's top-right column */
+.mapzoom{display:flex;flex-direction:column}
+.mapzoom .rung{height:26px;font:600 11px/1 var(--sans,Inter,system-ui,sans-serif);font-variant-numeric:tabular-nums;cursor:pointer}
+.mapzoom .rung[aria-pressed="true"]{color:var(--accent);background:var(--hover)}
+.mapzoom .readout{display:block;width:30px;padding:3px 0;text-align:center;font:600 10px/14px var(--sans,Inter,system-ui,sans-serif);color:var(--accent);background:var(--surface);border-top:1px solid var(--line)}
+.mapzoom .readout+.rung{border-top:1px solid var(--line)}
+.mapzoom .readout[hidden]{display:none}
+.leaflet-touch .mapzoom .rung{height:32px}
+.leaflet-touch .mapzoom .readout{width:40px}
+.leaflet-control-scale{margin-top:6px}
+.leaflet-control-scale-line{background:var(--surface);color:var(--ink);border-color:var(--ink-2,var(--ink));font:500 10px/14px var(--sans,Inter,system-ui,sans-serif);padding:0 4px;opacity:.9}
