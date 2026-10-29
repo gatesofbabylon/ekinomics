@@ -339,9 +339,9 @@ html.alt select{-webkit-appearance:none;appearance:none;height:36px;padding:0 34
 html.alt label,html.alt .fieldlabel{gap:6px}
 @media(pointer:coarse){html.alt select{height:42px;line-height:40px}}
 /* Map colours as chips, the active one outlined in the accent. */
-html.alt #metric{border:0;background:none;gap:6px;height:auto;flex-wrap:wrap}
-html.alt #metric button{height:32px;border:1px solid var(--line);border-radius:999px}
-html.alt #metric button[aria-pressed="true"]{background:transparent;color:var(--accent);border-color:var(--accent)}
+html.alt #metric,html.alt #unit{border:0;background:none;gap:6px;height:auto;flex-wrap:wrap}
+html.alt #metric button,html.alt #unit button{height:32px;border:1px solid var(--line);border-radius:999px}
+html.alt #metric button[aria-pressed="true"],html.alt #unit button[aria-pressed="true"]{background:transparent;color:var(--accent);border-color:var(--accent)}
 html.alt .legend{border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
 html.alt .nearlink a{border-radius:999px;border-color:var(--line);box-shadow:var(--shadow)}
 html.alt .leaflet-bar{border-radius:10px!important;overflow:hidden;border-color:var(--line)!important;box-shadow:var(--shadow)!important}
@@ -417,3 +417,4 @@ html.alt :is(.up,.down){color:var(--ink)}
   html.compact .intro{order:4;padding:6px 16px 10px}
   html.compact .toolbar .presets{grid-column:1/-1;flex-wrap:wrap;white-space:normal;overflow:visible;padding:4px 0 0;border:0;background:none}
 }
+html.alt #unit button:disabled{opacity:.4;cursor:default}
