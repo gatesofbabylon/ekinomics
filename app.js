@@ -161,7 +161,7 @@ EDITIONS.fukuoka={...EDITIONS.osaka,priceBreaks:[100000,150000,200000,300000,400
   cities:[{key:'fukuoka',label:'Fukuoka',ja:'福岡',box:[[33.55,130.33],[33.63,130.45]],home:'博多'},{key:'kitakyushu',label:'Kitakyushu',ja:'北九州',box:[[33.83,130.80],[33.92,130.92]],home:'小倉'},{key:'kurume',label:'Kurume',ja:'久留米',box:[[33.29,130.48],[33.34,130.55]],home:'久留米'}],headline:japanHeadline({en:'Fukuoka prefecture',ja:'福岡県'}),
   scope:{en:'The map shows Fukuoka prefecture: Fukuoka, Kitakyushu, Kurume and the towns around them.',ja:'地図は福岡県（福岡・北九州・久留米とその周辺）を表示する。'},
   presets:japanPresets({en:'Cheapest on the Kūkō Line',ja:'空港線で価格の安い駅'},'福岡市 / 1号線(空港線)')};
-// One-prefecture pages added 2026-10-25, each opening on its prefectural capital (Naha: Omoromachi, the busiest priced stop).
+// One-prefecture pages added 2026-10-25, each opening on its prefectural capital (Naha: Makishi on Kokusai-dōri, as the civic centre, Kenchō-mae, has too few sales for a full price).
 EDITIONS.sendai={...EDITIONS.fukuoka,priceBreaks:[50000, 100000, 200000, 250000, 300000, 400000],landBreaks:[10000, 20000, 30000, 70000, 100000, 150000],home:'仙台',view:[38.26, 140.88, 11],homeBox:[[38.2, 140.8], [38.33, 140.95]],
   cities:[{key:'sendai',label:'Sendai',ja:'仙台',box:[[38.21,140.81],[38.31,140.95]],home:'仙台'},{key:'ishinomaki',label:'Ishinomaki',ja:'石巻',box:[[38.385,141.23],[38.485,141.37]],home:'石巻'}],headline:japanHeadline({en:'Miyagi prefecture',ja:'宮城県'}),
   scope:{en:"The map shows Miyagi prefecture: Sendai, Ishinomaki and the towns around them.",ja:'地図は宮城県（仙台・石巻とその周辺）を表示する。'},
@@ -182,8 +182,8 @@ EDITIONS.kumamoto={...EDITIONS.fukuoka,homeBox:[[32.69,130.66],[32.89,130.80]],p
   cities:[{key:'kumamoto',label:'Kumamoto',ja:'熊本',box:[[32.745,130.635],[32.845,130.775]],open:[[32.69,130.66],[32.89,130.80]],home:'熊本'},{key:'yatsushiro',label:'Yatsushiro',ja:'八代',box:[[32.455,130.55],[32.555,130.69]],home:'八代'}],headline:japanHeadline({en:'Kumamoto prefecture',ja:'熊本県'}),
   scope:{en:"The map shows Kumamoto prefecture: Kumamoto, Yatsushiro and the towns around them.",ja:'地図は熊本県（熊本・八代とその周辺）を表示する。'},
   presets:japanPresets({en:'Cheapest on the Hōhi Line',ja:'豊肥線で価格の安い駅'},'九州旅客鉄道 / 豊肥線')};
-EDITIONS.naha={...EDITIONS.fukuoka,priceBreaks:[300000, 350000, 400000, 450000, 500000, 600000],landBreaks:[100000, 125000, 150000, 175000, 200000, 250000],home:'おもろまち',view:[26.22, 127.69, 12],homeBox:[[26.19, 127.66], [26.25, 127.74]],
-  cities:[{key:'naha',label:'Naha',ja:'那覇',box:[[26.165,127.62],[26.265,127.76]],home:'おもろまち'},{key:'shuri',label:'Shuri',ja:'首里',box:[[26.17,127.655],[26.27,127.795]],home:'首里'}],headline:japanHeadline({en:'Okinawa Island',ja:'沖縄本島'}),
+EDITIONS.naha={...EDITIONS.fukuoka,priceBreaks:[300000, 350000, 400000, 450000, 500000, 600000],landBreaks:[100000, 125000, 150000, 175000, 200000, 250000],home:'牧志',view:[26.22, 127.69, 12],homeBox:[[26.19, 127.66], [26.25, 127.74]],
+  cities:[{key:'naha',label:'Naha',ja:'那覇',box:[[26.165,127.62],[26.265,127.76]],home:'牧志'},{key:'shuri',label:'Shuri',ja:'首里',box:[[26.17,127.655],[26.27,127.795]],home:'首里'}],headline:japanHeadline({en:'Okinawa Island',ja:'沖縄本島'}),
   scope:{en:"The map shows Okinawa Island. The prefecture's only railway is the Yui Rail monorail, through Naha and Urasoe.",ja:'地図は沖縄本島を表示する。県内唯一の鉄道は、那覇と浦添を走るゆいレールである。'},
   presets:japanPresets({en:'Cheapest on Yui Rail',ja:'ゆいレールで価格の安い駅'},'沖縄都市モノレール / 沖縄都市モノレール線')};
 // Region pages added 2026-10-25 (Hokkaido, Hokuriku, Shikoku, Nagasaki) and Greater Kagoshima; each opens on its main city.
@@ -195,8 +195,8 @@ EDITIONS.hokuriku={...EDITIONS.fukuoka,homeBox:[[36.44,136.52],[36.70,136.75]],p
   cities:[{key:'kanazawa',label:'Kanazawa',ja:'金沢',box:[[36.52,136.575],[36.62,136.715]],open:[[36.44,136.52],[36.70,136.75]],home:'金沢'},{key:'toyama',label:'Toyama',ja:'富山',box:[[36.65,137.145],[36.75,137.285]],home:'富山'},{key:'fukui',label:'Fukui',ja:'福井',box:[[36.015,136.15],[36.115,136.29]],home:'福井'},{key:'takaoka',label:'Takaoka',ja:'高岡',box:[[36.69,136.95],[36.79,137.09]],home:'高岡'}],headline:japanHeadline({en:'Toyama, Ishikawa, Fukui',ja:'富山・石川・福井'}),
   scope:{en:"The map shows Toyama, Ishikawa and Fukui: Kanazawa, Toyama, Fukui, Takaoka and the towns around them.",ja:'地図は富山・石川・福井（金沢・富山・福井・高岡とその周辺）を表示する。'},
   presets:japanPresets({en:'Cheapest on the Ainokaze Toyama Railway',ja:'あいの風とやま鉄道線で価格の安い駅'},'あいの風とやま鉄道 / あいの風とやま鉄道線')};
-EDITIONS.shikoku={...EDITIONS.fukuoka,priceBreaks:[40000, 60000, 90000, 140000, 180000, 230000],landBreaks:[15000, 20000, 30000, 40000, 60000, 90000],home:'本町六丁目',view:[33.84,132.76,11],homeBox:[[33.78,132.68],[33.90,132.84]],
-  cities:[{key:'matsuyama',label:'Matsuyama',ja:'松山',box:[[33.79,132.69],[33.89,132.83]],home:'本町六丁目'},{key:'takamatsu',label:'Takamatsu',ja:'高松',box:[[34.29,133.98],[34.39,134.12]],home:'高松'},{key:'kochi',label:'Kōchi',ja:'高知',box:[[33.51,133.47],[33.61,133.61]],home:'高知'}],headline:japanHeadline({en:'Kagawa, Ehime, Kōchi',ja:'香川・愛媛・高知'}),
+EDITIONS.shikoku={...EDITIONS.fukuoka,priceBreaks:[40000, 60000, 90000, 140000, 180000, 230000],landBreaks:[15000, 20000, 30000, 40000, 60000, 90000],home:'松山',view:[33.84,132.76,11],homeBox:[[33.78,132.68],[33.90,132.84]],
+  cities:[{key:'matsuyama',label:'Matsuyama',ja:'松山',box:[[33.79,132.69],[33.89,132.83]],home:'松山'},{key:'takamatsu',label:'Takamatsu',ja:'高松',box:[[34.29,133.98],[34.39,134.12]],home:'高松'},{key:'kochi',label:'Kōchi',ja:'高知',box:[[33.51,133.47],[33.61,133.61]],home:'高知'}],headline:japanHeadline({en:'Kagawa, Ehime, Kōchi',ja:'香川・愛媛・高知'}),
   scope:{en:"The map shows Kagawa, Ehime and Kōchi: Takamatsu, Matsuyama, Kōchi and the towns around them. Tokushima is not included yet.",ja:'地図は香川・愛媛・高知（高松・松山・高知とその周辺）を表示する。徳島県はまだ含まない。'},
   presets:japanPresets({en:'Cheapest on the Yosan Line',ja:'予讃線で価格の安い駅'},'四国旅客鉄道 / 予讃線')};
 EDITIONS.nagasaki={...EDITIONS.fukuoka,homeBox:[[32.74,129.84],[32.94,130.08]],priceBreaks:[50000, 80000, 120000, 150000, 190000, 230000],landBreaks:[15000, 25000, 30000, 40000, 50000, 60000],home:'長崎',view:[32.76, 129.87, 12],
