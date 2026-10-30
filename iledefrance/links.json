@@ -1,1 +1,1 @@
-[]
+[{"name":"London","href":"../southeast/london/","label":[1.9951,49.2361],"arrow":"↖","from":"paris","route":"Eurostar"},{"name":"Lille","href":"../nord/lille/","label":[2.4801,49.1909],"arrow":"↑","from":"paris","route":"TGV"},{"name":"Lyon","href":"../rhone/lyon/","label":[2.9452,48.1135],"arrow":"↘","from":"paris","route":"TGV"},{"name":"Rennes","href":"../illeetvilaine/rennes/","label":[1.5182,48.7057],"arrow":"←","from":"paris","route":"TGV"},{"name":"Toulouse","href":"../hautegaronne/toulouse/","label":[2.2416,48.2462],"arrow":"↓","from":"paris","route":"TGV"}]
