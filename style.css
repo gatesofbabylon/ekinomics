@@ -313,7 +313,7 @@ html[lang="ja"] .hsec[data-c="jp"],html:not([lang="ja"]) .hsec[data-c="uk"]{orde
 @media(max-width:1100px){.hgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:820px){.hgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.hmaps{gap:8px}.hmap{padding:4px}}
 @media(max-width:720px){.home main{padding:16px 16px 20px}.hhero{font-size:14.5px}.hmap .hlab{display:none}.hgrid{gap:8px}
-  .hcard{padding:10px 11px;gap:3px}.htop{display:block}.htop b{font-size:15px}.hother{margin-left:5px;font-size:12px}.htag{display:block;margin:1px 0 0;font-size:11px}
+  .hcard{padding:10px 11px;gap:3px}.htop{display:block}.htop b{font-size:15px;margin-right:5px}.hother{font-size:12px}.htag{display:block;margin:1px 0 0;font-size:11px}
   .hprice{font-size:18px}.hbottom{flex-direction:column;align-items:stretch;gap:2px}.hspark{width:100%;height:28px}.hch small{display:none}}
 
 /* A second look on trial (Phil, 2026-10-27), on when <html> has the alt class: 3rd cultures' type, Fraunces and Inter, in
