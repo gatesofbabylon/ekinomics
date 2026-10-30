@@ -1,1 +1,1 @@
-[{"name":"New York","href":"../newyork/newyork/","label":[-87.5417,41.8783],"arrow":"→","from":"chicago","route":"Amtrak Lake Shore Limited"}]
+[{"name":"New York","href":"../newyork/newyork/","label":[-87.5417,41.8783],"arrow":"→","from":"chicago","route":"Amtrak Lake Shore Limited"},{"name":"Denver","href":"../colorado/denver/","label":[-87.9883,41.8419],"arrow":"←","from":"chicago","route":"Amtrak California Zephyr"},{"name":"Seattle","href":"../washington/seattle/","label":[-88.3363,42.0021],"arrow":"←","from":"chicago","route":"Amtrak Empire Builder"}]

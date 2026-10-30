@@ -1,1 +1,1 @@
-[{"name":"Chicago","href":"../illinois/chicago/","label":[-74.078,40.7612],"arrow":"←","from":"newyork","route":"Amtrak Lake Shore Limited"}]
+[{"name":"Chicago","href":"../illinois/chicago/","label":[-74.078,40.7612],"arrow":"←","from":"newyork","route":"Amtrak Lake Shore Limited"},{"name":"Philadelphia","href":"../pennsylvania/philadelphia/","label":[-74.2511,40.5681],"arrow":"↙","from":"newyork","route":"Amtrak Northeast Corridor"},{"name":"Miami","href":"../florida/miami/","label":[-74.0572,40.5596],"arrow":"↓","from":"newyork","route":"Amtrak Silver Meteor"}]
