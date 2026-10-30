@@ -427,7 +427,7 @@ html.alt #unit button:disabled{opacity:.4;cursor:default}
 .mapzoom .readout[hidden]{display:none}
 .leaflet-touch .mapzoom .rung{height:32px}
 .leaflet-control-scale{margin-top:6px}
-.leaflet-control-scale-line{background:var(--surface);color:var(--ink);border-color:var(--ink-2,var(--ink));font:500 10px/14px var(--sans,Inter,system-ui,sans-serif);padding:0 4px;opacity:.9}
+.leaflet-control-scale-line{background:var(--surface);color:var(--ink);border-color:var(--ink-2,var(--ink));font:500 10px/14px var(--sans,Inter,system-ui,sans-serif);padding:0 4px;opacity:.9;text-shadow:none}
 /* Image export: the options panel beside the map tools (a sheet at the foot of the map on phones) and the frame's outline. */
 .savepanel{position:absolute;z-index:1001;top:12px;right:64px;width:320px;max-width:calc(100% - 24px);background:var(--surface);border:1px solid var(--line);box-shadow:0 2px 10px rgba(0,0,0,.15);padding:10px 12px 12px;display:flex;flex-direction:column;gap:8px}
 .savehead{display:flex;align-items:center;justify-content:space-between}.savehead strong{font:600 14px var(--sans)}
