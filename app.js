@@ -291,7 +291,7 @@ const LAYOUT=(()=>{const q=s=>document.querySelector(s),home={};
 // The map's zoom is shifted so that zoom 10 is ×1 at the latitude of the city the page opened on: the quarter-zoom steps are
 // then the ladder (×2 is zoom 11, ×16 zoom 14), and every zoom threshold in this file is a magnification (labels: prefectures
 // up to ×¼, places ×½–×1.7, stations from ×1.7, stations without a price from ×8; a picked station opens at ×4 or closer).
-let MAG_OFF=0,MAG=null;const zOf=m=>10+Math.log2(m),magOf=z=>2**(z-10),RUNGS=[16,8,4,2,1],
+let MAG_OFF=0,MAG=null,AT=null;const zOf=m=>10+Math.log2(m),magOf=z=>2**(z-10),RUNGS=[16,8,4,2,1],
   magText=m=>'×'+(m>=10?Math.round(m):+m.toPrecision(2)),CRS=L.extend({},L.CRS.EPSG3857,{scale:z=>256*2**(z+MAG_OFF),zoom:s=>Math.log2(s/256)-MAG_OFF});
 // The ladder replaces + and −: rungs at ×16 to ×1, and a readout between the two rungs either side of the view's magnification.
 // Picking a rung is the comparison mode: the address carries it (?mag=2) and so do the links to other cities, which then open
@@ -313,7 +313,7 @@ const LAPTOP=[748,536];
 function viewArea(){const p=clearPad(0),S=map.getSize(),tl=p.paddingTopLeft||p.padding,br=p.paddingBottomRight||p.padding,hid=Math.max(0,map.getContainer().getBoundingClientRect().bottom-innerHeight);
   return {tl,br:[br[0],Math.min(S.y-tl[1]-60,br[1]+hid)],S}}
 function openCity(c,animate=true){const B=L.latLngBounds(c.box),a=viewArea(),w=a.S.x-a.tl[0]-a.br[0],h=a.S.y-a.tl[1]-a.br[1];let ll=B.getCenter(),z;
-  if(MAG){const i=D.stations.findIndex(s=>s.name===c.home);if(i>=0)ll=L.latLng(D.stations[i].lat,D.stations[i].lon);z=zOf(MAG)}
+  if(AT)[ll,z]=AT;else if(MAG){const i=D.stations.findIndex(s=>s.name===c.home);if(i>=0)ll=L.latLng(D.stations[i].lat,D.stations[i].lon);z=zOf(MAG)}
   else{const priced=D.stations.filter(s=>cell(s)[1]!=null),near=priced.filter(s=>map.distance(B.getCenter(),[s.lat,s.lon])<=30000).length,
       want=Math.min(Math.max(8,Math.min(25,Math.ceil(near/2))),priced.length),
       shows=(z,w,h)=>{const o=map.project(ll,z);return priced.filter(s=>{const q=map.project([s.lat,s.lon],z).subtract(o);return Math.abs(q.x)<=w/2&&Math.abs(q.y)<=h/2}).length},
@@ -401,7 +401,7 @@ function legendSteps(cols,breaks,f){const grid=`style="grid-template-columns:rep
 // or without map text. Frames are sized in screen pixels at the current magnification and saved at 2.5× (2× when wide), so
 // labels read on a phone; "This view" is the map's clear area. While the panel is open a dashed outline shows what the frame
 // holds. Stories keep Instagram's top and bottom bands clear.
-const FRAMES={view:[0,0,0],square:[432,432,2.5],portrait:[432,540,2.5],story:[432,768,2.5],wide:[960,540,2]},FRAME_FILE={view:'view',square:'1x1',portrait:'4x5',story:'9x16',wide:'16x9'},
+const FRAMES={view:[0,0,0],square:[432,432,2.5],portrait:[432,540,2.5],story:[432,768,2.5],wide:[960,540,2]},CHROME=.85,FRAME_FILE={view:'view',square:'1x1',portrait:'4x5',story:'9x16',wide:'16x9'},
   SAVE={frame:'portrait',theme:null,text:null},XF={sans:'Inter,"IBM Plex Sans JP",sans-serif',serif:'Fraunces,"IBM Plex Sans JP",serif'};
 const wrap=(g,t,w)=>{const out=[];let line='';for(const k of t.match(/[　-鿿＀-￯]|[^\s　-鿿＀-￯]+\s*|\s+/g)||[]){if(line&&g.measureText(line+k).width>w){out.push(line.trimEnd());line=k.trimStart()}else line+=k}if(line)out.push(line);return out},
   rr=(g,x,y,w,h,r)=>{g.beginPath();if(g.roundRect)g.roundRect(x,y,w,h,r);else g.rect(x,y,w,h)};
@@ -413,13 +413,13 @@ function saveTexts(){const c=E.city||cityAt(viewCentre())||(E.cities||[])[0],en=
     filt:filt.length?J('Filters: ','絞り込み：')+filt.join(' · '):'',src:[prices,JA&&E.ja?'地理：国土交通省 国土数値情報（加工、CC BY 4.0）':src.textContent.trim()].filter(Boolean).join(' · '),url:'ekinomics.com'+MAP_ROOT+(c?c.key+'/':''),name:c?c.key:D.edition||'tokyo'}}
 // Sizes in screen pixels: the header (brand left, heading right, or the heading on a row of its own when they don't fit), the
 // map, and the footer rows (legend, key, filters, sources, address), each placed by its text baseline.
-function saveLayout(g,T){const [fw,fh,fs]=FRAMES[SAVE.frame],a=fw?null:viewArea(),W=fw||a.S.x-a.tl[0]-a.br[0],P=16,iw=W-2*P,[t0,b0]=SAVE.frame==='story'?[38,57]:[0,0];
+function saveLayout(g,T){const [fw,fh,fs]=FRAMES[SAVE.frame],a=fw?null:viewArea(),W=fw||a.S.x-a.tl[0]-a.br[0],k=CHROME,P=16,iw=W/k-2*P,[t0,b0]=SAVE.frame==='story'?[38,57]:[0,0];
   g.font=`600 11px ${XF.sans}`;const cw=g.measureText(T.city).width,mw=g.measureText(T.metric).width;g.font=`500 22px ${XF.serif}`;const ww=g.measureText('Ekinomics').width;g.font=`500 20px ${XF.serif}`;
   const two=52+Math.max(cw,ww)+24+Math.max(mw,g.measureText(T.period).width)>iw,hh=two?108:64,rows=[];let y=23;
   rows.push({t:'title',y});y+=8;rows.push({t:'steps',y});y+=37;
   g.font=`400 10px ${XF.sans}`;let x=0;const items=[];T.key.forEach((tx,k)=>{if(!tx)return;const w=14+g.measureText(tx).width;if(x&&x+w>iw){x=0;y+=14}items.push({sym:k?'nodata':'hollow',tx,x,y});x+=w+12});rows.push({t:'key',items});
   for(const tx of [...(T.filt?wrap(g,T.filt,iw):[]),...wrap(g,T.src,iw)]){y+=14;rows.push({t:'text',tx,y})}y+=18;rows.push({t:'url',y});
-  const ft=y+12,mapH=fw?fh-t0-b0-hh-ft:a.S.y-a.tl[1]-a.br[1];return {W,H:t0+hh+mapH+ft+b0,S:fs||(W<=600?2.5:2),t0,hh,two,mapH,ft,rows}}
+  const ft=(y+12)*k,hk=hh*k,mapH=fw?fh-t0-b0-hk-ft:a.S.y-a.tl[1]-a.br[1];return {W,H:t0+hk+mapH+ft+b0,S:fs||(W<=600?2.5:2),t0,hh:hk,two,mapH,ft,rows,k}}
 // Colours are read with the chosen theme in place, then put back before the page next paints.
 function inTheme(mode,fn){const root=document.documentElement,had=root.dataset.theme,keep=[RAMP,GROWTH,colours,TC];root.dataset.theme=mode;const p=PALETTE[mode];RAMP=p.ramp;GROWTH=p.growth;colours=p.series;
   TC={ring:css('--dot-ring'),empty:css('--dot-empty'),ink:css('--ink')};try{return fn()}finally{if(had==null)delete root.dataset.theme;else root.dataset.theme=had;[RAMP,GROWTH,colours,TC]=keep}}
@@ -452,19 +452,19 @@ function labelItems(g,items){const ja=JN(),ink=css('--ink'),ink2=css('--ink-2'),
     if(faint)f=f.replace(/^\d+ /,'400 ');if(c.includes('selected'))f=f.replace('11px','12px');if(pref&&ALT)f=f.replace(/^600 /,'500 ');g.font=f;if('letterSpacing' in g)g.letterSpacing=pref?(ja?'2px':'2.5px'):'0px';
     const x=mid?o.x+(o.w+1)/2:o.x,y=o.y+(pref?7.5:6);g.textAlign=mid?'center':'left';g.strokeStyle=halo;g.lineWidth=3;g.strokeText(o.text,x,y);g.fillStyle=faint?mut:place||pref?ink2:ink;g.fillText(o.text,x,y)}
   if('letterSpacing' in g)g.letterSpacing='0px'}
-function drawFrame(g,Lt,T){const {W,H,t0,hh,two,mapH,rows}=Lt,P=16,ink=css('--ink'),ink2=css('--ink-2'),mut=css('--muted'),line=css('--line');
-  g.fillStyle=css('--surface');g.fillRect(0,0,W,H);
+function drawFrame(g,Lt,T){const {W:FW,H,t0:T0,hh,two,mapH,rows,k}=Lt,W=FW/k,t0=0,P=16,ink=css('--ink'),ink2=css('--ink-2'),mut=css('--muted'),line=css('--line');
+  g.fillStyle=css('--surface');g.fillRect(0,0,FW,H);g.save();g.translate(0,T0);g.scale(k,k);
   g.fillStyle=ink;g.fillRect(P,t0+12,40,40);g.fillStyle=css('--page');g.font='700 18.8px "Space Grotesk",sans-serif';g.textAlign='center';g.textBaseline='middle';g.fillText('EKI',P+20,t0+32.5);
   g.textAlign='left';g.textBaseline='alphabetic';g.fillStyle=ink2;g.font=`600 11px ${XF.sans}`;g.fillText(T.city,P+52,t0+27);g.fillStyle=ink;g.font=`500 22px ${XF.serif}`;g.fillText('Ekinomics',P+52,t0+50);
   const hx=two?P:W-P,hy=two?t0+64:t0;g.textAlign=two?'left':'right';g.fillStyle=ink2;g.font=`600 11px ${XF.sans}`;g.fillText(T.metric,hx,hy+(two?18:27));g.fillStyle=ink;g.font=`500 20px ${XF.serif}`;g.fillText(T.period,hx,hy+(two?40:50));
-  g.fillStyle=line;if(two)g.fillRect(P,t0+64,W-2*P,1);const my=t0+hh;g.save();g.translate(0,my);drawMap(g,W,mapH,SAVE.text);g.restore();g.fillStyle=line;g.fillRect(0,my-1,W,1);g.fillRect(0,my+mapH,W,1);
-  const fy=my+mapH,[cols,breaks,fl]=legendScale(),sw=Math.min(W-2*P,cols.length*52),cw=sw/cols.length;g.textAlign='left';g.textBaseline='alphabetic';
+  g.fillStyle=line;if(two)g.fillRect(P,t0+64,W-2*P,1);g.restore();const my=T0+hh;g.save();g.translate(0,my);drawMap(g,FW,mapH,SAVE.text);g.restore();g.fillStyle=line;g.fillRect(0,my-1,FW,1);g.fillRect(0,my+mapH,FW,1);
+  g.save();g.translate(0,my+mapH);g.scale(k,k);const fy=0,[cols,breaks,fl]=legendScale(),sw=Math.min(W-2*P,cols.length*52),cw=sw/cols.length;g.textAlign='left';g.textBaseline='alphabetic';
   for(const r of rows){if(r.t==='title'){g.fillStyle=ink;g.font=`600 11px ${XF.sans}`;g.fillText(T.legend,P,fy+r.y)}
     else if(r.t==='steps'){cols.forEach((c,k)=>{g.fillStyle=c;g.fillRect(P+k*cw,fy+r.y,cw-2,9)});g.fillStyle=ink2;g.font=`400 10px ${XF.sans}`;g.textAlign='center';breaks.forEach((b,k)=>g.fillText(fl(b),P+(k+1)*cw-1,fy+r.y+22));g.textAlign='left'}
     else if(r.t==='key')for(const it of r.items){const cx=P+it.x+5,cy=fy+it.y-3.5;g.beginPath();if(it.sym==='hollow'){g.arc(cx,cy,4,0,2*Math.PI);g.fillStyle=TC.ring;g.fill();g.lineWidth=2;g.strokeStyle=cols[Math.min(3,cols.length-1)];g.stroke()}else{g.arc(cx,cy,2.5,0,2*Math.PI);g.globalAlpha=.6;g.fillStyle=TC.empty;g.fill();g.globalAlpha=1}
       g.fillStyle=mut;g.font=`400 10px ${XF.sans}`;g.fillText(it.tx,P+it.x+14,fy+it.y)}
     else if(r.t==='text'){g.fillStyle=mut;g.font=`400 10px ${XF.sans}`;g.fillText(r.tx,P,fy+r.y)}
-    else if(r.t==='url'){g.fillStyle=ink;g.font=`600 11px ${XF.sans}`;g.fillText(T.url,P,fy+r.y)}}}
+    else if(r.t==='url'){g.fillStyle=ink;g.font=`600 11px ${XF.sans}`;g.fillText(T.url,P,fy+r.y)}}g.restore()}
 async function saveImage(){const T=saveTexts(),ja=JN();
   if(document.fonts){const txt=Object.values(T).flat().filter(x=>typeof x==='string').join('')+D.stations.map(s=>ja?s.name:s.en||s.name).join('')+(D.place_labels||[]).map(p=>ja?p[1]:p[2]).join('')+Object.values(D.pref_labels||{}).map(p=>p[0]).join('');
     await Promise.all(['700 18.8px "Space Grotesk"',`500 22px ${XF.serif}`,`600 11px ${XF.sans}`,`400 10px ${XF.sans}`,...Object.values(LABEL_FONT),...Object.values(LABEL_FONT).map(f=>f.replace(/^[^ ]*\d+ /,'400 '))].map(f=>document.fonts.load(f,txt).catch(()=>{})));widths.clear()}
@@ -482,9 +482,10 @@ function savePanel(open){const old=$('savePanel');if(old){old.remove();$('saveFr
   const seg=(k,opts,label)=>`<div class="seg" role="group" aria-label="${label}">${opts.map(([v,t])=>`<button type="button" data-k="${k}" data-v="${v}" aria-pressed="${String(SAVE[k])===String(v)}">${t}</button>`).join('')}</div>`;
   p.innerHTML=`<div class="savehead"><strong>${J('Save image','画像を保存')}</strong><button type="button" class="tool" data-close aria-label="${J('Close','閉じる')}">${ICON.close}</button></div>`
     +seg('frame',[['view',J('This view','この表示')],['square','1:1'],['portrait','4:5'],['story','9:16'],['wide','16:9']],J('Shape','形'))+seg('theme',[['light',J('Light','ライト')],['dark',J('Dark','ダーク')]],J('Colours','配色'))
-    +seg('text',[[true,J('Names','文字あり')],[false,J('No names','文字なし')]],J('Map text','地図の文字'))+`<button type="button" class="savego" data-go>${J('Save PNG','PNGで保存')}</button><small class="savesize"></small>`;
+    +seg('text',[[true,J('Names','文字あり')],[false,J('No names','文字なし')]],J('Map text','地図の文字'))+`<button type="button" class="savego" data-go>${J('Save PNG','PNGで保存')}</button><div class="savefoot"><small class="savesize"></small><button type="button" class="savelink" data-link>${J('Copy link to this view','この表示へのリンクをコピー')}</button></div>`;
   p.onclick=async e=>{const t=e.target.closest('button');if(!t)return;if(t.dataset.close!=null){savePanel(false);$('mapSave').focus();return}
     if(t.dataset.k){const k=t.dataset.k;SAVE[k]=k==='text'?t.dataset.v==='true':t.dataset.v;p.querySelectorAll(`[data-k="${k}"]`).forEach(x=>x.setAttribute('aria-pressed',String(x===t)));frameOutline();return}
+    if(t.dataset.link!=null){copyView();return}
     if(t.dataset.go!=null){t.disabled=true;try{await saveImage()}finally{t.disabled=false}}};
   L.DomEvent.disableClickPropagation(p);L.DomEvent.disableScrollPropagation(p);$('mapPanel').append(p);
   if(!phone.matches){const m=$('mapPanel').getBoundingClientRect(),as=document.querySelector('.mapwrap>aside'),r=document.documentElement.classList.contains('alt-wide')&&as&&as.offsetWidth?as.getBoundingClientRect():null,t=$('mapSave').getBoundingClientRect();
@@ -532,10 +533,14 @@ let SLUG=[],BY_SLUG={},LINE_SLUG={},SLUG_LINE={};
 const VIEW={price:'price',growth:'change',count:'sales'},VIEW_BACK={price:'price',change:'growth',sales:'count'},yearOf=p=>D.periods[p].slice(0,4);
 function writeURL(){const q=new URLSearchParams();if(selected!=null)q.set('s',SLUG[selected]);if(state.unit!=='m2')q.set('unit',state.unit);if(MAG)q.set('mag',+MAG.toPrecision(3));if(state.period!==D.periods.length-1)q.set('p',yearOf(state.period));if(state.metric!=='price')q.set('view',VIEW[state.metric]);if(state.baseline!==DEFAULTS.baseline)q.set('base',yearOf(state.baseline));for(const d of E.dims)if(state[d]!==DEFAULTS[d])q.set(d,state[d]);if(state.pref)q.set('pref',slug(prefName(state.pref)));if(!showText)q.set('text','0');if(state.line)q.set('line',LINE_SLUG[state.line]);if(state.sortKey!==DEFAULTS.sortKey||state.sortDir!==DEFAULTS.sortDir)q.set('sort',`${state.sortKey}-${state.sortDir<0?'desc':'asc'}`);if(compare.length)q.set('cmp',compare.map(i=>SLUG[i]).join(','));const here=new URLSearchParams(location.search),t=here.get('theme');if(t)q.set('theme',t);if(here.get('lang'))q.set('lang',JA?'ja':'en');const s=q.toString(),path=E.cities?MAP_ROOT+(E.city?E.city.key+'/':''):location.pathname;try{history.replaceState(null,'',path+(s?'?'+s:''))}catch(e){}magLinks()}
 function readURL(){const q=new URLSearchParams(location.search),per=y=>{const i=D.periods.findIndex(p=>p.startsWith(y));return i<0?null:i};
-if(q.get('unit')==='home'&&HOMES()&&!isLand()){state.unit='home';usePeriods()}{const m=+q.get('mag');if(m>=1/8&&m<=64)MAG=2**(Math.round(4*Math.log2(m))/4)}if(q.get('p')&&per(q.get('p'))!=null)state.period=per(q.get('p'));if(q.get('base')&&per(q.get('base'))!=null)state.baseline=per(q.get('base'));if(VIEW_BACK[q.get('view')])state.metric=VIEW_BACK[q.get('view')];
+if(q.get('unit')==='home'&&HOMES()&&!isLand()){state.unit='home';usePeriods()}{const m=+q.get('mag');if(m>=1/8&&m<=64)MAG=2**(Math.round(4*Math.log2(m))/4)}{const a=(q.get('at')||'').split(',').map(Number);if(a.length===3&&a.every(isFinite)&&a[2]>=1/8&&a[2]<=64&&map.options.maxBounds.contains([a[0],a[1]]))AT=[L.latLng(a[0],a[1]),Math.max(map.getMinZoom(),Math.min(map.getMaxZoom(),Math.round(4*zOf(a[2]))/4))]}if(q.get('p')&&per(q.get('p'))!=null)state.period=per(q.get('p'));if(q.get('base')&&per(q.get('base'))!=null)state.baseline=per(q.get('base'));if(VIEW_BACK[q.get('view')])state.metric=VIEW_BACK[q.get('view')];
 for(const k of E.dims){const raw=q.get(k);if(raw){const v=+raw;if(Number.isInteger(v)&&v>=0&&v<=E.ranges[k])state[k]=v}}if(isLand()){state.size=0;state.age=0}const pf=Object.entries(D.prefectures).find(([,n])=>slug(n)===q.get('pref')),pg=[...new Set(Object.values(D.pref_groups||{})),...(E.outer||[])].find(n=>slug(n)===q.get('pref'));if(pf)state.pref=pf[0];else if(pg)state.pref='g:'+pg;if(SLUG_LINE[q.get('line')])state.line=SLUG_LINE[q.get('line')];if(q.get('text')==='0')showText=false;
 const so=/^(name|pref|price|change|sales)-(asc|desc)$/.exec(q.get('sort')||'');if(so){state.sortKey=so[1];state.sortDir=so[2]==='asc'?1:-1}compare=[...new Set((q.get('cmp')||'').split(',').map(k=>BY_SLUG[k]).filter(i=>i!=null))].slice(0,3);return BY_SLUG[q.get('s')]}
 function toast(t,long){const el=$('toast');el.textContent=t;el.hidden=false;clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.hidden=true,long?8000:2500)}
+// A link to exactly this view: the address with the clear area's centre and the magnification (at=lat,lon,mag), which opens
+// the same view once, in place of the city's opening.
+async function copyView(){writeURL();const c=viewCentre(),url=location.href+(location.search?'&':'?')+'at='+[c.lat.toFixed(4),c.lng.toFixed(4),+magOf(map.getZoom()).toPrecision(3)].join(',');track('share',{method:'view_link'});
+  try{await navigator.clipboard.writeText(url);toast(J('Link to this view copied','この表示へのリンクをコピー済み'))}catch(e){toast(J('Copy this link: ','このリンクをコピー：')+url,true)}}
 async function copyLink(){writeURL();track('share',{method:'copy_link'});const url=location.href;try{await navigator.clipboard.writeText(url);toast(J('Link copied','リンクをコピー済み'))}catch(e){toast(J('Copy this link: ','このリンクをコピー：')+url,true)}}
 
 // Presets: one-tap starting views; any later change clears the highlight.
@@ -647,7 +652,7 @@ labelPane=map.createPane('labels');measure=document.createElement('canvas').getC
 if(document.fonts)document.fonts.ready.then(()=>{widths.clear();drawLabels()});
 if(HOMES())unitSwitch();const fromURL=readURL();await ensureCells();syncControls();applyTheme();
 openCity(E.city||E.cities[0],false);
-selected=fromURL!=null?fromURL:Math.max(0,D.stations.findIndex(s=>s.name===E.home));render();if(fromURL!=null)centre([D.stations[fromURL].lat,D.stations[fromURL].lon],MAG?zOf(MAG):12);else if(state.pref||state.line)fitVisible(false);
+selected=fromURL!=null?fromURL:Math.max(0,D.stations.findIndex(s=>s.name===E.home));render();if(AT)AT=null;else if(fromURL!=null)centre([D.stations[fromURL].lat,D.stations[fromURL].lon],MAG?zOf(MAG):12);else if(state.pref||state.line)fitVisible(false);
 $('resetMap').onclick=()=>openCity(E.city||E.cities[0]);
 if(E.cities){const g=$('goto');g.hidden=false;const mark=()=>g.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(!!E.city&&b.dataset.city===E.city.key)));
 for(const c of E.cities){const b=document.createElement('button');b.type='button';b.textContent=cityLabel(c);b.dataset.city=c.key;b.onclick=()=>{E.city=c;openCity(c);const idx=D.stations.findIndex(s=>s.name===c.home);if(idx>=0)showStation(idx,false,true);mark();showCity(c);track('select_city',{city:c.key});changed()};g.append(b)}mark();showCity(E.city||cityAt(viewCentre())||E.cities[0])}$('mapFull').hidden=!canFull&&!phone.matches;if(!canFull)expandMap(false);
