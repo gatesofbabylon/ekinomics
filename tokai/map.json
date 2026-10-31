@@ -1,0 +1,142 @@
+{
+ "key": "nagoya",
+ "country": "Japan",
+ "order": 2,
+ "path": "tokai/",
+ "en": "Greater Nagoya",
+ "ja": "中京圏",
+ "population": 11291411,
+ "tag": {
+  "en": "Tōkai",
+  "ja": "東海"
+ },
+ "cities": [
+  {
+   "key": "nagoya",
+   "en": "Nagoya",
+   "ja": "名古屋",
+   "population": 2332176
+  }
+ ],
+ "goto": [
+  {
+   "key": "nagoya",
+   "label": "Nagoya",
+   "ja": "名古屋",
+   "box": [
+    [
+     35.1,
+     136.84
+    ],
+    [
+     35.22,
+     136.98
+    ]
+   ],
+   "home": "名古屋"
+  },
+  {
+   "key": "toyota",
+   "label": "Toyota",
+   "ja": "豊田",
+   "box": [
+    [
+     35.03,
+     137.1
+    ],
+    [
+     35.13,
+     137.2
+    ]
+   ],
+   "home": "豊田市"
+  },
+  {
+   "key": "gifu",
+   "label": "Gifu",
+   "ja": "岐阜",
+   "box": [
+    [
+     35.36,
+     136.687
+    ],
+    [
+     35.46,
+     136.827
+    ]
+   ],
+   "home": "岐阜"
+  },
+  {
+   "key": "okazaki",
+   "label": "Okazaki",
+   "ja": "岡崎",
+   "box": [
+    [
+     34.902,
+     137.097
+    ],
+    [
+     35.002,
+     137.237
+    ]
+   ],
+   "home": "東岡崎"
+  },
+  {
+   "key": "yokkaichi",
+   "label": "Yokkaichi",
+   "ja": "四日市",
+   "box": [
+    [
+     34.917,
+     136.548
+    ],
+    [
+     35.017,
+     136.688
+    ]
+   ],
+   "home": "近鉄四日市"
+  },
+  {
+   "key": "tsu",
+   "label": "Tsu",
+   "ja": "津",
+   "box": [
+    [
+     34.684,
+     136.441
+    ],
+    [
+     34.784,
+     136.581
+    ]
+   ],
+   "home": "津"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "tokai",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:tokai/*_{MLIT}.*",
+   "cache:tokai/residential/*_{MLIT}.*",
+   "cache:wikidata/tokai/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

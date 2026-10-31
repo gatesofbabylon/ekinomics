@@ -1,0 +1,244 @@
+{
+ "key": "tokyo",
+ "country": "Japan",
+ "order": 0,
+ "path": "shutoken/",
+ "en": "Greater Tokyo",
+ "ja": "首都圏",
+ "population": 43653441,
+ "tag": {
+  "en": "Greater Tokyo",
+  "ja": "首都圏"
+ },
+ "cities": [
+  {
+   "key": "tokyo",
+   "en": "Tokyo",
+   "ja": "東京",
+   "population": 9733276
+  },
+  {
+   "key": "yokohama",
+   "en": "Yokohama",
+   "ja": "横浜",
+   "population": 3777491
+  }
+ ],
+ "goto": [
+  {
+   "key": "tokyo",
+   "label": "Tokyo",
+   "ja": "東京",
+   "box": [
+    [
+     35.55,
+     139.6
+    ],
+    [
+     35.8,
+     139.92
+    ]
+   ],
+   "home": "新宿"
+  },
+  {
+   "key": "yokohama",
+   "label": "Yokohama",
+   "ja": "横浜",
+   "box": [
+    [
+     35.36,
+     139.5
+    ],
+    [
+     35.58,
+     139.72
+    ]
+   ],
+   "home": "横浜"
+  },
+  {
+   "key": "kawasaki",
+   "label": "Kawasaki",
+   "ja": "川崎",
+   "box": [
+    [
+     35.51,
+     139.55
+    ],
+    [
+     35.62,
+     139.76
+    ]
+   ],
+   "home": "川崎"
+  },
+  {
+   "key": "saitama",
+   "label": "Saitama",
+   "ja": "さいたま",
+   "box": [
+    [
+     35.82,
+     139.56
+    ],
+    [
+     35.97,
+     139.74
+    ]
+   ],
+   "home": "大宮"
+  },
+  {
+   "key": "chiba",
+   "label": "Chiba",
+   "ja": "千葉",
+   "box": [
+    [
+     35.56,
+     140.04
+    ],
+    [
+     35.7,
+     140.18
+    ]
+   ],
+   "home": "千葉"
+  },
+  {
+   "key": "sagamihara",
+   "label": "Sagamihara",
+   "ja": "相模原",
+   "box": [
+    [
+     35.545,
+     139.275
+    ],
+    [
+     35.645,
+     139.415
+    ]
+   ],
+   "home": "橋本"
+  },
+  {
+   "key": "hachioji",
+   "label": "Hachiōji",
+   "ja": "八王子",
+   "box": [
+    [
+     35.605,
+     139.269
+    ],
+    [
+     35.705,
+     139.409
+    ]
+   ],
+   "home": "八王子"
+  },
+  {
+   "key": "funabashi",
+   "label": "Funabashi",
+   "ja": "船橋",
+   "box": [
+    [
+     35.652,
+     139.915
+    ],
+    [
+     35.752,
+     140.055
+    ]
+   ],
+   "home": "船橋"
+  },
+  {
+   "key": "kawaguchi",
+   "label": "Kawaguchi",
+   "ja": "川口",
+   "box": [
+    [
+     35.752,
+     139.647
+    ],
+    [
+     35.852,
+     139.787
+    ]
+   ],
+   "home": "川口"
+  },
+  {
+   "key": "utsunomiya",
+   "label": "Utsunomiya",
+   "ja": "宇都宮",
+   "box": [
+    [
+     36.509,
+     139.829
+    ],
+    [
+     36.609,
+     139.969
+    ]
+   ],
+   "home": "宇都宮"
+  },
+  {
+   "key": "takasaki",
+   "label": "Takasaki",
+   "ja": "高崎",
+   "box": [
+    [
+     36.272,
+     138.943
+    ],
+    [
+     36.372,
+     139.083
+    ]
+   ],
+   "home": "高崎"
+  },
+  {
+   "key": "mito",
+   "label": "Mito",
+   "ja": "水戸",
+   "box": [
+    [
+     36.321,
+     140.407
+    ],
+    [
+     36.421,
+     140.547
+    ]
+   ],
+   "home": "水戸"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "kanto",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:*_{MLIT}.*",
+   "cache:residential/*_{MLIT}.*",
+   "cache:wikidata/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

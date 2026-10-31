@@ -1,0 +1,327 @@
+{
+ "key": "philadelphia",
+ "country": "United States",
+ "order": 2,
+ "path": "pennsylvania/",
+ "en": "Philadelphia",
+ "population": 1574281,
+ "tag": {
+  "en": "Pennsylvania",
+  "ja": "ペンシルベニア州"
+ },
+ "cities": [
+  {
+   "key": "philadelphia",
+   "en": "Philadelphia",
+   "ja": "フィラデルフィア",
+   "population": 1574281
+  }
+ ],
+ "goto": [
+  {
+   "key": "philadelphia",
+   "label": "Philadelphia",
+   "kana": "フィラデルフィア",
+   "box": [
+    [
+     39.938,
+     -75.185
+    ],
+    [
+     39.962,
+     -75.14
+    ]
+   ],
+   "home": "15th St/City Hall Station"
+  },
+  {
+   "key": "oldcity",
+   "label": "Old City",
+   "kana": "オールド・シティ",
+   "box": [
+    [
+     39.937,
+     -75.164
+    ],
+    [
+     39.967,
+     -75.124
+    ]
+   ],
+   "home": "2nd St"
+  },
+  {
+   "key": "universitycity",
+   "label": "University City",
+   "kana": "ユニバーシティ・シティ",
+   "box": [
+    [
+     39.938,
+     -75.215
+    ],
+    [
+     39.968,
+     -75.175
+    ]
+   ],
+   "home": "Penn Medicine Station"
+  },
+  {
+   "key": "northernliberties",
+   "label": "Northern Liberties",
+   "kana": "ノーザン・リバティーズ",
+   "box": [
+    [
+     39.948,
+     -75.163
+    ],
+    [
+     39.978,
+     -75.123
+    ]
+   ],
+   "home": "Spring Garden"
+  },
+  {
+   "key": "fishtown",
+   "label": "Fishtown",
+   "kana": "フィッシュタウン",
+   "box": [
+    [
+     39.957,
+     -75.153
+    ],
+    [
+     39.987,
+     -75.113
+    ]
+   ],
+   "home": "Front-Girard"
+  },
+  {
+   "key": "fairmount",
+   "label": "Fairmount",
+   "kana": "フェアモント",
+   "box": [
+    [
+     39.952,
+     -75.18
+    ],
+    [
+     39.982,
+     -75.14
+    ]
+   ],
+   "home": "Fairmount"
+  },
+  {
+   "key": "southphiladelphia",
+   "label": "South Philadelphia",
+   "kana": "サウス・フィラデルフィア",
+   "box": [
+    [
+     39.912,
+     -75.19
+    ],
+    [
+     39.942,
+     -75.15
+    ]
+   ],
+   "home": "Tasker-Morris"
+  },
+  {
+   "key": "westphiladelphia",
+   "label": "West Philadelphia",
+   "kana": "ウェスト・フィラデルフィア",
+   "box": [
+    [
+     39.945,
+     -75.245
+    ],
+    [
+     39.975,
+     -75.205
+    ]
+   ],
+   "home": "52nd St"
+  },
+  {
+   "key": "kensington",
+   "label": "Kensington",
+   "kana": "ケンジントン",
+   "box": [
+    [
+     39.982,
+     -75.133
+    ],
+    [
+     40.012,
+     -75.093
+    ]
+   ],
+   "home": "Kensington-Allegheny"
+  },
+  {
+   "key": "eastfalls",
+   "label": "East Falls",
+   "kana": "イースト・フォールズ",
+   "box": [
+    [
+     39.996,
+     -75.212
+    ],
+    [
+     40.026,
+     -75.172
+    ]
+   ],
+   "home": "East Falls"
+  },
+  {
+   "key": "manayunk",
+   "label": "Manayunk",
+   "kana": "マナユンク",
+   "box": [
+    [
+     40.012,
+     -75.245
+    ],
+    [
+     40.042,
+     -75.205
+    ]
+   ],
+   "home": "Manayunk"
+  },
+  {
+   "key": "germantown",
+   "label": "Germantown",
+   "kana": "ジャーマンタウン",
+   "box": [
+    [
+     40.022,
+     -75.192
+    ],
+    [
+     40.052,
+     -75.152
+    ]
+   ],
+   "home": "Germantown"
+  },
+  {
+   "key": "mountairy",
+   "label": "Mount Airy",
+   "kana": "マウント・エアリー",
+   "box": [
+    [
+     40.04,
+     -75.21
+    ],
+    [
+     40.07,
+     -75.17
+    ]
+   ],
+   "home": "Mount Airy"
+  },
+  {
+   "key": "chestnuthill",
+   "label": "Chestnut Hill",
+   "kana": "チェスナット・ヒル",
+   "box": [
+    [
+     40.062,
+     -75.228
+    ],
+    [
+     40.092,
+     -75.188
+    ]
+   ],
+   "home": "Chestnut Hill West"
+  },
+  {
+   "key": "olney",
+   "label": "Olney",
+   "kana": "オルニー",
+   "box": [
+    [
+     40.024,
+     -75.164
+    ],
+    [
+     40.054,
+     -75.124
+    ]
+   ],
+   "home": "Olney Transit Center"
+  },
+  {
+   "key": "frankford",
+   "label": "Frankford",
+   "kana": "フランクフォード",
+   "box": [
+    [
+     40.008,
+     -75.097
+    ],
+    [
+     40.038,
+     -75.057
+    ]
+   ],
+   "home": "Frankford Transit Center"
+  },
+  {
+   "key": "foxchase",
+   "label": "Fox Chase",
+   "kana": "フォックス・チェイス",
+   "box": [
+    [
+     40.062,
+     -75.103
+    ],
+    [
+     40.092,
+     -75.063
+    ]
+   ],
+   "home": "Fox Chase"
+  },
+  {
+   "key": "northeastphiladelphia",
+   "label": "Northeast Philadelphia",
+   "kana": "ノースイースト・フィラデルフィア",
+   "box": [
+    [
+     40.015,
+     -75.07
+    ],
+    [
+     40.06,
+     -75
+    ]
+   ],
+   "home": "Holmesburg Junction"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_philadelphia.py",
+  "check": "scripts/validate_philadelphia.py",
+  "arg": "philadelphia",
+  "inputs": [
+   "cache:us/philadelphia/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales: City of Philadelphia, Department of Records, Real Estate Transfers. Property types, floor areas, years built and positions: City of Philadelphia, Office of Property Assessment. Planning districts: City of Philadelphia, City Planning Commission. All from OpenDataPhilly, provided by the City as is, without warranty. Stations and lines: SEPTA GTFS (Trip Planning Data, used under the SEPTA License Agreement) and PATCO GTFS. Counties, New Jersey and the rivers: US Census Bureau cartographic boundary files and TIGER/Line area water.</span><span>This site is not produced, sponsored or endorsed by the City of Philadelphia, SEPTA, PATCO or the US Census Bureau. The City of Philadelphia makes no representation about the accuracy of any specific information in its data, which is provided as is and without warranty of any kind; SEPTA provides its Trip Planning Data as is and as available.</span>",
+  "priceSource": {
+   "en": "Prices: City of Philadelphia real estate transfers and property assessments (OpenDataPhilly)",
+   "ja": "価格：フィラデルフィア市の不動産移転記録と資産評価（OpenDataPhilly）"
+  },
+  "attribution": "Stations and lines: SEPTA and PATCO GTFS · Outlines: City of Philadelphia, US Census Bureau"
+ }
+}

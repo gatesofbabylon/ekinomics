@@ -1,0 +1,93 @@
+{
+ "key": "bristol",
+ "country": "United Kingdom",
+ "order": 7,
+ "path": "westcountry/",
+ "en": "Greater Bristol",
+ "population": 1232105,
+ "tag": {
+  "en": "West Country",
+  "ja": "イングランド西部"
+ },
+ "cities": [
+  {
+   "key": "bristol",
+   "en": "Bristol",
+   "ja": "ブリストル",
+   "population": 495260
+  }
+ ],
+ "goto": [
+  {
+   "key": "bristol",
+   "label": "Bristol",
+   "kana": "ブリストル",
+   "box": [
+    [
+     51.4,
+     -2.7
+    ],
+    [
+     51.52,
+     -2.5
+    ]
+   ],
+   "home": "Bristol Temple Meads"
+  },
+  {
+   "key": "bath",
+   "label": "Bath",
+   "kana": "バース",
+   "box": [
+    [
+     51.36,
+     -2.41
+    ],
+    [
+     51.4,
+     -2.32
+    ]
+   ],
+   "home": "Bath Spa"
+  },
+  {
+   "key": "weston",
+   "label": "Weston-super-Mare",
+   "kana": "ウェストン・スーパー・メア",
+   "box": [
+    [
+     51.32,
+     -3
+    ],
+    [
+     51.37,
+     -2.93
+    ]
+   ],
+   "home": "Weston-super-Mare"
+  }
+ ],
+ "build": {
+  "family": "uk",
+  "script": "scripts/build_london.py",
+  "check": "scripts/validate_london.py",
+  "arg": "bristol",
+  "inputs": [
+   "assets/uk_areas.json",
+   "assets/london_station_lines_overrides.csv",
+   "assets/belfast_stations.csv",
+   "assets/*_districts.csv",
+   "cache:london/*",
+   "cache:london/tfl",
+   "cache:london/boundaries",
+   "cache:london/bods",
+   "cache:london/vmd",
+   "cache:london/scotland",
+   "cache:london/ni"
+  ]
+ },
+ "credits": {
+  "block": "<span>Contains HM Land Registry data © Crown copyright and database right 2024. This data is licensed under the Open Government Licence v3.0. Floor areas: Chi, Dennett, Oléron-Evans and Morphet (2025), <a href=\"https://doi.org/10.5255/UKDA-SN-857911\" target=\"_blank\" rel=\"noopener\">House Price Per Square Metre in England and Wales, 1995–2024</a>, UK Data Service, CC BY 4.0, which links Land Registry sales to Energy Performance Certificates (MHCLG, Open Government Licence).</span><span>Postcodes and borough boundaries: Office for National Statistics, Open Government Licence; contains OS data © Crown copyright and database right 2024, Royal Mail data © Royal Mail copyright and database right 2024 and GeoPlace data © Local Government Information House Limited copyright and database right 2024. Stations: NaPTAN, Department for Transport, Open Government Licence. Rail lines: Powered by TfL Open Data; contains OS data © Crown copyright and database rights 2016 and Geomni UK Map data © and database rights [2019]. None of these bodies produced or endorses this site.</span>",
+  "attribution": "Contains OS data © Crown copyright and database right 2026 · Powered by TfL Open Data"
+ }
+}

@@ -1,0 +1,147 @@
+{
+ "key": "yorkshire",
+ "country": "United Kingdom",
+ "order": 3,
+ "path": "yorkshire/",
+ "en": "Yorkshire",
+ "population": 5765802,
+ "tag": {
+  "en": "Yorkshire",
+  "ja": "ヨークシャー"
+ },
+ "cities": [
+  {
+   "key": "leeds",
+   "en": "Leeds",
+   "ja": "リーズ",
+   "population": 840550
+  },
+  {
+   "key": "sheffield",
+   "en": "Sheffield",
+   "ja": "シェフィールド",
+   "population": 579517
+  }
+ ],
+ "goto": [
+  {
+   "key": "leeds",
+   "label": "Leeds",
+   "kana": "リーズ",
+   "box": [
+    [
+     53.74,
+     -1.65
+    ],
+    [
+     53.86,
+     -1.45
+    ]
+   ],
+   "home": "Leeds"
+  },
+  {
+   "key": "sheffield",
+   "label": "Sheffield",
+   "kana": "シェフィールド",
+   "box": [
+    [
+     53.33,
+     -1.56
+    ],
+    [
+     53.45,
+     -1.35
+    ]
+   ],
+   "home": "Sheffield"
+  },
+  {
+   "key": "york",
+   "label": "York",
+   "kana": "ヨーク",
+   "box": [
+    [
+     53.92,
+     -1.16
+    ],
+    [
+     54,
+     -1
+    ]
+   ],
+   "home": "York"
+  },
+  {
+   "key": "bradford",
+   "label": "Bradford",
+   "kana": "ブラッドフォード",
+   "box": [
+    [
+     53.75,
+     -1.85
+    ],
+    [
+     53.84,
+     -1.7
+    ]
+   ],
+   "home": "Bradford Interchange"
+  },
+  {
+   "key": "hull",
+   "label": "Hull",
+   "kana": "ハル",
+   "box": [
+    [
+     53.71,
+     -0.45
+    ],
+    [
+     53.79,
+     -0.25
+    ]
+   ],
+   "home": "Hull"
+  },
+  {
+   "key": "wakefield",
+   "label": "Wakefield",
+   "kana": "ウェイクフィールド",
+   "box": [
+    [
+     53.633,
+     -1.576
+    ],
+    [
+     53.733,
+     -1.436
+    ]
+   ],
+   "home": "Wakefield Westgate"
+  }
+ ],
+ "build": {
+  "family": "uk",
+  "script": "scripts/build_london.py",
+  "check": "scripts/validate_london.py",
+  "arg": "yorkshire",
+  "inputs": [
+   "assets/uk_areas.json",
+   "assets/london_station_lines_overrides.csv",
+   "assets/belfast_stations.csv",
+   "assets/*_districts.csv",
+   "cache:london/*",
+   "cache:london/tfl",
+   "cache:london/boundaries",
+   "cache:london/bods",
+   "cache:london/vmd",
+   "cache:london/scotland",
+   "cache:london/ni"
+  ]
+ },
+ "credits": {
+  "block": "<span>Contains HM Land Registry data © Crown copyright and database right 2024. This data is licensed under the Open Government Licence v3.0. Floor areas: Chi, Dennett, Oléron-Evans and Morphet (2025), <a href=\"https://doi.org/10.5255/UKDA-SN-857911\" target=\"_blank\" rel=\"noopener\">House Price Per Square Metre in England and Wales, 1995–2024</a>, UK Data Service, CC BY 4.0, which links Land Registry sales to Energy Performance Certificates (MHCLG, Open Government Licence).</span><span>Postcodes and borough boundaries: Office for National Statistics, Open Government Licence; contains OS data © Crown copyright and database right 2024, Royal Mail data © Royal Mail copyright and database right 2024 and GeoPlace data © Local Government Information House Limited copyright and database right 2024. Stations: NaPTAN, Department for Transport, Open Government Licence. Sheffield Supertram timetable: Bus Open Data Service, Department for Transport, Open Government Licence. Rail lines: Powered by TfL Open Data; contains OS data © Crown copyright and database rights 2016 and Geomni UK Map data © and database rights [2019]. None of these bodies produced or endorses this site.</span>",
+  "attribution": "Contains OS data © Crown copyright and database right 2026 · Powered by TfL Open Data"
+ }
+}

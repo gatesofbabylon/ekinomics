@@ -1,0 +1,126 @@
+{
+ "key": "hokuriku",
+ "country": "Japan",
+ "order": 7,
+ "path": "hokuriku/",
+ "en": "Hokuriku",
+ "ja": "北陸",
+ "population": 2934203,
+ "tag": {
+  "en": "Hokuriku",
+  "ja": "北陸"
+ },
+ "cities": [
+  {
+   "key": "kanazawa",
+   "en": "Kanazawa",
+   "ja": "金沢",
+   "population": 463254
+  },
+  {
+   "key": "toyama",
+   "en": "Toyama",
+   "ja": "富山",
+   "population": 413938
+  },
+  {
+   "key": "fukui",
+   "en": "Fukui",
+   "ja": "福井",
+   "population": 262328
+  }
+ ],
+ "goto": [
+  {
+   "key": "kanazawa",
+   "label": "Kanazawa",
+   "ja": "金沢",
+   "box": [
+    [
+     36.52,
+     136.575
+    ],
+    [
+     36.62,
+     136.715
+    ]
+   ],
+   "home": "金沢"
+  },
+  {
+   "key": "toyama",
+   "label": "Toyama",
+   "ja": "富山",
+   "box": [
+    [
+     36.65,
+     137.145
+    ],
+    [
+     36.75,
+     137.285
+    ]
+   ],
+   "home": "富山"
+  },
+  {
+   "key": "fukui",
+   "label": "Fukui",
+   "ja": "福井",
+   "box": [
+    [
+     36.015,
+     136.15
+    ],
+    [
+     36.115,
+     136.29
+    ]
+   ],
+   "home": "福井"
+  },
+  {
+   "key": "takaoka",
+   "label": "Takaoka",
+   "ja": "高岡",
+   "box": [
+    [
+     36.69,
+     136.95
+    ],
+    [
+     36.79,
+     137.09
+    ]
+   ],
+   "home": "高岡"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "hokuriku",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:toyama/*_{MLIT}.*",
+   "cache:ishikawa/*_{MLIT}.*",
+   "cache:fukui/*_{MLIT}.*",
+   "cache:toyama/residential/*_{MLIT}.*",
+   "cache:ishikawa/residential/*_{MLIT}.*",
+   "cache:fukui/residential/*_{MLIT}.*",
+   "cache:wikidata/hokuriku/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

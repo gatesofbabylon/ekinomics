@@ -1,0 +1,327 @@
+{
+ "key": "miami",
+ "country": "United States",
+ "order": 4,
+ "path": "florida/",
+ "en": "South Florida",
+ "population": 6391072,
+ "tag": {
+  "en": "Florida",
+  "ja": "フロリダ州"
+ },
+ "cities": [
+  {
+   "key": "miami",
+   "en": "Miami",
+   "ja": "マイアミ",
+   "population": 489812
+  }
+ ],
+ "goto": [
+  {
+   "key": "miami",
+   "label": "Miami",
+   "kana": "マイアミ",
+   "box": [
+    [
+     25.757,
+     -80.215
+    ],
+    [
+     25.793,
+     -80.175
+    ]
+   ],
+   "home": "Government Center"
+  },
+  {
+   "key": "brickell",
+   "label": "Brickell",
+   "kana": "ブリッケル",
+   "box": [
+    [
+     25.748,
+     -80.212
+    ],
+    [
+     25.778,
+     -80.172
+    ]
+   ],
+   "home": "Brickell"
+  },
+  {
+   "key": "edgewater",
+   "label": "Edgewater",
+   "kana": "エッジウォーター",
+   "box": [
+    [
+     25.78,
+     -80.205
+    ],
+    [
+     25.81,
+     -80.165
+    ]
+   ],
+   "home": "Adrienne Arsht Center"
+  },
+  {
+   "key": "coconutgrove",
+   "label": "Coconut Grove",
+   "kana": "ココナッツグローブ",
+   "box": [
+    [
+     25.718,
+     -80.258
+    ],
+    [
+     25.748,
+     -80.218
+    ]
+   ],
+   "home": "Coconut Grove"
+  },
+  {
+   "key": "coralgables",
+   "label": "Coral Gables",
+   "kana": "コーラルゲーブルズ",
+   "box": [
+    [
+     25.7,
+     -80.3
+    ],
+    [
+     25.73,
+     -80.26
+    ]
+   ],
+   "home": "University"
+  },
+  {
+   "key": "dadeland",
+   "label": "Dadeland",
+   "kana": "ダドランド",
+   "box": [
+    [
+     25.674,
+     -80.33
+    ],
+    [
+     25.704,
+     -80.29
+    ]
+   ],
+   "home": "Dadeland North"
+  },
+  {
+   "key": "hialeah",
+   "label": "Hialeah",
+   "kana": "ハイアリア",
+   "box": [
+    [
+     25.826,
+     -80.31
+    ],
+    [
+     25.856,
+     -80.27
+    ]
+   ],
+   "home": "Hialeah"
+  },
+  {
+   "key": "opalocka",
+   "label": "Opa-locka",
+   "kana": "オパロッカ",
+   "box": [
+    [
+     25.885,
+     -80.272
+    ],
+    [
+     25.915,
+     -80.232
+    ]
+   ],
+   "home": "Opa-Locka"
+  },
+  {
+   "key": "aventura",
+   "label": "Aventura",
+   "kana": "アベンチュラ",
+   "box": [
+    [
+     25.943,
+     -80.167
+    ],
+    [
+     25.973,
+     -80.127
+    ]
+   ],
+   "home": "Aventura"
+  },
+  {
+   "key": "hollywood",
+   "label": "Hollywood",
+   "kana": "ハリウッド",
+   "box": [
+    [
+     25.997,
+     -80.188
+    ],
+    [
+     26.027,
+     -80.148
+    ]
+   ],
+   "home": "Hollywood"
+  },
+  {
+   "key": "fortlauderdale",
+   "label": "Fort Lauderdale",
+   "kana": "フォートローダーデール",
+   "box": [
+    [
+     26.105,
+     -80.18
+    ],
+    [
+     26.14,
+     -80.13
+    ]
+   ],
+   "home": "Fort Lauderdale (Brightline)"
+  },
+  {
+   "key": "pompanobeach",
+   "label": "Pompano Beach",
+   "kana": "ポンパノビーチ",
+   "box": [
+    [
+     26.257,
+     -80.155
+    ],
+    [
+     26.287,
+     -80.115
+    ]
+   ],
+   "home": "Pompano Beach"
+  },
+  {
+   "key": "deerfieldbeach",
+   "label": "Deerfield Beach",
+   "kana": "ディアフィールドビーチ",
+   "box": [
+    [
+     26.302,
+     -80.142
+    ],
+    [
+     26.332,
+     -80.102
+    ]
+   ],
+   "home": "Deerfield Beach"
+  },
+  {
+   "key": "bocaraton",
+   "label": "Boca Raton",
+   "kana": "ボカラトン",
+   "box": [
+    [
+     26.34,
+     -80.12
+    ],
+    [
+     26.4,
+     -80.07
+    ]
+   ],
+   "home": "Boca Raton (Brightline)"
+  },
+  {
+   "key": "delraybeach",
+   "label": "Delray Beach",
+   "kana": "デルレイビーチ",
+   "box": [
+    [
+     26.439,
+     -80.11
+    ],
+    [
+     26.469,
+     -80.07
+    ]
+   ],
+   "home": "Delray Beach"
+  },
+  {
+   "key": "boyntonbeach",
+   "label": "Boynton Beach",
+   "kana": "ボイントンビーチ",
+   "box": [
+    [
+     26.539,
+     -80.09
+    ],
+    [
+     26.569,
+     -80.05
+    ]
+   ],
+   "home": "Boynton Beach"
+  },
+  {
+   "key": "lakeworthbeach",
+   "label": "Lake Worth Beach",
+   "kana": "レイクワースビーチ",
+   "box": [
+    [
+     26.601,
+     -80.089
+    ],
+    [
+     26.631,
+     -80.049
+    ]
+   ],
+   "home": "Lake Worth Beach"
+  },
+  {
+   "key": "westpalmbeach",
+   "label": "West Palm Beach",
+   "kana": "ウェストパームビーチ",
+   "box": [
+    [
+     26.695,
+     -80.08
+    ],
+    [
+     26.73,
+     -80.04
+    ]
+   ],
+   "home": "West Palm Beach (Brightline)"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_miami.py",
+  "check": "scripts/validate_miami.py",
+  "arg": "miami",
+  "inputs": [
+   "cache:us/miami/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales, use codes, living areas and parcel maps: Florida Department of Revenue, Property Tax Oversight, Property Tax Data Portal (public records). Metrorail and Metromover stations and lines: Miami-Dade Transit GTFS. Tri-Rail: South Florida Regional Transportation Authority GTFS. Brightline: Brightline GTFS. Places, counties and the shore: US Census Bureau cartographic boundary files.</span><span>This site is not sponsored by, affiliated with or operated by any of these bodies, and none of the Florida Department of Revenue, Miami-Dade County, the South Florida Regional Transportation Authority, Brightline or the US Census Bureau produced or endorses it. The data are provided as is, without any warranty that they are accurate, current or complete, and are used here at the reader's own risk.</span>",
+  "priceSource": {
+   "en": "Prices: Florida Department of Revenue tax roll sale data (floridarevenue.com)",
+   "ja": "価格：フロリダ州歳入局 課税台帳の取引データ（floridarevenue.com）"
+  },
+  "attribution": "Stations and lines: Miami-Dade Transit, Tri-Rail and Brightline GTFS · Outlines: US Census Bureau"
+ }
+}

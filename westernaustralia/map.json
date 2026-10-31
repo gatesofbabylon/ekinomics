@@ -1,0 +1,359 @@
+{
+ "key": "perth",
+ "country": "Australia",
+ "order": 4,
+ "path": "westernaustralia/",
+ "en": "Greater Perth",
+ "population": 2452765,
+ "tag": {
+  "en": "WA",
+  "ja": "西オーストラリア州"
+ },
+ "cities": [
+  {
+   "key": "perth",
+   "en": "Perth",
+   "ja": "パース",
+   "population": 2452765
+  }
+ ],
+ "goto": [
+  {
+   "key": "perth",
+   "label": "Perth",
+   "kana": "パース",
+   "box": [
+    [
+     -31.99,
+     115.8
+    ],
+    [
+     -31.91,
+     115.92
+    ]
+   ],
+   "home": "Perth"
+  },
+  {
+   "key": "fremantle",
+   "label": "Fremantle",
+   "kana": "フリーマントル",
+   "box": [
+    [
+     -32.077,
+     115.71
+    ],
+    [
+     -32.027,
+     115.78
+    ]
+   ],
+   "home": "Fremantle"
+  },
+  {
+   "key": "subiaco",
+   "label": "Subiaco",
+   "kana": "スビアコ",
+   "box": [
+    [
+     -31.97,
+     115.789
+    ],
+    [
+     -31.92,
+     115.859
+    ]
+   ],
+   "home": "Subiaco"
+  },
+  {
+   "key": "leederville",
+   "label": "Leederville",
+   "kana": "リーダービル",
+   "box": [
+    [
+     -31.964,
+     115.805
+    ],
+    [
+     -31.915,
+     115.875
+    ]
+   ],
+   "home": "Leederville"
+  },
+  {
+   "key": "claremont",
+   "label": "Claremont",
+   "kana": "クレアモント",
+   "box": [
+    [
+     -32.006,
+     115.747
+    ],
+    [
+     -31.956,
+     115.817
+    ]
+   ],
+   "home": "Claremont"
+  },
+  {
+   "key": "cottesloe",
+   "label": "Cottesloe",
+   "kana": "コテスロー",
+   "box": [
+    [
+     -32.022,
+     115.726
+    ],
+    [
+     -31.972,
+     115.796
+    ]
+   ],
+   "home": "Cottesloe"
+  },
+  {
+   "key": "mountlawley",
+   "label": "Mount Lawley",
+   "kana": "マウント・ローリー",
+   "box": [
+    [
+     -31.96,
+     115.846
+    ],
+    [
+     -31.91,
+     115.916
+    ]
+   ],
+   "home": "Mt Lawley"
+  },
+  {
+   "key": "victoriapark",
+   "label": "Victoria Park",
+   "kana": "ビクトリア・パーク",
+   "box": [
+    [
+     -31.997,
+     115.867
+    ],
+    [
+     -31.947,
+     115.937
+    ]
+   ],
+   "home": "Victoria Park"
+  },
+  {
+   "key": "canningbridge",
+   "label": "Canning Bridge",
+   "kana": "キャニング・ブリッジ",
+   "box": [
+    [
+     -32.034,
+     115.821
+    ],
+    [
+     -31.984,
+     115.891
+    ]
+   ],
+   "home": "Canning Bridge"
+  },
+  {
+   "key": "cannington",
+   "label": "Cannington",
+   "kana": "キャニントン",
+   "box": [
+    [
+     -32.038,
+     115.91
+    ],
+    [
+     -31.988,
+     115.98
+    ]
+   ],
+   "home": "Cannington"
+  },
+  {
+   "key": "stirling",
+   "label": "Stirling",
+   "kana": "スターリング",
+   "box": [
+    [
+     -31.919,
+     115.77
+    ],
+    [
+     -31.869,
+     115.84
+    ]
+   ],
+   "home": "Stirling"
+  },
+  {
+   "key": "midland",
+   "label": "Midland",
+   "kana": "ミッドランド",
+   "box": [
+    [
+     -31.917,
+     115.968
+    ],
+    [
+     -31.867,
+     116.038
+    ]
+   ],
+   "home": "Midland"
+  },
+  {
+   "key": "ellenbrook",
+   "label": "Ellenbrook",
+   "kana": "エレンブルック",
+   "box": [
+    [
+     -31.806,
+     115.928
+    ],
+    [
+     -31.756,
+     115.998
+    ]
+   ],
+   "home": "Ellenbrook"
+  },
+  {
+   "key": "joondalup",
+   "label": "Joondalup",
+   "kana": "ジュンダラップ",
+   "box": [
+    [
+     -31.77,
+     115.732
+    ],
+    [
+     -31.72,
+     115.802
+    ]
+   ],
+   "home": "Joondalup"
+  },
+  {
+   "key": "yanchep",
+   "label": "Yanchep",
+   "kana": "ヤンチェップ",
+   "box": [
+    [
+     -31.557,
+     115.609
+    ],
+    [
+     -31.507,
+     115.679
+    ]
+   ],
+   "home": "Yanchep"
+  },
+  {
+   "key": "murdoch",
+   "label": "Murdoch",
+   "kana": "マードック",
+   "box": [
+    [
+     -32.091,
+     115.815
+    ],
+    [
+     -32.041,
+     115.885
+    ]
+   ],
+   "home": "Murdoch"
+  },
+  {
+   "key": "cockburn",
+   "label": "Cockburn Central",
+   "kana": "コックバーン・セントラル",
+   "box": [
+    [
+     -32.15,
+     115.823
+    ],
+    [
+     -32.1,
+     115.893
+    ]
+   ],
+   "home": "Cockburn Central"
+  },
+  {
+   "key": "armadale",
+   "label": "Armadale",
+   "kana": "アーマデール",
+   "box": [
+    [
+     -32.179,
+     115.978
+    ],
+    [
+     -32.129,
+     116.048
+    ]
+   ],
+   "home": "Armadale"
+  },
+  {
+   "key": "rockingham",
+   "label": "Rockingham",
+   "kana": "ロッキンガム",
+   "box": [
+    [
+     -32.315,
+     115.726
+    ],
+    [
+     -32.265,
+     115.796
+    ]
+   ],
+   "home": "Rockingham"
+  },
+  {
+   "key": "mandurah",
+   "label": "Mandurah",
+   "kana": "マンジュラ",
+   "box": [
+    [
+     -32.552,
+     115.712
+    ],
+    [
+     -32.502,
+     115.782
+    ]
+   ],
+   "home": "Mandurah"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_australia.py",
+  "check": "scripts/validate_australia.py",
+  "arg": "perth",
+  "settings": "assets/au_areas.json",
+  "inputs": [
+   "cache:australia/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Prices: based on Australian Bureau of Statistics data, <a href=\"https://www.abs.gov.au/methodologies/data-region-methodology/2011-25\" target=\"_blank\" rel=\"noopener\">Data by region</a>, residential property transfers by SA2 (sales data supplied to the ABS by Cotality), © Commonwealth of Australia, licensed under <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>; the station blends are Ekinomics’ own calculation from those figures. Stations and lines: GTFS timetable data, available free of charge from <a href=\"https://www.transperth.wa.gov.au/About/Spatial-Data-Access\" target=\"_blank\" rel=\"noopener\">www.transperth.wa.gov.au</a>.</span><span>SA2, council and Greater Perth boundaries: Australian Bureau of Statistics, ASGS 2016 and Edition 3 (2021), CC BY 4.0. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: based on ABS Data by region (CC BY 4.0)",
+   "ja": "価格：ABS Data by region（CC BY 4.0）に基づく"
+  },
+  "attribution": "Stations: GTFS data, free from www.transperth.wa.gov.au · Outlines: ABS ASGS (CC BY 4.0)"
+ }
+}

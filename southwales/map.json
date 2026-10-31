@@ -1,0 +1,93 @@
+{
+ "key": "southwales",
+ "country": "United Kingdom",
+ "order": 6,
+ "path": "southwales/",
+ "en": "South Wales",
+ "population": 2146292,
+ "tag": {
+  "en": "S Wales",
+  "ja": "南ウェールズ"
+ },
+ "cities": [
+  {
+   "key": "cardiff",
+   "en": "Cardiff",
+   "ja": "カーディフ",
+   "population": 381516
+  }
+ ],
+ "goto": [
+  {
+   "key": "cardiff",
+   "label": "Cardiff",
+   "kana": "カーディフ",
+   "box": [
+    [
+     51.44,
+     -3.27
+    ],
+    [
+     51.53,
+     -3.12
+    ]
+   ],
+   "home": "Cardiff Central"
+  },
+  {
+   "key": "newport",
+   "label": "Newport",
+   "kana": "ニューポート",
+   "box": [
+    [
+     51.55,
+     -3.05
+    ],
+    [
+     51.62,
+     -2.93
+    ]
+   ],
+   "home": "Newport"
+  },
+  {
+   "key": "swansea",
+   "label": "Swansea",
+   "kana": "スウォンジー",
+   "box": [
+    [
+     51.59,
+     -4.02
+    ],
+    [
+     51.66,
+     -3.88
+    ]
+   ],
+   "home": "Swansea"
+  }
+ ],
+ "build": {
+  "family": "uk",
+  "script": "scripts/build_london.py",
+  "check": "scripts/validate_london.py",
+  "arg": "southwales",
+  "inputs": [
+   "assets/uk_areas.json",
+   "assets/london_station_lines_overrides.csv",
+   "assets/belfast_stations.csv",
+   "assets/*_districts.csv",
+   "cache:london/*",
+   "cache:london/tfl",
+   "cache:london/boundaries",
+   "cache:london/bods",
+   "cache:london/vmd",
+   "cache:london/scotland",
+   "cache:london/ni"
+  ]
+ },
+ "credits": {
+  "block": "<span>Contains HM Land Registry data © Crown copyright and database right 2024. This data is licensed under the Open Government Licence v3.0. Floor areas: Chi, Dennett, Oléron-Evans and Morphet (2025), <a href=\"https://doi.org/10.5255/UKDA-SN-857911\" target=\"_blank\" rel=\"noopener\">House Price Per Square Metre in England and Wales, 1995–2024</a>, UK Data Service, CC BY 4.0, which links Land Registry sales to Energy Performance Certificates (MHCLG, Open Government Licence).</span><span>Postcodes and borough boundaries: Office for National Statistics, Open Government Licence; contains OS data © Crown copyright and database right 2024, Royal Mail data © Royal Mail copyright and database right 2024 and GeoPlace data © Local Government Information House Limited copyright and database right 2024. Stations: NaPTAN, Department for Transport, Open Government Licence. Rail lines: Powered by TfL Open Data; contains OS data © Crown copyright and database rights 2016 and Geomni UK Map data © and database rights [2019]. None of these bodies produced or endorses this site.</span>",
+  "attribution": "Contains OS data © Crown copyright and database right 2026 · Powered by TfL Open Data"
+ }
+}

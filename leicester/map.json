@@ -1,0 +1,125 @@
+{
+ "key": "leicester",
+ "country": "United Kingdom",
+ "order": 9,
+ "path": "leicester/",
+ "en": "Greater Leicester",
+ "population": 1135564,
+ "tag": {
+  "en": "E Midlands",
+  "ja": "イースト・ミッドランズ"
+ },
+ "cities": [
+  {
+   "key": "leicester",
+   "en": "Leicester",
+   "ja": "レスター",
+   "population": 383116
+  }
+ ],
+ "goto": [
+  {
+   "key": "leicester",
+   "label": "Leicester",
+   "kana": "レスター",
+   "box": [
+    [
+     52.42,
+     -1.45
+    ],
+    [
+     52.84,
+     -0.8
+    ]
+   ],
+   "home": "Leicester"
+  },
+  {
+   "key": "loughborough",
+   "label": "Loughborough",
+   "kana": "ラフバラー",
+   "box": [
+    [
+     52.74,
+     -1.25
+    ],
+    [
+     52.8,
+     -1.15
+    ]
+   ],
+   "home": "Loughborough"
+  },
+  {
+   "key": "hinckley",
+   "label": "Hinckley",
+   "kana": "ヒンクリー",
+   "box": [
+    [
+     52.51,
+     -1.42
+    ],
+    [
+     52.57,
+     -1.33
+    ]
+   ],
+   "home": "Hinckley"
+  },
+  {
+   "key": "marketharborough",
+   "label": "Market Harborough",
+   "kana": "マーケット・ハーバラ",
+   "box": [
+    [
+     52.45,
+     -0.96
+    ],
+    [
+     52.5,
+     -0.88
+    ]
+   ],
+   "home": "Market Harborough"
+  },
+  {
+   "key": "melton",
+   "label": "Melton Mowbray",
+   "kana": "メルトン・モーブレー",
+   "box": [
+    [
+     52.74,
+     -0.93
+    ],
+    [
+     52.79,
+     -0.85
+    ]
+   ],
+   "home": "Melton Mowbray"
+  }
+ ],
+ "build": {
+  "family": "uk",
+  "script": "scripts/build_london.py",
+  "check": "scripts/validate_london.py",
+  "arg": "leicester",
+  "inputs": [
+   "assets/uk_areas.json",
+   "assets/london_station_lines_overrides.csv",
+   "assets/belfast_stations.csv",
+   "assets/*_districts.csv",
+   "cache:london/*",
+   "cache:london/tfl",
+   "cache:london/boundaries",
+   "cache:london/bods",
+   "cache:london/vmd",
+   "cache:london/scotland",
+   "cache:london/ni"
+  ]
+ },
+ "credits": {
+  "block": "<span>Contains HM Land Registry data © Crown copyright and database right 2024. This data is licensed under the Open Government Licence v3.0. Floor areas: Chi, Dennett, Oléron-Evans and Morphet (2025), <a href=\"https://doi.org/10.5255/UKDA-SN-857911\" target=\"_blank\" rel=\"noopener\">House Price Per Square Metre in England and Wales, 1995–2024</a>, UK Data Service, CC BY 4.0, which links Land Registry sales to Energy Performance Certificates (MHCLG, Open Government Licence).</span><span>Postcodes and borough boundaries: Office for National Statistics, Open Government Licence; contains OS data © Crown copyright and database right 2024, Royal Mail data © Royal Mail copyright and database right 2024 and GeoPlace data © Local Government Information House Limited copyright and database right 2024. Stations: NaPTAN, Department for Transport, Open Government Licence. Rail lines: Powered by TfL Open Data; contains OS data © Crown copyright and database rights 2016 and Geomni UK Map data © and database rights [2019]. None of these bodies produced or endorses this site.</span>",
+  "attribution": "Contains OS data © Crown copyright and database right 2026 · Powered by TfL Open Data"
+ }
+}

@@ -502,3 +502,5 @@ html.alt .savepanel .seg button[aria-pressed="true"]{background:transparent;colo
 @media(max-width:820px){.hgrid.hsix,.hcbody .hgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:720px){.hinsets{grid-template-columns:minmax(0,1fr)}.hhero2 h2{font-size:26px}.hhero2 p{font-size:14px}.hinset .hlab{display:none}.hctitle h2{font-size:30px}.hctitle .hsearch{flex:1 1 100%}}
 .home main>.hlegend{order:0;margin:0}.hbuckets{align-self:start}
+/* /sources/ (scripts/sources_page.py): each map's credits as its own page shows them. */
+.srcmap{margin:0 0 18px;max-width:900px}.srcmap h3{font-size:15px;margin:10px 0 4px}.srcmap .credit,.srcline,.srcsite{font-size:13px;color:var(--muted);line-height:1.6}.srcline{margin:2px 0}.srcsite{margin:0;padding-left:18px}.srcsite li{margin:0 0 4px}

@@ -1,0 +1,78 @@
+{
+ "key": "sendai",
+ "country": "Japan",
+ "order": 9,
+ "path": "miyagi/",
+ "en": "Greater Sendai",
+ "ja": "仙台圏",
+ "population": 2301996,
+ "tag": {
+  "en": "Tōhoku",
+  "ja": "東北"
+ },
+ "cities": [
+  {
+   "key": "sendai",
+   "en": "Sendai",
+   "ja": "仙台",
+   "population": 1096704
+  }
+ ],
+ "goto": [
+  {
+   "key": "sendai",
+   "label": "Sendai",
+   "ja": "仙台",
+   "box": [
+    [
+     38.21,
+     140.81
+    ],
+    [
+     38.31,
+     140.95
+    ]
+   ],
+   "home": "仙台"
+  },
+  {
+   "key": "ishinomaki",
+   "label": "Ishinomaki",
+   "ja": "石巻",
+   "box": [
+    [
+     38.385,
+     141.23
+    ],
+    [
+     38.485,
+     141.37
+    ]
+   ],
+   "home": "石巻"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "miyagi",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:miyagi/*_{MLIT}.*",
+   "cache:miyagi/residential/*_{MLIT}.*",
+   "cache:wikidata/miyagi/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

@@ -1,0 +1,100 @@
+{
+ "key": "fukuoka",
+ "country": "Japan",
+ "order": 4,
+ "path": "fukuoka/",
+ "en": "Greater Fukuoka",
+ "ja": "福岡圏",
+ "population": 5135214,
+ "tag": {
+  "en": "Kyūshū",
+  "ja": "九州"
+ },
+ "cities": [
+  {
+   "key": "fukuoka",
+   "en": "Fukuoka",
+   "ja": "福岡",
+   "population": 1612392
+  },
+  {
+   "key": "kitakyushu",
+   "en": "Kitakyushu",
+   "ja": "北九州",
+   "population": 939029
+  }
+ ],
+ "goto": [
+  {
+   "key": "fukuoka",
+   "label": "Fukuoka",
+   "ja": "福岡",
+   "box": [
+    [
+     33.55,
+     130.33
+    ],
+    [
+     33.63,
+     130.45
+    ]
+   ],
+   "home": "博多"
+  },
+  {
+   "key": "kitakyushu",
+   "label": "Kitakyushu",
+   "ja": "北九州",
+   "box": [
+    [
+     33.83,
+     130.8
+    ],
+    [
+     33.92,
+     130.92
+    ]
+   ],
+   "home": "小倉"
+  },
+  {
+   "key": "kurume",
+   "label": "Kurume",
+   "ja": "久留米",
+   "box": [
+    [
+     33.29,
+     130.48
+    ],
+    [
+     33.34,
+     130.55
+    ]
+   ],
+   "home": "久留米"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "fukuoka",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:fukuoka/*_{MLIT}.*",
+   "cache:fukuoka/residential/*_{MLIT}.*",
+   "cache:wikidata/fukuoka/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

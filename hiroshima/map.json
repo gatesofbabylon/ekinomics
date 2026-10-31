@@ -1,0 +1,110 @@
+{
+ "key": "hiroshima",
+ "country": "Japan",
+ "order": 8,
+ "path": "hiroshima/",
+ "en": "Greater Hiroshima",
+ "ja": "広島圏",
+ "population": 2799702,
+ "tag": {
+  "en": "Chūgoku",
+  "ja": "中国"
+ },
+ "cities": [
+  {
+   "key": "hiroshima",
+   "en": "Hiroshima",
+   "ja": "広島",
+   "population": 1200754
+  }
+ ],
+ "goto": [
+  {
+   "key": "hiroshima",
+   "label": "Hiroshima",
+   "ja": "広島",
+   "box": [
+    [
+     34.34,
+     132.39
+    ],
+    [
+     34.44,
+     132.53
+    ]
+   ],
+   "home": "広島"
+  },
+  {
+   "key": "fukuyama",
+   "label": "Fukuyama",
+   "ja": "福山",
+   "box": [
+    [
+     34.435,
+     133.29
+    ],
+    [
+     34.535,
+     133.43
+    ]
+   ],
+   "home": "福山"
+  },
+  {
+   "key": "kure",
+   "label": "Kure",
+   "ja": "呉",
+   "box": [
+    [
+     34.195,
+     132.49
+    ],
+    [
+     34.295,
+     132.63
+    ]
+   ],
+   "home": "呉"
+  },
+  {
+   "key": "higashihiroshima",
+   "label": "Higashi-Hiroshima",
+   "ja": "東広島",
+   "box": [
+    [
+     34.38,
+     132.675
+    ],
+    [
+     34.48,
+     132.815
+    ]
+   ],
+   "home": "西条"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "hiroshima",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:hiroshima/*_{MLIT}.*",
+   "cache:hiroshima/residential/*_{MLIT}.*",
+   "cache:wikidata/hiroshima/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

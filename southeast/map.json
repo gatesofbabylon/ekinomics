@@ -1,0 +1,163 @@
+{
+ "key": "london",
+ "country": "United Kingdom",
+ "order": 0,
+ "path": "southeast/",
+ "en": "Greater London",
+ "population": 23552500,
+ "tag": {
+  "en": "London & SE",
+  "ja": "ロンドン・南東部"
+ },
+ "cities": [
+  {
+   "key": "london",
+   "en": "London",
+   "ja": "ロンドン",
+   "population": 9122909
+  },
+  {
+   "key": "brighton",
+   "en": "Brighton",
+   "ja": "ブライトン",
+   "population": 284170
+  }
+ ],
+ "goto": [
+  {
+   "key": "london",
+   "label": "London",
+   "kana": "ロンドン",
+   "box": [
+    [
+     51.42,
+     -0.25
+    ],
+    [
+     51.58,
+     0.05
+    ]
+   ],
+   "home": "Westminster"
+  },
+  {
+   "key": "brighton",
+   "label": "Brighton",
+   "kana": "ブライトン",
+   "box": [
+    [
+     50.81,
+     -0.21
+    ],
+    [
+     50.87,
+     -0.08
+    ]
+   ],
+   "home": "Brighton"
+  },
+  {
+   "key": "reading",
+   "label": "Reading",
+   "kana": "レディング",
+   "box": [
+    [
+     51.42,
+     -1.03
+    ],
+    [
+     51.49,
+     -0.92
+    ]
+   ],
+   "home": "Reading"
+  },
+  {
+   "key": "oxford",
+   "label": "Oxford",
+   "kana": "オックスフォード",
+   "box": [
+    [
+     51.72,
+     -1.3
+    ],
+    [
+     51.78,
+     -1.2
+    ]
+   ],
+   "home": "Oxford"
+  },
+  {
+   "key": "cambridge",
+   "label": "Cambridge",
+   "kana": "ケンブリッジ",
+   "box": [
+    [
+     52.17,
+     0.08
+    ],
+    [
+     52.23,
+     0.18
+    ]
+   ],
+   "home": "Cambridge"
+  },
+  {
+   "key": "miltonkeynes",
+   "label": "Milton Keynes",
+   "kana": "ミルトン・キーンズ",
+   "box": [
+    [
+     52,
+     -0.82
+    ],
+    [
+     52.07,
+     -0.7
+    ]
+   ],
+   "home": "Milton Keynes Central"
+  },
+  {
+   "key": "southend",
+   "label": "Southend-on-Sea",
+   "kana": "サウスエンド",
+   "box": [
+    [
+     51.492,
+     0.642
+    ],
+    [
+     51.592,
+     0.782
+    ]
+   ],
+   "home": "Southend Victoria"
+  }
+ ],
+ "build": {
+  "family": "uk",
+  "script": "scripts/build_london.py",
+  "check": "scripts/validate_london.py",
+  "arg": "london",
+  "inputs": [
+   "assets/uk_areas.json",
+   "assets/london_station_lines_overrides.csv",
+   "assets/belfast_stations.csv",
+   "assets/*_districts.csv",
+   "cache:london/*",
+   "cache:london/tfl",
+   "cache:london/boundaries",
+   "cache:london/bods",
+   "cache:london/vmd",
+   "cache:london/scotland",
+   "cache:london/ni"
+  ]
+ },
+ "credits": {
+  "block": "<span>Contains HM Land Registry data © Crown copyright and database right 2024. This data is licensed under the Open Government Licence v3.0. Floor areas: Chi, Dennett, Oléron-Evans and Morphet (2025), <a href=\"https://doi.org/10.5255/UKDA-SN-857911\" target=\"_blank\" rel=\"noopener\">House Price Per Square Metre in England and Wales, 1995–2024</a>, UK Data Service, CC BY 4.0, which links Land Registry sales to Energy Performance Certificates (MHCLG, Open Government Licence).</span><span>Postcodes and district boundaries: Office for National Statistics, Open Government Licence; contains OS data © Crown copyright and database right 2024, Royal Mail data © Royal Mail copyright and database right 2024 and GeoPlace data © Local Government Information House Limited copyright and database right 2024. Stations: NaPTAN, Department for Transport, Open Government Licence. Lines: Powered by TfL Open Data; contains OS data © Crown copyright and database rights 2016 and Geomni UK Map data © and database rights [2019]. None of these bodies produced or endorses this site.</span>",
+  "attribution": "Contains OS data © Crown copyright and database right 2026 · Powered by TfL Open Data"
+ }
+}

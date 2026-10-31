@@ -1,0 +1,185 @@
+{
+ "key": "bilbao",
+ "country": "Spain",
+ "order": 2,
+ "path": "bilbao/",
+ "en": "Bilbao",
+ "population": 351124,
+ "tag": {
+  "en": "Basque Country",
+  "ja": "バスク"
+ },
+ "cities": [
+  {
+   "key": "bilbao",
+   "en": "Bilbao",
+   "ja": "ビルバオ",
+   "population": 351124
+  }
+ ],
+ "goto": [
+  {
+   "key": "bilbao",
+   "label": "Bilbao",
+   "kana": "ビルバオ",
+   "box": [
+    [
+     43.251,
+     -2.945
+    ],
+    [
+     43.272,
+     -2.91
+    ]
+   ],
+   "home": "Abando"
+  },
+  {
+   "key": "cascoviejo",
+   "label": "Casco Viejo",
+   "kana": "カスコ・ビエホ",
+   "box": [
+    [
+     43.254,
+     -2.927
+    ],
+    [
+     43.263,
+     -2.916
+    ]
+   ],
+   "home": "Zazpikaleak/Casco Viejo"
+  },
+  {
+   "key": "indautxu",
+   "label": "Indautxu",
+   "kana": "インダウチュ",
+   "box": [
+    [
+     43.257,
+     -2.945
+    ],
+    [
+     43.266,
+     -2.932
+    ]
+   ],
+   "home": "Indautxu"
+  },
+  {
+   "key": "deusto",
+   "label": "Deusto",
+   "kana": "デウスト",
+   "box": [
+    [
+     43.262,
+     -2.958
+    ],
+    [
+     43.278,
+     -2.935
+    ]
+   ],
+   "home": "Deustu"
+  },
+  {
+   "key": "sanmames",
+   "label": "San Mamés",
+   "kana": "サン・マメス",
+   "box": [
+    [
+     43.255,
+     -2.955
+    ],
+    [
+     43.268,
+     -2.94
+    ]
+   ],
+   "home": "San Mamés"
+  },
+  {
+   "key": "santutxu",
+   "label": "Santutxu",
+   "kana": "サントゥチュ",
+   "box": [
+    [
+     43.249,
+     -2.92
+    ],
+    [
+     43.26,
+     -2.9
+    ]
+   ],
+   "home": "Santutxu"
+  },
+  {
+   "key": "zorrotza",
+   "label": "Zorrotza",
+   "kana": "ソロツァ",
+   "box": [
+    [
+     43.268,
+     -2.985
+    ],
+    [
+     43.284,
+     -2.962
+    ]
+   ],
+   "home": "Zorrotza"
+  },
+  {
+   "key": "basurto",
+   "label": "Basurto",
+   "kana": "バスルト",
+   "box": [
+    [
+     43.251,
+     -2.96
+    ],
+    [
+     43.264,
+     -2.943
+    ]
+   ],
+   "home": "Basurto"
+  },
+  {
+   "key": "bolueta",
+   "label": "Bolueta",
+   "kana": "ボルエタ",
+   "box": [
+    [
+     43.24,
+     -2.913
+    ],
+    [
+     43.254,
+     -2.893
+    ]
+   ],
+   "home": "Bolueta"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_bilbao.py",
+  "check": "scripts/validate_bilbao.py",
+  "arg": "bilbao",
+  "helpers": [
+   "scripts/spain.py"
+  ],
+  "inputs": [
+   "cache:spain/bilbao/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Mean prices per m² and per home of free-market homes, and numbers of home sales, by barrio: Gobierno Vasco, Estadística de Compraventa de Inmuebles (ECVI), from the Colegio de Registradores' data, figures to December 2025, under <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>; the station figures are Ekinomics' own calculation from them. Barrios: Eustat; land: Gobierno Vasco, geoEuskadi (CC BY 4.0).</span><span>Stations and lines: Gobierno Vasco, <a href=\"https://www.euskadi.eus/moveuskadi-datos-de-la-red-de-transporte-publico-de-euskadi-operadores-horarios-paradas-calendario-tarifas-etc/web01-s2ing/es/\" target=\"_blank\" rel=\"noopener\">Moveuskadi</a> (CC BY 4.0), processed from the timetables of Metro Bilbao, Euskotren and Renfe Cercanías as published on 30 October 2026. District names: Wikidata (CC0). None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: Gobierno Vasco, ECVI, from the Colegio de Registradores (CC BY 4.0)",
+   "ja": "価格：バスク州政府 ECVI（スペイン登記官協会のデータ、CC BY 4.0）"
+  },
+  "attribution": "Stations: Moveuskadi, Gobierno Vasco (CC BY 4.0) · Barrios: Eustat · Land: geoEuskadi (CC BY 4.0)"
+ }
+}

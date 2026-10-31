@@ -1,0 +1,132 @@
+{
+ "key": "hokkaido",
+ "country": "Japan",
+ "order": 3,
+ "path": "hokkaido/",
+ "en": "Hokkaido",
+ "ja": "北海道",
+ "population": 5224614,
+ "tag": {
+  "en": "Hokkaidō",
+  "ja": "北海道"
+ },
+ "cities": [
+  {
+   "key": "sapporo",
+   "en": "Sapporo",
+   "ja": "札幌",
+   "population": 1973395
+  },
+  {
+   "key": "hakodate",
+   "en": "Hakodate",
+   "ja": "函館",
+   "population": 251084
+  }
+ ],
+ "goto": [
+  {
+   "key": "sapporo",
+   "label": "Sapporo",
+   "ja": "札幌",
+   "box": [
+    [
+     43.015,
+     141.28
+    ],
+    [
+     43.115,
+     141.42
+    ]
+   ],
+   "home": "札幌"
+  },
+  {
+   "key": "asahikawa",
+   "label": "Asahikawa",
+   "ja": "旭川",
+   "box": [
+    [
+     43.715,
+     142.29
+    ],
+    [
+     43.815,
+     142.43
+    ]
+   ],
+   "home": "旭川"
+  },
+  {
+   "key": "hakodate",
+   "label": "Hakodate",
+   "ja": "函館",
+   "box": [
+    [
+     41.725,
+     140.67
+    ],
+    [
+     41.825,
+     140.81
+    ]
+   ],
+   "home": "函館"
+  },
+  {
+   "key": "obihiro",
+   "label": "Obihiro",
+   "ja": "帯広",
+   "box": [
+    [
+     42.87,
+     143.13
+    ],
+    [
+     42.97,
+     143.27
+    ]
+   ],
+   "home": "帯広"
+  },
+  {
+   "key": "kushiro",
+   "label": "Kushiro",
+   "ja": "釧路",
+   "box": [
+    [
+     42.94,
+     144.31
+    ],
+    [
+     43.04,
+     144.45
+    ]
+   ],
+   "home": "釧路"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "hokkaido",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:hokkaido/*_{MLIT}.*",
+   "cache:hokkaido/residential/*_{MLIT}.*",
+   "cache:wikidata/hokkaido/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

@@ -1,0 +1,106 @@
+{
+ "key": "tampa",
+ "country": "United States",
+ "order": 16,
+ "path": "tampabay/",
+ "en": "Hillsborough County",
+ "population": 1574115,
+ "tag": {
+  "en": "Tampa Bay",
+  "ja": "タンパベイ"
+ },
+ "cities": [
+  {
+   "key": "tampa",
+   "en": "Tampa",
+   "ja": "タンパ",
+   "population": 413554
+  }
+ ],
+ "goto": [
+  {
+   "key": "tampa",
+   "label": "Tampa",
+   "kana": "タンパ",
+   "box": [
+    [
+     27.936,
+     -82.464
+    ],
+    [
+     27.966,
+     -82.432
+    ]
+   ],
+   "home": "Dick Greco Plaza"
+  },
+  {
+   "key": "downtown",
+   "label": "Downtown",
+   "kana": "ダウンタウン",
+   "box": [
+    [
+     27.937,
+     -82.463
+    ],
+    [
+     27.953,
+     -82.443
+    ]
+   ],
+   "home": "Hattricks"
+  },
+  {
+   "key": "ybor",
+   "label": "Ybor City",
+   "kana": "イーボーシティ",
+   "box": [
+    [
+     27.952,
+     -82.448
+    ],
+    [
+     27.968,
+     -82.43
+    ]
+   ],
+   "home": "Centro Ybor"
+  },
+  {
+   "key": "channelside",
+   "label": "Channelside",
+   "kana": "チャネルサイド",
+   "box": [
+    [
+     27.94,
+     -82.455
+    ],
+    [
+     27.958,
+     -82.437
+    ]
+   ],
+   "home": "Port Tampa Bay"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_tampa.py",
+  "check": "scripts/validate_tampa.py",
+  "arg": "tampa",
+  "helpers": [
+   "scripts/florida.py"
+  ],
+  "inputs": [
+   "cache:us/tampa/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales, use codes, living areas and parcel maps: Florida Department of Revenue, Property Tax Oversight, Property Tax Data Portal (public records). TECO Line Streetcar stops and line: Hillsborough Area Regional Transit Authority (HART) GTFS. Tampa Union Station and its line: Amtrak GTFS. Places, counties and the shore: US Census Bureau cartographic boundary files.</span><span>This site is not sponsored by, affiliated with or operated by any of these bodies, and none of the Florida Department of Revenue, HART, Amtrak or the US Census Bureau produced or endorses it. The data are provided as is, without any warranty that they are accurate, current or complete, and are used here at the reader's own risk.</span>",
+  "priceSource": {
+   "en": "Prices: Florida Department of Revenue tax roll sale data (floridarevenue.com)",
+   "ja": "価格：フロリダ州歳入局 課税台帳の取引データ（floridarevenue.com）"
+  },
+  "attribution": "Stations and lines: HART and Amtrak GTFS · Outlines: US Census Bureau"
+ }
+}

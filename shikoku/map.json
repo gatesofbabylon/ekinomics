@@ -1,0 +1,110 @@
+{
+ "key": "shikoku",
+ "country": "Japan",
+ "order": 6,
+ "path": "shikoku/",
+ "en": "Shikoku",
+ "ja": "四国",
+ "population": 2976612,
+ "tag": {
+  "en": "Shikoku",
+  "ja": "四国"
+ },
+ "cities": [
+  {
+   "key": "matsuyama",
+   "en": "Matsuyama",
+   "ja": "松山",
+   "population": 511192
+  },
+  {
+   "key": "takamatsu",
+   "en": "Takamatsu",
+   "ja": "高松",
+   "population": 417496
+  },
+  {
+   "key": "kochi",
+   "en": "Kōchi",
+   "ja": "高知",
+   "population": 326545
+  }
+ ],
+ "goto": [
+  {
+   "key": "matsuyama",
+   "label": "Matsuyama",
+   "ja": "松山",
+   "box": [
+    [
+     33.79,
+     132.69
+    ],
+    [
+     33.89,
+     132.83
+    ]
+   ],
+   "home": "松山"
+  },
+  {
+   "key": "takamatsu",
+   "label": "Takamatsu",
+   "ja": "高松",
+   "box": [
+    [
+     34.29,
+     133.98
+    ],
+    [
+     34.39,
+     134.12
+    ]
+   ],
+   "home": "高松"
+  },
+  {
+   "key": "kochi",
+   "label": "Kōchi",
+   "ja": "高知",
+   "box": [
+    [
+     33.51,
+     133.47
+    ],
+    [
+     33.61,
+     133.61
+    ]
+   ],
+   "home": "高知"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "shikoku",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:kagawa/*_{MLIT}.*",
+   "cache:ehime/*_{MLIT}.*",
+   "cache:kochi/*_{MLIT}.*",
+   "cache:kagawa/residential/*_{MLIT}.*",
+   "cache:ehime/residential/*_{MLIT}.*",
+   "cache:kochi/residential/*_{MLIT}.*",
+   "cache:wikidata/shikoku/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

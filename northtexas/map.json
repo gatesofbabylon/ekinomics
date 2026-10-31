@@ -1,0 +1,384 @@
+{
+ "key": "dallas",
+ "country": "United States",
+ "order": 12,
+ "path": "northtexas/",
+ "en": "Dallas–Fort Worth",
+ "population": 7276388,
+ "tag": {
+  "en": "Texas",
+  "ja": "テキサス州"
+ },
+ "cities": [
+  {
+   "key": "dallas",
+   "en": "Dallas",
+   "ja": "ダラス",
+   "population": 1329491
+  },
+  {
+   "key": "fortworth",
+   "en": "Fort Worth",
+   "ja": "フォートワース",
+   "population": 1028117
+  }
+ ],
+ "goto": [
+  {
+   "key": "dallas",
+   "label": "Dallas",
+   "kana": "ダラス",
+   "box": [
+    [
+     32.74,
+     -96.86
+    ],
+    [
+     32.84,
+     -96.74
+    ]
+   ],
+   "home": "Akard"
+  },
+  {
+   "key": "fortworth",
+   "label": "Fort Worth",
+   "kana": "フォートワース",
+   "box": [
+    [
+     32.735,
+     -97.36
+    ],
+    [
+     32.825,
+     -97.285
+    ]
+   ],
+   "home": "Fort Worth Central"
+  },
+  {
+   "key": "uptown",
+   "label": "Uptown",
+   "kana": "アップタウン",
+   "box": [
+    [
+     32.79,
+     -96.815
+    ],
+    [
+     32.815,
+     -96.785
+    ]
+   ],
+   "home": "Cityplace/Uptown"
+  },
+  {
+   "key": "deepellum",
+   "label": "Deep Ellum",
+   "kana": "ディープ・エラム",
+   "box": [
+    [
+     32.775,
+     -96.8
+    ],
+    [
+     32.795,
+     -96.77
+    ]
+   ],
+   "home": "Deep Ellum"
+  },
+  {
+   "key": "bishoparts",
+   "label": "Bishop Arts",
+   "kana": "ビショップ・アーツ",
+   "box": [
+    [
+     32.735,
+     -96.84
+    ],
+    [
+     32.76,
+     -96.81
+    ]
+   ],
+   "home": "Bishop Arts"
+  },
+  {
+   "key": "universitypark",
+   "label": "University Park",
+   "kana": "ユニバーシティ・パーク",
+   "box": [
+    [
+     32.825,
+     -96.79
+    ],
+    [
+     32.86,
+     -96.76
+    ]
+   ],
+   "home": "SMU/Mockingbird"
+  },
+  {
+   "key": "lakehighlands",
+   "label": "Lake Highlands",
+   "kana": "レイク・ハイランズ",
+   "box": [
+    [
+     32.86,
+     -96.75
+    ],
+    [
+     32.895,
+     -96.71
+    ]
+   ],
+   "home": "Lake Highlands"
+  },
+  {
+   "key": "richardson",
+   "label": "Richardson",
+   "kana": "リチャードソン",
+   "box": [
+    [
+     32.93,
+     -96.76
+    ],
+    [
+     32.99,
+     -96.7
+    ]
+   ],
+   "home": "Arapaho Center"
+  },
+  {
+   "key": "plano",
+   "label": "Plano",
+   "kana": "プレイノ",
+   "box": [
+    [
+     33,
+     -96.73
+    ],
+    [
+     33.04,
+     -96.68
+    ]
+   ],
+   "home": "Downtown Plano"
+  },
+  {
+   "key": "garland",
+   "label": "Garland",
+   "kana": "ガーランド",
+   "box": [
+    [
+     32.895,
+     -96.66
+    ],
+    [
+     32.93,
+     -96.62
+    ]
+   ],
+   "home": "Downtown Garland"
+  },
+  {
+   "key": "rowlett",
+   "label": "Rowlett",
+   "kana": "ローレット",
+   "box": [
+    [
+     32.89,
+     -96.59
+    ],
+    [
+     32.92,
+     -96.54
+    ]
+   ],
+   "home": "Downtown Rowlett"
+  },
+  {
+   "key": "irving",
+   "label": "Irving",
+   "kana": "アーヴィング",
+   "box": [
+    [
+     32.8,
+     -96.97
+    ],
+    [
+     32.83,
+     -96.93
+    ]
+   ],
+   "home": "Downtown Irving/Heritage Crossing"
+  },
+  {
+   "key": "lascolinas",
+   "label": "Las Colinas",
+   "kana": "ラス・コリナス",
+   "box": [
+    [
+     32.855,
+     -96.95
+    ],
+    [
+     32.89,
+     -96.92
+    ]
+   ],
+   "home": "Las Colinas Urban Center"
+  },
+  {
+   "key": "addison",
+   "label": "Addison",
+   "kana": "アディソン",
+   "box": [
+    [
+     32.945,
+     -96.845
+    ],
+    [
+     32.975,
+     -96.81
+    ]
+   ],
+   "home": "Addison"
+  },
+  {
+   "key": "farmersbranch",
+   "label": "Farmers Branch",
+   "kana": "ファーマーズ・ブランチ",
+   "box": [
+    [
+     32.905,
+     -96.915
+    ],
+    [
+     32.94,
+     -96.88
+    ]
+   ],
+   "home": "Farmers Branch"
+  },
+  {
+   "key": "carrollton",
+   "label": "Carrollton",
+   "kana": "キャロルトン",
+   "box": [
+    [
+     32.94,
+     -96.93
+    ],
+    [
+     32.97,
+     -96.89
+    ]
+   ],
+   "home": "Downtown Carrollton"
+  },
+  {
+   "key": "lewisville",
+   "label": "Lewisville",
+   "kana": "ルイスビル",
+   "box": [
+    [
+     33.03,
+     -97.01
+    ],
+    [
+     33.06,
+     -96.97
+    ]
+   ],
+   "home": "Old Town"
+  },
+  {
+   "key": "denton",
+   "label": "Denton",
+   "kana": "デントン",
+   "box": [
+    [
+     33.19,
+     -97.15
+    ],
+    [
+     33.235,
+     -97.1
+    ]
+   ],
+   "home": "Downtown Denton"
+  },
+  {
+   "key": "hurst",
+   "label": "Hurst",
+   "kana": "ハースト",
+   "box": [
+    [
+     32.79,
+     -97.23
+    ],
+    [
+     32.82,
+     -97.19
+    ]
+   ],
+   "home": "Trinity Lakes"
+  },
+  {
+   "key": "northrichlandhills",
+   "label": "North Richland Hills",
+   "kana": "ノース・リッチランド・ヒルズ",
+   "box": [
+    [
+     32.83,
+     -97.27
+    ],
+    [
+     32.88,
+     -97.19
+    ]
+   ],
+   "home": "North Richland Hills/Smithfield"
+  },
+  {
+   "key": "grapevine",
+   "label": "Grapevine",
+   "kana": "グレイプバイン",
+   "box": [
+    [
+     32.92,
+     -97.1
+    ],
+    [
+     32.95,
+     -97.05
+    ]
+   ],
+   "home": "Grapevine/Main Street"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_dallas.py",
+  "check": "scripts/validate_dallas.py",
+  "arg": "dallas",
+  "helpers": [
+   "scripts/hmda.py"
+  ],
+  "inputs": [
+   "cache:us/dallas/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Prices: HMDA public loan-level data (Consumer Financial Protection Bureau and FFIEC), 2018–2025, the property values lenders reported for home-purchase loans. Census tracts, cities, counties and water: US Census Bureau TIGER/Line and cartographic boundary files. Stations and lines: Dallas Area Rapid Transit (DART) GTFS; Trinity Metro GTFS (TEXRail), from MobilityData's archived copy of June 2026; Denton County Transportation Authority (DCTA) GTFS, used under DCTA's Open Data License Agreement. Data provided by Trinity Metro is not warranted by Trinity Metro for accuracy or completeness and data is subject to change without notice.</span><span>This site is not produced, commissioned, sponsored or endorsed by the CFPB, the FFIEC, the Census Bureau, DART, Trinity Metro or DCTA. DART and DCTA make no representation or warranty as to the accuracy or completeness of their data, which are provided as is.</span>",
+  "priceSource": {
+   "en": "Prices: HMDA mortgage records (CFPB, FFIEC), low confidence",
+   "ja": "価格：HMDA 住宅ローン記録（CFPB、FFIEC）、低信頼度"
+  },
+  "attribution": "Stations and lines: DART, Trinity Metro (archived copy, June 2026) and DCTA GTFS · Data provided by Trinity Metro is not warranted by Trinity Metro for accuracy or completeness and data is subject to change without notice · Outlines: US Census Bureau"
+ }
+}

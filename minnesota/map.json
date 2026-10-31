@@ -1,0 +1,288 @@
+{
+ "key": "twincities",
+ "country": "United States",
+ "order": 18,
+ "path": "minnesota/",
+ "en": "Twin Cities",
+ "population": 3226013,
+ "tag": {
+  "en": "Minnesota",
+  "ja": "ミネソタ州"
+ },
+ "cities": [
+  {
+   "key": "minneapolis",
+   "en": "Minneapolis",
+   "ja": "ミネアポリス",
+   "population": 430324
+  },
+  {
+   "key": "stpaul",
+   "en": "St Paul",
+   "ja": "セントポール",
+   "population": 306684
+  }
+ ],
+ "goto": [
+  {
+   "key": "minneapolis",
+   "label": "Minneapolis",
+   "kana": "ミネアポリス",
+   "box": [
+    [
+     44.965,
+     -93.29
+    ],
+    [
+     44.99,
+     -93.245
+    ]
+   ],
+   "home": "Nicollet Mall"
+  },
+  {
+   "key": "stpaul",
+   "label": "St Paul",
+   "kana": "セントポール",
+   "box": [
+    [
+     44.935,
+     -93.115
+    ],
+    [
+     44.96,
+     -93.07
+    ]
+   ],
+   "home": "Central"
+  },
+  {
+   "key": "downtowneast",
+   "label": "Downtown East",
+   "kana": "ダウンタウン・イースト",
+   "box": [
+    [
+     44.963,
+     -93.282
+    ],
+    [
+     44.987,
+     -93.237
+    ]
+   ],
+   "home": "U.S. Bank Stadium"
+  },
+  {
+   "key": "northloop",
+   "label": "North Loop",
+   "kana": "ノース・ループ",
+   "box": [
+    [
+     44.972,
+     -93.3
+    ],
+    [
+     44.996,
+     -93.255
+    ]
+   ],
+   "home": "Target Field"
+  },
+  {
+   "key": "cedarriverside",
+   "label": "Cedar-Riverside",
+   "kana": "シーダー・リバーサイド",
+   "box": [
+    [
+     44.957,
+     -93.272
+    ],
+    [
+     44.981,
+     -93.227
+    ]
+   ],
+   "home": "Cedar-Riverside"
+  },
+  {
+   "key": "stadiumvillage",
+   "label": "Stadium Village",
+   "kana": "スタジアム・ビレッジ",
+   "box": [
+    [
+     44.963,
+     -93.245
+    ],
+    [
+     44.987,
+     -93.2
+    ]
+   ],
+   "home": "Stadium Village"
+  },
+  {
+   "key": "lakestreet",
+   "label": "Lake Street",
+   "kana": "レイク・ストリート",
+   "box": [
+    [
+     44.937,
+     -93.261
+    ],
+    [
+     44.961,
+     -93.216
+    ]
+   ],
+   "home": "Lake Street/Midtown"
+  },
+  {
+   "key": "38thstreet",
+   "label": "38th Street",
+   "kana": "38丁目",
+   "box": [
+    [
+     44.923,
+     -93.252
+    ],
+    [
+     44.947,
+     -93.207
+    ]
+   ],
+   "home": "38th St"
+  },
+  {
+   "key": "minnehaha",
+   "label": "Minnehaha Park",
+   "kana": "ミネハハ公園",
+   "box": [
+    [
+     44.9,
+     -93.233
+    ],
+    [
+     44.924,
+     -93.188
+    ]
+   ],
+   "home": "50th St/Minnehaha Park"
+  },
+  {
+   "key": "bloomington",
+   "label": "Bloomington",
+   "kana": "ブルーミントン",
+   "box": [
+    [
+     44.843,
+     -93.262
+    ],
+    [
+     44.867,
+     -93.208
+    ]
+   ],
+   "home": "Mall of America"
+  },
+  {
+   "key": "raymondave",
+   "label": "Raymond Avenue",
+   "kana": "レイモンド・アベニュー",
+   "box": [
+    [
+     44.951,
+     -93.218
+    ],
+    [
+     44.975,
+     -93.173
+    ]
+   ],
+   "home": "Raymond Ave"
+  },
+  {
+   "key": "midway",
+   "label": "Midway",
+   "kana": "ミッドウェイ",
+   "box": [
+    [
+     44.944,
+     -93.19
+    ],
+    [
+     44.968,
+     -93.145
+    ]
+   ],
+   "home": "Snelling Ave"
+  },
+  {
+   "key": "frogtown",
+   "label": "Frogtown",
+   "kana": "フロッグタウン",
+   "box": [
+    [
+     44.944,
+     -93.149
+    ],
+    [
+     44.968,
+     -93.104
+    ]
+   ],
+   "home": "Dale St"
+  },
+  {
+   "key": "capitol",
+   "label": "Capitol",
+   "kana": "キャピトル",
+   "box": [
+    [
+     44.944,
+     -93.128
+    ],
+    [
+     44.968,
+     -93.083
+    ]
+   ],
+   "home": "Capitol/Rice St"
+  },
+  {
+   "key": "lowertown",
+   "label": "Lowertown",
+   "kana": "ロウワータウン",
+   "box": [
+    [
+     44.937,
+     -93.11
+    ],
+    [
+     44.961,
+     -93.065
+    ]
+   ],
+   "home": "Union Depot"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_twincities.py",
+  "check": "scripts/validate_twincities.py",
+  "arg": "twincities",
+  "helpers": [
+   "scripts/minnesota.py"
+  ],
+  "inputs": [
+   "cache:us/twincities/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales, use classes, floor areas, years built and parcel positions: Metropolitan Council, Metropolitan 7-County Parcel Points (yearly snapshots 2021–2025 and current) and MetroGIS Regional Parcel Dataset (year-end snapshots 2014, 2015 and 2017–2020, Internet Archive copies), compiled from Anoka, Carver, Dakota, Hennepin, Ramsey, Scott and Washington counties; public domain under the Minnesota Government Data Practices Act. Stations and lines: Metro Transit GTFS. Cities, townships, counties and water: US Census Bureau cartographic boundary files and TIGER/Line area water.</span><span>This site is not produced, commissioned, sponsored or endorsed by the Metropolitan Council, Metro Transit, the counties or the US Census Bureau, and their data are shown as published, without warranty.</span>",
+  "priceSource": {
+   "en": "Prices: Metropolitan Council parcel data (each parcel's last sale, yearly), from 2014",
+   "ja": "価格：メトロポリタン・カウンシルの区画データ（各区画の最後の取引、年次）、2014年以降"
+  },
+  "attribution": "Stations and lines: Metro Transit GTFS · Sales: Metropolitan Council · Outlines: US Census Bureau"
+ }
+}

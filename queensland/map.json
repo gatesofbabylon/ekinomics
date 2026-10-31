@@ -1,0 +1,381 @@
+{
+ "key": "brisbane",
+ "country": "Australia",
+ "order": 3,
+ "path": "queensland/",
+ "en": "Greater Brisbane",
+ "population": 3906711,
+ "tag": {
+  "en": "Queensland",
+  "ja": "クイーンズランド州"
+ },
+ "cities": [
+  {
+   "key": "brisbane",
+   "en": "Brisbane",
+   "ja": "ブリスベン",
+   "population": 2833524
+  },
+  {
+   "key": "goldcoast",
+   "en": "Gold Coast",
+   "ja": "ゴールドコースト",
+   "population": 691230
+  }
+ ],
+ "goto": [
+  {
+   "key": "brisbane",
+   "label": "Brisbane",
+   "kana": "ブリスベン",
+   "box": [
+    [
+     -27.51,
+     152.97
+    ],
+    [
+     -27.42,
+     153.09
+    ]
+   ],
+   "home": "Central"
+  },
+  {
+   "key": "goldcoast",
+   "label": "Gold Coast",
+   "kana": "ゴールドコースト",
+   "box": [
+    [
+     -28.05,
+     153.38
+    ],
+    [
+     -27.95,
+     153.45
+    ]
+   ],
+   "home": "Surfers Paradise"
+  },
+  {
+   "key": "toowong",
+   "label": "Toowong",
+   "kana": "トゥーウォング",
+   "box": [
+    [
+     -27.51,
+     152.958
+    ],
+    [
+     -27.46,
+     153.028
+    ]
+   ],
+   "home": "Toowong"
+  },
+  {
+   "key": "indooroopilly",
+   "label": "Indooroopilly",
+   "kana": "インドゥルーピリー",
+   "box": [
+    [
+     -27.528,
+     152.941
+    ],
+    [
+     -27.478,
+     153.011
+    ]
+   ],
+   "home": "Indooroopilly"
+  },
+  {
+   "key": "nundah",
+   "label": "Nundah",
+   "kana": "ナンダ",
+   "box": [
+    [
+     -27.426,
+     153.027
+    ],
+    [
+     -27.376,
+     153.097
+    ]
+   ],
+   "home": "Nundah"
+  },
+  {
+   "key": "sandgate",
+   "label": "Sandgate",
+   "kana": "サンドゲート",
+   "box": [
+    [
+     -27.347,
+     153.034
+    ],
+    [
+     -27.297,
+     153.104
+    ]
+   ],
+   "home": "Sandgate"
+  },
+  {
+   "key": "wynnum",
+   "label": "Wynnum",
+   "kana": "ウィナム",
+   "box": [
+    [
+     -27.471,
+     153.136
+    ],
+    [
+     -27.421,
+     153.206
+    ]
+   ],
+   "home": "Wynnum Central"
+  },
+  {
+   "key": "cleveland",
+   "label": "Cleveland",
+   "kana": "クリーブランド",
+   "box": [
+    [
+     -27.549,
+     153.231
+    ],
+    [
+     -27.499,
+     153.301
+    ]
+   ],
+   "home": "Cleveland"
+  },
+  {
+   "key": "ipswich",
+   "label": "Ipswich",
+   "kana": "イプスウィッチ",
+   "box": [
+    [
+     -27.638,
+     152.725
+    ],
+    [
+     -27.588,
+     152.795
+    ]
+   ],
+   "home": "Ipswich"
+  },
+  {
+   "key": "springfield",
+   "label": "Springfield",
+   "kana": "スプリングフィールド",
+   "box": [
+    [
+     -27.699,
+     152.868
+    ],
+    [
+     -27.649,
+     152.938
+    ]
+   ],
+   "home": "Springfield Central"
+  },
+  {
+   "key": "redcliffe",
+   "label": "Redcliffe Peninsula",
+   "kana": "レッドクリフ半島",
+   "box": [
+    [
+     -27.25,
+     153.047
+    ],
+    [
+     -27.2,
+     153.117
+    ]
+   ],
+   "home": "Kippa-Ring"
+  },
+  {
+   "key": "strathpine",
+   "label": "Strathpine",
+   "kana": "ストラスパイン",
+   "box": [
+    [
+     -27.336,
+     152.955
+    ],
+    [
+     -27.286,
+     153.025
+    ]
+   ],
+   "home": "Strathpine"
+  },
+  {
+   "key": "caboolture",
+   "label": "Caboolture",
+   "kana": "カブールチャー",
+   "box": [
+    [
+     -27.108,
+     152.918
+    ],
+    [
+     -27.058,
+     152.988
+    ]
+   ],
+   "home": "Caboolture"
+  },
+  {
+   "key": "beenleigh",
+   "label": "Beenleigh",
+   "kana": "ビーンリー",
+   "box": [
+    [
+     -27.743,
+     153.169
+    ],
+    [
+     -27.693,
+     153.239
+    ]
+   ],
+   "home": "Beenleigh"
+  },
+  {
+   "key": "helensvale",
+   "label": "Helensvale",
+   "kana": "ヘレンズベール",
+   "box": [
+    [
+     -27.95,
+     153.304
+    ],
+    [
+     -27.9,
+     153.374
+    ]
+   ],
+   "home": "Helensvale"
+  },
+  {
+   "key": "coomera",
+   "label": "Coomera",
+   "kana": "クーメラ",
+   "box": [
+    [
+     -27.878,
+     153.282
+    ],
+    [
+     -27.828,
+     153.352
+    ]
+   ],
+   "home": "Coomera"
+  },
+  {
+   "key": "southport",
+   "label": "Southport",
+   "kana": "サウスポート",
+   "box": [
+    [
+     -27.993,
+     153.379
+    ],
+    [
+     -27.943,
+     153.449
+    ]
+   ],
+   "home": "Southport"
+  },
+  {
+   "key": "broadbeach",
+   "label": "Broadbeach",
+   "kana": "ブロードビーチ",
+   "box": [
+    [
+     -28.061,
+     153.396
+    ],
+    [
+     -28.011,
+     153.466
+    ]
+   ],
+   "home": "Broadbeach South"
+  },
+  {
+   "key": "burleighheads",
+   "label": "Burleigh Heads",
+   "kana": "バーレイ・ヘッズ",
+   "box": [
+    [
+     -28.115,
+     153.418
+    ],
+    [
+     -28.065,
+     153.488
+    ]
+   ],
+   "home": "Burleigh Heads"
+  },
+  {
+   "key": "robina",
+   "label": "Robina",
+   "kana": "ロビーナ",
+   "box": [
+    [
+     -28.096,
+     153.343
+    ],
+    [
+     -28.046,
+     153.413
+    ]
+   ],
+   "home": "Robina"
+  },
+  {
+   "key": "nambour",
+   "label": "Nambour",
+   "kana": "ナンバー",
+   "box": [
+    [
+     -26.651,
+     152.923
+    ],
+    [
+     -26.601,
+     152.993
+    ]
+   ],
+   "home": "Nambour"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_australia.py",
+  "check": "scripts/validate_australia.py",
+  "arg": "brisbane",
+  "settings": "assets/au_areas.json",
+  "inputs": [
+   "cache:australia/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Prices: based on Australian Bureau of Statistics data, <a href=\"https://www.abs.gov.au/methodologies/data-region-methodology/2011-25\" target=\"_blank\" rel=\"noopener\">Data by region</a>, residential property transfers by SA2 (sales data supplied to the ABS by Cotality), © Commonwealth of Australia, licensed under <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>; the station blends are Ekinomics’ own calculation from those figures. Stations and lines: Translink, Department of Transport and Main Roads, Queensland (<a href=\"https://www.data.qld.gov.au/dataset/general-transit-feed-specification-gtfs-translink\" target=\"_blank\" rel=\"noopener\">GTFS</a>), CC BY 4.0.</span><span>SA2, council and Greater Brisbane boundaries: Australian Bureau of Statistics, ASGS 2016 and Edition 3 (2021), CC BY 4.0. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: based on ABS Data by region (CC BY 4.0)",
+   "ja": "価格：ABS Data by region（CC BY 4.0）に基づく"
+  },
+  "attribution": "Stations: Translink, Department of Transport and Main Roads (CC BY 4.0) · Outlines: ABS ASGS (CC BY 4.0)"
+ }
+}

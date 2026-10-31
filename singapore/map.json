@@ -1,0 +1,294 @@
+{
+ "key": "singapore",
+ "country": "Singapore",
+ "order": 0,
+ "path": "singapore/",
+ "en": "Singapore",
+ "population": 6208523,
+ "tag": {
+  "en": "Singapore",
+  "ja": "シンガポール"
+ },
+ "cities": [
+  {
+   "key": "singapore",
+   "en": "Singapore",
+   "ja": "シンガポール",
+   "population": 6208523
+  }
+ ],
+ "goto": [
+  {
+   "key": "singapore",
+   "label": "Singapore",
+   "kana": "シンガポール",
+   "box": [
+    [
+     1.265,
+     103.82
+    ],
+    [
+     1.31,
+     103.87
+    ]
+   ],
+   "home": "Tanjong Pagar"
+  },
+  {
+   "key": "jurongeast",
+   "label": "Jurong East",
+   "kana": "ジュロン・イースト",
+   "box": [
+    [
+     1.315,
+     103.717
+    ],
+    [
+     1.351,
+     103.767
+    ]
+   ],
+   "home": "Jurong East"
+  },
+  {
+   "key": "woodlands",
+   "label": "Woodlands",
+   "kana": "ウッドランズ",
+   "box": [
+    [
+     1.418,
+     103.763
+    ],
+    [
+     1.454,
+     103.813
+    ]
+   ],
+   "home": "Woodlands"
+  },
+  {
+   "key": "tampines",
+   "label": "Tampines",
+   "kana": "タンピネス",
+   "box": [
+    [
+     1.336,
+     103.919
+    ],
+    [
+     1.372,
+     103.969
+    ]
+   ],
+   "home": "Tampines"
+  },
+  {
+   "key": "punggol",
+   "label": "Punggol",
+   "kana": "プンゴル",
+   "box": [
+    [
+     1.387,
+     103.877
+    ],
+    [
+     1.423,
+     103.927
+    ]
+   ],
+   "home": "Punggol"
+  },
+  {
+   "key": "sengkang",
+   "label": "Sengkang",
+   "kana": "センカン",
+   "box": [
+    [
+     1.374,
+     103.87
+    ],
+    [
+     1.41,
+     103.92
+    ]
+   ],
+   "home": "Sengkang"
+  },
+  {
+   "key": "angmokio",
+   "label": "Ang Mo Kio",
+   "kana": "アンモキオ",
+   "box": [
+    [
+     1.352,
+     103.825
+    ],
+    [
+     1.388,
+     103.875
+    ]
+   ],
+   "home": "Ang Mo Kio"
+  },
+  {
+   "key": "bishan",
+   "label": "Bishan",
+   "kana": "ビシャン",
+   "box": [
+    [
+     1.333,
+     103.824
+    ],
+    [
+     1.369,
+     103.874
+    ]
+   ],
+   "home": "Bishan"
+  },
+  {
+   "key": "toapayoh",
+   "label": "Toa Payoh",
+   "kana": "トア・パヨ",
+   "box": [
+    [
+     1.315,
+     103.822
+    ],
+    [
+     1.351,
+     103.872
+    ]
+   ],
+   "home": "Toa Payoh"
+  },
+  {
+   "key": "queenstown",
+   "label": "Queenstown",
+   "kana": "クイーンズタウン",
+   "box": [
+    [
+     1.277,
+     103.781
+    ],
+    [
+     1.313,
+     103.831
+    ]
+   ],
+   "home": "Queenstown"
+  },
+  {
+   "key": "clementi",
+   "label": "Clementi",
+   "kana": "クレメンティ",
+   "box": [
+    [
+     1.297,
+     103.74
+    ],
+    [
+     1.333,
+     103.79
+    ]
+   ],
+   "home": "Clementi"
+  },
+  {
+   "key": "bedok",
+   "label": "Bedok",
+   "kana": "ベドック",
+   "box": [
+    [
+     1.306,
+     103.904
+    ],
+    [
+     1.342,
+     103.954
+    ]
+   ],
+   "home": "Bedok"
+  },
+  {
+   "key": "yishun",
+   "label": "Yishun",
+   "kana": "イーシュン",
+   "box": [
+    [
+     1.411,
+     103.81
+    ],
+    [
+     1.447,
+     103.86
+    ]
+   ],
+   "home": "Yishun"
+  },
+  {
+   "key": "pasirris",
+   "label": "Pasir Ris",
+   "kana": "パシール・リス",
+   "box": [
+    [
+     1.355,
+     103.924
+    ],
+    [
+     1.391,
+     103.974
+    ]
+   ],
+   "home": "Pasir Ris"
+  },
+  {
+   "key": "bukitpanjang",
+   "label": "Bukit Panjang",
+   "kana": "ブキ・パンジャン",
+   "box": [
+    [
+     1.361,
+     103.736
+    ],
+    [
+     1.397,
+     103.786
+    ]
+   ],
+   "home": "Bukit Panjang"
+  },
+  {
+   "key": "serangoon",
+   "label": "Serangoon",
+   "kana": "セラングーン",
+   "box": [
+    [
+     1.332,
+     103.848
+    ],
+    [
+     1.368,
+     103.898
+    ]
+   ],
+   "home": "Serangoon"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_singapore.py",
+  "check": "scripts/validate_singapore.py",
+  "arg": "singapore",
+  "inputs": [
+   "cache:singapore/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Contains information from Resale Flat Prices (Housing &amp; Development Board), LTA MRT Station Exit (Land Transport Authority) and Master Plan 2019 Planning Area Boundary (Urban Redevelopment Authority), accessed on 30 October 2026 from data.gov.sg, which is made available under the terms of the Singapore Open Data Licence version 1.0.</span><span>Block positions and station codes: OneMap, Singapore Land Authority. Land beyond Singapore: Natural Earth. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: HDB resale flat prices (data.gov.sg, Singapore Open Data Licence)",
+   "ja": "価格：HDB 再販価格（data.gov.sg、Singapore Open Data Licence）"
+  },
+  "attribution": "Stations: LTA and OneMap · Outlines: URA Master Plan 2019 · Singapore Open Data Licence"
+ }
+}

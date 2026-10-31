@@ -1,0 +1,359 @@
+{
+ "key": "grenoble",
+ "country": "France",
+ "order": 10,
+ "path": "isere/",
+ "en": "Isère",
+ "population": 1298990,
+ "tag": {
+  "en": "Isère",
+  "ja": "イゼール"
+ },
+ "cities": [
+  {
+   "key": "grenoble",
+   "en": "Grenoble",
+   "ja": "グルノーブル",
+   "population": 156140
+  }
+ ],
+ "goto": [
+  {
+   "key": "grenoble",
+   "label": "Grenoble",
+   "kana": "グルノーブル",
+   "box": [
+    [
+     45.14,
+     5.67
+    ],
+    [
+     45.23,
+     5.78
+    ]
+   ],
+   "home": "Victor Hugo"
+  },
+  {
+   "key": "echirolles",
+   "label": "Échirolles",
+   "kana": "エシロル",
+   "box": [
+    [
+     45.119,
+     5.673
+    ],
+    [
+     45.179,
+     5.763
+    ]
+   ],
+   "home": "La Rampe – Centre-Ville"
+  },
+  {
+   "key": "saintmartindheres",
+   "label": "Saint-Martin-d’Hères",
+   "kana": "サン＝マルタン＝デール",
+   "box": [
+    [
+     45.157,
+     5.712
+    ],
+    [
+     45.217,
+     5.802
+    ]
+   ],
+   "home": "Neyrpic – Belledonne"
+  },
+  {
+   "key": "fontaine",
+   "label": "Fontaine",
+   "kana": "フォンテーヌ",
+   "box": [
+    [
+     45.162,
+     5.642
+    ],
+    [
+     45.222,
+     5.732
+    ]
+   ],
+   "home": "Fontaine Hôtel de Ville – La Source"
+  },
+  {
+   "key": "seyssinetpariset",
+   "label": "Seyssinet-Pariset",
+   "kana": "セシネ＝パリゼ",
+   "box": [
+    [
+     45.15,
+     5.651
+    ],
+    [
+     45.21,
+     5.741
+    ]
+   ],
+   "home": "Seyssinet-Pariset Hôtel de Ville"
+  },
+  {
+   "key": "pontdeclaix",
+   "label": "Le Pont-de-Claix",
+   "kana": "ル・ポン＝ド＝クレ",
+   "box": [
+    [
+     45.107,
+     5.658
+    ],
+    [
+     45.167,
+     5.748
+    ]
+   ],
+   "home": "Pont-de-Claix l'Étoile"
+  },
+  {
+   "key": "gieres",
+   "label": "Gières",
+   "kana": "ジエール",
+   "box": [
+    [
+     45.155,
+     5.74
+    ],
+    [
+     45.215,
+     5.83
+    ]
+   ],
+   "home": "Grenoble Universités - Gières"
+  },
+  {
+   "key": "vizille",
+   "label": "Vizille",
+   "kana": "ヴィジーユ",
+   "box": [
+    [
+     45.055,
+     5.697
+    ],
+    [
+     45.115,
+     5.787
+    ]
+   ],
+   "home": "Jarrie - Vizille"
+  },
+  {
+   "key": "villardbonnot",
+   "label": "Villard-Bonnot",
+   "kana": "ヴィラール＝ボノ",
+   "box": [
+    [
+     45.232,
+     5.856
+    ],
+    [
+     45.292,
+     5.946
+    ]
+   ],
+   "home": "Brignoud"
+  },
+  {
+   "key": "pontcharra",
+   "label": "Pontcharra",
+   "kana": "ポンシャラ",
+   "box": [
+    [
+     45.404,
+     5.963
+    ],
+    [
+     45.464,
+     6.053
+    ]
+   ],
+   "home": "Pontcharra sur Bréda"
+  },
+  {
+   "key": "voiron",
+   "label": "Voiron",
+   "kana": "ヴォワロン",
+   "box": [
+    [
+     45.334,
+     5.55
+    ],
+    [
+     45.394,
+     5.64
+    ]
+   ],
+   "home": "Voiron"
+  },
+  {
+   "key": "moirans",
+   "label": "Moirans",
+   "kana": "モワラン",
+   "box": [
+    [
+     45.294,
+     5.52
+    ],
+    [
+     45.354,
+     5.61
+    ]
+   ],
+   "home": "Moirans la Galifette"
+  },
+  {
+   "key": "rives",
+   "label": "Rives",
+   "kana": "リーヴ",
+   "box": [
+    [
+     45.328,
+     5.447
+    ],
+    [
+     45.388,
+     5.537
+    ]
+   ],
+   "home": "Rives"
+  },
+  {
+   "key": "tullins",
+   "label": "Tullins",
+   "kana": "テュラン",
+   "box": [
+    [
+     45.271,
+     5.447
+    ],
+    [
+     45.331,
+     5.537
+    ]
+   ],
+   "home": "Tullins Fures"
+  },
+  {
+   "key": "saintmarcellin",
+   "label": "Saint-Marcellin",
+   "kana": "サン＝マルスラン",
+   "box": [
+    [
+     45.121,
+     5.279
+    ],
+    [
+     45.181,
+     5.369
+    ]
+   ],
+   "home": "Saint-Marcellin"
+  },
+  {
+   "key": "latourdupin",
+   "label": "La Tour-du-Pin",
+   "kana": "ラ・トゥール＝デュ＝パン",
+   "box": [
+    [
+     45.53,
+     5.405
+    ],
+    [
+     45.59,
+     5.495
+    ]
+   ],
+   "home": "La Tour-du-Pin"
+  },
+  {
+   "key": "bourgoinjallieu",
+   "label": "Bourgoin-Jallieu",
+   "kana": "ブルゴワン＝ジャリュー",
+   "box": [
+    [
+     45.554,
+     5.228
+    ],
+    [
+     45.614,
+     5.318
+    ]
+   ],
+   "home": "Bourgoin-Jallieu"
+  },
+  {
+   "key": "isledabeau",
+   "label": "L’Isle-d’Abeau",
+   "kana": "リル＝ダボー",
+   "box": [
+    [
+     45.578,
+     5.175
+    ],
+    [
+     45.638,
+     5.265
+    ]
+   ],
+   "home": "L'Isle-d'Abeau"
+  },
+  {
+   "key": "vienne",
+   "label": "Vienne",
+   "kana": "ヴィエンヌ",
+   "box": [
+    [
+     45.491,
+     4.829
+    ],
+    [
+     45.551,
+     4.919
+    ]
+   ],
+   "home": "Vienne"
+  },
+  {
+   "key": "roussillon",
+   "label": "Le Péage-de-Roussillon",
+   "kana": "ル・ペアージュ＝ド＝ルシヨン",
+   "box": [
+    [
+     45.342,
+     4.75
+    ],
+    [
+     45.402,
+     4.84
+    ]
+   ],
+   "home": "Le Péage-de-Roussillon"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_france.py",
+  "check": "scripts/validate_france.py",
+  "arg": "grenoble",
+  "settings": "assets/fr_areas.json",
+  "inputs": [
+   "cache:france/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales: Demandes de valeurs foncières, Direction générale des Finances publiques (DGFiP), as structured by Cerema in <a href=\"https://www.data.gouv.fr/datasets/dvf-open-data\" target=\"_blank\" rel=\"noopener\">DVF+ open data</a> (October 2026 release), Licence Ouverte 2.0.</span><span>Stations and lines: M TAG, GTFS timetables published by the SMMAG, the Grenoble area's transport authority (ODbL); SNCF timetables (ODbL); track: SNCF Réseau, shapes of the lines of the national rail network (ODbL). The stations and lines in this map's data files are derived from these sources and are available under the ODbL. Département outlines: IGN Admin Express, via Etalab, Licence Ouverte 2.0. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: DVF+ open data (Cerema, from DGFiP), Licence Ouverte 2.0",
+   "ja": "価格：DVF+ open data（Cerema、DGFiP の DVF から作成）、Licence Ouverte 2.0"
+  },
+  "attribution": "Stations: M TAG (ODbL) and SNCF (ODbL) · Track: SNCF Réseau (ODbL) · Outlines: IGN via Etalab"
+ }
+}

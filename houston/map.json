@@ -1,0 +1,186 @@
+{
+ "key": "houston",
+ "country": "United States",
+ "order": 13,
+ "path": "houston/",
+ "en": "Harris County",
+ "population": 5045026,
+ "tag": {
+  "en": "Texas",
+  "ja": "テキサス州"
+ },
+ "cities": [
+  {
+   "key": "houston",
+   "en": "Houston",
+   "ja": "ヒューストン",
+   "population": 2397315
+  }
+ ],
+ "goto": [
+  {
+   "key": "houston",
+   "label": "Houston",
+   "kana": "ヒューストン",
+   "box": [
+    [
+     29.735,
+     -95.385
+    ],
+    [
+     29.775,
+     -95.345
+    ]
+   ],
+   "home": "Main Street Square"
+  },
+  {
+   "key": "midtown",
+   "label": "Midtown",
+   "kana": "ミッドタウン",
+   "box": [
+    [
+     29.73,
+     -95.39
+    ],
+    [
+     29.75,
+     -95.365
+    ]
+   ],
+   "home": "McGowen"
+  },
+  {
+   "key": "museumdistrict",
+   "label": "Museum District",
+   "kana": "ミュージアム・ディストリクト",
+   "box": [
+    [
+     29.715,
+     -95.4
+    ],
+    [
+     29.735,
+     -95.38
+    ]
+   ],
+   "home": "Museum District"
+  },
+  {
+   "key": "medicalcenter",
+   "label": "Texas Medical Center",
+   "kana": "テキサス・メディカル・センター",
+   "box": [
+    [
+     29.695,
+     -95.41
+    ],
+    [
+     29.715,
+     -95.39
+    ]
+   ],
+   "home": "TMC Transit Center"
+  },
+  {
+   "key": "thirdward",
+   "label": "Third Ward",
+   "kana": "サード・ワード",
+   "box": [
+    [
+     29.71,
+     -95.36
+    ],
+    [
+     29.735,
+     -95.335
+    ]
+   ],
+   "home": "Elgin/Third Ward"
+  },
+  {
+   "key": "eado",
+   "label": "EaDo",
+   "kana": "イーダウ",
+   "box": [
+    [
+     29.745,
+     -95.36
+    ],
+    [
+     29.76,
+     -95.34
+    ]
+   ],
+   "home": "EaDo/Stadium"
+  },
+  {
+   "key": "secondward",
+   "label": "Second Ward",
+   "kana": "セカンド・ワード",
+   "box": [
+    [
+     29.74,
+     -95.35
+    ],
+    [
+     29.755,
+     -95.325
+    ]
+   ],
+   "home": "Coffee Plant/Second Ward"
+  },
+  {
+   "key": "northside",
+   "label": "Northside",
+   "kana": "ノースサイド",
+   "box": [
+    [
+     29.775,
+     -95.38
+    ],
+    [
+     29.81,
+     -95.355
+    ]
+   ],
+   "home": "Moody Park"
+  },
+  {
+   "key": "magnoliapark",
+   "label": "Magnolia Park",
+   "kana": "マグノリア・パーク",
+   "box": [
+    [
+     29.725,
+     -95.32
+    ],
+    [
+     29.745,
+     -95.295
+    ]
+   ],
+   "home": "Magnolia Park Transit Center"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_houston.py",
+  "check": "scripts/validate_houston.py",
+  "arg": "houston",
+  "helpers": [
+   "scripts/hmda.py"
+  ],
+  "inputs": [
+   "cache:us/houston/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Prices: HMDA public loan-level data (Consumer Financial Protection Bureau and FFIEC), 2018–2025, the property values lenders reported for home-purchase loans. Census tracts, cities, counties and water: US Census Bureau TIGER/Line and cartographic boundary files. Super neighborhoods: City of Houston, Planning and Development Department (COHGIS data, in the public domain; for general reference only, without warranty). Stations and lines: route and arrival data provided by permission of METRO. * METRO is the registered trademark of the Metropolitan Transit Authority of Harris County, Texas. All rights reserved.</span><span>This site is not produced, commissioned, sponsored or endorsed by the CFPB, the FFIEC, the Census Bureau, the City of Houston or METRO. METRO's data are provided as is, without warranty of any kind.</span>",
+  "priceSource": {
+   "en": "Prices: HMDA mortgage records (CFPB, FFIEC), low confidence",
+   "ja": "価格：HMDA 住宅ローン記録（CFPB、FFIEC）、低信頼度"
+  },
+  "attribution": "Route and arrival data provided by permission of METRO · Outlines: US Census Bureau, City of Houston"
+ }
+}

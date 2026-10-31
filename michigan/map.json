@@ -1,0 +1,183 @@
+{
+ "key": "detroit",
+ "country": "United States",
+ "order": 17,
+ "path": "michigan/",
+ "en": "City of Detroit",
+ "population": 649095,
+ "tag": {
+  "en": "Michigan",
+  "ja": "ミシガン州"
+ },
+ "cities": [
+  {
+   "key": "detroit",
+   "en": "Detroit",
+   "ja": "デトロイト",
+   "population": 649095
+  }
+ ],
+ "goto": [
+  {
+   "key": "detroit",
+   "label": "Detroit",
+   "kana": "デトロイト",
+   "box": [
+    [
+     42.323,
+     -83.082
+    ],
+    [
+     42.372,
+     -83.034
+    ]
+   ],
+   "home": "Michigan"
+  },
+  {
+   "key": "midtown",
+   "label": "Midtown",
+   "kana": "ミッドタウン",
+   "box": [
+    [
+     42.342,
+     -83.075
+    ],
+    [
+     42.364,
+     -83.047
+    ]
+   ],
+   "home": "Canfield St"
+  },
+  {
+   "key": "newcenter",
+   "label": "New Center",
+   "kana": "ニュー・センター",
+   "box": [
+    [
+     42.359,
+     -83.09
+    ],
+    [
+     42.379,
+     -83.058
+    ]
+   ],
+   "home": "Grand Blvd"
+  },
+  {
+   "key": "corktown",
+   "label": "Corktown",
+   "kana": "コークタウン",
+   "box": [
+    [
+     42.32,
+     -83.085
+    ],
+    [
+     42.34,
+     -83.052
+    ]
+   ],
+   "home": "Michigan"
+  },
+  {
+   "key": "greektown",
+   "label": "Greektown",
+   "kana": "グリークタウン",
+   "box": [
+    [
+     42.327,
+     -83.054
+    ],
+    [
+     42.342,
+     -83.032
+    ]
+   ],
+   "home": "Greektown"
+  },
+  {
+   "key": "brushpark",
+   "label": "Brush Park",
+   "kana": "ブラッシュ・パーク",
+   "box": [
+    [
+     42.336,
+     -83.063
+    ],
+    [
+     42.352,
+     -83.039
+    ]
+   ],
+   "home": "Sproat/Adelaide"
+  },
+  {
+   "key": "lafayettepark",
+   "label": "Lafayette Park",
+   "kana": "ラファイエット・パーク",
+   "box": [
+    [
+     42.329,
+     -83.05
+    ],
+    [
+     42.347,
+     -83.024
+    ]
+   ],
+   "home": "Greektown"
+  },
+  {
+   "key": "riverfront",
+   "label": "Riverfront",
+   "kana": "リバーフロント",
+   "box": [
+    [
+     42.318,
+     -83.065
+    ],
+    [
+     42.334,
+     -83.035
+    ]
+   ],
+   "home": "Water Square"
+  },
+  {
+   "key": "waynestate",
+   "label": "Wayne State",
+   "kana": "ウェイン州立大学",
+   "box": [
+    [
+     42.35,
+     -83.083
+    ],
+    [
+     42.37,
+     -83.052
+    ]
+   ],
+   "home": "Ferry St"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_detroit.py",
+  "check": "scripts/validate_detroit.py",
+  "arg": "detroit",
+  "inputs": [
+   "cache:us/detroit/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales, property classes, use codes, floor areas, years built and positions: City of Detroit, Office of the Assessor, Property Sales and Parcels (Current) (City of Detroit Open Data). Council districts and neighbourhoods: City of Detroit. Stations and lines: Detroit People Mover GTFS (Detroit Transportation Corporation), QLine GTFS (QLine Detroit) and Amtrak GTFS. Places, counties and water: US Census Bureau cartographic boundary files and TIGER/Line area water. Windsor and Essex County: adapted from Statistics Canada, 2021 Census Cartographic Boundary Files; contains information licensed under the Open Government Licence – Canada.</span><span>This site is not produced, commissioned, sponsored or endorsed by the City of Detroit, the Detroit Transportation Corporation, QLine Detroit, Amtrak, the US Census Bureau or Statistics Canada, and this does not constitute an endorsement by Statistics Canada of this product. The data are shown as published, without any claim that they are accurate, complete or current.</span>",
+  "priceSource": {
+   "en": "Prices: City of Detroit Office of the Assessor, property sales",
+   "ja": "価格：デトロイト市査定官事務所の取引記録"
+  },
+  "attribution": "Stations and lines: People Mover, QLine and Amtrak GTFS · Outlines: City of Detroit, US Census Bureau, Statistics Canada (Open Government Licence – Canada)"
+ }
+}

@@ -1,0 +1,151 @@
+{
+ "key": "rennes",
+ "country": "France",
+ "order": 5,
+ "path": "illeetvilaine/",
+ "en": "Ille-et-Vilaine",
+ "population": 1120666,
+ "tag": {
+  "en": "Ille-et-Vilaine",
+  "ja": "イル＝エ＝ヴィレーヌ"
+ },
+ "cities": [
+  {
+   "key": "rennes",
+   "en": "Rennes",
+   "ja": "レンヌ",
+   "population": 230890
+  }
+ ],
+ "goto": [
+  {
+   "key": "rennes",
+   "label": "Rennes",
+   "kana": "レンヌ",
+   "box": [
+    [
+     48.077,
+     -1.753
+    ],
+    [
+     48.155,
+     -1.624
+    ]
+   ],
+   "home": "République"
+  },
+  {
+   "key": "cessonsevigne",
+   "label": "Cesson-Sévigné",
+   "kana": "セソン＝セヴィニェ",
+   "box": [
+    [
+     48.083,
+     -1.647
+    ],
+    [
+     48.143,
+     -1.557
+    ]
+   ],
+   "home": "Cesson-Sévigné"
+  },
+  {
+   "key": "bruz",
+   "label": "Bruz",
+   "kana": "ブリュ",
+   "box": [
+    [
+     47.999,
+     -1.797
+    ],
+    [
+     48.059,
+     -1.707
+    ]
+   ],
+   "home": "Bruz"
+  },
+  {
+   "key": "vitre",
+   "label": "Vitré",
+   "kana": "ヴィトレ",
+   "box": [
+    [
+     48.093,
+     -1.257
+    ],
+    [
+     48.153,
+     -1.167
+    ]
+   ],
+   "home": "Vitré"
+  },
+  {
+   "key": "saintmalo",
+   "label": "Saint-Malo",
+   "kana": "サン＝マロ",
+   "box": [
+    [
+     48.617,
+     -2.049
+    ],
+    [
+     48.677,
+     -1.959
+    ]
+   ],
+   "home": "Saint-Malo"
+  },
+  {
+   "key": "redon",
+   "label": "Redon",
+   "kana": "ルドン",
+   "box": [
+    [
+     47.622,
+     -2.133
+    ],
+    [
+     47.682,
+     -2.043
+    ]
+   ],
+   "home": "Redon"
+  },
+  {
+   "key": "montfort",
+   "label": "Montfort-sur-Meu",
+   "kana": "モンフォール＝シュル＝ムー",
+   "box": [
+    [
+     48.109,
+     -1.994
+    ],
+    [
+     48.169,
+     -1.904
+    ]
+   ],
+   "home": "Montfort-sur-Meu"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_france.py",
+  "check": "scripts/validate_france.py",
+  "arg": "rennes",
+  "settings": "assets/fr_areas.json",
+  "inputs": [
+   "cache:france/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales: Demandes de valeurs foncières, Direction générale des Finances publiques (DGFiP), as structured by Cerema in <a href=\"https://www.data.gouv.fr/datasets/dvf-open-data\" target=\"_blank\" rel=\"noopener\">DVF+ open data</a> (October 2026 release), Licence Ouverte 2.0.</span><span>Stations and lines: STAR, GTFS timetables published by STAR (ODbL); SNCF timetables (ODbL); track: SNCF Réseau, shapes of the lines of the national rail network (ODbL). The stations and lines in this map's data files are derived from these sources and are available under the ODbL. Département outlines: IGN Admin Express, via Etalab, Licence Ouverte 2.0. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: DVF+ open data (Cerema, from DGFiP), Licence Ouverte 2.0",
+   "ja": "価格：DVF+ open data（Cerema、DGFiP の DVF から作成）、Licence Ouverte 2.0"
+  },
+  "attribution": "Stations: STAR (ODbL) and SNCF (ODbL) · Track: SNCF Réseau (ODbL) · Outlines: IGN via Etalab"
+ }
+}

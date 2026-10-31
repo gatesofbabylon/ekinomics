@@ -1,0 +1,496 @@
+{
+ "key": "sanfrancisco",
+ "country": "United States",
+ "order": 20,
+ "path": "bayarea/",
+ "en": "San Francisco and Alameda",
+ "population": 2462709,
+ "tag": {
+  "en": "Bay Area",
+  "ja": "ベイエリア"
+ },
+ "cities": [
+  {
+   "key": "sanfrancisco",
+   "en": "San Francisco",
+   "ja": "サンフランシスコ",
+   "population": 826079
+  },
+  {
+   "key": "oakland",
+   "en": "Oakland",
+   "ja": "オークランド",
+   "population": 440838
+  }
+ ],
+ "goto": [
+  {
+   "key": "sanfrancisco",
+   "label": "San Francisco",
+   "kana": "サンフランシスコ",
+   "box": [
+    [
+     37.776,
+     -122.42
+    ],
+    [
+     37.8,
+     -122.388
+    ]
+   ],
+   "home": "Montgomery Street"
+  },
+  {
+   "key": "oakland",
+   "label": "Oakland",
+   "kana": "オークランド",
+   "box": [
+    [
+     37.795,
+     -122.285
+    ],
+    [
+     37.825,
+     -122.255
+    ]
+   ],
+   "home": "12th Street / Oakland City Center"
+  },
+  {
+   "key": "mission",
+   "label": "Mission",
+   "kana": "ミッション",
+   "box": [
+    [
+     37.737,
+     -122.438
+    ],
+    [
+     37.767,
+     -122.398
+    ]
+   ],
+   "home": "24th Street / Mission"
+  },
+  {
+   "key": "castro",
+   "label": "Castro",
+   "kana": "カストロ",
+   "box": [
+    [
+     37.748,
+     -122.455
+    ],
+    [
+     37.778,
+     -122.415
+    ]
+   ],
+   "home": "Castro"
+  },
+  {
+   "key": "noevalley",
+   "label": "Noe Valley",
+   "kana": "ノエバレー",
+   "box": [
+    [
+     37.737,
+     -122.447
+    ],
+    [
+     37.767,
+     -122.407
+    ]
+   ],
+   "home": "Church St & 24th St"
+  },
+  {
+   "key": "haight",
+   "label": "Haight-Ashbury",
+   "kana": "ヘイト・アシュベリー",
+   "box": [
+    [
+     37.751,
+     -122.47
+    ],
+    [
+     37.781,
+     -122.43
+    ]
+   ],
+   "home": "Carl St & Cole St"
+  },
+  {
+   "key": "hayesvalley",
+   "label": "Hayes Valley",
+   "kana": "ヘイズバレー",
+   "box": [
+    [
+     37.76,
+     -122.439
+    ],
+    [
+     37.79,
+     -122.399
+    ]
+   ],
+   "home": "Van Ness"
+  },
+  {
+   "key": "soma",
+   "label": "SoMa",
+   "kana": "ソーマ",
+   "box": [
+    [
+     37.767,
+     -122.422
+    ],
+    [
+     37.797,
+     -122.382
+    ]
+   ],
+   "home": "Yerba Buena/Moscone"
+  },
+  {
+   "key": "southbeach",
+   "label": "South Beach",
+   "kana": "サウスビーチ",
+   "box": [
+    [
+     37.776,
+     -122.41
+    ],
+    [
+     37.806,
+     -122.37
+    ]
+   ],
+   "home": "The Embarcadero & Folsom St"
+  },
+  {
+   "key": "missionbay",
+   "label": "Mission Bay",
+   "kana": "ミッションベイ",
+   "box": [
+    [
+     37.758,
+     -122.41
+    ],
+    [
+     37.788,
+     -122.37
+    ]
+   ],
+   "home": "Third Street & Mission Rock St"
+  },
+  {
+   "key": "dogpatch",
+   "label": "Dogpatch",
+   "kana": "ドッグパッチ",
+   "box": [
+    [
+     37.745,
+     -122.409
+    ],
+    [
+     37.775,
+     -122.369
+    ]
+   ],
+   "home": "Third Street & 20th St"
+  },
+  {
+   "key": "bayview",
+   "label": "Bayview",
+   "kana": "ベイビュー",
+   "box": [
+    [
+     37.704,
+     -122.418
+    ],
+    [
+     37.734,
+     -122.378
+    ]
+   ],
+   "home": "Third Street & Le Conte Ave"
+  },
+  {
+   "key": "nobhill",
+   "label": "Nob Hill",
+   "kana": "ノブヒル",
+   "box": [
+    [
+     37.777,
+     -122.429
+    ],
+    [
+     37.807,
+     -122.389
+    ]
+   ],
+   "home": "California St & Powell St"
+  },
+  {
+   "key": "russianhill",
+   "label": "Russian Hill",
+   "kana": "ロシアンヒル",
+   "box": [
+    [
+     37.784,
+     -122.439
+    ],
+    [
+     37.814,
+     -122.399
+    ]
+   ],
+   "home": "Hyde St & Union St"
+  },
+  {
+   "key": "sunset",
+   "label": "Sunset",
+   "kana": "サンセット",
+   "box": [
+    [
+     37.746,
+     -122.507
+    ],
+    [
+     37.776,
+     -122.467
+    ]
+   ],
+   "home": "Judah St & 28th Ave"
+  },
+  {
+   "key": "westportal",
+   "label": "West Portal",
+   "kana": "ウェストポータル",
+   "box": [
+    [
+     37.726,
+     -122.486
+    ],
+    [
+     37.756,
+     -122.446
+    ]
+   ],
+   "home": "West Portal"
+  },
+  {
+   "key": "glenpark",
+   "label": "Glen Park",
+   "kana": "グレンパーク",
+   "box": [
+    [
+     37.718,
+     -122.454
+    ],
+    [
+     37.748,
+     -122.414
+    ]
+   ],
+   "home": "Glen Park"
+  },
+  {
+   "key": "berkeley",
+   "label": "Berkeley",
+   "kana": "バークレー",
+   "box": [
+    [
+     37.855,
+     -122.288
+    ],
+    [
+     37.885,
+     -122.248
+    ]
+   ],
+   "home": "Downtown Berkeley"
+  },
+  {
+   "key": "rockridge",
+   "label": "Rockridge",
+   "kana": "ロックリッジ",
+   "box": [
+    [
+     37.83,
+     -122.271
+    ],
+    [
+     37.86,
+     -122.231
+    ]
+   ],
+   "home": "Rockridge"
+  },
+  {
+   "key": "lakemerritt",
+   "label": "Lake Merritt",
+   "kana": "レイクメリット",
+   "box": [
+    [
+     37.782,
+     -122.285
+    ],
+    [
+     37.812,
+     -122.245
+    ]
+   ],
+   "home": "Lake Merritt"
+  },
+  {
+   "key": "westoakland",
+   "label": "West Oakland",
+   "kana": "ウェストオークランド",
+   "box": [
+    [
+     37.79,
+     -122.315
+    ],
+    [
+     37.82,
+     -122.275
+    ]
+   ],
+   "home": "West Oakland"
+  },
+  {
+   "key": "fruitvale",
+   "label": "Fruitvale",
+   "kana": "フルートベール",
+   "box": [
+    [
+     37.76,
+     -122.244
+    ],
+    [
+     37.79,
+     -122.204
+    ]
+   ],
+   "home": "Fruitvale"
+  },
+  {
+   "key": "sanleandro",
+   "label": "San Leandro",
+   "kana": "サンリアンドロ",
+   "box": [
+    [
+     37.707,
+     -122.181
+    ],
+    [
+     37.737,
+     -122.141
+    ]
+   ],
+   "home": "San Leandro"
+  },
+  {
+   "key": "castrovalley",
+   "label": "Castro Valley",
+   "kana": "カストロバレー",
+   "box": [
+    [
+     37.676,
+     -122.096
+    ],
+    [
+     37.706,
+     -122.056
+    ]
+   ],
+   "home": "Castro Valley"
+  },
+  {
+   "key": "hayward",
+   "label": "Hayward",
+   "kana": "ヘイワード",
+   "box": [
+    [
+     37.655,
+     -122.107
+    ],
+    [
+     37.685,
+     -122.067
+    ]
+   ],
+   "home": "Hayward"
+  },
+  {
+   "key": "unioncity",
+   "label": "Union City",
+   "kana": "ユニオンシティ",
+   "box": [
+    [
+     37.576,
+     -122.037
+    ],
+    [
+     37.606,
+     -121.997
+    ]
+   ],
+   "home": "Union City"
+  },
+  {
+   "key": "fremont",
+   "label": "Fremont",
+   "kana": "フリーモント",
+   "box": [
+    [
+     37.542,
+     -121.997
+    ],
+    [
+     37.572,
+     -121.957
+    ]
+   ],
+   "home": "Fremont"
+  },
+  {
+   "key": "dublin",
+   "label": "Dublin / Pleasanton",
+   "kana": "ダブリン/プレザントン",
+   "box": [
+    [
+     37.687,
+     -121.919
+    ],
+    [
+     37.717,
+     -121.879
+    ]
+   ],
+   "home": "Dublin / Pleasanton"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_sanfrancisco.py",
+  "check": "scripts/validate_sanfrancisco.py",
+  "arg": "sanfrancisco",
+  "helpers": [
+   "scripts/ca_roll.py"
+  ],
+  "inputs": [
+   "cache:us/sanfrancisco/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Values at sale: the San Francisco Office of the Assessor-Recorder's secured rolls (DataSF, public domain dedication) and the Alameda County Assessor's secured rolls and ownership transfer list (data.acgov.org). Areas: DataSF Analysis Neighborhoods; US Census Bureau places, county subdivisions, water and counties. Station and line data: BART (San Francisco Bay Area Rapid Transit District) and Caltrain (Peninsula Corridor Joint Powers Board), as is; Muni Metro, streetcar and cable car data from SFMTA. Reproduced with permission granted by the City and County of San Francisco. The information has been provided by means of a nonexclusive, limited, and revocable license granted by the City and County of San Francisco. The City and County of San Francisco does not guarantee the accuracy, adequacy, completeness or usefulness of any information. The City and County of San Francisco provides this information \"as is,\" without warranty of any kind, express or implied, including but not limited to warranties of merchantability or fitness for a particular purpose, and assumes no responsibility for anyone's use of the information.</span><span>None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: values at sale on the San Francisco and Alameda County Assessors' rolls",
+   "ja": "価格：サンフランシスコとアラメダ郡の査定官の課税台帳にある売却時の評価額"
+  },
+  "attribution": "Stations and lines: BART, Caltrain and SFMTA (GTFS), as is; SFMTA data reproduced with permission granted by the City and County of San Francisco · Outlines: DataSF, US Census Bureau"
+ }
+}

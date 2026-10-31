@@ -1,0 +1,78 @@
+{
+ "key": "naha",
+ "country": "Japan",
+ "order": 13,
+ "path": "okinawa/",
+ "en": "Greater Naha",
+ "ja": "那覇圏",
+ "population": 1467480,
+ "tag": {
+  "en": "Okinawa",
+  "ja": "沖縄"
+ },
+ "cities": [
+  {
+   "key": "naha",
+   "en": "Naha",
+   "ja": "那覇",
+   "population": 317625
+  }
+ ],
+ "goto": [
+  {
+   "key": "naha",
+   "label": "Naha",
+   "ja": "那覇",
+   "box": [
+    [
+     26.165,
+     127.62
+    ],
+    [
+     26.265,
+     127.76
+    ]
+   ],
+   "home": "牧志"
+  },
+  {
+   "key": "shuri",
+   "label": "Shuri",
+   "ja": "首里",
+   "box": [
+    [
+     26.17,
+     127.655
+    ],
+    [
+     26.27,
+     127.795
+    ]
+   ],
+   "home": "首里"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "okinawa",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:okinawa/*_{MLIT}.*",
+   "cache:okinawa/residential/*_{MLIT}.*",
+   "cache:wikidata/okinawa/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

@@ -1,0 +1,233 @@
+{
+ "key": "madrid",
+ "country": "Spain",
+ "order": 0,
+ "path": "madrid/",
+ "en": "Madrid",
+ "population": 3506730,
+ "tag": {
+  "en": "Madrid",
+  "ja": "マドリード"
+ },
+ "cities": [
+  {
+   "key": "madrid",
+   "en": "Madrid",
+   "ja": "マドリード",
+   "population": 3506730
+  }
+ ],
+ "goto": [
+  {
+   "key": "madrid",
+   "label": "Madrid",
+   "kana": "マドリード",
+   "box": [
+    [
+     40.4,
+     -3.725
+    ],
+    [
+     40.44,
+     -3.67
+    ]
+   ],
+   "home": "Sol"
+  },
+  {
+   "key": "granvia",
+   "label": "Gran Vía",
+   "kana": "グラン・ビア",
+   "box": [
+    [
+     40.412,
+     -3.718
+    ],
+    [
+     40.428,
+     -3.695
+    ]
+   ],
+   "home": "Gran Vía"
+  },
+  {
+   "key": "salamanca",
+   "label": "Salamanca",
+   "kana": "サラマンカ",
+   "box": [
+    [
+     40.418,
+     -3.69
+    ],
+    [
+     40.44,
+     -3.665
+    ]
+   ],
+   "home": "Velázquez"
+  },
+  {
+   "key": "chamberi",
+   "label": "Chamberí",
+   "kana": "チャンベリ",
+   "box": [
+    [
+     40.425,
+     -3.715
+    ],
+    [
+     40.445,
+     -3.69
+    ]
+   ],
+   "home": "Iglesia"
+  },
+  {
+   "key": "retiro",
+   "label": "Retiro",
+   "kana": "レティーロ",
+   "box": [
+    [
+     40.402,
+     -3.69
+    ],
+    [
+     40.424,
+     -3.665
+    ]
+   ],
+   "home": "Retiro"
+  },
+  {
+   "key": "lavapies",
+   "label": "Lavapiés",
+   "kana": "ラバピエス",
+   "box": [
+    [
+     40.4,
+     -3.712
+    ],
+    [
+     40.416,
+     -3.69
+    ]
+   ],
+   "home": "Lavapiés"
+  },
+  {
+   "key": "malasana",
+   "label": "Malasaña",
+   "kana": "マラサーニャ",
+   "box": [
+    [
+     40.418,
+     -3.714
+    ],
+    [
+     40.432,
+     -3.695
+    ]
+   ],
+   "home": "Tribunal"
+  },
+  {
+   "key": "chamartin",
+   "label": "Chamartín",
+   "kana": "チャマルティン",
+   "box": [
+    [
+     40.455,
+     -3.7
+    ],
+    [
+     40.485,
+     -3.665
+    ]
+   ],
+   "home": "Chamartín"
+  },
+  {
+   "key": "atocha",
+   "label": "Atocha",
+   "kana": "アトーチャ",
+   "box": [
+    [
+     40.395,
+     -3.705
+    ],
+    [
+     40.414,
+     -3.68
+    ]
+   ],
+   "home": "Atocha"
+  },
+  {
+   "key": "moncloa",
+   "label": "Moncloa",
+   "kana": "モンクロア",
+   "box": [
+    [
+     40.425,
+     -3.735
+    ],
+    [
+     40.445,
+     -3.705
+    ]
+   ],
+   "home": "Moncloa"
+  },
+  {
+   "key": "vallecas",
+   "label": "Vallecas",
+   "kana": "バリェカス",
+   "box": [
+    [
+     40.375,
+     -3.68
+    ],
+    [
+     40.405,
+     -3.64
+    ]
+   ],
+   "home": "Puente de Vallecas"
+  },
+  {
+   "key": "carabanchel",
+   "label": "Carabanchel",
+   "kana": "カラバンチェル",
+   "box": [
+    [
+     40.37,
+     -3.75
+    ],
+    [
+     40.395,
+     -3.71
+    ]
+   ],
+   "home": "Carabanchel"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_madrid.py",
+  "check": "scripts/validate_madrid.py",
+  "arg": "madrid",
+  "helpers": [
+   "scripts/spain.py"
+  ],
+  "inputs": [
+   "cache:spain/madrid/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Mean declared prices per m² and numbers of home sales by barrio: Colegio de Registradores de España, published in the Ayuntamiento de Madrid's Banco de Datos; the station figures are Ekinomics' own calculation from them. Barrios: Ayuntamiento de Madrid (CC BY 4.0).</span><span>Stations and lines: <a href=\"https://www.crtm.es/\" target=\"_blank\" rel=\"noopener\">Powered by CRTM</a>, processed from its open data under its <a href=\"https://www.crtm.es/licencia-de-uso\" target=\"_blank\" rel=\"noopener\">licence</a> (Metro stations updated May 2026 and track April 2026; Metro Ligero and Cercanías timetables updated October 2026). Station spellings: Wikidata (CC0). None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: Colegio de Registradores, via Banco de Datos del Ayuntamiento de Madrid",
+   "ja": "価格：スペイン登記官協会（マドリード市 Banco de Datos）"
+  },
+  "attribution": "Stations: <a href=\"https://www.crtm.es/\" target=\"_blank\" rel=\"noopener\">Powered by CRTM</a> · Barrios: Ayuntamiento de Madrid (CC BY 4.0)"
+ }
+}

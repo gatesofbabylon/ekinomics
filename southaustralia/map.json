@@ -1,0 +1,183 @@
+{
+ "key": "adelaide",
+ "country": "Australia",
+ "order": 1,
+ "path": "southaustralia/",
+ "en": "Greater Adelaide",
+ "population": 1491015,
+ "tag": {
+  "en": "S Australia",
+  "ja": "南オーストラリア州"
+ },
+ "cities": [
+  {
+   "key": "adelaide",
+   "en": "Adelaide",
+   "ja": "アデレード",
+   "population": 1491015
+  }
+ ],
+ "goto": [
+  {
+   "key": "adelaide",
+   "label": "Adelaide",
+   "kana": "アデレード",
+   "box": [
+    [
+     -34.96,
+     138.55
+    ],
+    [
+     -34.88,
+     138.65
+    ]
+   ],
+   "home": "Adelaide"
+  },
+  {
+   "key": "glenelg",
+   "label": "Glenelg",
+   "kana": "グレネルグ",
+   "box": [
+    [
+     -35,
+     138.48
+    ],
+    [
+     -34.96,
+     138.54
+    ]
+   ],
+   "home": "Moseley Square"
+  },
+  {
+   "key": "portadelaide",
+   "label": "Port Adelaide",
+   "kana": "ポート・アデレード",
+   "box": [
+    [
+     -34.87,
+     138.47
+    ],
+    [
+     -34.83,
+     138.54
+    ]
+   ],
+   "home": "Port Adelaide"
+  },
+  {
+   "key": "mawsonlakes",
+   "label": "Mawson Lakes",
+   "kana": "モーソン・レイクス",
+   "box": [
+    [
+     -34.82,
+     138.58
+    ],
+    [
+     -34.79,
+     138.64
+    ]
+   ],
+   "home": "Mawson Lakes"
+  },
+  {
+   "key": "salisbury",
+   "label": "Salisbury",
+   "kana": "ソールズベリー",
+   "box": [
+    [
+     -34.78,
+     138.61
+    ],
+    [
+     -34.74,
+     138.67
+    ]
+   ],
+   "home": "Salisbury"
+  },
+  {
+   "key": "elizabeth",
+   "label": "Elizabeth",
+   "kana": "エリザベス",
+   "box": [
+    [
+     -34.74,
+     138.63
+    ],
+    [
+     -34.7,
+     138.69
+    ]
+   ],
+   "home": "Elizabeth"
+  },
+  {
+   "key": "gawler",
+   "label": "Gawler",
+   "kana": "ゴーラー",
+   "box": [
+    [
+     -34.62,
+     138.72
+    ],
+    [
+     -34.57,
+     138.78
+    ]
+   ],
+   "home": "Gawler Central"
+  },
+  {
+   "key": "brighton",
+   "label": "Brighton",
+   "kana": "ブライトン",
+   "box": [
+    [
+     -35.04,
+     138.49
+    ],
+    [
+     -35,
+     138.55
+    ]
+   ],
+   "home": "Brighton"
+  },
+  {
+   "key": "seaford",
+   "label": "Seaford",
+   "kana": "シーフォード",
+   "box": [
+    [
+     -35.21,
+     138.45
+    ],
+    [
+     -35.17,
+     138.51
+    ]
+   ],
+   "home": "Seaford"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_australia.py",
+  "check": "scripts/validate_australia.py",
+  "arg": "adelaide",
+  "settings": "assets/au_areas.json",
+  "inputs": [
+   "cache:australia/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales: <a href=\"https://data.sa.gov.au/data/dataset/metro-median-house-sales\" target=\"_blank\" rel=\"noopener\">Metropolitan median house sales</a>, Department for Housing and Urban Development, Government of South Australia, Creative Commons Attribution. Stations and lines: <a href=\"https://data.sa.gov.au/data/dataset/https-gtfs-adelaidemetro-com-au\" target=\"_blank\" rel=\"noopener\">Adelaide Metro General Transit Feed</a>, Department for Infrastructure and Transport, Creative Commons Attribution.</span><span>Suburb, council and Greater Adelaide boundaries: Australian Bureau of Statistics, ASGS Edition 3 (2021), CC BY 4.0. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: SA Department for Housing and Urban Development (data.sa.gov.au, CC BY)",
+   "ja": "価格：南オーストラリア州住宅都市開発省（data.sa.gov.au、CC BY）"
+  },
+  "attribution": "Stations: Adelaide Metro (CC BY) · Outlines: ABS ASGS 2021 (CC BY 4.0)"
+ }
+}

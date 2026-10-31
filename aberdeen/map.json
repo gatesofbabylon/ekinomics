@@ -1,0 +1,93 @@
+{
+ "key": "aberdeen",
+ "country": "United Kingdom",
+ "order": 11,
+ "path": "aberdeen/",
+ "en": "Aberdeen",
+ "population": 494820,
+ "tag": {
+  "en": "NE Scotland",
+  "ja": "北東スコットランド"
+ },
+ "cities": [
+  {
+   "key": "aberdeen",
+   "en": "Aberdeen",
+   "ja": "アバディーン",
+   "population": 230180
+  }
+ ],
+ "goto": [
+  {
+   "key": "aberdeen",
+   "label": "Aberdeen",
+   "kana": "アバディーン",
+   "box": [
+    [
+     57.12,
+     -2.15
+    ],
+    [
+     57.17,
+     -2.07
+    ]
+   ],
+   "home": "Aberdeen"
+  },
+  {
+   "key": "stonehaven",
+   "label": "Stonehaven",
+   "kana": "ストーンヘイヴン",
+   "box": [
+    [
+     56.95,
+     -2.24
+    ],
+    [
+     56.98,
+     -2.19
+    ]
+   ],
+   "home": "Stonehaven"
+  },
+  {
+   "key": "inverurie",
+   "label": "Inverurie",
+   "kana": "インヴァルーリー",
+   "box": [
+    [
+     57.27,
+     -2.4
+    ],
+    [
+     57.3,
+     -2.35
+    ]
+   ],
+   "home": "Inverurie"
+  }
+ ],
+ "build": {
+  "family": "uk",
+  "script": "scripts/build_london.py",
+  "check": "scripts/validate_london.py",
+  "arg": "aberdeen",
+  "inputs": [
+   "assets/uk_areas.json",
+   "assets/london_station_lines_overrides.csv",
+   "assets/belfast_stations.csv",
+   "assets/*_districts.csv",
+   "cache:london/*",
+   "cache:london/tfl",
+   "cache:london/boundaries",
+   "cache:london/bods",
+   "cache:london/vmd",
+   "cache:london/scotland",
+   "cache:london/ni"
+  ]
+ },
+ "credits": {
+  "block": "<span>Contains Registers of Scotland data © Crown copyright and database right 2026. This data is licensed under the Open Government Licence v3.0. Data zone centroids: Scottish Government, Open Government Licence; contains OS data © Crown copyright and database right.</span><span>Council boundaries: Office for National Statistics, Open Government Licence; contains OS data © Crown copyright and database right 2024. Railway track: OS VectorMap District, Open Government Licence; contains OS data © Crown copyright and database right 2026. Stations: NaPTAN, Department for Transport, Open Government Licence. Lines: Powered by TfL Open Data. None of these bodies produced or endorses this site.</span>",
+  "attribution": "Contains OS data © Crown copyright and database right 2026 · Contains Registers of Scotland data © Crown copyright and database right 2026 · Powered by TfL Open Data"
+ }
+}

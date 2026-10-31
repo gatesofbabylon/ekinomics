@@ -1,0 +1,135 @@
+{
+ "key": "lyon",
+ "country": "France",
+ "order": 2,
+ "path": "rhone/",
+ "en": "Rhône",
+ "population": 1914667,
+ "tag": {
+  "en": "Rhône",
+  "ja": "ローヌ"
+ },
+ "cities": [
+  {
+   "key": "lyon",
+   "en": "Lyon",
+   "ja": "リヨン",
+   "population": 519127
+  }
+ ],
+ "goto": [
+  {
+   "key": "lyon",
+   "label": "Lyon",
+   "kana": "リヨン",
+   "box": [
+    [
+     45.707,
+     4.772
+    ],
+    [
+     45.808,
+     4.898
+    ]
+   ],
+   "home": "Bellecour"
+  },
+  {
+   "key": "villeurbanne",
+   "label": "Villeurbanne",
+   "kana": "ヴィルールバンヌ",
+   "box": [
+    [
+     45.739,
+     4.836
+    ],
+    [
+     45.799,
+     4.926
+    ]
+   ],
+   "home": "Gratte-Ciel"
+  },
+  {
+   "key": "venissieux",
+   "label": "Vénissieux",
+   "kana": "ヴェニシュー",
+   "box": [
+    [
+     45.676,
+     4.843
+    ],
+    [
+     45.736,
+     4.933
+    ]
+   ],
+   "home": "Vénissieux"
+  },
+  {
+   "key": "villefranche",
+   "label": "Villefranche-sur-Saône",
+   "kana": "ヴィルフランシュ＝シュル＝ソーヌ",
+   "box": [
+    [
+     45.954,
+     4.676
+    ],
+    [
+     46.014,
+     4.766
+    ]
+   ],
+   "home": "Villefranche-sur-Saône"
+  },
+  {
+   "key": "givors",
+   "label": "Givors",
+   "kana": "ジヴォール",
+   "box": [
+    [
+     45.555,
+     4.721
+    ],
+    [
+     45.615,
+     4.811
+    ]
+   ],
+   "home": "Givors Ville"
+  },
+  {
+   "key": "tarare",
+   "label": "Tarare",
+   "kana": "タラール",
+   "box": [
+    [
+     45.86,
+     4.394
+    ],
+    [
+     45.92,
+     4.484
+    ]
+   ],
+   "home": "Tarare"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_france.py",
+  "check": "scripts/validate_france.py",
+  "arg": "lyon",
+  "settings": "assets/fr_areas.json",
+  "inputs": [
+   "cache:france/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales: Demandes de valeurs foncières, Direction générale des Finances publiques (DGFiP), as structured by Cerema in <a href=\"https://www.data.gouv.fr/datasets/dvf-open-data\" target=\"_blank\" rel=\"noopener\">DVF+ open data</a> (October 2026 release), Licence Ouverte 2.0.</span><span>Stations and lines: TCL (SYTRAL Mobilités), open map layers of stops and lines on data.grandlyon.com (Licence Mobilités); SNCF timetables (ODbL); track: SNCF Réseau, shapes of the lines of the national rail network (ODbL). The stations and lines in this map's data files are derived from these sources and are available under the Licence Mobilités and the ODbL. Département outlines: IGN Admin Express, via Etalab, Licence Ouverte 2.0. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: DVF+ open data (Cerema, from DGFiP), Licence Ouverte 2.0",
+   "ja": "価格：DVF+ open data（Cerema、DGFiP の DVF から作成）、Licence Ouverte 2.0"
+  },
+  "attribution": "Stations: TCL (SYTRAL Mobilités, Licence Mobilités) and SNCF (ODbL) · Track: SNCF Réseau (ODbL) · Outlines: IGN via Etalab"
+ }
+}

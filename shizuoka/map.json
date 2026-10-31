@@ -1,0 +1,116 @@
+{
+ "key": "shizuoka",
+ "country": "Japan",
+ "order": 5,
+ "path": "shizuoka/",
+ "en": "Shizuoka",
+ "ja": "静岡県",
+ "population": 3633202,
+ "tag": {
+  "en": "Tōkai",
+  "ja": "東海"
+ },
+ "cities": [
+  {
+   "key": "hamamatsu",
+   "en": "Hamamatsu",
+   "ja": "浜松",
+   "population": 790718
+  },
+  {
+   "key": "shizuoka",
+   "en": "Shizuoka",
+   "ja": "静岡",
+   "population": 693389
+  }
+ ],
+ "goto": [
+  {
+   "key": "shizuoka",
+   "label": "Shizuoka",
+   "ja": "静岡",
+   "box": [
+    [
+     34.925,
+     138.32
+    ],
+    [
+     35.025,
+     138.46
+    ]
+   ],
+   "home": "静岡"
+  },
+  {
+   "key": "hamamatsu",
+   "label": "Hamamatsu",
+   "ja": "浜松",
+   "box": [
+    [
+     34.655,
+     137.665
+    ],
+    [
+     34.755,
+     137.805
+    ]
+   ],
+   "home": "浜松"
+  },
+  {
+   "key": "numazu",
+   "label": "Numazu",
+   "ja": "沼津",
+   "box": [
+    [
+     35.05,
+     138.79
+    ],
+    [
+     35.15,
+     138.93
+    ]
+   ],
+   "home": "沼津"
+  },
+  {
+   "key": "fuji",
+   "label": "Fuji",
+   "ja": "富士",
+   "box": [
+    [
+     35.1,
+     138.58
+    ],
+    [
+     35.2,
+     138.72
+    ]
+   ],
+   "home": "富士"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "shizuoka",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:shizuoka/*_{MLIT}.*",
+   "cache:shizuoka/residential/*_{MLIT}.*",
+   "cache:wikidata/shizuoka/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

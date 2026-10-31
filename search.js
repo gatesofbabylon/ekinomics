@@ -1,14 +1,18 @@
 // Site search (homepage, country pages and every map's city menu): one index of every menu city, Go-to town and station
 // (search.json at the site root, written by scripts/search_index.py), loaded on first use and matched without accents, in
-// English or Japanese. Results open the city's page, or a station on its map. Also folds the menu's other countries.
+// English or Japanese. Results open the city's page, or a station on its map.
+// The city menu on map pages is drawn here from cities.json (scripts/place_links.py): the page's own country in full, one
+// group per map, then every other country folded to one line, and a last line home. A draft map, absent from cities.json,
+// adds itself from its own map.json. Both shared indexes are fetched with cache:'no-cache' (one conditional request), so a
+// new city never changes another map's page.
 (function(){
-  const me=document.currentScript,ROOT=new URL('.',me.src).href,V=new URL(me.src).searchParams.get('v')||'';
+  const me=document.currentScript,ROOT=new URL('.',me.src).href;
   let ITEMS=null,loading=null;
   const JA=()=>document.documentElement.lang==='ja';
   const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   const norm=t=>(t||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[’'`.]/g,'').replace(/[^a-z0-9぀-ヿ㐀-鿿ｦ-ﾟ]+/g,' ').trim();
   function load(){if(ITEMS)return Promise.resolve(ITEMS);if(loading)return loading;
-    loading=fetch(ROOT+'search.json'+(V?'?v='+V:'')).then(r=>r.json()).then(d=>{const it=[];
+    loading=fetch(ROOT+'search.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{const it=[];
       d.cities.forEach(([en,ja,m,key])=>it.push({k:'city',en,ja,m,key,w:3000}));
       d.towns.forEach(([en,ja,m,key])=>it.push({k:'town',en,ja,m,key,w:1500}));
       d.stations.forEach(([en,ja,area,areaJa,m,slug,n])=>it.push({k:'station',en,ja,area,areaJa,m,slug,w:Math.log10(n+1)*40}));
@@ -36,5 +40,27 @@
   document.querySelectorAll('[data-search]').forEach(attach);
   // The menu's other countries, folded to one line each until opened.
   document.addEventListener('click',e=>{const b=e.target.closest('.mfold');if(!b)return;e.stopPropagation();const open=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',String(open));const c=b.nextElementSibling;if(c)c.hidden=!open});
-  window.EkiSearch={attach};
+  // cities.json, fetched once and shared with web/app.js (the links between maps).
+  let cities=null;const CITIES=()=>cities||(cities=fetch(ROOT+'cities.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('cities.json '+r.status);return r.json()}));
+  const both=x=>`<span class="l-en">${esc(x.en)}</span><span class="l-ja" lang="ja">${esc(x.ja)}</span>`;
+  async function drawMenu(){const nav=document.getElementById('placeMenu'),key=nav&&nav.dataset.map;if(!key||nav.dataset.drawn)return;
+    const d=await CITIES(),menu=d.menu.map(c=>({name:c.name,maps:c.maps.slice()}));let here=null;
+    for(const c of menu)for(const m of c.maps)if(m.key===key)here={c:c.name,m};
+    if(!here){// a draft's own page: its map joins the menu here only
+      const M=await fetch(new URL('map.json',document.baseURI),{cache:'no-cache'}).then(r=>r.json());const m={key,path:M.path,tag:M.tag,population:M.population,cities:M.cities};
+      let c=menu.find(c=>c.name===M.country);if(!c)menu.push(c={name:M.country,maps:[]});c.maps.push(m);c.maps.sort((a,b)=>b.cities[0].population-a.cities[0].population);
+      const sum=(c,f)=>c.maps.reduce((s,m)=>s+f(m),0);menu.sort((a,b)=>sum(b,m=>m.cities.length)-sum(a,m=>m.cities.length)||sum(b,m=>m.population)-sum(a,m=>m.population));here={c:M.country,m}}
+    // Links are relative to the map's address; city pages carry <base href="../">, so the same links work there.
+    const up=here.m.path?'../':'',cur=window.EKI_CITY||here.m.cities[0].key,href=(p,c)=>(p.key===key?'./':up+p.path)+c.key+'/';
+    const groups=ps=>'<div class="mcls">'+ps.map(p=>`<span class="mcl" title="${esc(p.tag.en)}">`+p.cities.map(c=>`<a href="${href(p,c)}"${p.key===key&&c.key===cur?' aria-current="true"':''}>${both(c)}</a>`).join('<i aria-hidden="true">·</i>')+'</span>').join('')+'</div>';
+    const parts=[...menu.filter(c=>c.name===here.c),...menu.filter(c=>c.name!==here.c)].map(c=>{const [en,ja,slug]=d.countries[c.name]||[c.name,c.name,''];
+      if(c.name===here.c)return `<div class="mcountry"><p><a href="${up}${slug}/"><span class="l-en">${esc(en)}</span><span class="l-ja">${esc(ja)}</span></a></p>${groups(c.maps)}</div>`;
+      const big=c.maps.flatMap(m=>m.cities).sort((a,b)=>b.population-a.population),k=big.length,prev=(f,sep,more)=>big.slice(0,5).map(x=>esc(x[f])).join(sep)+(k>5?more:'');
+      return `<div class="mcountry"><button type="button" class="mfold" aria-expanded="false"><b><span class="l-en">${esc(en)}</span><span class="l-ja">${esc(ja)}</span></b>`+
+        `<span class="mprev"><span class="l-en">${prev('en',', ','…')}</span><span class="l-ja">${prev('ja','、',' ほか')}</span></span>`+
+        `<i><span class="l-en">${k} ${k>1?'cities':'city'}</span><span class="l-ja">${k}都市</span></i></button><div class="mfolded" hidden>${groups(c.maps)}</div></div>`});
+    nav.insertAdjacentHTML('beforeend',parts.join('')+`<a class="mall" href="${up}"><span class="l-en">All countries and the world map →</span><span class="l-ja">すべての国と地図 →</span></a>`);
+    nav.dataset.drawn='1';if(window.EkiMenuDrawn)window.EkiMenuDrawn()}
+  drawMenu().catch(e=>console.error('City menu:',e));
+  window.EkiSearch={attach,cities:CITIES};
 })();

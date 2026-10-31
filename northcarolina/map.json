@@ -1,0 +1,231 @@
+{
+ "key": "charlotte",
+ "country": "United States",
+ "order": 8,
+ "path": "northcarolina/",
+ "en": "Mecklenburg County",
+ "population": 1233383,
+ "tag": {
+  "en": "N Carolina",
+  "ja": "ノースカロライナ州"
+ },
+ "cities": [
+  {
+   "key": "charlotte",
+   "en": "Charlotte",
+   "ja": "シャーロット",
+   "population": 964784
+  }
+ ],
+ "goto": [
+  {
+   "key": "charlotte",
+   "label": "Charlotte",
+   "kana": "シャーロット",
+   "box": [
+    [
+     35.19,
+     -80.875
+    ],
+    [
+     35.25,
+     -80.8
+    ]
+   ],
+   "home": "7th St"
+  },
+  {
+   "key": "southend",
+   "label": "South End",
+   "kana": "サウス・エンド",
+   "box": [
+    [
+     35.198,
+     -80.875
+    ],
+    [
+     35.224,
+     -80.842
+    ]
+   ],
+   "home": "Bland"
+  },
+  {
+   "key": "lowersouthend",
+   "label": "Lower South End",
+   "kana": "ロウワー・サウス・エンド",
+   "box": [
+    [
+     35.18,
+     -80.888
+    ],
+    [
+     35.21,
+     -80.856
+    ]
+   ],
+   "home": "New Bern"
+  },
+  {
+   "key": "noda",
+   "label": "NoDa",
+   "kana": "ノーダ",
+   "box": [
+    [
+     35.238,
+     -80.822
+    ],
+    [
+     35.262,
+     -80.792
+    ]
+   ],
+   "home": "36th St"
+  },
+  {
+   "key": "optimistpark",
+   "label": "Optimist Park",
+   "kana": "オプティミスト・パーク",
+   "box": [
+    [
+     35.228,
+     -80.836
+    ],
+    [
+     35.25,
+     -80.808
+    ]
+   ],
+   "home": "Parkwood"
+  },
+  {
+   "key": "plazamidwood",
+   "label": "Plaza Midwood",
+   "kana": "プラザ・ミッドウッド",
+   "box": [
+    [
+     35.205,
+     -80.834
+    ],
+    [
+     35.229,
+     -80.806
+    ]
+   ],
+   "home": "Hawthorne Ln & 8th St"
+  },
+  {
+   "key": "elizabeth",
+   "label": "Elizabeth",
+   "kana": "エリザベス",
+   "box": [
+    [
+     35.202,
+     -80.842
+    ],
+    [
+     35.224,
+     -80.814
+    ]
+   ],
+   "home": "Elizabeth Ave & Hawthorne Ln"
+  },
+  {
+   "key": "westend",
+   "label": "West End",
+   "kana": "ウェスト・エンド",
+   "box": [
+    [
+     35.226,
+     -80.87
+    ],
+    [
+     35.252,
+     -80.84
+    ]
+   ],
+   "home": "Johnson C. Smith University"
+  },
+  {
+   "key": "sugarcreek",
+   "label": "Sugar Creek",
+   "kana": "シュガー・クリーク",
+   "box": [
+    [
+     35.24,
+     -80.806
+    ],
+    [
+     35.272,
+     -80.762
+    ]
+   ],
+   "home": "Sugar Creek"
+  },
+  {
+   "key": "universitycity",
+   "label": "University City",
+   "kana": "ユニバーシティ・シティ",
+   "box": [
+    [
+     35.272,
+     -80.775
+    ],
+    [
+     35.32,
+     -80.725
+    ]
+   ],
+   "home": "UNC Charlotte"
+  },
+  {
+   "key": "tyvola",
+   "label": "Tyvola",
+   "kana": "タイボラ",
+   "box": [
+    [
+     35.145,
+     -80.892
+    ],
+    [
+     35.18,
+     -80.862
+    ]
+   ],
+   "home": "Tyvola"
+  },
+  {
+   "key": "pineville",
+   "label": "Pineville",
+   "kana": "パインビル",
+   "box": [
+    [
+     35.075,
+     -80.91
+    ],
+    [
+     35.125,
+     -80.86
+    ]
+   ],
+   "home": "I-485"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_charlotte.py",
+  "check": "scripts/validate_charlotte.py",
+  "arg": "charlotte",
+  "inputs": [
+   "cache:us/charlotte/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales, property types, heated areas, years built, positions and the county's cities and towns: Mecklenburg County (Mecklenburg County Land Records Management and Mecklenburg County GIS &amp; Mapping Services, Open Mapping, released under CC0). City Council districts: City of Charlotte. Stations and lines: CATS GTFS. Counties, the lakes and the Catawba River: US Census Bureau cartographic boundary files and TIGER/Line area water.</span><span>This site is not produced, sponsored or endorsed by Mecklenburg County, the City of Charlotte, CATS or the US Census Bureau. Mecklenburg County makes no warranty, expressed or implied, as to the accuracy or completeness of its data, which it distributes as is.</span>",
+  "priceSource": {
+   "en": "Prices: Mecklenburg County property sales and CAMA data (Mecklenburg County GIS Open Mapping, CC0)",
+   "ja": "価格：メクレンバーグ郡の不動産取引と評価データ（Mecklenburg County GIS Open Mapping、CC0）"
+  },
+  "attribution": "Stations and lines: CATS GTFS · Outlines: Mecklenburg County GIS, City of Charlotte, US Census Bureau"
+ }
+}

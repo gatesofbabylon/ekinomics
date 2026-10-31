@@ -1,0 +1,247 @@
+{
+ "key": "pittsburgh",
+ "country": "United States",
+ "order": 6,
+ "path": "allegheny/",
+ "en": "Allegheny County",
+ "population": 1225035,
+ "tag": {
+  "en": "Pennsylvania",
+  "ja": "ペンシルベニア州"
+ },
+ "cities": [
+  {
+   "key": "pittsburgh",
+   "en": "Pittsburgh",
+   "ja": "ピッツバーグ",
+   "population": 307632
+  }
+ ],
+ "goto": [
+  {
+   "key": "pittsburgh",
+   "label": "Pittsburgh",
+   "kana": "ピッツバーグ",
+   "box": [
+    [
+     40.43,
+     -80.014
+    ],
+    [
+     40.45,
+     -79.988
+    ]
+   ],
+   "home": "Steel Plaza"
+  },
+  {
+   "key": "northshore",
+   "label": "North Shore",
+   "kana": "ノースショア",
+   "box": [
+    [
+     40.438,
+     -80.032
+    ],
+    [
+     40.458,
+     -80
+    ]
+   ],
+   "home": "North Side"
+  },
+  {
+   "key": "stationsquare",
+   "label": "Station Square",
+   "kana": "ステーション・スクエア",
+   "box": [
+    [
+     40.424,
+     -80.018
+    ],
+    [
+     40.44,
+     -79.99
+    ]
+   ],
+   "home": "Station Square"
+  },
+  {
+   "key": "mountwashington",
+   "label": "Mount Washington",
+   "kana": "マウント・ワシントン",
+   "box": [
+    [
+     40.422,
+     -80.03
+    ],
+    [
+     40.44,
+     -80
+    ]
+   ],
+   "home": "Monongahela Incline Upper Station"
+  },
+  {
+   "key": "duquesneheights",
+   "label": "Duquesne Heights",
+   "kana": "デュケイン・ハイツ",
+   "box": [
+    [
+     40.428,
+     -80.035
+    ],
+    [
+     40.446,
+     -80.008
+    ]
+   ],
+   "home": "Duquesne Incline Upper Station"
+  },
+  {
+   "key": "beechview",
+   "label": "Beechview",
+   "kana": "ビーチビュー",
+   "box": [
+    [
+     40.398,
+     -80.04
+    ],
+    [
+     40.418,
+     -80.01
+    ]
+   ],
+   "home": "Broadway Ave at Shiras"
+  },
+  {
+   "key": "brookline",
+   "label": "Brookline",
+   "kana": "ブルックライン",
+   "box": [
+    [
+     40.384,
+     -80.015
+    ],
+    [
+     40.404,
+     -79.99
+    ]
+   ],
+   "home": "South Bank"
+  },
+  {
+   "key": "carrick",
+   "label": "Carrick",
+   "kana": "カリック",
+   "box": [
+    [
+     40.39,
+     -80.012
+    ],
+    [
+     40.41,
+     -79.988
+    ]
+   ],
+   "home": "Denise"
+  },
+  {
+   "key": "dormont",
+   "label": "Dormont",
+   "kana": "ドーモント",
+   "box": [
+    [
+     40.384,
+     -80.052
+    ],
+    [
+     40.404,
+     -80.024
+    ]
+   ],
+   "home": "Dormont Junction"
+  },
+  {
+   "key": "mtlebanon",
+   "label": "Mt. Lebanon",
+   "kana": "マウント・レバノン",
+   "box": [
+    [
+     40.366,
+     -80.056
+    ],
+    [
+     40.39,
+     -80.028
+    ]
+   ],
+   "home": "Mount Lebanon"
+  },
+  {
+   "key": "castleshannon",
+   "label": "Castle Shannon",
+   "kana": "キャッスル・シャノン",
+   "box": [
+    [
+     40.355,
+     -80.042
+    ],
+    [
+     40.378,
+     -80.008
+    ]
+   ],
+   "home": "Castle Shannon"
+  },
+  {
+   "key": "bethelpark",
+   "label": "Bethel Park",
+   "kana": "ベセル・パーク",
+   "box": [
+    [
+     40.33,
+     -80.06
+    ],
+    [
+     40.36,
+     -80.022
+    ]
+   ],
+   "home": "Highland"
+  },
+  {
+   "key": "library",
+   "label": "Library",
+   "kana": "ライブラリー",
+   "box": [
+    [
+     40.28,
+     -80.045
+    ],
+    [
+     40.31,
+     -80.015
+    ]
+   ],
+   "home": "Library"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_pittsburgh.py",
+  "check": "scripts/validate_pittsburgh.py",
+  "arg": "pittsburgh",
+  "inputs": [
+   "cache:us/pittsburgh/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales: Allegheny County Property Sale Transactions (Allegheny County Department of Administrative Services, Real Estate Division). Land uses, floor areas and years built: Allegheny County Property Assessments (Office of Property Assessments). Parcel positions: Parcel Centroids in Allegheny County. All from the Western Pennsylvania Regional Data Center (WPRDC), CC0. Neighborhoods: City of Pittsburgh, via WPRDC, CC BY. Stations and lines: Pittsburgh Regional Transit GTFS, via WPRDC’s GTFS Archive, CC BY. Municipalities, counties and the rivers: US Census Bureau TIGER/Line and cartographic boundary files.</span><span>This site is not produced, sponsored or endorsed by Allegheny County, the City of Pittsburgh, Pittsburgh Regional Transit, the WPRDC or the US Census Bureau. The data are provided as is and as available, without warranty; sale validity codes and other content are subject to change.</span>",
+  "priceSource": {
+   "en": "Prices: Allegheny County property sales and assessments (WPRDC, CC0)",
+   "ja": "価格：アレゲニー郡の不動産取引と資産評価（WPRDC、CC0）"
+  },
+  "attribution": "Stations and lines: Pittsburgh Regional Transit GTFS (CC BY) · Outlines: City of Pittsburgh (CC BY), US Census Bureau"
+ }
+}

@@ -1,0 +1,327 @@
+{
+ "key": "nantes",
+ "country": "France",
+ "order": 7,
+ "path": "loireatlantique/",
+ "en": "Loire-Atlantique",
+ "population": 1487570,
+ "tag": {
+  "en": "Loire-Atlantique",
+  "ja": "ロワール＝アトランティック"
+ },
+ "cities": [
+  {
+   "key": "nantes",
+   "en": "Nantes",
+   "ja": "ナント",
+   "population": 327734
+  }
+ ],
+ "goto": [
+  {
+   "key": "nantes",
+   "label": "Nantes",
+   "kana": "ナント",
+   "box": [
+    [
+     47.17,
+     -1.615
+    ],
+    [
+     47.26,
+     -1.495
+    ]
+   ],
+   "home": "Commerce"
+  },
+  {
+   "key": "reze",
+   "label": "Rezé",
+   "kana": "ルゼ",
+   "box": [
+    [
+     47.156,
+     -1.605
+    ],
+    [
+     47.216,
+     -1.515
+    ]
+   ],
+   "home": "Château de Rezé"
+  },
+  {
+   "key": "saintsebastien",
+   "label": "Saint-Sébastien-sur-Loire",
+   "kana": "サン＝セバスティアン＝シュル＝ロワール",
+   "box": [
+    [
+     47.177,
+     -1.556
+    ],
+    [
+     47.237,
+     -1.466
+    ]
+   ],
+   "home": "Saint-Sébastien Pas Enchantés"
+  },
+  {
+   "key": "orvault",
+   "label": "Orvault",
+   "kana": "オルヴォー",
+   "box": [
+    [
+     47.232,
+     -1.638
+    ],
+    [
+     47.292,
+     -1.548
+    ]
+   ],
+   "home": "Orvault Grand Val"
+  },
+  {
+   "key": "vertou",
+   "label": "Vertou",
+   "kana": "ヴェルトゥ",
+   "box": [
+    [
+     47.156,
+     -1.523
+    ],
+    [
+     47.216,
+     -1.433
+    ]
+   ],
+   "home": "Vertou"
+  },
+  {
+   "key": "coueron",
+   "label": "Couëron",
+   "kana": "クエロン",
+   "box": [
+    [
+     47.192,
+     -1.769
+    ],
+    [
+     47.252,
+     -1.679
+    ]
+   ],
+   "home": "Couëron"
+  },
+  {
+   "key": "saintnazaire",
+   "label": "Saint-Nazaire",
+   "kana": "サン＝ナゼール",
+   "box": [
+    [
+     47.256,
+     -2.256
+    ],
+    [
+     47.316,
+     -2.166
+    ]
+   ],
+   "home": "Saint-Nazaire"
+  },
+  {
+   "key": "labaule",
+   "label": "La Baule-Escoublac",
+   "kana": "ラ・ボール＝エスクブラック",
+   "box": [
+    [
+     47.258,
+     -2.434
+    ],
+    [
+     47.318,
+     -2.344
+    ]
+   ],
+   "home": "La Baule-Escoublac"
+  },
+  {
+   "key": "pornichet",
+   "label": "Pornichet",
+   "kana": "ポルニシェ",
+   "box": [
+    [
+     47.24,
+     -2.39
+    ],
+    [
+     47.3,
+     -2.3
+    ]
+   ],
+   "home": "Pornichet"
+  },
+  {
+   "key": "lecroisic",
+   "label": "Le Croisic",
+   "kana": "ル・クロワジック",
+   "box": [
+    [
+     47.26,
+     -2.552
+    ],
+    [
+     47.32,
+     -2.462
+    ]
+   ],
+   "home": "Le Croisic"
+  },
+  {
+   "key": "pornic",
+   "label": "Pornic",
+   "kana": "ポルニック",
+   "box": [
+    [
+     47.084,
+     -2.143
+    ],
+    [
+     47.144,
+     -2.053
+    ]
+   ],
+   "home": "Pornic"
+  },
+  {
+   "key": "savenay",
+   "label": "Savenay",
+   "kana": "サヴネ",
+   "box": [
+    [
+     47.329,
+     -1.996
+    ],
+    [
+     47.389,
+     -1.906
+    ]
+   ],
+   "home": "Savenay"
+  },
+  {
+   "key": "pontchateau",
+   "label": "Pontchâteau",
+   "kana": "ポンシャトー",
+   "box": [
+    [
+     47.405,
+     -2.134
+    ],
+    [
+     47.465,
+     -2.044
+    ]
+   ],
+   "home": "Pontchâteau"
+  },
+  {
+   "key": "ancenis",
+   "label": "Ancenis",
+   "kana": "アンスニ",
+   "box": [
+    [
+     47.339,
+     -1.223
+    ],
+    [
+     47.399,
+     -1.133
+    ]
+   ],
+   "home": "Ancenis"
+  },
+  {
+   "key": "clisson",
+   "label": "Clisson",
+   "kana": "クリッソン",
+   "box": [
+    [
+     47.056,
+     -1.331
+    ],
+    [
+     47.116,
+     -1.241
+    ]
+   ],
+   "home": "Clisson"
+  },
+  {
+   "key": "nortsurerdre",
+   "label": "Nort-sur-Erdre",
+   "kana": "ノール＝シュル＝エルドル",
+   "box": [
+    [
+     47.412,
+     -1.548
+    ],
+    [
+     47.472,
+     -1.458
+    ]
+   ],
+   "home": "Nort-sur-Erdre"
+  },
+  {
+   "key": "chateaubriant",
+   "label": "Châteaubriant",
+   "kana": "シャトーブリアン",
+   "box": [
+    [
+     47.688,
+     -1.417
+    ],
+    [
+     47.748,
+     -1.327
+    ]
+   ],
+   "home": "Châteaubriant"
+  },
+  {
+   "key": "machecoul",
+   "label": "Machecoul",
+   "kana": "マシュクール",
+   "box": [
+    [
+     46.961,
+     -1.868
+    ],
+    [
+     47.021,
+     -1.778
+    ]
+   ],
+   "home": "Machecoul"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_france.py",
+  "check": "scripts/validate_france.py",
+  "arg": "nantes",
+  "settings": "assets/fr_areas.json",
+  "inputs": [
+   "cache:france/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales: Demandes de valeurs foncières, Direction générale des Finances publiques (DGFiP), as structured by Cerema in <a href=\"https://www.data.gouv.fr/datasets/dvf-open-data\" target=\"_blank\" rel=\"noopener\">DVF+ open data</a> (October 2026 release), Licence Ouverte 2.0.</span><span>Stations and lines: Naolib, GTFS timetables published by Nantes Métropole (Licence Ouverte 2.0); SNCF timetables (ODbL); track: SNCF Réseau, shapes of the lines of the national rail network (ODbL). The stations and lines in this map's data files are derived from these sources and are available under the ODbL. Département outlines: IGN Admin Express, via Etalab, Licence Ouverte 2.0. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: DVF+ open data (Cerema, from DGFiP), Licence Ouverte 2.0",
+   "ja": "価格：DVF+ open data（Cerema、DGFiP の DVF から作成）、Licence Ouverte 2.0"
+  },
+  "attribution": "Stations: Naolib (Licence Ouverte) and SNCF (ODbL) · Track: SNCF Réseau (ODbL) · Outlines: IGN via Etalab"
+ }
+}

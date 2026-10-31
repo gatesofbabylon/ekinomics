@@ -1,0 +1,407 @@
+{
+ "key": "chicago",
+ "country": "United States",
+ "order": 1,
+ "path": "illinois/",
+ "en": "Cook County",
+ "population": 5194625,
+ "tag": {
+  "en": "Illinois",
+  "ja": "イリノイ州"
+ },
+ "cities": [
+  {
+   "key": "chicago",
+   "en": "Chicago",
+   "ja": "シカゴ",
+   "population": 2731585
+  }
+ ],
+ "goto": [
+  {
+   "key": "chicago",
+   "label": "Chicago",
+   "kana": "シカゴ",
+   "box": [
+    [
+     41.85,
+     -87.68
+    ],
+    [
+     41.91,
+     -87.61
+    ]
+   ],
+   "home": "Clark/Lake"
+  },
+  {
+   "key": "lincolnpark",
+   "label": "Lincoln Park",
+   "kana": "リンカーン・パーク",
+   "box": [
+    [
+     41.91,
+     -87.673
+    ],
+    [
+     41.94,
+     -87.633
+    ]
+   ],
+   "home": "Fullerton"
+  },
+  {
+   "key": "lakeview",
+   "label": "Lakeview",
+   "kana": "レイクビュー",
+   "box": [
+    [
+     41.925,
+     -87.673
+    ],
+    [
+     41.955,
+     -87.633
+    ]
+   ],
+   "home": "Belmont (Red, Brown & Purple lines)"
+  },
+  {
+   "key": "wickerpark",
+   "label": "Wicker Park",
+   "kana": "ウィッカー・パーク",
+   "box": [
+    [
+     41.895,
+     -87.698
+    ],
+    [
+     41.925,
+     -87.658
+    ]
+   ],
+   "home": "Damen (Blue Line)"
+  },
+  {
+   "key": "logansquare",
+   "label": "Logan Square",
+   "kana": "ローガン・スクエア",
+   "box": [
+    [
+     41.915,
+     -87.728
+    ],
+    [
+     41.945,
+     -87.688
+    ]
+   ],
+   "home": "Logan Square"
+  },
+  {
+   "key": "uptown",
+   "label": "Uptown",
+   "kana": "アップタウン",
+   "box": [
+    [
+     41.95,
+     -87.678
+    ],
+    [
+     41.98,
+     -87.638
+    ]
+   ],
+   "home": "Wilson"
+  },
+  {
+   "key": "rogerspark",
+   "label": "Rogers Park",
+   "kana": "ロジャーズ・パーク",
+   "box": [
+    [
+     41.993,
+     -87.686
+    ],
+    [
+     42.023,
+     -87.646
+    ]
+   ],
+   "home": "Morse"
+  },
+  {
+   "key": "pilsen",
+   "label": "Pilsen",
+   "kana": "ピルゼン",
+   "box": [
+    [
+     41.843,
+     -87.689
+    ],
+    [
+     41.873,
+     -87.649
+    ]
+   ],
+   "home": "18th"
+  },
+  {
+   "key": "bronzeville",
+   "label": "Bronzeville",
+   "kana": "ブロンズビル",
+   "box": [
+    [
+     41.794,
+     -87.639
+    ],
+    [
+     41.824,
+     -87.599
+    ]
+   ],
+   "home": "47th (Green Line)"
+  },
+  {
+   "key": "hydepark",
+   "label": "Hyde Park",
+   "kana": "ハイド・パーク",
+   "box": [
+    [
+     41.778,
+     -87.608
+    ],
+    [
+     41.808,
+     -87.568
+    ]
+   ],
+   "home": "55th - 56th - 57th St."
+  },
+  {
+   "key": "evanston",
+   "label": "Evanston",
+   "kana": "エバンストン",
+   "box": [
+    [
+     42.033,
+     -87.704
+    ],
+    [
+     42.063,
+     -87.664
+    ]
+   ],
+   "home": "Davis"
+  },
+  {
+   "key": "skokie",
+   "label": "Skokie",
+   "kana": "スコーキー",
+   "box": [
+    [
+     42.024,
+     -87.772
+    ],
+    [
+     42.054,
+     -87.732
+    ]
+   ],
+   "home": "Dempster-Skokie"
+  },
+  {
+   "key": "wilmette",
+   "label": "Wilmette",
+   "kana": "ウィルメット",
+   "box": [
+    [
+     42.062,
+     -87.729
+    ],
+    [
+     42.092,
+     -87.689
+    ]
+   ],
+   "home": "Wilmette"
+  },
+  {
+   "key": "oakpark",
+   "label": "Oak Park",
+   "kana": "オーク・パーク",
+   "box": [
+    [
+     41.872,
+     -87.814
+    ],
+    [
+     41.902,
+     -87.774
+    ]
+   ],
+   "home": "Oak Park (Green Line)"
+  },
+  {
+   "key": "parkridge",
+   "label": "Park Ridge",
+   "kana": "パーク・リッジ",
+   "box": [
+    [
+     41.995,
+     -87.852
+    ],
+    [
+     42.025,
+     -87.812
+    ]
+   ],
+   "home": "Park Ridge"
+  },
+  {
+   "key": "desplaines",
+   "label": "Des Plaines",
+   "kana": "デス・プレインズ",
+   "box": [
+    [
+     42.026,
+     -87.907
+    ],
+    [
+     42.056,
+     -87.867
+    ]
+   ],
+   "home": "Des Plaines"
+  },
+  {
+   "key": "arlingtonheights",
+   "label": "Arlington Heights",
+   "kana": "アーリントン・ハイツ",
+   "box": [
+    [
+     42.069,
+     -88.004
+    ],
+    [
+     42.099,
+     -87.964
+    ]
+   ],
+   "home": "Arlington Heights"
+  },
+  {
+   "key": "palatine",
+   "label": "Palatine",
+   "kana": "パラタイン",
+   "box": [
+    [
+     42.098,
+     -88.068
+    ],
+    [
+     42.128,
+     -88.028
+    ]
+   ],
+   "home": "Palatine"
+  },
+  {
+   "key": "lagrange",
+   "label": "La Grange",
+   "kana": "ラ・グレンジ",
+   "box": [
+    [
+     41.801,
+     -87.891
+    ],
+    [
+     41.831,
+     -87.851
+    ]
+   ],
+   "home": "LaGrange Road"
+  },
+  {
+   "key": "blueisland",
+   "label": "Blue Island",
+   "kana": "ブルー・アイランド",
+   "box": [
+    [
+     41.641,
+     -87.696
+    ],
+    [
+     41.671,
+     -87.656
+    ]
+   ],
+   "home": "Blue Island"
+  },
+  {
+   "key": "orlandpark",
+   "label": "Orland Park",
+   "kana": "オーランド・パーク",
+   "box": [
+    [
+     41.616,
+     -87.879
+    ],
+    [
+     41.646,
+     -87.839
+    ]
+   ],
+   "home": "Orland Park 143rd"
+  },
+  {
+   "key": "tinleypark",
+   "label": "Tinley Park",
+   "kana": "ティンリー・パーク",
+   "box": [
+    [
+     41.561,
+     -87.803
+    ],
+    [
+     41.591,
+     -87.763
+    ]
+   ],
+   "home": "Tinley Park"
+  },
+  {
+   "key": "homewood",
+   "label": "Homewood",
+   "kana": "ホームウッド",
+   "box": [
+    [
+     41.547,
+     -87.689
+    ],
+    [
+     41.577,
+     -87.649
+    ]
+   ],
+   "home": "Homewood"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_chicago.py",
+  "check": "scripts/validate_chicago.py",
+  "arg": "chicago",
+  "inputs": [
+   "cache:us/chicago/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales, building and condominium characteristics and parcel positions: Cook County Assessor's Office open data. 'L' stations and lines and community areas: City of Chicago Data Portal. Commuter rail stations and lines: data obtained from Metra and redistributed through this site; Metra schedule data last updated 22 October 2026, 2:20 am Central Time. Municipalities, counties and the Lake Michigan shore: US Census Bureau cartographic boundary files.</span><span>This site is not sponsored, affiliated or operated by Metra, and none of Metra, the Chicago Transit Authority, Cook County, the City of Chicago or the US Census Bureau produced or endorses it. This site provides applications using data that has been modified for use from its original source, www.cityofchicago.org, the official website of the City of Chicago. The City of Chicago makes no claims as to the content, accuracy, timeliness, or completeness of any of the data provided at this site. The data provided at this site is subject to change at any time. It is understood that the data provided at this site is being used at one’s own risk.</span>",
+  "priceSource": {
+   "en": "Prices: Cook County Assessor parcel sales (Cook County open data)",
+   "ja": "価格：クック郡査定官事務所の区画取引（クック郡オープンデータ）"
+  },
+  "attribution": "'L' stations and lines: City of Chicago Data Portal · Commuter rail: Metra GTFS · Outlines: City of Chicago, US Census Bureau"
+ }
+}

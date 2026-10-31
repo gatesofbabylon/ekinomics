@@ -1,0 +1,94 @@
+{
+ "key": "okayama",
+ "country": "Japan",
+ "order": 10,
+ "path": "okayama/",
+ "en": "Greater Okayama",
+ "ja": "岡山圏",
+ "population": 1888432,
+ "tag": {
+  "en": "Chūgoku",
+  "ja": "中国"
+ },
+ "cities": [
+  {
+   "key": "okayama",
+   "en": "Okayama",
+   "ja": "岡山",
+   "population": 724691
+  }
+ ],
+ "goto": [
+  {
+   "key": "okayama",
+   "label": "Okayama",
+   "ja": "岡山",
+   "box": [
+    [
+     34.615,
+     133.85
+    ],
+    [
+     34.715,
+     133.99
+    ]
+   ],
+   "home": "岡山"
+  },
+  {
+   "key": "kurashiki",
+   "label": "Kurashiki",
+   "ja": "倉敷",
+   "box": [
+    [
+     34.55,
+     133.695
+    ],
+    [
+     34.65,
+     133.835
+    ]
+   ],
+   "home": "倉敷"
+  },
+  {
+   "key": "tsuyama",
+   "label": "Tsuyama",
+   "ja": "津山",
+   "box": [
+    [
+     35.005,
+     133.935
+    ],
+    [
+     35.105,
+     134.075
+    ]
+   ],
+   "home": "津山"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "okayama",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:okayama/*_{MLIT}.*",
+   "cache:okayama/residential/*_{MLIT}.*",
+   "cache:wikidata/okayama/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

@@ -1,0 +1,311 @@
+{
+ "key": "bordeaux",
+ "country": "France",
+ "order": 6,
+ "path": "gironde/",
+ "en": "Gironde",
+ "population": 1690493,
+ "tag": {
+  "en": "Gironde",
+  "ja": "ジロンド"
+ },
+ "cities": [
+  {
+   "key": "bordeaux",
+   "en": "Bordeaux",
+   "ja": "ボルドー",
+   "population": 267991
+  }
+ ],
+ "goto": [
+  {
+   "key": "bordeaux",
+   "label": "Bordeaux",
+   "kana": "ボルドー",
+   "box": [
+    [
+     44.795,
+     -0.63
+    ],
+    [
+     44.885,
+     -0.52
+    ]
+   ],
+   "home": "Hôtel de Ville"
+  },
+  {
+   "key": "merignac",
+   "label": "Mérignac",
+   "kana": "メリニャック",
+   "box": [
+    [
+     44.811,
+     -0.692
+    ],
+    [
+     44.871,
+     -0.602
+    ]
+   ],
+   "home": "Mérignac Centre"
+  },
+  {
+   "key": "pessac",
+   "label": "Pessac",
+   "kana": "ペサック",
+   "box": [
+    [
+     44.775,
+     -0.677
+    ],
+    [
+     44.835,
+     -0.587
+    ]
+   ],
+   "home": "Pessac"
+  },
+  {
+   "key": "talence",
+   "label": "Talence",
+   "kana": "タランス",
+   "box": [
+    [
+     44.782,
+     -0.636
+    ],
+    [
+     44.842,
+     -0.546
+    ]
+   ],
+   "home": "Talence Centre-Forum"
+  },
+  {
+   "key": "begles",
+   "label": "Bègles",
+   "kana": "ベーグル",
+   "box": [
+    [
+     44.769,
+     -0.6
+    ],
+    [
+     44.829,
+     -0.51
+    ]
+   ],
+   "home": "Bègles"
+  },
+  {
+   "key": "villenavedornon",
+   "label": "Villenave-d’Ornon",
+   "kana": "ヴィルナーヴ＝ドルノン",
+   "box": [
+    [
+     44.738,
+     -0.592
+    ],
+    [
+     44.798,
+     -0.502
+    ]
+   ],
+   "home": "Villenave-d'Ornon"
+  },
+  {
+   "key": "lormont",
+   "label": "Lormont",
+   "kana": "ロルモン",
+   "box": [
+    [
+     44.85,
+     -0.569
+    ],
+    [
+     44.91,
+     -0.479
+    ]
+   ],
+   "home": "Mairie de Lormont"
+  },
+  {
+   "key": "cenon",
+   "label": "Cenon",
+   "kana": "スノン",
+   "box": [
+    [
+     44.826,
+     -0.579
+    ],
+    [
+     44.886,
+     -0.489
+    ]
+   ],
+   "home": "Cenon"
+  },
+  {
+   "key": "eysines",
+   "label": "Eysines",
+   "kana": "エイジーヌ",
+   "box": [
+    [
+     44.854,
+     -0.695
+    ],
+    [
+     44.914,
+     -0.605
+    ]
+   ],
+   "home": "Eysines Centre"
+  },
+  {
+   "key": "blanquefort",
+   "label": "Blanquefort",
+   "kana": "ブランクフォール",
+   "box": [
+    [
+     44.888,
+     -0.669
+    ],
+    [
+     44.948,
+     -0.579
+    ]
+   ],
+   "home": "Blanquefort"
+  },
+  {
+   "key": "arcachon",
+   "label": "Arcachon",
+   "kana": "アルカション",
+   "box": [
+    [
+     44.629,
+     -1.21
+    ],
+    [
+     44.689,
+     -1.12
+    ]
+   ],
+   "home": "Arcachon"
+  },
+  {
+   "key": "latestedebuch",
+   "label": "La Teste-de-Buch",
+   "kana": "ラ・テスト＝ド＝ビュック",
+   "box": [
+    [
+     44.607,
+     -1.188
+    ],
+    [
+     44.667,
+     -1.098
+    ]
+   ],
+   "home": "La Teste"
+  },
+  {
+   "key": "biganos",
+   "label": "Biganos",
+   "kana": "ビガノス",
+   "box": [
+    [
+     44.607,
+     -1.011
+    ],
+    [
+     44.667,
+     -0.921
+    ]
+   ],
+   "home": "Biganos Facture"
+  },
+  {
+   "key": "libourne",
+   "label": "Libourne",
+   "kana": "リブルヌ",
+   "box": [
+    [
+     44.886,
+     -0.281
+    ],
+    [
+     44.946,
+     -0.191
+    ]
+   ],
+   "home": "Libourne"
+  },
+  {
+   "key": "langon",
+   "label": "Langon",
+   "kana": "ランゴン",
+   "box": [
+    [
+     44.525,
+     -0.301
+    ],
+    [
+     44.585,
+     -0.211
+    ]
+   ],
+   "home": "Langon"
+  },
+  {
+   "key": "lesparre",
+   "label": "Lesparre-Médoc",
+   "kana": "レスパール＝メドック",
+   "box": [
+    [
+     45.274,
+     -0.99
+    ],
+    [
+     45.334,
+     -0.9
+    ]
+   ],
+   "home": "Lesparre"
+  },
+  {
+   "key": "soulac",
+   "label": "Soulac-sur-Mer",
+   "kana": "スーラック＝シュル＝メール",
+   "box": [
+    [
+     45.478,
+     -1.163
+    ],
+    [
+     45.538,
+     -1.073
+    ]
+   ],
+   "home": "Soulac-sur-Mer"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_france.py",
+  "check": "scripts/validate_france.py",
+  "arg": "bordeaux",
+  "settings": "assets/fr_areas.json",
+  "inputs": [
+   "cache:france/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales: Demandes de valeurs foncières, Direction générale des Finances publiques (DGFiP), as structured by Cerema in <a href=\"https://www.data.gouv.fr/datasets/dvf-open-data\" target=\"_blank\" rel=\"noopener\">DVF+ open data</a> (October 2026 release), Licence Ouverte 2.0.</span><span>Stations and lines: TBM, GTFS timetables published by Bordeaux Métropole (Licence Ouverte 2.0); SNCF timetables (ODbL); track: SNCF Réseau, shapes of the lines of the national rail network (ODbL). The stations and lines in this map's data files are derived from these sources and are available under the ODbL. Département outlines: IGN Admin Express, via Etalab, Licence Ouverte 2.0. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: DVF+ open data (Cerema, from DGFiP), Licence Ouverte 2.0",
+   "ja": "価格：DVF+ open data（Cerema、DGFiP の DVF から作成）、Licence Ouverte 2.0"
+  },
+  "attribution": "Stations: TBM (Licence Ouverte) and SNCF (ODbL) · Track: SNCF Réseau (ODbL) · Outlines: IGN via Etalab"
+ }
+}

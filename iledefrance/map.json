@@ -1,0 +1,327 @@
+{
+ "key": "paris",
+ "country": "France",
+ "order": 0,
+ "path": "iledefrance/",
+ "en": "Île-de-France",
+ "population": 12463067,
+ "tag": {
+  "en": "Île-de-France",
+  "ja": "イル＝ド＝フランス"
+ },
+ "cities": [
+  {
+   "key": "paris",
+   "en": "Paris",
+   "ja": "パリ",
+   "population": 2103778
+  }
+ ],
+ "goto": [
+  {
+   "key": "paris",
+   "label": "Paris",
+   "kana": "パリ",
+   "box": [
+    [
+     48.815,
+     2.225
+    ],
+    [
+     48.902,
+     2.47
+    ]
+   ],
+   "home": "Châtelet"
+  },
+  {
+   "key": "versailles",
+   "label": "Versailles",
+   "kana": "ヴェルサイユ",
+   "box": [
+    [
+     48.779,
+     2.09
+    ],
+    [
+     48.839,
+     2.18
+    ]
+   ],
+   "home": "Versailles Rive Droite"
+  },
+  {
+   "key": "saintdenis",
+   "label": "Saint-Denis",
+   "kana": "サン＝ドニ",
+   "box": [
+    [
+     48.905,
+     2.301
+    ],
+    [
+     48.965,
+     2.391
+    ]
+   ],
+   "home": "Saint-Denis"
+  },
+  {
+   "key": "boulogne",
+   "label": "Boulogne-Billancourt",
+   "kana": "ブローニュ＝ビヤンクール",
+   "box": [
+    [
+     48.822,
+     2.209
+    ],
+    [
+     48.862,
+     2.269
+    ]
+   ],
+   "home": "Boulogne Jean Jaurès"
+  },
+  {
+   "key": "nanterre",
+   "label": "Nanterre",
+   "kana": "ナンテール",
+   "box": [
+    [
+     48.866,
+     2.178
+    ],
+    [
+     48.926,
+     2.268
+    ]
+   ],
+   "home": "Nanterre Préfecture / Esplanade Charles De Gaulle"
+  },
+  {
+   "key": "creteil",
+   "label": "Créteil",
+   "kana": "クレテイユ",
+   "box": [
+    [
+     48.75,
+     2.414
+    ],
+    [
+     48.81,
+     2.504
+    ]
+   ],
+   "home": "Créteil Préfecture"
+  },
+  {
+   "key": "argenteuil",
+   "label": "Argenteuil",
+   "kana": "アルジャントゥイユ",
+   "box": [
+    [
+     48.917,
+     2.213
+    ],
+    [
+     48.977,
+     2.303
+    ]
+   ],
+   "home": "Argenteuil"
+  },
+  {
+   "key": "cergy",
+   "label": "Cergy-Pontoise",
+   "kana": "セルジー＝ポントワーズ",
+   "box": [
+    [
+     48.996,
+     2.02
+    ],
+    [
+     49.076,
+     2.14
+    ]
+   ],
+   "home": "Cergy Préfecture"
+  },
+  {
+   "key": "evry",
+   "label": "Évry",
+   "kana": "エヴリー",
+   "box": [
+    [
+     48.595,
+     2.384
+    ],
+    [
+     48.655,
+     2.474
+    ]
+   ],
+   "home": "Évry - Courcouronnes"
+  },
+  {
+   "key": "massy",
+   "label": "Massy",
+   "kana": "マシー",
+   "box": [
+    [
+     48.695,
+     2.214
+    ],
+    [
+     48.755,
+     2.304
+    ]
+   ],
+   "home": "Massy - Palaiseau"
+  },
+  {
+   "key": "noisy",
+   "label": "Noisy-le-Grand",
+   "kana": "ノワジー＝ル＝グラン",
+   "box": [
+    [
+     48.813,
+     2.535
+    ],
+    [
+     48.873,
+     2.625
+    ]
+   ],
+   "home": "Noisy - Champs"
+  },
+  {
+   "key": "saintgermain",
+   "label": "Saint-Germain-en-Laye",
+   "kana": "サン＝ジェルマン＝アン＝レー",
+   "box": [
+    [
+     48.87,
+     2.05
+    ],
+    [
+     48.93,
+     2.14
+    ]
+   ],
+   "home": "Saint-Germain-en-Laye"
+  },
+  {
+   "key": "saintquentin",
+   "label": "Saint-Quentin-en-Yvelines",
+   "kana": "サン＝カンタン＝アン＝イヴリーヌ",
+   "box": [
+    [
+     48.757,
+     2
+    ],
+    [
+     48.817,
+     2.09
+    ]
+   ],
+   "home": "Saint-Quentin en Yvelines - Montigny-le-Bretonneux"
+  },
+  {
+   "key": "melun",
+   "label": "Melun",
+   "kana": "ムラン",
+   "box": [
+    [
+     48.497,
+     2.61
+    ],
+    [
+     48.557,
+     2.7
+    ]
+   ],
+   "home": "Melun"
+  },
+  {
+   "key": "meaux",
+   "label": "Meaux",
+   "kana": "モー",
+   "box": [
+    [
+     48.927,
+     2.828
+    ],
+    [
+     48.987,
+     2.918
+    ]
+   ],
+   "home": "Meaux"
+  },
+  {
+   "key": "mantes",
+   "label": "Mantes-la-Jolie",
+   "kana": "マント＝ラ＝ジョリー",
+   "box": [
+    [
+     48.96,
+     1.658
+    ],
+    [
+     49.02,
+     1.748
+    ]
+   ],
+   "home": "Mantes-la-Jolie"
+  },
+  {
+   "key": "fontainebleau",
+   "label": "Fontainebleau",
+   "kana": "フォンテーヌブロー",
+   "box": [
+    [
+     48.386,
+     2.682
+    ],
+    [
+     48.446,
+     2.772
+    ]
+   ],
+   "home": "Fontainebleau - Avon"
+  },
+  {
+   "key": "rambouillet",
+   "label": "Rambouillet",
+   "kana": "ランブイエ",
+   "box": [
+    [
+     48.614,
+     1.788
+    ],
+    [
+     48.674,
+     1.878
+    ]
+   ],
+   "home": "Rambouillet"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_france.py",
+  "check": "scripts/validate_france.py",
+  "arg": "paris",
+  "settings": "assets/fr_areas.json",
+  "inputs": [
+   "cache:france/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales: Demandes de valeurs foncières, Direction générale des Finances publiques (DGFiP), as structured by Cerema in <a href=\"https://www.data.gouv.fr/datasets/dvf-open-data\" target=\"_blank\" rel=\"noopener\">DVF+ open data</a> (October 2026 release), Licence Ouverte 2.0.</span><span>Stations and lines: <a href=\"https://data.iledefrance-mobilites.fr/\" target=\"_blank\" rel=\"noopener\">Île-de-France Mobilités</a> open data (October 2026), Licence Ouverte 2.0. Département outlines: IGN Admin Express, via Etalab, Licence Ouverte 2.0. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: DVF+ open data (Cerema, from DGFiP), Licence Ouverte 2.0",
+   "ja": "価格：DVF+ open data（Cerema、DGFiP の DVF から作成）、Licence Ouverte 2.0"
+  },
+  "attribution": "Stations and lines: Île-de-France Mobilités · Outlines: IGN via Etalab · Licence Ouverte 2.0"
+ }
+}

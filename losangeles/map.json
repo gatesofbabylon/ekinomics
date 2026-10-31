@@ -1,0 +1,730 @@
+{
+ "key": "losangeles",
+ "country": "United States",
+ "order": 10,
+ "path": "losangeles/",
+ "en": "Los Angeles County",
+ "population": 9694934,
+ "tag": {
+  "en": "California",
+  "ja": "カリフォルニア州"
+ },
+ "cities": [
+  {
+   "key": "losangeles",
+   "en": "Los Angeles",
+   "ja": "ロサンゼルス",
+   "population": 3869089
+  }
+ ],
+ "goto": [
+  {
+   "key": "losangeles",
+   "label": "Los Angeles",
+   "kana": "ロサンゼルス",
+   "box": [
+    [
+     34.033,
+     -118.281
+    ],
+    [
+     34.065,
+     -118.237
+    ]
+   ],
+   "home": "7th Street / Metro Center"
+  },
+  {
+   "key": "hollywood",
+   "label": "Hollywood",
+   "kana": "ハリウッド",
+   "box": [
+    [
+     34.087,
+     -118.359
+    ],
+    [
+     34.117,
+     -118.319
+    ]
+   ],
+   "home": "Hollywood / Highland"
+  },
+  {
+   "key": "koreatown",
+   "label": "Koreatown",
+   "kana": "コリアタウン",
+   "box": [
+    [
+     34.048,
+     -118.31
+    ],
+    [
+     34.078,
+     -118.27
+    ]
+   ],
+   "home": "Wilshire / Vermont"
+  },
+  {
+   "key": "midwilshire",
+   "label": "Mid-Wilshire",
+   "kana": "ミッドウィルシャー",
+   "box": [
+    [
+     34.047,
+     -118.363
+    ],
+    [
+     34.077,
+     -118.323
+    ]
+   ],
+   "home": "Wilshire / La Brea"
+  },
+  {
+   "key": "losfeliz",
+   "label": "Los Feliz",
+   "kana": "ロスフェリズ",
+   "box": [
+    [
+     34.083,
+     -118.312
+    ],
+    [
+     34.113,
+     -118.272
+    ]
+   ],
+   "home": "Vermont / Sunset"
+  },
+  {
+   "key": "chinatown",
+   "label": "Chinatown",
+   "kana": "チャイナタウン",
+   "box": [
+    [
+     34.049,
+     -118.256
+    ],
+    [
+     34.079,
+     -118.216
+    ]
+   ],
+   "home": "Chinatown"
+  },
+  {
+   "key": "littletokyo",
+   "label": "Little Tokyo",
+   "kana": "リトル・トーキョー",
+   "box": [
+    [
+     34.034,
+     -118.259
+    ],
+    [
+     34.064,
+     -118.219
+    ]
+   ],
+   "home": "Little Tokyo / Arts District"
+  },
+  {
+   "key": "boyleheights",
+   "label": "Boyle Heights",
+   "kana": "ボイルハイツ",
+   "box": [
+    [
+     34.032,
+     -118.24
+    ],
+    [
+     34.062,
+     -118.2
+    ]
+   ],
+   "home": "Mariachi Plaza / Boyle Heights"
+  },
+  {
+   "key": "highlandpark",
+   "label": "Highland Park",
+   "kana": "ハイランドパーク",
+   "box": [
+    [
+     34.096,
+     -118.213
+    ],
+    [
+     34.126,
+     -118.173
+    ]
+   ],
+   "home": "Highland Park"
+  },
+  {
+   "key": "universitypark",
+   "label": "University Park",
+   "kana": "ユニバーシティ・パーク",
+   "box": [
+    [
+     34.003,
+     -118.306
+    ],
+    [
+     34.033,
+     -118.266
+    ]
+   ],
+   "home": "Expo Park / USC"
+  },
+  {
+   "key": "leimertpark",
+   "label": "Leimert Park",
+   "kana": "レイマート・パーク",
+   "box": [
+    [
+     33.989,
+     -118.352
+    ],
+    [
+     34.019,
+     -118.312
+    ]
+   ],
+   "home": "Leimert Park"
+  },
+  {
+   "key": "watts",
+   "label": "Watts",
+   "kana": "ワッツ",
+   "box": [
+    [
+     33.927,
+     -118.263
+    ],
+    [
+     33.957,
+     -118.223
+    ]
+   ],
+   "home": "103rd Street / Watts Towers"
+  },
+  {
+   "key": "westchester",
+   "label": "Westchester",
+   "kana": "ウエストチェスター",
+   "box": [
+    [
+     33.947,
+     -118.394
+    ],
+    [
+     33.977,
+     -118.354
+    ]
+   ],
+   "home": "Westchester / Veterans"
+  },
+  {
+   "key": "northhollywood",
+   "label": "North Hollywood",
+   "kana": "ノースハリウッド",
+   "box": [
+    [
+     34.154,
+     -118.397
+    ],
+    [
+     34.184,
+     -118.357
+    ]
+   ],
+   "home": "North Hollywood"
+  },
+  {
+   "key": "universalcity",
+   "label": "Universal City",
+   "kana": "ユニバーサル・シティ",
+   "box": [
+    [
+     34.125,
+     -118.383
+    ],
+    [
+     34.155,
+     -118.343
+    ]
+   ],
+   "home": "Universal / Studio City"
+  },
+  {
+   "key": "vannuys",
+   "label": "Van Nuys",
+   "kana": "バンナイズ",
+   "box": [
+    [
+     34.197,
+     -118.468
+    ],
+    [
+     34.227,
+     -118.428
+    ]
+   ],
+   "home": "Van Nuys"
+  },
+  {
+   "key": "northridge",
+   "label": "Northridge",
+   "kana": "ノースリッジ",
+   "box": [
+    [
+     34.216,
+     -118.565
+    ],
+    [
+     34.246,
+     -118.525
+    ]
+   ],
+   "home": "Northridge"
+  },
+  {
+   "key": "chatsworth",
+   "label": "Chatsworth",
+   "kana": "チャッツワース",
+   "box": [
+    [
+     34.238,
+     -118.619
+    ],
+    [
+     34.268,
+     -118.579
+    ]
+   ],
+   "home": "Chatsworth"
+  },
+  {
+   "key": "santamonica",
+   "label": "Santa Monica",
+   "kana": "サンタモニカ",
+   "box": [
+    [
+     33.999,
+     -118.511
+    ],
+    [
+     34.029,
+     -118.471
+    ]
+   ],
+   "home": "Downtown Santa Monica"
+  },
+  {
+   "key": "culvercity",
+   "label": "Culver City",
+   "kana": "カルバーシティ",
+   "box": [
+    [
+     34.013,
+     -118.409
+    ],
+    [
+     34.043,
+     -118.369
+    ]
+   ],
+   "home": "Culver City"
+  },
+  {
+   "key": "inglewood",
+   "label": "Inglewood",
+   "kana": "イングルウッド",
+   "box": [
+    [
+     33.952,
+     -118.371
+    ],
+    [
+     33.982,
+     -118.331
+    ]
+   ],
+   "home": "Downtown Inglewood"
+  },
+  {
+   "key": "hawthorne",
+   "label": "Hawthorne",
+   "kana": "ホーソーン",
+   "box": [
+    [
+     33.918,
+     -118.372
+    ],
+    [
+     33.948,
+     -118.332
+    ]
+   ],
+   "home": "Hawthorne / Lennox"
+  },
+  {
+   "key": "elsegundo",
+   "label": "El Segundo",
+   "kana": "エルセグンド",
+   "box": [
+    [
+     33.901,
+     -118.407
+    ],
+    [
+     33.931,
+     -118.367
+    ]
+   ],
+   "home": "El Segundo"
+  },
+  {
+   "key": "redondobeach",
+   "label": "Redondo Beach",
+   "kana": "レドンドビーチ",
+   "box": [
+    [
+     33.88,
+     -118.389
+    ],
+    [
+     33.91,
+     -118.349
+    ]
+   ],
+   "home": "Redondo Beach"
+  },
+  {
+   "key": "longbeach",
+   "label": "Long Beach",
+   "kana": "ロングビーチ",
+   "box": [
+    [
+     33.753,
+     -118.213
+    ],
+    [
+     33.783,
+     -118.173
+    ]
+   ],
+   "home": "Downtown Long Beach"
+  },
+  {
+   "key": "compton",
+   "label": "Compton",
+   "kana": "コンプトン",
+   "box": [
+    [
+     33.882,
+     -118.244
+    ],
+    [
+     33.912,
+     -118.204
+    ]
+   ],
+   "home": "Compton"
+  },
+  {
+   "key": "eastla",
+   "label": "East Los Angeles",
+   "kana": "イースト・ロサンゼルス",
+   "box": [
+    [
+     34.018,
+     -118.181
+    ],
+    [
+     34.048,
+     -118.141
+    ]
+   ],
+   "home": "East LA Civic Center"
+  },
+  {
+   "key": "norwalk",
+   "label": "Norwalk",
+   "kana": "ノーウォーク",
+   "box": [
+    [
+     33.899,
+     -118.125
+    ],
+    [
+     33.929,
+     -118.085
+    ]
+   ],
+   "home": "Norwalk"
+  },
+  {
+   "key": "pasadena",
+   "label": "Pasadena",
+   "kana": "パサデナ",
+   "box": [
+    [
+     34.133,
+     -118.168
+    ],
+    [
+     34.163,
+     -118.128
+    ]
+   ],
+   "home": "Memorial Park"
+  },
+  {
+   "key": "southpasadena",
+   "label": "South Pasadena",
+   "kana": "サウスパサデナ",
+   "box": [
+    [
+     34.1,
+     -118.178
+    ],
+    [
+     34.13,
+     -118.138
+    ]
+   ],
+   "home": "South Pasadena"
+  },
+  {
+   "key": "glendale",
+   "label": "Glendale",
+   "kana": "グレンデール",
+   "box": [
+    [
+     34.108,
+     -118.279
+    ],
+    [
+     34.138,
+     -118.239
+    ]
+   ],
+   "home": "Glendale"
+  },
+  {
+   "key": "burbank",
+   "label": "Burbank",
+   "kana": "バーバンク",
+   "box": [
+    [
+     34.164,
+     -118.333
+    ],
+    [
+     34.194,
+     -118.293
+    ]
+   ],
+   "home": "Burbank - Downtown"
+  },
+  {
+   "key": "arcadia",
+   "label": "Arcadia",
+   "kana": "アーケイディア",
+   "box": [
+    [
+     34.128,
+     -118.049
+    ],
+    [
+     34.158,
+     -118.009
+    ]
+   ],
+   "home": "Arcadia"
+  },
+  {
+   "key": "monrovia",
+   "label": "Monrovia",
+   "kana": "モンロビア",
+   "box": [
+    [
+     34.118,
+     -118.023
+    ],
+    [
+     34.148,
+     -117.983
+    ]
+   ],
+   "home": "Monrovia"
+  },
+  {
+   "key": "azusa",
+   "label": "Azusa",
+   "kana": "アズサ",
+   "box": [
+    [
+     34.121,
+     -117.927
+    ],
+    [
+     34.151,
+     -117.887
+    ]
+   ],
+   "home": "Azusa Downtown"
+  },
+  {
+   "key": "glendora",
+   "label": "Glendora",
+   "kana": "グレンドーラ",
+   "box": [
+    [
+     34.117,
+     -117.886
+    ],
+    [
+     34.147,
+     -117.846
+    ]
+   ],
+   "home": "Glendora"
+  },
+  {
+   "key": "elmonte",
+   "label": "El Monte",
+   "kana": "エルモンテ",
+   "box": [
+    [
+     34.062,
+     -118.055
+    ],
+    [
+     34.092,
+     -118.016
+    ]
+   ],
+   "home": "El Monte"
+  },
+  {
+   "key": "covina",
+   "label": "Covina",
+   "kana": "コビーナ",
+   "box": [
+    [
+     34.077,
+     -117.909
+    ],
+    [
+     34.107,
+     -117.869
+    ]
+   ],
+   "home": "Covina"
+  },
+  {
+   "key": "pomona",
+   "label": "Pomona",
+   "kana": "ポモナ",
+   "box": [
+    [
+     34.044,
+     -117.771
+    ],
+    [
+     34.074,
+     -117.731
+    ]
+   ],
+   "home": "Pomona - Downtown"
+  },
+  {
+   "key": "claremont",
+   "label": "Claremont",
+   "kana": "クレアモント",
+   "box": [
+    [
+     34.079,
+     -117.736
+    ],
+    [
+     34.109,
+     -117.696
+    ]
+   ],
+   "home": "Claremont"
+  },
+  {
+   "key": "santaclarita",
+   "label": "Santa Clarita",
+   "kana": "サンタクラリタ",
+   "box": [
+    [
+     34.398,
+     -118.545
+    ],
+    [
+     34.428,
+     -118.505
+    ]
+   ],
+   "home": "Santa Clarita"
+  },
+  {
+   "key": "palmdale",
+   "label": "Palmdale",
+   "kana": "パームデール",
+   "box": [
+    [
+     34.576,
+     -118.139
+    ],
+    [
+     34.606,
+     -118.099
+    ]
+   ],
+   "home": "Palmdale"
+  },
+  {
+   "key": "lancaster",
+   "label": "Lancaster",
+   "kana": "ランカスター",
+   "box": [
+    [
+     34.682,
+     -118.156
+    ],
+    [
+     34.712,
+     -118.116
+    ]
+   ],
+   "home": "Lancaster"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_losangeles.py",
+  "check": "scripts/validate_losangeles.py",
+  "arg": "losangeles",
+  "helpers": [
+   "scripts/ca_roll.py"
+  ],
+  "inputs": [
+   "cache:us/losangeles/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Values at sale: the Los Angeles County Assessor's secured rolls, County of Los Angeles. Areas: County of Los Angeles and its Department of Public Health. Station and line data provided by LA Metro (Los Angeles County Metropolitan Transportation Authority) and by Metrolink (Southern California Regional Rail Authority), as is. Counties and water: US Census Bureau.</span><span>None of these bodies produced or endorses this site. The County of Los Angeles provides its data as is, without warranties of any kind.</span>",
+  "priceSource": {
+   "en": "Prices: values at sale on the LA County Assessor's rolls",
+   "ja": "価格：ロサンゼルス郡査定官の課税台帳にある売却時の評価額"
+  },
+  "attribution": "Stations and lines: provided by LA Metro and Metrolink (GTFS), as is · Outlines: County of Los Angeles, US Census Bureau"
+ }
+}

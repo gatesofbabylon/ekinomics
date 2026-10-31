@@ -1,0 +1,247 @@
+{
+ "key": "cleveland",
+ "country": "United States",
+ "order": 9,
+ "path": "ohio/",
+ "en": "Cuyahoga County",
+ "population": 1232925,
+ "tag": {
+  "en": "Ohio",
+  "ja": "オハイオ州"
+ },
+ "cities": [
+  {
+   "key": "cleveland",
+   "en": "Cleveland",
+   "ja": "クリーブランド",
+   "population": 363608
+  }
+ ],
+ "goto": [
+  {
+   "key": "cleveland",
+   "label": "Cleveland",
+   "kana": "クリーブランド",
+   "box": [
+    [
+     41.485,
+     -81.715
+    ],
+    [
+     41.51,
+     -81.672
+    ]
+   ],
+   "home": "Tower City"
+  },
+  {
+   "key": "ohiocity",
+   "label": "Ohio City",
+   "kana": "オハイオ・シティ",
+   "box": [
+    [
+     41.472,
+     -81.722
+    ],
+    [
+     41.497,
+     -81.68
+    ]
+   ],
+   "home": "W. 25th–Ohio City"
+  },
+  {
+   "key": "universitycircle",
+   "label": "University Circle",
+   "kana": "ユニバーシティ・サークル",
+   "box": [
+    [
+     41.49,
+     -81.626
+    ],
+    [
+     41.515,
+     -81.584
+    ]
+   ],
+   "home": "Cedar–University"
+  },
+  {
+   "key": "littleitaly",
+   "label": "Little Italy",
+   "kana": "リトル・イタリー",
+   "box": [
+    [
+     41.497,
+     -81.621
+    ],
+    [
+     41.521,
+     -81.58
+    ]
+   ],
+   "home": "Little Italy–University Circle"
+  },
+  {
+   "key": "shakersquare",
+   "label": "Shaker Square",
+   "kana": "シェーカー・スクエア",
+   "box": [
+    [
+     41.472,
+     -81.611
+    ],
+    [
+     41.496,
+     -81.571
+    ]
+   ],
+   "home": "Shaker Square"
+  },
+  {
+   "key": "shakerheights",
+   "label": "Shaker Heights",
+   "kana": "シェーカーハイツ",
+   "box": [
+    [
+     41.458,
+     -81.575
+    ],
+    [
+     41.488,
+     -81.515
+    ]
+   ],
+   "home": "Van Aken & Warrensville"
+  },
+  {
+   "key": "buckeyeshaker",
+   "label": "Buckeye–Shaker",
+   "kana": "バックアイ・シェーカー",
+   "box": [
+    [
+     41.472,
+     -81.625
+    ],
+    [
+     41.496,
+     -81.585
+    ]
+   ],
+   "home": "E. 116th"
+  },
+  {
+   "key": "eastcleveland",
+   "label": "East Cleveland",
+   "kana": "イースト・クリーブランド",
+   "box": [
+    [
+     41.514,
+     -81.61
+    ],
+    [
+     41.54,
+     -81.566
+    ]
+   ],
+   "home": "Stokes–Windermere"
+  },
+  {
+   "key": "detroitshoreway",
+   "label": "Detroit–Shoreway",
+   "kana": "デトロイト・ショアウェイ",
+   "box": [
+    [
+     41.465,
+     -81.75
+    ],
+    [
+     41.49,
+     -81.708
+    ]
+   ],
+   "home": "W. 65th–Lorain"
+  },
+  {
+   "key": "lakewood",
+   "label": "Lakewood",
+   "kana": "レイクウッド",
+   "box": [
+    [
+     41.463,
+     -81.79
+    ],
+    [
+     41.488,
+     -81.748
+    ]
+   ],
+   "home": "W. 117th–Madison"
+  },
+  {
+   "key": "westpark",
+   "label": "West Park",
+   "kana": "ウェスト・パーク",
+   "box": [
+    [
+     41.43,
+     -81.82
+    ],
+    [
+     41.47,
+     -81.77
+    ]
+   ],
+   "home": "West Park"
+  },
+  {
+   "key": "hopkinsairport",
+   "label": "Cleveland Hopkins Airport",
+   "kana": "クリーブランド・ホプキンス空港",
+   "box": [
+    [
+     41.398,
+     -81.858
+    ],
+    [
+     41.448,
+     -81.792
+    ]
+   ],
+   "home": "Brookpark"
+  },
+  {
+   "key": "brookpark",
+   "label": "Brook Park",
+   "kana": "ブルックパーク",
+   "box": [
+    [
+     41.4,
+     -81.85
+    ],
+    [
+     41.44,
+     -81.79
+    ]
+   ],
+   "home": "Brookpark"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_cleveland.py",
+  "check": "scripts/validate_cleveland.py",
+  "arg": "cleveland",
+  "inputs": [
+   "cache:us/cleveland/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales, land uses, living areas, years built and parcel positions: Cuyahoga County Fiscal Officer, Cuyahoga Parcel Sales 2021 to Present (Cuyahoga County Fiscal GIS Hub). Cleveland's wards: Cuyahoga County (election wards). Cuyahoga County provides this data as a free public service on an \"as is\" basis; it is not an official public record, and the official records of the office from which it was compiled remain the official record. Stations and lines: Greater Cleveland Regional Transit Authority (GCRTA), the provider of the GTFS data, used under its Developer's License Agreement. Municipalities, counties and water: US Census Bureau cartographic boundary files and TIGER/Line area water.</span><span>This site is not produced, commissioned, sponsored or endorsed by Cuyahoga County, GCRTA or the US Census Bureau. Cuyahoga County makes no guarantee or warranty as to the accuracy, completeness, timeliness or fitness for any particular use of its data; GCRTA does not guarantee that its data are accurate, complete or current.</span>",
+  "priceSource": {
+   "en": "Prices: Cuyahoga County Fiscal Officer, parcel sales from 2021",
+   "ja": "価格：カイヤホガ郡財務官の区画取引記録（2021年以降）"
+  },
+  "attribution": "Stations and lines: Greater Cleveland RTA GTFS · Outlines: Cuyahoga County, US Census Bureau"
+ }
+}

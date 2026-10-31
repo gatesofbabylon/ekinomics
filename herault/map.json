@@ -1,0 +1,247 @@
+{
+ "key": "montpellier",
+ "country": "France",
+ "order": 8,
+ "path": "herault/",
+ "en": "Hérault",
+ "population": 1230289,
+ "tag": {
+  "en": "Hérault",
+  "ja": "エロー"
+ },
+ "cities": [
+  {
+   "key": "montpellier",
+   "en": "Montpellier",
+   "ja": "モンペリエ",
+   "population": 310240
+  }
+ ],
+ "goto": [
+  {
+   "key": "montpellier",
+   "label": "Montpellier",
+   "kana": "モンペリエ",
+   "box": [
+    [
+     43.565,
+     3.82
+    ],
+    [
+     43.655,
+     3.93
+    ]
+   ],
+   "home": "Comédie"
+  },
+  {
+   "key": "lattes",
+   "label": "Lattes",
+   "kana": "ラット",
+   "box": [
+    [
+     43.541,
+     3.86
+    ],
+    [
+     43.601,
+     3.95
+    ]
+   ],
+   "home": "Lattes Centre"
+  },
+  {
+   "key": "perols",
+   "label": "Pérols",
+   "kana": "ペロル",
+   "box": [
+    [
+     43.535,
+     3.912
+    ],
+    [
+     43.595,
+     4.002
+    ]
+   ],
+   "home": "Pérols Centre"
+  },
+  {
+   "key": "juvignac",
+   "label": "Juvignac",
+   "kana": "ジュヴィニャック",
+   "box": [
+    [
+     43.587,
+     3.765
+    ],
+    [
+     43.647,
+     3.855
+    ]
+   ],
+   "home": "Juvignac"
+  },
+  {
+   "key": "jacou",
+   "label": "Jacou",
+   "kana": "ジャク",
+   "box": [
+    [
+     43.625,
+     3.868
+    ],
+    [
+     43.685,
+     3.958
+    ]
+   ],
+   "home": "Jacou"
+  },
+  {
+   "key": "saintjeandevedas",
+   "label": "Saint-Jean-de-Védas",
+   "kana": "サン＝ジャン＝ド＝ヴェダ",
+   "box": [
+    [
+     43.545,
+     3.786
+    ],
+    [
+     43.605,
+     3.876
+    ]
+   ],
+   "home": "Saint-Jean de Védas Centre"
+  },
+  {
+   "key": "sete",
+   "label": "Sète",
+   "kana": "セット",
+   "box": [
+    [
+     43.383,
+     3.652
+    ],
+    [
+     43.443,
+     3.742
+    ]
+   ],
+   "home": "Sète"
+  },
+  {
+   "key": "frontignan",
+   "label": "Frontignan",
+   "kana": "フロンティニャン",
+   "box": [
+    [
+     43.415,
+     3.714
+    ],
+    [
+     43.475,
+     3.804
+    ]
+   ],
+   "home": "Frontignan"
+  },
+  {
+   "key": "agde",
+   "label": "Agde",
+   "kana": "アグド",
+   "box": [
+    [
+     43.287,
+     3.421
+    ],
+    [
+     43.347,
+     3.511
+    ]
+   ],
+   "home": "Agde"
+  },
+  {
+   "key": "marseillan",
+   "label": "Marseillan",
+   "kana": "マルセイヤン",
+   "box": [
+    [
+     43.288,
+     3.491
+    ],
+    [
+     43.348,
+     3.581
+    ]
+   ],
+   "home": "Marseillan Plage"
+  },
+  {
+   "key": "beziers",
+   "label": "Béziers",
+   "kana": "ベジエ",
+   "box": [
+    [
+     43.306,
+     3.174
+    ],
+    [
+     43.366,
+     3.264
+    ]
+   ],
+   "home": "Béziers"
+  },
+  {
+   "key": "lunel",
+   "label": "Lunel",
+   "kana": "リュネル",
+   "box": [
+    [
+     43.649,
+     4.086
+    ],
+    [
+     43.709,
+     4.176
+    ]
+   ],
+   "home": "Lunel"
+  },
+  {
+   "key": "bedarieux",
+   "label": "Bédarieux",
+   "kana": "ベダリュー",
+   "box": [
+    [
+     43.579,
+     3.105
+    ],
+    [
+     43.639,
+     3.195
+    ]
+   ],
+   "home": "Bédarieux"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_france.py",
+  "check": "scripts/validate_france.py",
+  "arg": "montpellier",
+  "settings": "assets/fr_areas.json",
+  "inputs": [
+   "cache:france/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales: Demandes de valeurs foncières, Direction générale des Finances publiques (DGFiP), as structured by Cerema in <a href=\"https://www.data.gouv.fr/datasets/dvf-open-data\" target=\"_blank\" rel=\"noopener\">DVF+ open data</a> (October 2026 release), Licence Ouverte 2.0.</span><span>Stations and lines: TaM, GTFS timetables published by Montpellier Méditerranée Métropole (ODbL); SNCF timetables (ODbL); track: SNCF Réseau, shapes of the lines of the national rail network (ODbL). The stations and lines in this map's data files are derived from these sources and are available under the ODbL. Département outlines: IGN Admin Express, via Etalab, Licence Ouverte 2.0. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: DVF+ open data (Cerema, from DGFiP), Licence Ouverte 2.0",
+   "ja": "価格：DVF+ open data（Cerema、DGFiP の DVF から作成）、Licence Ouverte 2.0"
+  },
+  "attribution": "Stations: TaM (ODbL) and SNCF (ODbL) · Track: SNCF Réseau (ODbL) · Outlines: IGN via Etalab"
+ }
+}

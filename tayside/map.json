@@ -1,0 +1,131 @@
+{
+ "key": "tayside",
+ "country": "United Kingdom",
+ "order": 12,
+ "path": "tayside/",
+ "en": "Tayside",
+ "population": 417930,
+ "tag": {
+  "en": "Tayside",
+  "ja": "テイサイド"
+ },
+ "cities": [
+  {
+   "key": "dundee",
+   "en": "Dundee",
+   "ja": "ダンディー",
+   "population": 148390
+  },
+  {
+   "key": "perth",
+   "en": "Perth",
+   "ja": "パース",
+   "population": 47350
+  }
+ ],
+ "goto": [
+  {
+   "key": "dundee",
+   "label": "Dundee",
+   "kana": "ダンディー",
+   "box": [
+    [
+     56.44,
+     -3.05
+    ],
+    [
+     56.49,
+     -2.9
+    ]
+   ],
+   "home": "Dundee"
+  },
+  {
+   "key": "perth",
+   "label": "Perth",
+   "kana": "パース",
+   "box": [
+    [
+     56.37,
+     -3.48
+    ],
+    [
+     56.42,
+     -3.4
+    ]
+   ],
+   "home": "Perth"
+  },
+  {
+   "key": "arbroath",
+   "label": "Arbroath",
+   "kana": "アーブロース",
+   "box": [
+    [
+     56.54,
+     -2.62
+    ],
+    [
+     56.58,
+     -2.55
+    ]
+   ],
+   "home": "Arbroath"
+  },
+  {
+   "key": "montrose",
+   "label": "Montrose",
+   "kana": "モントローズ",
+   "box": [
+    [
+     56.69,
+     -2.5
+    ],
+    [
+     56.73,
+     -2.44
+    ]
+   ],
+   "home": "Montrose"
+  },
+  {
+   "key": "pitlochry",
+   "label": "Pitlochry",
+   "kana": "ピトロッホリー",
+   "box": [
+    [
+     56.69,
+     -3.76
+    ],
+    [
+     56.72,
+     -3.71
+    ]
+   ],
+   "home": "Pitlochry"
+  }
+ ],
+ "build": {
+  "family": "uk",
+  "script": "scripts/build_london.py",
+  "check": "scripts/validate_london.py",
+  "arg": "tayside",
+  "inputs": [
+   "assets/uk_areas.json",
+   "assets/london_station_lines_overrides.csv",
+   "assets/belfast_stations.csv",
+   "assets/*_districts.csv",
+   "cache:london/*",
+   "cache:london/tfl",
+   "cache:london/boundaries",
+   "cache:london/bods",
+   "cache:london/vmd",
+   "cache:london/scotland",
+   "cache:london/ni"
+  ]
+ },
+ "credits": {
+  "block": "<span>Contains Registers of Scotland data © Crown copyright and database right 2026. This data is licensed under the Open Government Licence v3.0. Data zone centroids: Scottish Government, Open Government Licence; contains OS data © Crown copyright and database right.</span><span>Council boundaries: Office for National Statistics, Open Government Licence; contains OS data © Crown copyright and database right 2024. Railway track: OS VectorMap District, Open Government Licence; contains OS data © Crown copyright and database right 2026. Stations: NaPTAN, Department for Transport, Open Government Licence. Lines: Powered by TfL Open Data. None of these bodies produced or endorses this site.</span>",
+  "attribution": "Contains OS data © Crown copyright and database right 2026 · Contains Registers of Scotland data © Crown copyright and database right 2026 · Powered by TfL Open Data"
+ }
+}

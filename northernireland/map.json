@@ -1,0 +1,205 @@
+{
+ "key": "belfast",
+ "country": "United Kingdom",
+ "order": 13,
+ "path": "northernireland/",
+ "en": "Belfast",
+ "population": 1364080,
+ "tag": {
+  "en": "N Ireland",
+  "ja": "北アイルランド"
+ },
+ "cities": [
+  {
+   "key": "belfast",
+   "en": "Belfast",
+   "ja": "ベルファスト",
+   "population": 351927
+  }
+ ],
+ "goto": [
+  {
+   "key": "belfast",
+   "label": "Belfast",
+   "kana": "ベルファスト",
+   "box": [
+    [
+     54.56,
+     -5.99
+    ],
+    [
+     54.63,
+     -5.86
+    ]
+   ],
+   "home": "Belfast Grand Central"
+  },
+  {
+   "key": "lisburn",
+   "label": "Lisburn",
+   "kana": "リスバーン",
+   "box": [
+    [
+     54.49,
+     -6.08
+    ],
+    [
+     54.53,
+     -6.01
+    ]
+   ],
+   "home": "Lisburn"
+  },
+  {
+   "key": "bangor",
+   "label": "Bangor",
+   "kana": "バンガー",
+   "box": [
+    [
+     54.64,
+     -5.71
+    ],
+    [
+     54.67,
+     -5.65
+    ]
+   ],
+   "home": "Bangor"
+  },
+  {
+   "key": "carrickfergus",
+   "label": "Carrickfergus",
+   "kana": "キャリクファーガス",
+   "box": [
+    [
+     54.7,
+     -5.84
+    ],
+    [
+     54.73,
+     -5.77
+    ]
+   ],
+   "home": "Carrickfergus"
+  },
+  {
+   "key": "holywood",
+   "label": "Holywood",
+   "kana": "ホーリーウッド",
+   "box": [
+    [
+     54.63,
+     -5.86
+    ],
+    [
+     54.65,
+     -5.81
+    ]
+   ],
+   "home": "Holywood"
+  },
+  {
+   "key": "antrim",
+   "label": "Antrim",
+   "kana": "アントリム",
+   "box": [
+    [
+     54.7,
+     -6.24
+    ],
+    [
+     54.73,
+     -6.18
+    ]
+   ],
+   "home": "Antrim"
+  },
+  {
+   "key": "ballymena",
+   "label": "Ballymena",
+   "kana": "バリミーナ",
+   "box": [
+    [
+     54.85,
+     -6.31
+    ],
+    [
+     54.88,
+     -6.25
+    ]
+   ],
+   "home": "Ballymena"
+  },
+  {
+   "key": "larne",
+   "label": "Larne",
+   "kana": "ラーン",
+   "box": [
+    [
+     54.84,
+     -5.84
+    ],
+    [
+     54.87,
+     -5.79
+    ]
+   ],
+   "home": "Larne Town"
+  },
+  {
+   "key": "lurgan",
+   "label": "Lurgan",
+   "kana": "ラーガン",
+   "box": [
+    [
+     54.45,
+     -6.36
+    ],
+    [
+     54.48,
+     -6.31
+    ]
+   ],
+   "home": "Lurgan"
+  },
+  {
+   "key": "portadown",
+   "label": "Portadown",
+   "kana": "ポータダウン",
+   "box": [
+    [
+     54.41,
+     -6.47
+    ],
+    [
+     54.44,
+     -6.42
+    ]
+   ],
+   "home": "Portadown"
+  }
+ ],
+ "build": {
+  "family": "uk",
+  "script": "scripts/build_london.py",
+  "check": "scripts/validate_london.py",
+  "arg": "belfast",
+  "inputs": [
+   "assets/uk_areas.json",
+   "assets/london_station_lines_overrides.csv",
+   "assets/belfast_stations.csv",
+   "assets/*_districts.csv",
+   "cache:london/*",
+   "cache:london/tfl",
+   "cache:london/boundaries",
+   "cache:london/bods",
+   "cache:london/vmd",
+   "cache:london/scotland",
+   "cache:london/ni"
+  ]
+ },
+ "credits": {
+  "block": "<span>Contains Land &amp; Property Services data © Crown copyright and database right 2026, licensed under the Open Government Licence v3.0. Ward positions: ONS Postcode Directory, Open Government Licence; contains LPS Intellectual Property © Crown copyright and database right 2024.</span><span>Ward and council boundaries: Office for National Statistics, Open Government Licence; contains OS data © Crown copyright and database right 2024. Railway track and loughs: OSNI Open Data 1:50,000 transport and Northern Ireland outline, © Crown copyright, Land &amp; Property Services, Open Government Licence. Stations: Translink, OpenDataNI, Open Government Licence; lines and newer stations: English Wikipedia, CC BY-SA 4.0. Land beyond the border: Tailte Éireann, CC BY 4.0. None of these bodies produced or endorses this site.</span>",
+  "attribution": "Contains OSNI and LPS data © Crown copyright 2026 · Contains OS data © Crown copyright and database right 2024 · Tailte Éireann CC BY 4.0"
+ }
+}

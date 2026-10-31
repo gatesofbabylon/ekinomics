@@ -1,0 +1,791 @@
+{
+ "key": "boston",
+ "country": "United States",
+ "order": 14,
+ "path": "massachusetts/",
+ "en": "Greater Boston",
+ "population": 4460526,
+ "tag": {
+  "en": "Massachusetts",
+  "ja": "マサチューセッツ州"
+ },
+ "cities": [
+  {
+   "key": "boston",
+   "en": "Boston",
+   "ja": "ボストン",
+   "population": 672973
+  }
+ ],
+ "goto": [
+  {
+   "key": "boston",
+   "label": "Boston",
+   "kana": "ボストン",
+   "box": [
+    [
+     42.345,
+     -71.075
+    ],
+    [
+     42.368,
+     -71.045
+    ]
+   ],
+   "home": "Park Street"
+  },
+  {
+   "key": "backbay",
+   "label": "Back Bay",
+   "kana": "バックベイ",
+   "box": [
+    [
+     42.332,
+     -71.096
+    ],
+    [
+     42.362,
+     -71.056
+    ]
+   ],
+   "home": "Back Bay"
+  },
+  {
+   "key": "southend",
+   "label": "South End",
+   "kana": "サウスエンド",
+   "box": [
+    [
+     42.327,
+     -71.103
+    ],
+    [
+     42.357,
+     -71.063
+    ]
+   ],
+   "home": "Massachusetts Avenue"
+  },
+  {
+   "key": "southboston",
+   "label": "South Boston",
+   "kana": "サウスボストン",
+   "box": [
+    [
+     42.328,
+     -71.077
+    ],
+    [
+     42.358,
+     -71.037
+    ]
+   ],
+   "home": "Broadway"
+  },
+  {
+   "key": "charlestown",
+   "label": "Charlestown",
+   "kana": "チャールズタウン",
+   "box": [
+    [
+     42.359,
+     -71.09
+    ],
+    [
+     42.389,
+     -71.05
+    ]
+   ],
+   "home": "Community College"
+  },
+  {
+   "key": "eastboston",
+   "label": "East Boston",
+   "kana": "イーストボストン",
+   "box": [
+    [
+     42.354,
+     -71.06
+    ],
+    [
+     42.384,
+     -71.02
+    ]
+   ],
+   "home": "Maverick"
+  },
+  {
+   "key": "dorchester",
+   "label": "Dorchester",
+   "kana": "ドーチェスター",
+   "box": [
+    [
+     42.285,
+     -71.082
+    ],
+    [
+     42.315,
+     -71.042
+    ]
+   ],
+   "home": "Fields Corner"
+  },
+  {
+   "key": "roxbury",
+   "label": "Roxbury",
+   "kana": "ロクスベリー",
+   "box": [
+    [
+     42.316,
+     -71.115
+    ],
+    [
+     42.346,
+     -71.075
+    ]
+   ],
+   "home": "Roxbury Crossing"
+  },
+  {
+   "key": "jamaicaplain",
+   "label": "Jamaica Plain",
+   "kana": "ジャマイカ・プレイン",
+   "box": [
+    [
+     42.296,
+     -71.127
+    ],
+    [
+     42.326,
+     -71.087
+    ]
+   ],
+   "home": "Green Street"
+  },
+  {
+   "key": "brighton",
+   "label": "Brighton",
+   "kana": "ブライトン",
+   "box": [
+    [
+     42.342,
+     -71.16
+    ],
+    [
+     42.372,
+     -71.12
+    ]
+   ],
+   "home": "Boston Landing"
+  },
+  {
+   "key": "cambridge",
+   "label": "Cambridge",
+   "kana": "ケンブリッジ",
+   "box": [
+    [
+     42.358,
+     -71.139
+    ],
+    [
+     42.388,
+     -71.099
+    ]
+   ],
+   "home": "Harvard"
+  },
+  {
+   "key": "kendall",
+   "label": "Kendall Square",
+   "kana": "ケンドール・スクエア",
+   "box": [
+    [
+     42.347,
+     -71.106
+    ],
+    [
+     42.377,
+     -71.066
+    ]
+   ],
+   "home": "Kendall/MIT"
+  },
+  {
+   "key": "somerville",
+   "label": "Somerville",
+   "kana": "サマービル",
+   "box": [
+    [
+     42.382,
+     -71.142
+    ],
+    [
+     42.412,
+     -71.102
+    ]
+   ],
+   "home": "Davis"
+  },
+  {
+   "key": "brookline",
+   "label": "Brookline",
+   "kana": "ブルックライン",
+   "box": [
+    [
+     42.327,
+     -71.141
+    ],
+    [
+     42.357,
+     -71.101
+    ]
+   ],
+   "home": "Coolidge Corner"
+  },
+  {
+   "key": "newton",
+   "label": "Newton",
+   "kana": "ニュートン",
+   "box": [
+    [
+     42.314,
+     -71.212
+    ],
+    [
+     42.344,
+     -71.172
+    ]
+   ],
+   "home": "Newton Centre"
+  },
+  {
+   "key": "quincy",
+   "label": "Quincy",
+   "kana": "クインシー",
+   "box": [
+    [
+     42.237,
+     -71.025
+    ],
+    [
+     42.267,
+     -70.985
+    ]
+   ],
+   "home": "Quincy Center"
+  },
+  {
+   "key": "malden",
+   "label": "Malden",
+   "kana": "モールデン",
+   "box": [
+    [
+     42.412,
+     -71.094
+    ],
+    [
+     42.442,
+     -71.054
+    ]
+   ],
+   "home": "Malden Center"
+  },
+  {
+   "key": "medford",
+   "label": "Medford",
+   "kana": "メドフォード",
+   "box": [
+    [
+     42.393,
+     -71.137
+    ],
+    [
+     42.423,
+     -71.097
+    ]
+   ],
+   "home": "Medford/Tufts"
+  },
+  {
+   "key": "chelsea",
+   "label": "Chelsea",
+   "kana": "チェルシー",
+   "box": [
+    [
+     42.382,
+     -71.061
+    ],
+    [
+     42.412,
+     -71.021
+    ]
+   ],
+   "home": "Chelsea"
+  },
+  {
+   "key": "revere",
+   "label": "Revere",
+   "kana": "リビア",
+   "box": [
+    [
+     42.393,
+     -71.013
+    ],
+    [
+     42.423,
+     -70.973
+    ]
+   ],
+   "home": "Revere Beach"
+  },
+  {
+   "key": "waltham",
+   "label": "Waltham",
+   "kana": "ウォルサム",
+   "box": [
+    [
+     42.359,
+     -71.256
+    ],
+    [
+     42.389,
+     -71.216
+    ]
+   ],
+   "home": "Waltham"
+  },
+  {
+   "key": "lowell",
+   "label": "Lowell",
+   "kana": "ローウェル",
+   "box": [
+    [
+     42.62,
+     -71.335
+    ],
+    [
+     42.65,
+     -71.295
+    ]
+   ],
+   "home": "Lowell"
+  },
+  {
+   "key": "lawrence",
+   "label": "Lawrence",
+   "kana": "ローレンス",
+   "box": [
+    [
+     42.687,
+     -71.172
+    ],
+    [
+     42.717,
+     -71.132
+    ]
+   ],
+   "home": "Lawrence"
+  },
+  {
+   "key": "haverhill",
+   "label": "Haverhill",
+   "kana": "ヘイバーヒル",
+   "box": [
+    [
+     42.758,
+     -71.106
+    ],
+    [
+     42.788,
+     -71.066
+    ]
+   ],
+   "home": "Haverhill"
+  },
+  {
+   "key": "andover",
+   "label": "Andover",
+   "kana": "アンドーバー",
+   "box": [
+    [
+     42.643,
+     -71.165
+    ],
+    [
+     42.673,
+     -71.125
+    ]
+   ],
+   "home": "Andover"
+  },
+  {
+   "key": "woburn",
+   "label": "Woburn",
+   "kana": "ウォバーン",
+   "box": [
+    [
+     42.502,
+     -71.164
+    ],
+    [
+     42.532,
+     -71.124
+    ]
+   ],
+   "home": "Anderson/Woburn"
+  },
+  {
+   "key": "lynn",
+   "label": "Lynn",
+   "kana": "リン",
+   "box": [
+    [
+     42.45,
+     -70.96
+    ],
+    [
+     42.48,
+     -70.92
+    ]
+   ],
+   "home": "Lynn Interim"
+  },
+  {
+   "key": "salem",
+   "label": "Salem",
+   "kana": "セーラム",
+   "box": [
+    [
+     42.51,
+     -70.916
+    ],
+    [
+     42.54,
+     -70.876
+    ]
+   ],
+   "home": "Salem"
+  },
+  {
+   "key": "beverly",
+   "label": "Beverly",
+   "kana": "ビバリー",
+   "box": [
+    [
+     42.532,
+     -70.905
+    ],
+    [
+     42.562,
+     -70.865
+    ]
+   ],
+   "home": "Beverly"
+  },
+  {
+   "key": "gloucester",
+   "label": "Gloucester",
+   "kana": "グロスター",
+   "box": [
+    [
+     42.602,
+     -70.688
+    ],
+    [
+     42.632,
+     -70.648
+    ]
+   ],
+   "home": "Gloucester"
+  },
+  {
+   "key": "rockport",
+   "label": "Rockport",
+   "kana": "ロックポート",
+   "box": [
+    [
+     42.64,
+     -70.647
+    ],
+    [
+     42.67,
+     -70.607
+    ]
+   ],
+   "home": "Rockport"
+  },
+  {
+   "key": "ipswich",
+   "label": "Ipswich",
+   "kana": "イプスウィッチ",
+   "box": [
+    [
+     42.662,
+     -70.861
+    ],
+    [
+     42.692,
+     -70.821
+    ]
+   ],
+   "home": "Ipswich"
+  },
+  {
+   "key": "newburyport",
+   "label": "Newburyport",
+   "kana": "ニューベリーポート",
+   "box": [
+    [
+     42.783,
+     -70.898
+    ],
+    [
+     42.813,
+     -70.858
+    ]
+   ],
+   "home": "Newburyport"
+  },
+  {
+   "key": "worcester",
+   "label": "Worcester",
+   "kana": "ウースター",
+   "box": [
+    [
+     42.246,
+     -71.815
+    ],
+    [
+     42.276,
+     -71.775
+    ]
+   ],
+   "home": "Worcester"
+  },
+  {
+   "key": "framingham",
+   "label": "Framingham",
+   "kana": "フレーミングハム",
+   "box": [
+    [
+     42.261,
+     -71.44
+    ],
+    [
+     42.291,
+     -71.4
+    ]
+   ],
+   "home": "Framingham"
+  },
+  {
+   "key": "wellesley",
+   "label": "Wellesley",
+   "kana": "ウェルズリー",
+   "box": [
+    [
+     42.283,
+     -71.314
+    ],
+    [
+     42.313,
+     -71.274
+    ]
+   ],
+   "home": "Wellesley Square"
+  },
+  {
+   "key": "needham",
+   "label": "Needham",
+   "kana": "ニーダム",
+   "box": [
+    [
+     42.266,
+     -71.258
+    ],
+    [
+     42.296,
+     -71.218
+    ]
+   ],
+   "home": "Needham Center"
+  },
+  {
+   "key": "dedham",
+   "label": "Dedham",
+   "kana": "デダム",
+   "box": [
+    [
+     42.218,
+     -71.179
+    ],
+    [
+     42.248,
+     -71.139
+    ]
+   ],
+   "home": "Endicott"
+  },
+  {
+   "key": "norwood",
+   "label": "Norwood",
+   "kana": "ノーウッド",
+   "box": [
+    [
+     42.174,
+     -71.22
+    ],
+    [
+     42.204,
+     -71.18
+    ]
+   ],
+   "home": "Norwood Central"
+  },
+  {
+   "key": "concord",
+   "label": "Concord",
+   "kana": "コンコード",
+   "box": [
+    [
+     42.442,
+     -71.378
+    ],
+    [
+     42.472,
+     -71.338
+    ]
+   ],
+   "home": "Concord"
+  },
+  {
+   "key": "fitchburg",
+   "label": "Fitchburg",
+   "kana": "フィッチバーグ",
+   "box": [
+    [
+     42.566,
+     -71.813
+    ],
+    [
+     42.596,
+     -71.773
+    ]
+   ],
+   "home": "Fitchburg"
+  },
+  {
+   "key": "braintree",
+   "label": "Braintree",
+   "kana": "ブレインツリー",
+   "box": [
+    [
+     42.193,
+     -71.021
+    ],
+    [
+     42.223,
+     -70.981
+    ]
+   ],
+   "home": "Braintree"
+  },
+  {
+   "key": "scituate",
+   "label": "Scituate",
+   "kana": "シチュエート",
+   "box": [
+    [
+     42.164,
+     -70.767
+    ],
+    [
+     42.194,
+     -70.727
+    ]
+   ],
+   "home": "Greenbush"
+  },
+  {
+   "key": "brockton",
+   "label": "Brockton",
+   "kana": "ブロックトン",
+   "box": [
+    [
+     42.07,
+     -71.037
+    ],
+    [
+     42.1,
+     -70.997
+    ]
+   ],
+   "home": "Brockton"
+  },
+  {
+   "key": "attleboro",
+   "label": "Attleboro",
+   "kana": "アトルボロ",
+   "box": [
+    [
+     41.926,
+     -71.305
+    ],
+    [
+     41.956,
+     -71.265
+    ]
+   ],
+   "home": "Attleboro"
+  },
+  {
+   "key": "fallriver",
+   "label": "Fall River",
+   "kana": "フォールリバー",
+   "box": [
+    [
+     41.699,
+     -71.174
+    ],
+    [
+     41.729,
+     -71.134
+    ]
+   ],
+   "home": "Fall River Depot"
+  },
+  {
+   "key": "newbedford",
+   "label": "New Bedford",
+   "kana": "ニューベッドフォード",
+   "box": [
+    [
+     41.629,
+     -70.945
+    ],
+    [
+     41.659,
+     -70.905
+    ]
+   ],
+   "home": "New Bedford"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_boston.py",
+  "check": "scripts/validate_boston.py",
+  "arg": "boston",
+  "inputs": [
+   "cache:us/boston/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales: Massachusetts Department of Revenue, Division of Local Services (LA3 sales reports, DLS Gateway). Floor areas, years built and parcel positions: MassGIS (Bureau of Geographic Information), Property Tax Parcels. Stations and lines: MBTA GTFS, data provided by the Massachusetts Department of Transportation (MassDOT). Towns, counties and the shore: US Census Bureau cartographic boundary files and TIGER/Line.</span><span>This site is not sponsored by, affiliated with or operated by any of these bodies, and none of the Massachusetts Department of Revenue, MassGIS, MassDOT, the MBTA or the US Census Bureau produced or endorses it. The data are provided as is, without any warranty that they are accurate, current or complete, and are used here at the reader's own risk.</span>",
+  "priceSource": {
+   "en": "Prices: Massachusetts Department of Revenue, Division of Local Services, LA3 sales reports (DLS Gateway)",
+   "ja": "価格：マサチューセッツ州歳入局 地方行政サービス部 LA3取引報告（DLS Gateway）"
+  },
+  "attribution": "Stations and lines: MBTA GTFS, data provided by MassDOT (not affiliated with MassDOT or the MBTA) · Floor areas and parcel points: MassGIS · Outlines: US Census Bureau"
+ }
+}

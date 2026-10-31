@@ -1,0 +1,279 @@
+{
+ "key": "denver",
+ "country": "United States",
+ "order": 3,
+ "path": "colorado/",
+ "en": "Denver",
+ "population": 740613,
+ "tag": {
+  "en": "Colorado",
+  "ja": "コロラド州"
+ },
+ "cities": [
+  {
+   "key": "denver",
+   "en": "Denver",
+   "ja": "デンバー",
+   "population": 740613
+  }
+ ],
+ "goto": [
+  {
+   "key": "denver",
+   "label": "Denver",
+   "kana": "デンバー",
+   "box": [
+    [
+     39.735,
+     -105.02
+    ],
+    [
+     39.765,
+     -104.98
+    ]
+   ],
+   "home": "Union Station"
+  },
+  {
+   "key": "fivepoints",
+   "label": "Five Points",
+   "kana": "ファイブ・ポインツ",
+   "box": [
+    [
+     39.755,
+     -104.99
+    ],
+    [
+     39.785,
+     -104.95
+    ]
+   ],
+   "home": "38th & Blake"
+  },
+  {
+   "key": "highlands",
+   "label": "Highlands",
+   "kana": "ハイランズ",
+   "box": [
+    [
+     39.75,
+     -105.04
+    ],
+    [
+     39.78,
+     -105
+    ]
+   ],
+   "home": "Union Station"
+  },
+  {
+   "key": "centralpark",
+   "label": "Central Park",
+   "kana": "セントラル・パーク",
+   "box": [
+    [
+     39.755,
+     -104.915
+    ],
+    [
+     39.785,
+     -104.87
+    ]
+   ],
+   "home": "Central Park"
+  },
+  {
+   "key": "virginiavillage",
+   "label": "Virginia Village",
+   "kana": "バージニア・ビレッジ",
+   "box": [
+    [
+     39.665,
+     -104.96
+    ],
+    [
+     39.695,
+     -104.92
+    ]
+   ],
+   "home": "Colorado"
+  },
+  {
+   "key": "greenvalleyranch",
+   "label": "Green Valley Ranch",
+   "kana": "グリーン・バレー・ランチ",
+   "box": [
+    [
+     39.775,
+     -104.81
+    ],
+    [
+     39.815,
+     -104.75
+    ]
+   ],
+   "home": "61st & Pena"
+  },
+  {
+   "key": "airport",
+   "label": "Denver Airport",
+   "kana": "デンバー空港",
+   "box": [
+    [
+     39.83,
+     -104.7
+    ],
+    [
+     39.865,
+     -104.65
+    ]
+   ],
+   "home": "Denver Airport"
+  },
+  {
+   "key": "baker",
+   "label": "Baker",
+   "kana": "ベイカー",
+   "box": [
+    [
+     39.695,
+     -105.01
+    ],
+    [
+     39.725,
+     -104.97
+    ]
+   ],
+   "home": "Alameda"
+  },
+  {
+   "key": "plattpark",
+   "label": "Platt Park",
+   "kana": "プラット・パーク",
+   "box": [
+    [
+     39.68,
+     -104.995
+    ],
+    [
+     39.71,
+     -104.955
+    ]
+   ],
+   "home": "Louisiana & Pearl"
+  },
+  {
+   "key": "university",
+   "label": "University",
+   "kana": "ユニバーシティ",
+   "box": [
+    [
+     39.67,
+     -104.985
+    ],
+    [
+     39.7,
+     -104.945
+    ]
+   ],
+   "home": "University of Denver"
+  },
+  {
+   "key": "lincolnpark",
+   "label": "Lincoln Park",
+   "kana": "リンカーン・パーク",
+   "box": [
+    [
+     39.72,
+     -105.025
+    ],
+    [
+     39.745,
+     -104.99
+    ]
+   ],
+   "home": "10th & Osage"
+  },
+  {
+   "key": "westcolfax",
+   "label": "West Colfax",
+   "kana": "ウェスト・コルファックス",
+   "box": [
+    [
+     39.72,
+     -105.06
+    ],
+    [
+     39.75,
+     -105.02
+    ]
+   ],
+   "home": "Perry"
+  },
+  {
+   "key": "globeville",
+   "label": "Globeville",
+   "kana": "グローブビル",
+   "box": [
+    [
+     39.765,
+     -105
+    ],
+    [
+     39.795,
+     -104.955
+    ]
+   ],
+   "home": "48th & Brighton-National Western"
+  },
+  {
+   "key": "universityhills",
+   "label": "University Hills",
+   "kana": "ユニバーシティ・ヒルズ",
+   "box": [
+    [
+     39.655,
+     -104.95
+    ],
+    [
+     39.685,
+     -104.91
+    ]
+   ],
+   "home": "Yale"
+  },
+  {
+   "key": "southmoor",
+   "label": "Southmoor",
+   "kana": "サウスモア",
+   "box": [
+    [
+     39.635,
+     -104.935
+    ],
+    [
+     39.665,
+     -104.895
+    ]
+   ],
+   "home": "Southmoor"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_denver.py",
+  "check": "scripts/validate_denver.py",
+  "arg": "denver",
+  "inputs": [
+   "cache:us/denver/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales, residential characteristics, parcel positions and statistical neighbourhoods: <a href=\"https://opendata-geospatialdenver.hub.arcgis.com/\" target=\"_blank\" rel=\"noopener\">City of Denver Open Data Catalog</a>, <a href=\"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\" rel=\"noopener\">CC BY 3.0</a>; the prices shown are medians derived from it. Light rail and commuter rail stations and lines: RTD GTFS. Counties: US Census Bureau cartographic boundary files.</span><span>This is an unofficial site. It is not endorsed by, sponsored by or affiliated with the Regional Transportation District (RTD), and the views on it are not RTD's. Neither the City and County of Denver nor the US Census Bureau produced or endorses it. The City and County of Denver provides its data as is, without warranty of any kind, and is not responsible for any use of it; the data are not for engineering purposes.</span>",
+  "priceSource": {
+   "en": "Prices: City and County of Denver real property sales (City of Denver Open Data Catalog, CC BY 3.0)",
+   "ja": "価格：デンバー市郡の不動産取引（デンバー市オープンデータカタログ、CC BY 3.0）"
+  },
+  "attribution": "Stations and lines: RTD GTFS (unofficial; not endorsed by RTD) · Outlines: City of Denver Open Data Catalog (CC BY 3.0), US Census Bureau"
+ }
+}

@@ -1,0 +1,407 @@
+{
+ "key": "seattle",
+ "country": "United States",
+ "order": 5,
+ "path": "washington/",
+ "en": "King County",
+ "population": 2344939,
+ "tag": {
+  "en": "Washington",
+  "ja": "ワシントン州"
+ },
+ "cities": [
+  {
+   "key": "seattle",
+   "en": "Seattle",
+   "ja": "シアトル",
+   "population": 784777
+  }
+ ],
+ "goto": [
+  {
+   "key": "seattle",
+   "label": "Seattle",
+   "kana": "シアトル",
+   "box": [
+    [
+     47.595,
+     -122.355
+    ],
+    [
+     47.625,
+     -122.315
+    ]
+   ],
+   "home": "Westlake"
+  },
+  {
+   "key": "capitolhill",
+   "label": "Capitol Hill",
+   "kana": "キャピトル・ヒル",
+   "box": [
+    [
+     47.604,
+     -122.34
+    ],
+    [
+     47.634,
+     -122.3
+    ]
+   ],
+   "home": "Capitol Hill"
+  },
+  {
+   "key": "southlakeunion",
+   "label": "South Lake Union",
+   "kana": "サウス・レイク・ユニオン",
+   "box": [
+    [
+     47.609,
+     -122.359
+    ],
+    [
+     47.639,
+     -122.319
+    ]
+   ],
+   "home": "Westlake & Mercer"
+  },
+  {
+   "key": "firsthill",
+   "label": "First Hill",
+   "kana": "ファースト・ヒル",
+   "box": [
+    [
+     47.595,
+     -122.341
+    ],
+    [
+     47.625,
+     -122.301
+    ]
+   ],
+   "home": "Broadway & Marion"
+  },
+  {
+   "key": "chinatown",
+   "label": "Chinatown-International District",
+   "kana": "チャイナタウン・インターナショナル・ディストリクト",
+   "box": [
+    [
+     47.583,
+     -122.348
+    ],
+    [
+     47.613,
+     -122.308
+    ]
+   ],
+   "home": "Int'l Dist/Chinatown"
+  },
+  {
+   "key": "sodo",
+   "label": "SODO",
+   "kana": "ソド",
+   "box": [
+    [
+     47.576,
+     -122.347
+    ],
+    [
+     47.606,
+     -122.307
+    ]
+   ],
+   "home": "Stadium"
+  },
+  {
+   "key": "universitydistrict",
+   "label": "University District",
+   "kana": "ユニバーシティ・ディストリクト",
+   "box": [
+    [
+     47.645,
+     -122.334
+    ],
+    [
+     47.675,
+     -122.294
+    ]
+   ],
+   "home": "U District"
+  },
+  {
+   "key": "roosevelt",
+   "label": "Roosevelt",
+   "kana": "ルーズベルト",
+   "box": [
+    [
+     47.662,
+     -122.336
+    ],
+    [
+     47.692,
+     -122.296
+    ]
+   ],
+   "home": "Roosevelt"
+  },
+  {
+   "key": "northgate",
+   "label": "Northgate",
+   "kana": "ノースゲート",
+   "box": [
+    [
+     47.688,
+     -122.348
+    ],
+    [
+     47.718,
+     -122.308
+    ]
+   ],
+   "home": "Northgate"
+  },
+  {
+   "key": "beaconhill",
+   "label": "Beacon Hill",
+   "kana": "ビーコン・ヒル",
+   "box": [
+    [
+     47.564,
+     -122.332
+    ],
+    [
+     47.594,
+     -122.292
+    ]
+   ],
+   "home": "Beacon Hill"
+  },
+  {
+   "key": "mountbaker",
+   "label": "Mount Baker",
+   "kana": "マウント・ベーカー",
+   "box": [
+    [
+     47.562,
+     -122.318
+    ],
+    [
+     47.592,
+     -122.278
+    ]
+   ],
+   "home": "Mount Baker"
+  },
+  {
+   "key": "columbiacity",
+   "label": "Columbia City",
+   "kana": "コロンビア・シティ",
+   "box": [
+    [
+     47.545,
+     -122.313
+    ],
+    [
+     47.575,
+     -122.273
+    ]
+   ],
+   "home": "Columbia City"
+  },
+  {
+   "key": "othello",
+   "label": "Othello",
+   "kana": "オセロ",
+   "box": [
+    [
+     47.523,
+     -122.302
+    ],
+    [
+     47.553,
+     -122.262
+    ]
+   ],
+   "home": "Othello"
+  },
+  {
+   "key": "rainierbeach",
+   "label": "Rainier Beach",
+   "kana": "レーニア・ビーチ",
+   "box": [
+    [
+     47.507,
+     -122.299
+    ],
+    [
+     47.537,
+     -122.259
+    ]
+   ],
+   "home": "Rainier Beach"
+  },
+  {
+   "key": "shoreline",
+   "label": "Shoreline",
+   "kana": "ショアライン",
+   "box": [
+    [
+     47.721,
+     -122.345
+    ],
+    [
+     47.751,
+     -122.305
+    ]
+   ],
+   "home": "Shoreline South/148th"
+  },
+  {
+   "key": "bellevue",
+   "label": "Bellevue",
+   "kana": "ベルビュー",
+   "box": [
+    [
+     47.6,
+     -122.212
+    ],
+    [
+     47.63,
+     -122.172
+    ]
+   ],
+   "home": "Bellevue Downtown"
+  },
+  {
+   "key": "mercerisland",
+   "label": "Mercer Island",
+   "kana": "マーサー・アイランド",
+   "box": [
+    [
+     47.573,
+     -122.253
+    ],
+    [
+     47.603,
+     -122.213
+    ]
+   ],
+   "home": "Mercer Island"
+  },
+  {
+   "key": "redmond",
+   "label": "Redmond",
+   "kana": "レドモンド",
+   "box": [
+    [
+     47.657,
+     -122.138
+    ],
+    [
+     47.687,
+     -122.098
+    ]
+   ],
+   "home": "Downtown Redmond"
+  },
+  {
+   "key": "tukwila",
+   "label": "Tukwila",
+   "kana": "タクウィラ",
+   "box": [
+    [
+     47.449,
+     -122.308
+    ],
+    [
+     47.479,
+     -122.268
+    ]
+   ],
+   "home": "Tukwila Int'l Blvd"
+  },
+  {
+   "key": "seatac",
+   "label": "SeaTac",
+   "kana": "シータック",
+   "box": [
+    [
+     47.43,
+     -122.317
+    ],
+    [
+     47.46,
+     -122.277
+    ]
+   ],
+   "home": "SeaTac/Airport"
+  },
+  {
+   "key": "kent",
+   "label": "Kent",
+   "kana": "ケント",
+   "box": [
+    [
+     47.369,
+     -122.253
+    ],
+    [
+     47.399,
+     -122.213
+    ]
+   ],
+   "home": "Kent Sounder Station"
+  },
+  {
+   "key": "auburn",
+   "label": "Auburn",
+   "kana": "オーバーン",
+   "box": [
+    [
+     47.291,
+     -122.252
+    ],
+    [
+     47.321,
+     -122.212
+    ]
+   ],
+   "home": "Auburn Station"
+  },
+  {
+   "key": "federalway",
+   "label": "Federal Way",
+   "kana": "フェデラル・ウェイ",
+   "box": [
+    [
+     47.301,
+     -122.324
+    ],
+    [
+     47.331,
+     -122.284
+    ]
+   ],
+   "home": "Federal Way Downtown"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_seattle.py",
+  "check": "scripts/validate_seattle.py",
+  "arg": "seattle",
+  "inputs": [
+   "cache:us/seattle/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales, residential buildings, condo units and parcels: King County Department of Assessments. Parcel positions and city boundaries: King County GIS. Seattle districts: City of Seattle. Station and line data provided on an \"AS IS\" basis by Sound Transit and King County Metro (with the Seattle Streetcar). Counties and water: US Census Bureau.</span><span>None of these bodies produced or endorses this site. The information included on this map has been compiled by King County staff from a variety of sources and is subject to change without notice. King County makes no representations or warranties, express or implied, as to accuracy, completeness, timeliness, or rights to the use of such information. King County shall not be liable for any general, special, indirect, incidental, or consequential damages including, but not limited to, lost revenues or lost profits resulting from the use or misuse of the information contained on this map. Any sale of this map or information on this map is prohibited except by written permission of King County.</span>",
+  "priceSource": {
+   "en": "Prices: King County Department of Assessments sales (data download)",
+   "ja": "価格：キング郡査定局の不動産取引（データダウンロード）"
+  },
+  "attribution": "Stations and lines: Sound Transit and King County Metro GTFS, as is · Outlines: King County GIS, City of Seattle, US Census Bureau"
+ }
+}

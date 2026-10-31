@@ -1,0 +1,119 @@
+{
+ "key": "canberra",
+ "country": "Australia",
+ "order": 5,
+ "path": "canberra/",
+ "en": "Canberra",
+ "population": 552263,
+ "tag": {
+  "en": "ACT",
+  "ja": "首都特別地域"
+ },
+ "cities": [
+  {
+   "key": "canberra",
+   "en": "Canberra",
+   "ja": "キャンベラ",
+   "population": 484630
+  }
+ ],
+ "goto": [
+  {
+   "key": "canberra",
+   "label": "Canberra",
+   "kana": "キャンベラ",
+   "box": [
+    [
+     -35.325,
+     149.095
+    ],
+    [
+     -35.245,
+     149.165
+    ]
+   ],
+   "home": "Alinga Street"
+  },
+  {
+   "key": "dickson",
+   "label": "Dickson",
+   "kana": "ディクソン",
+   "box": [
+    [
+     -35.275,
+     149.099
+    ],
+    [
+     -35.225,
+     149.169
+    ]
+   ],
+   "home": "Dickson Interchange"
+  },
+  {
+   "key": "gungahlin",
+   "label": "Gungahlin",
+   "kana": "ガンガーリン",
+   "box": [
+    [
+     -35.21,
+     149.1
+    ],
+    [
+     -35.16,
+     149.17
+    ]
+   ],
+   "home": "Gungahlin Place"
+  },
+  {
+   "key": "kingston",
+   "label": "Kingston",
+   "kana": "キングストン",
+   "box": [
+    [
+     -35.344,
+     149.114
+    ],
+    [
+     -35.294,
+     149.184
+    ]
+   ],
+   "home": "Canberra"
+  },
+  {
+   "key": "queanbeyan",
+   "label": "Queanbeyan",
+   "kana": "クイーンビアン",
+   "box": [
+    [
+     -35.368,
+     149.193
+    ],
+    [
+     -35.318,
+     149.263
+    ]
+   ],
+   "home": "Queanbeyan"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_australia.py",
+  "check": "scripts/validate_australia.py",
+  "arg": "canberra",
+  "settings": "assets/au_areas.json",
+  "inputs": [
+   "cache:australia/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Prices: based on Australian Bureau of Statistics data, <a href=\"https://www.abs.gov.au/methodologies/data-region-methodology/2011-25\" target=\"_blank\" rel=\"noopener\">Data by region</a>, residential property transfers by SA2 (sales data supplied to the ABS by Cotality), © Commonwealth of Australia, licensed under <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>; the station blends are Ekinomics’ own calculation from those figures. Stations and lines: Transport Canberra light rail timetable (GTFS), published by Canberra Metro Operations, licensed under <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>; NSW TrainLink stations and line: Source: Transport for NSW (<a href=\"https://opendata.transport.nsw.gov.au/\" target=\"_blank\" rel=\"noopener\">Open Data Hub</a>, Timetables Complete GTFS), CC BY 4.0.</span><span>SA2, district (SA3), council and ACT boundaries: Australian Bureau of Statistics, ASGS 2016 and Edition 3 (2021), CC BY 4.0. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: based on ABS Data by region (CC BY 4.0)",
+   "ja": "価格：ABS Data by region（CC BY 4.0）に基づく"
+  },
+  "attribution": "Stations: Transport Canberra (CC BY 4.0) · Source: Transport for NSW (CC BY 4.0) · Outlines: ABS ASGS (CC BY 4.0)"
+ }
+}

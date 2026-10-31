@@ -1,0 +1,327 @@
+{
+ "key": "newyork",
+ "country": "United States",
+ "order": 0,
+ "path": "newyork/",
+ "en": "New York City",
+ "population": 8584629,
+ "tag": {
+  "en": "New York",
+  "ja": "ニューヨーク州"
+ },
+ "cities": [
+  {
+   "key": "newyork",
+   "en": "New York",
+   "ja": "ニューヨーク",
+   "population": 8584629
+  }
+ ],
+ "goto": [
+  {
+   "key": "newyork",
+   "label": "New York",
+   "kana": "ニューヨーク",
+   "box": [
+    [
+     40.7,
+     -74.02
+    ],
+    [
+     40.8,
+     -73.93
+    ]
+   ],
+   "home": "Grand Central"
+  },
+  {
+   "key": "downtownbrooklyn",
+   "label": "Downtown Brooklyn",
+   "kana": "ダウンタウン・ブルックリン",
+   "box": [
+    [
+     40.677,
+     -74.007
+    ],
+    [
+     40.707,
+     -73.967
+    ]
+   ],
+   "home": "Jay St-MetroTech"
+  },
+  {
+   "key": "williamsburg",
+   "label": "Williamsburg",
+   "kana": "ウィリアムズバーグ",
+   "box": [
+    [
+     40.702,
+     -73.977
+    ],
+    [
+     40.732,
+     -73.937
+    ]
+   ],
+   "home": "Bedford Av"
+  },
+  {
+   "key": "longislandcity",
+   "label": "Long Island City",
+   "kana": "ロングアイランドシティ",
+   "box": [
+    [
+     40.732,
+     -73.965
+    ],
+    [
+     40.762,
+     -73.925
+    ]
+   ],
+   "home": "Court Sq"
+  },
+  {
+   "key": "astoria",
+   "label": "Astoria",
+   "kana": "アストリア",
+   "box": [
+    [
+     40.752,
+     -73.94
+    ],
+    [
+     40.782,
+     -73.9
+    ]
+   ],
+   "home": "Astoria-Ditmars Blvd"
+  },
+  {
+   "key": "harlem",
+   "label": "Harlem",
+   "kana": "ハーレム",
+   "box": [
+    [
+     40.795,
+     -73.965
+    ],
+    [
+     40.825,
+     -73.925
+    ]
+   ],
+   "home": "Harlem-125 St"
+  },
+  {
+   "key": "bronx",
+   "label": "The Bronx",
+   "kana": "ブロンクス",
+   "box": [
+    [
+     40.847,
+     -73.911
+    ],
+    [
+     40.877,
+     -73.871
+    ]
+   ],
+   "home": "Fordham"
+  },
+  {
+   "key": "riverdale",
+   "label": "Riverdale",
+   "kana": "リバーデール",
+   "box": [
+    [
+     40.889,
+     -73.934
+    ],
+    [
+     40.919,
+     -73.894
+    ]
+   ],
+   "home": "Riverdale"
+  },
+  {
+   "key": "flushing",
+   "label": "Flushing",
+   "kana": "フラッシング",
+   "box": [
+    [
+     40.744,
+     -73.851
+    ],
+    [
+     40.774,
+     -73.811
+    ]
+   ],
+   "home": "Flushing-Main St"
+  },
+  {
+   "key": "bayside",
+   "label": "Bayside",
+   "kana": "ベイサイド",
+   "box": [
+    [
+     40.748,
+     -73.791
+    ],
+    [
+     40.778,
+     -73.751
+    ]
+   ],
+   "home": "Bayside"
+  },
+  {
+   "key": "jacksonheights",
+   "label": "Jackson Heights",
+   "kana": "ジャクソンハイツ",
+   "box": [
+    [
+     40.732,
+     -73.911
+    ],
+    [
+     40.762,
+     -73.871
+    ]
+   ],
+   "home": "Jackson Hts-Roosevelt Av"
+  },
+  {
+   "key": "foresthills",
+   "label": "Forest Hills",
+   "kana": "フォレストヒルズ",
+   "box": [
+    [
+     40.706,
+     -73.865
+    ],
+    [
+     40.736,
+     -73.825
+    ]
+   ],
+   "home": "Forest Hills"
+  },
+  {
+   "key": "jamaica",
+   "label": "Jamaica",
+   "kana": "ジャマイカ",
+   "box": [
+    [
+     40.685,
+     -73.828
+    ],
+    [
+     40.715,
+     -73.788
+    ]
+   ],
+   "home": "Jamaica"
+  },
+  {
+   "key": "bushwick",
+   "label": "Bushwick",
+   "kana": "ブッシュウィック",
+   "box": [
+    [
+     40.685,
+     -73.932
+    ],
+    [
+     40.715,
+     -73.892
+    ]
+   ],
+   "home": "Myrtle-Wyckoff Avs"
+  },
+  {
+   "key": "crownheights",
+   "label": "Crown Heights",
+   "kana": "クラウンハイツ",
+   "box": [
+    [
+     40.654,
+     -73.953
+    ],
+    [
+     40.684,
+     -73.913
+    ]
+   ],
+   "home": "Crown Hts-Utica Av"
+  },
+  {
+   "key": "bayridge",
+   "label": "Bay Ridge",
+   "kana": "ベイリッジ",
+   "box": [
+    [
+     40.62,
+     -74.043
+    ],
+    [
+     40.65,
+     -74.003
+    ]
+   ],
+   "home": "Bay Ridge Av"
+  },
+  {
+   "key": "coneyisland",
+   "label": "Coney Island",
+   "kana": "コニーアイランド",
+   "box": [
+    [
+     40.562,
+     -74.001
+    ],
+    [
+     40.592,
+     -73.961
+    ]
+   ],
+   "home": "Coney Island-Stillwell Av"
+  },
+  {
+   "key": "statenisland",
+   "label": "Staten Island",
+   "kana": "スタテンアイランド",
+   "box": [
+    [
+     40.629,
+     -74.094
+    ],
+    [
+     40.659,
+     -74.054
+    ]
+   ],
+   "home": "St George"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_newyork.py",
+  "check": "scripts/validate_newyork.py",
+  "arg": "newyork",
+  "inputs": [
+   "cache:us/newyork/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales: NYC Department of Finance, NYC Citywide Annualized Calendar Sales Update (NYC Open Data, dataset w2pb-icbu, version of 9 June 2026) and annualized sales for 2014 and 2015 (nyc.gov). Tax lots (PLUTO, version of 24 August 2026), borough boundaries and 2020 Neighborhood Tabulation Areas: NYC Department of City Planning (NYC Open Data). These data are modified for use from their original source, NYC.gov, the official website of the City of New York: home sales are filtered, placed at their buildings and summarised by station. Stations and lines are derived from MTA GTFS data for the subway, the Staten Island Railway, the Long Island Rail Road and Metro-North, obtained from the MTA on 30 October 2026.</span><span>Land beyond the city: US Census Bureau. Neither the City of New York nor the MTA warrants that these data are accurate, complete or timely, and none of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: NYC Department of Finance annualized sales (NYC Open Data, nyc.gov)",
+   "ja": "価格：ニューヨーク市財務局 年間売買記録（NYC Open Data、nyc.gov）"
+  },
+  "attribution": "Stations: MTA GTFS · Outlines: NYC Planning, US Census Bureau"
+ }
+}

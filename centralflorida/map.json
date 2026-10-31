@@ -1,0 +1,202 @@
+{
+ "key": "orlando",
+ "country": "United States",
+ "order": 15,
+ "path": "centralflorida/",
+ "en": "Central Florida",
+ "population": 3108177,
+ "tag": {
+  "en": "Central Florida",
+  "ja": "中部フロリダ"
+ },
+ "cities": [
+  {
+   "key": "orlando",
+   "en": "Orlando",
+   "ja": "オーランド",
+   "population": 333888
+  }
+ ],
+ "goto": [
+  {
+   "key": "orlando",
+   "label": "Orlando",
+   "kana": "オーランド",
+   "box": [
+    [
+     28.525,
+     -81.4
+    ],
+    [
+     28.56,
+     -81.36
+    ]
+   ],
+   "home": "Church Street"
+  },
+  {
+   "key": "winterpark",
+   "label": "Winter Park",
+   "kana": "ウィンターパーク",
+   "box": [
+    [
+     28.582,
+     -81.372
+    ],
+    [
+     28.612,
+     -81.332
+    ]
+   ],
+   "home": "Winter Park"
+  },
+  {
+   "key": "maitland",
+   "label": "Maitland",
+   "kana": "メイトランド",
+   "box": [
+    [
+     28.62,
+     -81.382
+    ],
+    [
+     28.65,
+     -81.342
+    ]
+   ],
+   "home": "Maitland"
+  },
+  {
+   "key": "altamontesprings",
+   "label": "Altamonte Springs",
+   "kana": "アルタモンテスプリングス",
+   "box": [
+    [
+     28.649,
+     -81.377
+    ],
+    [
+     28.679,
+     -81.337
+    ]
+   ],
+   "home": "Altamonte Springs"
+  },
+  {
+   "key": "longwood",
+   "label": "Longwood",
+   "kana": "ロングウッド",
+   "box": [
+    [
+     28.686,
+     -81.365
+    ],
+    [
+     28.716,
+     -81.325
+    ]
+   ],
+   "home": "Longwood"
+  },
+  {
+   "key": "lakemary",
+   "label": "Lake Mary",
+   "kana": "レイクメアリー",
+   "box": [
+    [
+     28.744,
+     -81.338
+    ],
+    [
+     28.774,
+     -81.298
+    ]
+   ],
+   "home": "Lake Mary"
+  },
+  {
+   "key": "sanford",
+   "label": "Sanford",
+   "kana": "サンフォード",
+   "box": [
+    [
+     28.798,
+     -81.318
+    ],
+    [
+     28.828,
+     -81.278
+    ]
+   ],
+   "home": "Sanford"
+  },
+  {
+   "key": "debary",
+   "label": "DeBary",
+   "kana": "デバリー",
+   "box": [
+    [
+     28.841,
+     -81.343
+    ],
+    [
+     28.871,
+     -81.303
+    ]
+   ],
+   "home": "DeBary"
+  },
+  {
+   "key": "deland",
+   "label": "DeLand",
+   "kana": "デランド",
+   "box": [
+    [
+     29.003,
+     -81.373
+    ],
+    [
+     29.033,
+     -81.333
+    ]
+   ],
+   "home": "DeLand"
+  },
+  {
+   "key": "kissimmee",
+   "label": "Kissimmee",
+   "kana": "キシミー",
+   "box": [
+    [
+     28.279,
+     -81.424
+    ],
+    [
+     28.309,
+     -81.384
+    ]
+   ],
+   "home": "Kissimmee"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_orlando.py",
+  "check": "scripts/validate_orlando.py",
+  "arg": "orlando",
+  "helpers": [
+   "scripts/florida.py"
+  ],
+  "inputs": [
+   "cache:us/orlando/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales, use codes, living areas and parcel maps: Florida Department of Revenue, Property Tax Oversight, Property Tax Data Portal (public records). SunRail stations and line: Florida Department of Transportation (SunRail) GTFS, provided as is, through the Mobility Database. Brightline: Brightline GTFS. Places, counties and the shore: US Census Bureau cartographic boundary files.</span><span>This site is not sponsored by, affiliated with or operated by any of these bodies, and none of the Florida Department of Revenue, the Florida Department of Transportation, SunRail, Brightline, MobilityData or the US Census Bureau produced or endorses it. The data are provided as is, without any warranty that they are accurate, current or complete, and are used here at the reader's own risk.</span>",
+  "priceSource": {
+   "en": "Prices: Florida Department of Revenue tax roll sale data (floridarevenue.com)",
+   "ja": "価格：フロリダ州歳入局 課税台帳の取引データ（floridarevenue.com）"
+  },
+  "attribution": "Stations and lines: SunRail (FDOT) and Brightline GTFS · Outlines: US Census Bureau"
+ }
+}

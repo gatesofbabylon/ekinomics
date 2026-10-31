@@ -1,0 +1,78 @@
+{
+ "key": "kagoshima",
+ "country": "Japan",
+ "order": 12,
+ "path": "kagoshima/",
+ "en": "Greater Kagoshima",
+ "ja": "鹿児島圏",
+ "population": 1588256,
+ "tag": {
+  "en": "Kyūshū",
+  "ja": "九州"
+ },
+ "cities": [
+  {
+   "key": "kagoshima",
+   "en": "Kagoshima",
+   "ja": "鹿児島",
+   "population": 593128
+  }
+ ],
+ "goto": [
+  {
+   "key": "kagoshima",
+   "label": "Kagoshima",
+   "ja": "鹿児島",
+   "box": [
+    [
+     31.53,
+     130.48
+    ],
+    [
+     31.63,
+     130.62
+    ]
+   ],
+   "home": "鹿児島中央"
+  },
+  {
+   "key": "kirishima",
+   "label": "Kirishima",
+   "ja": "霧島",
+   "box": [
+    [
+     31.695,
+     130.695
+    ],
+    [
+     31.795,
+     130.835
+    ]
+   ],
+   "home": "国分"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "kagoshima",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:kagoshima/*_{MLIT}.*",
+   "cache:kagoshima/residential/*_{MLIT}.*",
+   "cache:wikidata/kagoshima/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

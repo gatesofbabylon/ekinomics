@@ -1,0 +1,407 @@
+{
+ "key": "sydney",
+ "country": "Australia",
+ "order": 2,
+ "path": "newsouthwales/",
+ "en": "Greater Sydney",
+ "population": 5638830,
+ "tag": {
+  "en": "NSW",
+  "ja": "ニューサウスウェールズ州"
+ },
+ "cities": [
+  {
+   "key": "sydney",
+   "en": "Sydney",
+   "ja": "シドニー",
+   "population": 5638830
+  }
+ ],
+ "goto": [
+  {
+   "key": "sydney",
+   "label": "Sydney",
+   "kana": "シドニー",
+   "box": [
+    [
+     -33.919,
+     151.156
+    ],
+    [
+     -33.849,
+     151.256
+    ]
+   ],
+   "home": "Central"
+  },
+  {
+   "key": "parramatta",
+   "label": "Parramatta",
+   "kana": "パラマタ",
+   "box": [
+    [
+     -33.843,
+     150.97
+    ],
+    [
+     -33.793,
+     151.04
+    ]
+   ],
+   "home": "Parramatta"
+  },
+  {
+   "key": "chatswood",
+   "label": "Chatswood",
+   "kana": "チャッツウッド",
+   "box": [
+    [
+     -33.822,
+     151.146
+    ],
+    [
+     -33.772,
+     151.216
+    ]
+   ],
+   "home": "Chatswood"
+  },
+  {
+   "key": "northsydney",
+   "label": "North Sydney",
+   "kana": "ノース・シドニー",
+   "box": [
+    [
+     -33.866,
+     151.172
+    ],
+    [
+     -33.816,
+     151.242
+    ]
+   ],
+   "home": "North Sydney"
+  },
+  {
+   "key": "bondijunction",
+   "label": "Bondi Junction",
+   "kana": "ボンダイ・ジャンクション",
+   "box": [
+    [
+     -33.916,
+     151.213
+    ],
+    [
+     -33.866,
+     151.283
+    ]
+   ],
+   "home": "Bondi Junction"
+  },
+  {
+   "key": "strathfield",
+   "label": "Strathfield",
+   "kana": "ストラスフィールド",
+   "box": [
+    [
+     -33.897,
+     151.059
+    ],
+    [
+     -33.847,
+     151.129
+    ]
+   ],
+   "home": "Strathfield"
+  },
+  {
+   "key": "burwood",
+   "label": "Burwood",
+   "kana": "バーウッド",
+   "box": [
+    [
+     -33.902,
+     151.069
+    ],
+    [
+     -33.852,
+     151.139
+    ]
+   ],
+   "home": "Burwood"
+  },
+  {
+   "key": "epping",
+   "label": "Epping",
+   "kana": "エッピング",
+   "box": [
+    [
+     -33.798,
+     151.047
+    ],
+    [
+     -33.748,
+     151.117
+    ]
+   ],
+   "home": "Epping"
+  },
+  {
+   "key": "macquariepark",
+   "label": "Macquarie Park",
+   "kana": "マッコーリー・パーク",
+   "box": [
+    [
+     -33.802,
+     151.083
+    ],
+    [
+     -33.752,
+     151.153
+    ]
+   ],
+   "home": "Macquarie University"
+  },
+  {
+   "key": "hornsby",
+   "label": "Hornsby",
+   "kana": "ホーンズビー",
+   "box": [
+    [
+     -33.728,
+     151.063
+    ],
+    [
+     -33.678,
+     151.133
+    ]
+   ],
+   "home": "Hornsby"
+  },
+  {
+   "key": "castlehill",
+   "label": "Castle Hill",
+   "kana": "キャッスル・ヒル",
+   "box": [
+    [
+     -33.757,
+     150.972
+    ],
+    [
+     -33.707,
+     151.042
+    ]
+   ],
+   "home": "Castle Hill"
+  },
+  {
+   "key": "blacktown",
+   "label": "Blacktown",
+   "kana": "ブラックタウン",
+   "box": [
+    [
+     -33.794,
+     150.872
+    ],
+    [
+     -33.744,
+     150.942
+    ]
+   ],
+   "home": "Blacktown"
+  },
+  {
+   "key": "penrith",
+   "label": "Penrith",
+   "kana": "ペンリス",
+   "box": [
+    [
+     -33.775,
+     150.661
+    ],
+    [
+     -33.725,
+     150.731
+    ]
+   ],
+   "home": "Penrith"
+  },
+  {
+   "key": "liverpool",
+   "label": "Liverpool",
+   "kana": "リバプール",
+   "box": [
+    [
+     -33.95,
+     150.892
+    ],
+    [
+     -33.9,
+     150.962
+    ]
+   ],
+   "home": "Liverpool"
+  },
+  {
+   "key": "bankstown",
+   "label": "Bankstown",
+   "kana": "バンクスタウン",
+   "box": [
+    [
+     -33.943,
+     151
+    ],
+    [
+     -33.893,
+     151.07
+    ]
+   ],
+   "home": "Bankstown"
+  },
+  {
+   "key": "hurstville",
+   "label": "Hurstville",
+   "kana": "ハーストビル",
+   "box": [
+    [
+     -33.992,
+     151.068
+    ],
+    [
+     -33.942,
+     151.138
+    ]
+   ],
+   "home": "Hurstville"
+  },
+  {
+   "key": "sutherland",
+   "label": "Sutherland",
+   "kana": "サザーランド",
+   "box": [
+    [
+     -34.057,
+     151.022
+    ],
+    [
+     -34.007,
+     151.092
+    ]
+   ],
+   "home": "Sutherland"
+  },
+  {
+   "key": "cronulla",
+   "label": "Cronulla",
+   "kana": "クロヌラ",
+   "box": [
+    [
+     -34.081,
+     151.117
+    ],
+    [
+     -34.031,
+     151.186
+    ]
+   ],
+   "home": "Cronulla"
+  },
+  {
+   "key": "campbelltown",
+   "label": "Campbelltown",
+   "kana": "キャンベルタウン",
+   "box": [
+    [
+     -34.089,
+     150.78
+    ],
+    [
+     -34.039,
+     150.85
+    ]
+   ],
+   "home": "Campbelltown"
+  },
+  {
+   "key": "richmond",
+   "label": "Richmond",
+   "kana": "リッチモンド",
+   "box": [
+    [
+     -33.624,
+     150.718
+    ],
+    [
+     -33.574,
+     150.788
+    ]
+   ],
+   "home": "Richmond"
+  },
+  {
+   "key": "katoomba",
+   "label": "Katoomba",
+   "kana": "カトゥーンバ",
+   "box": [
+    [
+     -33.737,
+     150.277
+    ],
+    [
+     -33.687,
+     150.347
+    ]
+   ],
+   "home": "Katoomba"
+  },
+  {
+   "key": "gosford",
+   "label": "Gosford",
+   "kana": "ゴスフォード",
+   "box": [
+    [
+     -33.448,
+     151.307
+    ],
+    [
+     -33.398,
+     151.377
+    ]
+   ],
+   "home": "Gosford"
+  },
+  {
+   "key": "wyong",
+   "label": "Wyong",
+   "kana": "ワイオング",
+   "box": [
+    [
+     -33.31,
+     151.39
+    ],
+    [
+     -33.26,
+     151.46
+    ]
+   ],
+   "home": "Wyong"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_australia.py",
+  "check": "scripts/validate_australia.py",
+  "arg": "sydney",
+  "settings": "assets/au_areas.json",
+  "inputs": [
+   "cache:australia/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales: property sales information from the NSW Valuer General (<a href=\"https://www.valuergeneral.nsw.gov.au/design/bulk_psi_content/bulk_psi\" target=\"_blank\" rel=\"noopener\">bulk property sales information</a>), © Crown in right of New South Wales through the Valuer General NSW, licensed under <a href=\"https://creativecommons.org/licenses/by/3.0/au/\" target=\"_blank\" rel=\"noopener\">CC BY 3.0 AU</a>; the station medians are Ekinomics' own calculation from those sales. Property positions: <a href=\"https://portal.spatial.nsw.gov.au/portal/home/item.html?id=01de8834e88a45a1a673b120aa00c82e\" target=\"_blank\" rel=\"noopener\">NSW Land Parcel and Property Theme</a>, © State of New South Wales (Spatial Services, a business unit of the Department of Customer Service NSW), CC BY 4.0. Stations and lines: Source: Transport for NSW (<a href=\"https://opendata.transport.nsw.gov.au/\" target=\"_blank\" rel=\"noopener\">Open Data Hub</a>, GTFS timetables), CC BY 4.0.</span><span>Suburb, council and Greater Sydney boundaries: Australian Bureau of Statistics, ASGS Edition 3 (2021), CC BY 4.0. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: Ekinomics from NSW Valuer General sales (CC BY 3.0 AU)",
+   "ja": "価格：NSW 評価長官の取引データ（CC BY 3.0 AU）から Ekinomics が算出"
+  },
+  "attribution": "Source: Transport for NSW (CC BY 4.0) · Properties: NSW Spatial Services (CC BY 4.0) · Outlines: ABS ASGS 2021 (CC BY 4.0)"
+ }
+}

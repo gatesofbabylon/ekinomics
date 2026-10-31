@@ -1,0 +1,311 @@
+{
+ "key": "nice",
+ "country": "France",
+ "order": 9,
+ "path": "alpesmaritimes/",
+ "en": "Alpes-Maritimes",
+ "population": 1128418,
+ "tag": {
+  "en": "Alpes-Maritimes",
+  "ja": "アルプ＝マリティーム"
+ },
+ "cities": [
+  {
+   "key": "nice",
+   "en": "Nice",
+   "ja": "ニース",
+   "population": 357737
+  }
+ ],
+ "goto": [
+  {
+   "key": "nice",
+   "label": "Nice",
+   "kana": "ニース",
+   "box": [
+    [
+     43.655,
+     7.21
+    ],
+    [
+     43.745,
+     7.32
+    ]
+   ],
+   "home": "Masséna"
+  },
+  {
+   "key": "cannes",
+   "label": "Cannes",
+   "kana": "カンヌ",
+   "box": [
+    [
+     43.524,
+     6.975
+    ],
+    [
+     43.584,
+     7.065
+    ]
+   ],
+   "home": "Cannes"
+  },
+  {
+   "key": "antibes",
+   "label": "Antibes",
+   "kana": "アンティーブ",
+   "box": [
+    [
+     43.556,
+     7.075
+    ],
+    [
+     43.616,
+     7.165
+    ]
+   ],
+   "home": "Antibes"
+  },
+  {
+   "key": "juanlespins",
+   "label": "Juan-les-Pins",
+   "kana": "ジュアン＝レ＝パン",
+   "box": [
+    [
+     43.541,
+     7.066
+    ],
+    [
+     43.601,
+     7.156
+    ]
+   ],
+   "home": "Juan les Pins"
+  },
+  {
+   "key": "vallauris",
+   "label": "Vallauris Golfe-Juan",
+   "kana": "ヴァロリス・ゴルフ＝ジュアン",
+   "box": [
+    [
+     43.537,
+     7.029
+    ],
+    [
+     43.597,
+     7.119
+    ]
+   ],
+   "home": "Golfe Juan Vallauris"
+  },
+  {
+   "key": "mandelieu",
+   "label": "Mandelieu-la-Napoule",
+   "kana": "マンドリュー＝ラ＝ナプール",
+   "box": [
+    [
+     43.494,
+     6.896
+    ],
+    [
+     43.554,
+     6.986
+    ]
+   ],
+   "home": "Mandelieu-la-Napoule"
+  },
+  {
+   "key": "grasse",
+   "label": "Grasse",
+   "kana": "グラース",
+   "box": [
+    [
+     43.623,
+     6.881
+    ],
+    [
+     43.683,
+     6.971
+    ]
+   ],
+   "home": "Grasse"
+  },
+  {
+   "key": "biot",
+   "label": "Biot",
+   "kana": "ビオ",
+   "box": [
+    [
+     43.581,
+     7.081
+    ],
+    [
+     43.641,
+     7.171
+    ]
+   ],
+   "home": "Biot"
+  },
+  {
+   "key": "villeneuveloubet",
+   "label": "Villeneuve-Loubet",
+   "kana": "ヴィルヌーヴ＝ルーベ",
+   "box": [
+    [
+     43.6,
+     7.089
+    ],
+    [
+     43.66,
+     7.179
+    ]
+   ],
+   "home": "Villeneuve-Loubet-Plage"
+  },
+  {
+   "key": "cagnes",
+   "label": "Cagnes-sur-Mer",
+   "kana": "カーニュ＝シュル＝メール",
+   "box": [
+    [
+     43.628,
+     7.103
+    ],
+    [
+     43.688,
+     7.193
+    ]
+   ],
+   "home": "Cagnes-sur-Mer"
+  },
+  {
+   "key": "saintlaurentduvar",
+   "label": "Saint-Laurent-du-Var",
+   "kana": "サン＝ローラン＝デュ＝ヴァール",
+   "box": [
+    [
+     43.632,
+     7.149
+    ],
+    [
+     43.692,
+     7.239
+    ]
+   ],
+   "home": "Saint-Laurent-du-Var"
+  },
+  {
+   "key": "villefranchesurmer",
+   "label": "Villefranche-sur-Mer",
+   "kana": "ヴィルフランシュ＝シュル＝メール",
+   "box": [
+    [
+     43.677,
+     7.269
+    ],
+    [
+     43.737,
+     7.359
+    ]
+   ],
+   "home": "Villefranche-sur-Mer"
+  },
+  {
+   "key": "beaulieu",
+   "label": "Beaulieu-sur-Mer",
+   "kana": "ボーリュー＝シュル＝メール",
+   "box": [
+    [
+     43.677,
+     7.287
+    ],
+    [
+     43.737,
+     7.377
+    ]
+   ],
+   "home": "Beaulieu-sur-Mer"
+  },
+  {
+   "key": "roquebrune",
+   "label": "Roquebrune-Cap-Martin",
+   "kana": "ロクブリュヌ＝カップ＝マルタン",
+   "box": [
+    [
+     43.731,
+     7.412
+    ],
+    [
+     43.791,
+     7.502
+    ]
+   ],
+   "home": "Roquebrune-Cap-Martin"
+  },
+  {
+   "key": "menton",
+   "label": "Menton",
+   "kana": "マントン",
+   "box": [
+    [
+     43.744,
+     7.448
+    ],
+    [
+     43.804,
+     7.538
+    ]
+   ],
+   "home": "Menton"
+  },
+  {
+   "key": "sospel",
+   "label": "Sospel",
+   "kana": "ソスペル",
+   "box": [
+    [
+     43.847,
+     7.409
+    ],
+    [
+     43.907,
+     7.499
+    ]
+   ],
+   "home": "Sospel"
+  },
+  {
+   "key": "breilsurroya",
+   "label": "Breil-sur-Roya",
+   "kana": "ブレイユ＝シュル＝ロワイヤ",
+   "box": [
+    [
+     43.914,
+     7.471
+    ],
+    [
+     43.974,
+     7.561
+    ]
+   ],
+   "home": "Breil-sur-Roya"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_france.py",
+  "check": "scripts/validate_france.py",
+  "arg": "nice",
+  "settings": "assets/fr_areas.json",
+  "inputs": [
+   "cache:france/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales: Demandes de valeurs foncières, Direction générale des Finances publiques (DGFiP), as structured by Cerema in <a href=\"https://www.data.gouv.fr/datasets/dvf-open-data\" target=\"_blank\" rel=\"noopener\">DVF+ open data</a> (October 2026 release), Licence Ouverte 2.0.</span><span>Stations and lines: Lignes d'Azur, GTFS timetables published by the Métropole Nice Côte d'Azur (Licence Ouverte 2.0); SNCF timetables (ODbL); track: SNCF Réseau, shapes of the lines of the national rail network (ODbL). The stations and lines in this map's data files are derived from these sources and are available under the ODbL. Département outlines: IGN Admin Express, via Etalab, Licence Ouverte 2.0. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: DVF+ open data (Cerema, from DGFiP), Licence Ouverte 2.0",
+   "ja": "価格：DVF+ open data（Cerema、DGFiP の DVF から作成）、Licence Ouverte 2.0"
+  },
+  "attribution": "Stations: Lignes d’Azur (Licence Ouverte) and SNCF (ODbL) · Track: SNCF Réseau (ODbL) · Outlines: IGN via Etalab"
+ }
+}

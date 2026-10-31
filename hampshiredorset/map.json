@@ -1,0 +1,185 @@
+{
+ "key": "wessex",
+ "country": "United Kingdom",
+ "order": 10,
+ "path": "hampshiredorset/",
+ "en": "Hampshire and Dorset",
+ "population": 2315716,
+ "tag": {
+  "en": "Hampshire & Dorset",
+  "ja": "ハンプシャー・ドーセット"
+ },
+ "cities": [
+  {
+   "key": "bournemouth",
+   "en": "Bournemouth",
+   "ja": "ボーンマス",
+   "population": 405829
+  },
+  {
+   "key": "southampton",
+   "en": "Southampton",
+   "ja": "サウサンプトン",
+   "population": 259230
+  },
+  {
+   "key": "portsmouth",
+   "en": "Portsmouth",
+   "ja": "ポーツマス",
+   "population": 211475
+  }
+ ],
+ "goto": [
+  {
+   "key": "bournemouth",
+   "label": "Bournemouth",
+   "kana": "ボーンマス",
+   "box": [
+    [
+     50.62,
+     -2.2
+    ],
+    [
+     50.84,
+     -1.55
+    ]
+   ],
+   "home": "Bournemouth"
+  },
+  {
+   "key": "southampton",
+   "label": "Southampton",
+   "kana": "サウサンプトン",
+   "box": [
+    [
+     50.82,
+     -1.6
+    ],
+    [
+     51,
+     -1.22
+    ]
+   ],
+   "home": "Southampton Central"
+  },
+  {
+   "key": "portsmouth",
+   "label": "Portsmouth",
+   "kana": "ポーツマス",
+   "box": [
+    [
+     50.76,
+     -1.25
+    ],
+    [
+     50.9,
+     -0.92
+    ]
+   ],
+   "home": "Portsmouth & Southsea"
+  },
+  {
+   "key": "winchester",
+   "label": "Winchester",
+   "kana": "ウィンチェスター",
+   "box": [
+    [
+     51.03,
+     -1.36
+    ],
+    [
+     51.09,
+     -1.27
+    ]
+   ],
+   "home": "Winchester"
+  },
+  {
+   "key": "poole",
+   "label": "Poole",
+   "kana": "プール",
+   "box": [
+    [
+     50.69,
+     -2.03
+    ],
+    [
+     50.74,
+     -1.93
+    ]
+   ],
+   "home": "Poole"
+  },
+  {
+   "key": "weymouth",
+   "label": "Weymouth",
+   "kana": "ウェイマス",
+   "box": [
+    [
+     50.59,
+     -2.5
+    ],
+    [
+     50.64,
+     -2.42
+    ]
+   ],
+   "home": "Weymouth"
+  },
+  {
+   "key": "dorchester",
+   "label": "Dorchester",
+   "kana": "ドーチェスター",
+   "box": [
+    [
+     50.69,
+     -2.47
+    ],
+    [
+     50.73,
+     -2.4
+    ]
+   ],
+   "home": "Dorchester South"
+  },
+  {
+   "key": "lymington",
+   "label": "Lymington",
+   "kana": "リミントン",
+   "box": [
+    [
+     50.74,
+     -1.58
+    ],
+    [
+     50.77,
+     -1.52
+    ]
+   ],
+   "home": "Lymington Town"
+  }
+ ],
+ "build": {
+  "family": "uk",
+  "script": "scripts/build_london.py",
+  "check": "scripts/validate_london.py",
+  "arg": "wessex",
+  "inputs": [
+   "assets/uk_areas.json",
+   "assets/london_station_lines_overrides.csv",
+   "assets/belfast_stations.csv",
+   "assets/*_districts.csv",
+   "cache:london/*",
+   "cache:london/tfl",
+   "cache:london/boundaries",
+   "cache:london/bods",
+   "cache:london/vmd",
+   "cache:london/scotland",
+   "cache:london/ni"
+  ]
+ },
+ "credits": {
+  "block": "<span>Contains HM Land Registry data © Crown copyright and database right 2024. This data is licensed under the Open Government Licence v3.0. Floor areas: Chi, Dennett, Oléron-Evans and Morphet (2025), <a href=\"https://doi.org/10.5255/UKDA-SN-857911\" target=\"_blank\" rel=\"noopener\">House Price Per Square Metre in England and Wales, 1995–2024</a>, UK Data Service, CC BY 4.0, which links Land Registry sales to Energy Performance Certificates (MHCLG, Open Government Licence).</span><span>Postcodes and borough boundaries: Office for National Statistics, Open Government Licence; contains OS data © Crown copyright and database right 2024, Royal Mail data © Royal Mail copyright and database right 2024 and GeoPlace data © Local Government Information House Limited copyright and database right 2024. Stations: NaPTAN, Department for Transport, Open Government Licence. Rail lines: Powered by TfL Open Data; contains OS data © Crown copyright and database rights 2016 and Geomni UK Map data © and database rights [2019]. None of these bodies produced or endorses this site.</span>",
+  "attribution": "Contains OS data © Crown copyright and database right 2026 · Powered by TfL Open Data"
+ }
+}

@@ -1,0 +1,131 @@
+{
+ "key": "northwest",
+ "country": "United Kingdom",
+ "order": 1,
+ "path": "northwest/",
+ "en": "North West England",
+ "population": 7350880,
+ "tag": {
+  "en": "NW England",
+  "ja": "イングランド北西部"
+ },
+ "cities": [
+  {
+   "key": "manchester",
+   "en": "Manchester",
+   "ja": "マンチェスター",
+   "population": 588256
+  },
+  {
+   "key": "liverpool",
+   "en": "Liverpool",
+   "ja": "リバプール",
+   "population": 507915
+  }
+ ],
+ "goto": [
+  {
+   "key": "manchester",
+   "label": "Manchester",
+   "kana": "マンチェスター",
+   "box": [
+    [
+     53.38,
+     -2.35
+    ],
+    [
+     53.56,
+     -2.12
+    ]
+   ],
+   "home": "Manchester Piccadilly"
+  },
+  {
+   "key": "liverpool",
+   "label": "Liverpool",
+   "kana": "リバプール",
+   "box": [
+    [
+     53.33,
+     -3.05
+    ],
+    [
+     53.5,
+     -2.85
+    ]
+   ],
+   "home": "Liverpool Lime Street"
+  },
+  {
+   "key": "blackpool",
+   "label": "Blackpool",
+   "kana": "ブラックプール",
+   "box": [
+    [
+     53.75,
+     -3.08
+    ],
+    [
+     53.88,
+     -2.98
+    ]
+   ],
+   "home": "Blackpool North"
+  },
+  {
+   "key": "preston",
+   "label": "Preston",
+   "kana": "プレストン",
+   "box": [
+    [
+     53.707,
+     -2.778
+    ],
+    [
+     53.807,
+     -2.638
+    ]
+   ],
+   "home": "Preston"
+  },
+  {
+   "key": "chester",
+   "label": "Chester",
+   "kana": "チェスター",
+   "box": [
+    [
+     53.147,
+     -2.95
+    ],
+    [
+     53.247,
+     -2.81
+    ]
+   ],
+   "home": "Chester"
+  }
+ ],
+ "build": {
+  "family": "uk",
+  "script": "scripts/build_london.py",
+  "check": "scripts/validate_london.py",
+  "arg": "northwest",
+  "inputs": [
+   "assets/uk_areas.json",
+   "assets/london_station_lines_overrides.csv",
+   "assets/belfast_stations.csv",
+   "assets/*_districts.csv",
+   "cache:london/*",
+   "cache:london/tfl",
+   "cache:london/boundaries",
+   "cache:london/bods",
+   "cache:london/vmd",
+   "cache:london/scotland",
+   "cache:london/ni"
+  ]
+ },
+ "credits": {
+  "block": "<span>Contains HM Land Registry data © Crown copyright and database right 2024. This data is licensed under the Open Government Licence v3.0. Floor areas: Chi, Dennett, Oléron-Evans and Morphet (2025), <a href=\"https://doi.org/10.5255/UKDA-SN-857911\" target=\"_blank\" rel=\"noopener\">House Price Per Square Metre in England and Wales, 1995–2024</a>, UK Data Service, CC BY 4.0, which links Land Registry sales to Energy Performance Certificates (MHCLG, Open Government Licence).</span><span>Postcodes and borough boundaries: Office for National Statistics, Open Government Licence; contains OS data © Crown copyright and database right 2024, Royal Mail data © Royal Mail copyright and database right 2024 and GeoPlace data © Local Government Information House Limited copyright and database right 2024. Stations: NaPTAN, Department for Transport, Open Government Licence. Metrolink: contains Transport for Greater Manchester data (Open Government Licence). Rail lines: Powered by TfL Open Data; contains OS data © Crown copyright and database rights 2016 and Geomni UK Map data © and database rights [2019]. None of these bodies produced or endorses this site.</span>",
+  "attribution": "Contains OS data © Crown copyright and database right 2026 · Powered by TfL Open Data"
+ }
+}

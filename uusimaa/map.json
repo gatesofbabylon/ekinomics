@@ -1,0 +1,231 @@
+{
+ "key": "helsinki",
+ "country": "Finland",
+ "order": 0,
+ "path": "uusimaa/",
+ "en": "Helsinki region",
+ "population": 1683184,
+ "tag": {
+  "en": "Uusimaa",
+  "ja": "ウーシマー"
+ },
+ "cities": [
+  {
+   "key": "helsinki",
+   "en": "Helsinki",
+   "ja": "ヘルシンキ",
+   "population": 694392
+  }
+ ],
+ "goto": [
+  {
+   "key": "helsinki",
+   "label": "Helsinki",
+   "kana": "ヘルシンキ",
+   "box": [
+    [
+     60.15,
+     24.86
+    ],
+    [
+     60.23,
+     25.05
+    ]
+   ],
+   "home": "Helsinki"
+  },
+  {
+   "key": "tapiola",
+   "label": "Tapiola",
+   "kana": "タピオラ",
+   "box": [
+    [
+     60.15,
+     24.753
+    ],
+    [
+     60.2,
+     24.853
+    ]
+   ],
+   "home": "Tapiola"
+  },
+  {
+   "key": "leppavaara",
+   "label": "Leppävaara",
+   "kana": "レッパヴァーラ",
+   "box": [
+    [
+     60.194,
+     24.765
+    ],
+    [
+     60.244,
+     24.865
+    ]
+   ],
+   "home": "Leppävaara"
+  },
+  {
+   "key": "matinkyla",
+   "label": "Matinkylä",
+   "kana": "マティンキュラ",
+   "box": [
+    [
+     60.134,
+     24.688
+    ],
+    [
+     60.184,
+     24.788
+    ]
+   ],
+   "home": "Matinkylä"
+  },
+  {
+   "key": "tikkurila",
+   "label": "Tikkurila",
+   "kana": "ティックリラ",
+   "box": [
+    [
+     60.267,
+     24.994
+    ],
+    [
+     60.317,
+     25.094
+    ]
+   ],
+   "home": "Tikkurila"
+  },
+  {
+   "key": "myyrmaki",
+   "label": "Myyrmäki",
+   "kana": "ミュルマキ",
+   "box": [
+    [
+     60.237,
+     24.805
+    ],
+    [
+     60.287,
+     24.905
+    ]
+   ],
+   "home": "Myyrmäki"
+  },
+  {
+   "key": "itakeskus",
+   "label": "Itäkeskus",
+   "kana": "イータケスクス",
+   "box": [
+    [
+     60.185,
+     25.027
+    ],
+    [
+     60.235,
+     25.127
+    ]
+   ],
+   "home": "Itäkeskus"
+  },
+  {
+   "key": "vuosaari",
+   "label": "Vuosaari",
+   "kana": "ヴォサーリ",
+   "box": [
+    [
+     60.182,
+     25.093
+    ],
+    [
+     60.232,
+     25.193
+    ]
+   ],
+   "home": "Vuosaari"
+  },
+  {
+   "key": "kerava",
+   "label": "Kerava",
+   "kana": "ケラヴァ",
+   "box": [
+    [
+     60.379,
+     25.056
+    ],
+    [
+     60.429,
+     25.156
+    ]
+   ],
+   "home": "Kerava"
+  },
+  {
+   "key": "jarvenpaa",
+   "label": "Järvenpää",
+   "kana": "ヤルヴェンパー",
+   "box": [
+    [
+     60.449,
+     25.041
+    ],
+    [
+     60.499,
+     25.141
+    ]
+   ],
+   "home": "Järvenpää"
+  },
+  {
+   "key": "hyvinkaa",
+   "label": "Hyvinkää",
+   "kana": "ヒュヴィンカー",
+   "box": [
+    [
+     60.606,
+     24.808
+    ],
+    [
+     60.656,
+     24.908
+    ]
+   ],
+   "home": "Hyvinkää"
+  },
+  {
+   "key": "kirkkonummi",
+   "label": "Kirkkonummi",
+   "kana": "キルッコヌンミ",
+   "box": [
+    [
+     60.095,
+     24.389
+    ],
+    [
+     60.145,
+     24.489
+    ]
+   ],
+   "home": "Kirkkonummi"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_finland.py",
+  "check": "scripts/validate_finland.py",
+  "arg": "helsinki",
+  "settings": "assets/fi_areas.json",
+  "inputs": [
+   "cache:finland/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Prices per square metre and numbers of sales by postal code area (table 13mu), Paavo postal code areas and the sub-region classification: Statistics Finland (CC BY 4.0). Stations and lines: HSL Helsinki Region Transport (CC BY 4.0).</span><span>Land beyond Finland: Natural Earth. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: Statistics Finland, table 13mu (CC BY 4.0)",
+   "ja": "価格：フィンランド統計局 表13mu（CC BY 4.0）"
+  },
+  "attribution": "Stations: HSL (CC BY 4.0) · Outlines: Statistics Finland (CC BY 4.0)"
+ }
+}

@@ -1,0 +1,135 @@
+{
+ "key": "toulouse",
+ "country": "France",
+ "order": 3,
+ "path": "hautegaronne/",
+ "en": "Haute-Garonne",
+ "population": 1471468,
+ "tag": {
+  "en": "Haute-Garonne",
+  "ja": "オート＝ガロンヌ"
+ },
+ "cities": [
+  {
+   "key": "toulouse",
+   "en": "Toulouse",
+   "ja": "トゥールーズ",
+   "population": 514819
+  }
+ ],
+ "goto": [
+  {
+   "key": "toulouse",
+   "label": "Toulouse",
+   "kana": "トゥールーズ",
+   "box": [
+    [
+     43.56,
+     1.39
+    ],
+    [
+     43.65,
+     1.49
+    ]
+   ],
+   "home": "Capitole"
+  },
+  {
+   "key": "colomiers",
+   "label": "Colomiers",
+   "kana": "コロミエ",
+   "box": [
+    [
+     43.574,
+     1.289
+    ],
+    [
+     43.634,
+     1.379
+    ]
+   ],
+   "home": "Colomiers"
+  },
+  {
+   "key": "blagnac",
+   "label": "Blagnac",
+   "kana": "ブラニャック",
+   "box": [
+    [
+     43.604,
+     1.346
+    ],
+    [
+     43.664,
+     1.436
+    ]
+   ],
+   "home": "Pasteur-Mairie de Blagnac"
+  },
+  {
+   "key": "ramonville",
+   "label": "Ramonville-Saint-Agne",
+   "kana": "ラモンヴィル＝サンタニュ",
+   "box": [
+    [
+     43.526,
+     1.432
+    ],
+    [
+     43.586,
+     1.522
+    ]
+   ],
+   "home": "Ramonville"
+  },
+  {
+   "key": "muret",
+   "label": "Muret",
+   "kana": "ミュレ",
+   "box": [
+    [
+     43.435,
+     1.279
+    ],
+    [
+     43.495,
+     1.369
+    ]
+   ],
+   "home": "Muret"
+  },
+  {
+   "key": "saintgaudens",
+   "label": "Saint-Gaudens",
+   "kana": "サン＝ゴーダン",
+   "box": [
+    [
+     43.075,
+     0.684
+    ],
+    [
+     43.135,
+     0.774
+    ]
+   ],
+   "home": "Saint-Gaudens"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_france.py",
+  "check": "scripts/validate_france.py",
+  "arg": "toulouse",
+  "settings": "assets/fr_areas.json",
+  "inputs": [
+   "cache:france/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales: Demandes de valeurs foncières, Direction générale des Finances publiques (DGFiP), as structured by Cerema in <a href=\"https://www.data.gouv.fr/datasets/dvf-open-data\" target=\"_blank\" rel=\"noopener\">DVF+ open data</a> (October 2026 release), Licence Ouverte 2.0.</span><span>Stations and lines: Tisséo, GTFS timetables published by Toulouse Métropole (ODbL); SNCF timetables (ODbL); track: SNCF Réseau, shapes of the lines of the national rail network (ODbL). The stations and lines in this map's data files are derived from these sources and are available under the ODbL. Département outlines: IGN Admin Express, via Etalab, Licence Ouverte 2.0. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: DVF+ open data (Cerema, from DGFiP), Licence Ouverte 2.0",
+   "ja": "価格：DVF+ open data（Cerema、DGFiP の DVF から作成）、Licence Ouverte 2.0"
+  },
+  "attribution": "Stations: Tisséo (ODbL) and SNCF (ODbL) · Track: SNCF Réseau (ODbL) · Outlines: IGN via Etalab"
+ }
+}

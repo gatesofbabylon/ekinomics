@@ -1,0 +1,78 @@
+{
+ "key": "kumamoto",
+ "country": "Japan",
+ "order": 11,
+ "path": "kumamoto/",
+ "en": "Greater Kumamoto",
+ "ja": "熊本圏",
+ "population": 1738301,
+ "tag": {
+  "en": "Kyūshū",
+  "ja": "九州"
+ },
+ "cities": [
+  {
+   "key": "kumamoto",
+   "en": "Kumamoto",
+   "ja": "熊本",
+   "population": 738865
+  }
+ ],
+ "goto": [
+  {
+   "key": "kumamoto",
+   "label": "Kumamoto",
+   "ja": "熊本",
+   "box": [
+    [
+     32.745,
+     130.635
+    ],
+    [
+     32.845,
+     130.775
+    ]
+   ],
+   "home": "熊本"
+  },
+  {
+   "key": "yatsushiro",
+   "label": "Yatsushiro",
+   "ja": "八代",
+   "box": [
+    [
+     32.455,
+     130.55
+    ],
+    [
+     32.555,
+     130.69
+    ]
+   ],
+   "home": "八代"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "kumamoto",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:kumamoto/*_{MLIT}.*",
+   "cache:kumamoto/residential/*_{MLIT}.*",
+   "cache:wikidata/kumamoto/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

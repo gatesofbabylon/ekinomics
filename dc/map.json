@@ -1,0 +1,343 @@
+{
+ "key": "washingtondc",
+ "country": "United States",
+ "order": 7,
+ "path": "dc/",
+ "en": "Washington, DC",
+ "population": 693645,
+ "tag": {
+  "en": "DC",
+  "ja": "ワシントンD.C."
+ },
+ "cities": [
+  {
+   "key": "washingtondc",
+   "en": "Washington",
+   "ja": "ワシントン",
+   "population": 693645
+  }
+ ],
+ "goto": [
+  {
+   "key": "washingtondc",
+   "label": "Washington",
+   "kana": "ワシントン",
+   "box": [
+    [
+     38.885,
+     -77.05
+    ],
+    [
+     38.912,
+     -77
+    ]
+   ],
+   "home": "Metro Center"
+  },
+  {
+   "key": "capitolhill",
+   "label": "Capitol Hill",
+   "kana": "キャピトル・ヒル",
+   "box": [
+    [
+     38.87,
+     -77.015
+    ],
+    [
+     38.9,
+     -76.975
+    ]
+   ],
+   "home": "Eastern Market"
+  },
+  {
+   "key": "navyyard",
+   "label": "Navy Yard",
+   "kana": "ネイビー・ヤード",
+   "box": [
+    [
+     38.862,
+     -77.025
+    ],
+    [
+     38.892,
+     -76.985
+    ]
+   ],
+   "home": "Navy Yard-Ballpark"
+  },
+  {
+   "key": "noma",
+   "label": "NoMa",
+   "kana": "ノーマ",
+   "box": [
+    [
+     38.892,
+     -77.023
+    ],
+    [
+     38.922,
+     -76.983
+    ]
+   ],
+   "home": "NoMa-Gallaudet U"
+  },
+  {
+   "key": "shaw",
+   "label": "Shaw",
+   "kana": "ショー",
+   "box": [
+    [
+     38.899,
+     -77.042
+    ],
+    [
+     38.929,
+     -77.002
+    ]
+   ],
+   "home": "Shaw-Howard U"
+  },
+  {
+   "key": "ustreet",
+   "label": "U Street",
+   "kana": "Uストリート",
+   "box": [
+    [
+     38.902,
+     -77.047
+    ],
+    [
+     38.932,
+     -77.007
+    ]
+   ],
+   "home": "U Street/African-Amer Civil War Memorial/Cardozo"
+  },
+  {
+   "key": "dupontcircle",
+   "label": "Dupont Circle",
+   "kana": "デュポン・サークル",
+   "box": [
+    [
+     38.895,
+     -77.063
+    ],
+    [
+     38.925,
+     -77.023
+    ]
+   ],
+   "home": "Dupont Circle"
+  },
+  {
+   "key": "georgetown",
+   "label": "Georgetown",
+   "kana": "ジョージタウン",
+   "box": [
+    [
+     38.89,
+     -77.085
+    ],
+    [
+     38.92,
+     -77.045
+    ]
+   ],
+   "home": "Foggy Bottom-GWU"
+  },
+  {
+   "key": "adamsmorgan",
+   "label": "Adams Morgan",
+   "kana": "アダムズ・モーガン",
+   "box": [
+    [
+     38.908,
+     -77.062
+    ],
+    [
+     38.938,
+     -77.022
+    ]
+   ],
+   "home": "Woodley Park-Zoo/Adams Morgan"
+  },
+  {
+   "key": "columbiaheights",
+   "label": "Columbia Heights",
+   "kana": "コロンビア・ハイツ",
+   "box": [
+    [
+     38.913,
+     -77.052
+    ],
+    [
+     38.943,
+     -77.012
+    ]
+   ],
+   "home": "Columbia Heights"
+  },
+  {
+   "key": "petworth",
+   "label": "Petworth",
+   "kana": "ペットワース",
+   "box": [
+    [
+     38.922,
+     -77.043
+    ],
+    [
+     38.952,
+     -77.003
+    ]
+   ],
+   "home": "Georgia Ave-Petworth"
+  },
+  {
+   "key": "clevelandpark",
+   "label": "Cleveland Park",
+   "kana": "クリーブランド・パーク",
+   "box": [
+    [
+     38.92,
+     -77.078
+    ],
+    [
+     38.95,
+     -77.038
+    ]
+   ],
+   "home": "Cleveland Park"
+  },
+  {
+   "key": "tenleytown",
+   "label": "Tenleytown",
+   "kana": "テンリータウン",
+   "box": [
+    [
+     38.934,
+     -77.1
+    ],
+    [
+     38.964,
+     -77.06
+    ]
+   ],
+   "home": "Tenleytown-AU"
+  },
+  {
+   "key": "takoma",
+   "label": "Takoma",
+   "kana": "タコマ",
+   "box": [
+    [
+     38.961,
+     -77.038
+    ],
+    [
+     38.991,
+     -76.998
+    ]
+   ],
+   "home": "Takoma"
+  },
+  {
+   "key": "brookland",
+   "label": "Brookland",
+   "kana": "ブルックランド",
+   "box": [
+    [
+     38.918,
+     -77.015
+    ],
+    [
+     38.948,
+     -76.975
+    ]
+   ],
+   "home": "Brookland-CUA"
+  },
+  {
+   "key": "southwestwaterfront",
+   "label": "Southwest Waterfront",
+   "kana": "サウスウェスト・ウォーターフロント",
+   "box": [
+    [
+     38.862,
+     -77.037
+    ],
+    [
+     38.892,
+     -76.997
+    ]
+   ],
+   "home": "Waterfront"
+  },
+  {
+   "key": "anacostia",
+   "label": "Anacostia",
+   "kana": "アナコスティア",
+   "box": [
+    [
+     38.848,
+     -77.015
+    ],
+    [
+     38.878,
+     -76.975
+    ]
+   ],
+   "home": "Anacostia"
+  },
+  {
+   "key": "congressheights",
+   "label": "Congress Heights",
+   "kana": "コングレス・ハイツ",
+   "box": [
+    [
+     38.831,
+     -77.008
+    ],
+    [
+     38.861,
+     -76.968
+    ]
+   ],
+   "home": "Congress Heights"
+  },
+  {
+   "key": "deanwood",
+   "label": "Deanwood",
+   "kana": "ディーンウッド",
+   "box": [
+    [
+     38.885,
+     -76.965
+    ],
+    [
+     38.915,
+     -76.925
+    ]
+   ],
+   "home": "Deanwood"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_washingtondc.py",
+  "check": "scripts/validate_washingtondc.py",
+  "arg": "washingtondc",
+  "inputs": [
+   "cache:us/washingtondc/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales, use codes, floor areas and years built: District of Columbia, Office of Tax and Revenue (Tax System Property Sales (CAMA), Integrated Tax System Public Extract, Computer Assisted Mass Appraisal - Residential and - Condominium, Condo Relate Table). Address points, neighborhood clusters, wards and Metro stations and lines: DC GIS (Office of the Chief Technology Officer). All from <a href=\"https://opendata.dc.gov/\" target=\"_blank\" rel=\"noopener\">DC Open Data</a> under the <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">Creative Commons Attribution 4.0 International licence</a>; filtered, combined and summarised as medians for this site. MARC stations and lines: MDOT MTA MARC GTFS. Counties and the rivers: US Census Bureau cartographic boundary files and TIGER/Line area water.</span><span>This site is not produced, sponsored or endorsed by the District of Columbia, WMATA, MDOT MTA or the US Census Bureau. The District's property data were developed and collected for real property assessment purposes only, and the District assumes no liability for their use, accuracy, sufficiency or suitability for any other use; MDOT MTA does not guarantee the accuracy of its data nor warrant or endorse any application that uses it.</span>",
+  "priceSource": {
+   "en": "Prices: DC Office of Tax and Revenue sales and appraisal records (DC Open Data, CC BY 4.0)",
+   "ja": "価格：D.C.税務歳入局の取引・評価記録（DC Open Data、CC BY 4.0）"
+  },
+  "attribution": "Stations and lines: DC GIS (CC BY 4.0) and MARC GTFS · Outlines: DC GIS, US Census Bureau"
+ }
+}

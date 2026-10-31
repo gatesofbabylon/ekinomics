@@ -1,0 +1,151 @@
+{
+ "key": "marseille",
+ "country": "France",
+ "order": 1,
+ "path": "bouchesdurhone/",
+ "en": "Bouches-du-Rhône",
+ "population": 2087658,
+ "tag": {
+  "en": "Bouches-du-Rhône",
+  "ja": "ブーシュ＝デュ＝ローヌ"
+ },
+ "cities": [
+  {
+   "key": "marseille",
+   "en": "Marseille",
+   "ja": "マルセイユ",
+   "population": 886040
+  }
+ ],
+ "goto": [
+  {
+   "key": "marseille",
+   "label": "Marseille",
+   "kana": "マルセイユ",
+   "box": [
+    [
+     43.245,
+     5.34
+    ],
+    [
+     43.335,
+     5.44
+    ]
+   ],
+   "home": "Vieux-Port"
+  },
+  {
+   "key": "aix",
+   "label": "Aix-en-Provence",
+   "kana": "エクス＝アン＝プロヴァンス",
+   "box": [
+    [
+     43.493,
+     5.4
+    ],
+    [
+     43.553,
+     5.49
+    ]
+   ],
+   "home": "Aix-en-Provence"
+  },
+  {
+   "key": "aubagne",
+   "label": "Aubagne",
+   "kana": "オーバーニュ",
+   "box": [
+    [
+     43.266,
+     5.521
+    ],
+    [
+     43.326,
+     5.611
+    ]
+   ],
+   "home": "Aubagne"
+  },
+  {
+   "key": "laciotat",
+   "label": "La Ciotat",
+   "kana": "ラ・シオタ",
+   "box": [
+    [
+     43.17,
+     5.588
+    ],
+    [
+     43.23,
+     5.678
+    ]
+   ],
+   "home": "La Ciotat-Ceyreste"
+  },
+  {
+   "key": "salon",
+   "label": "Salon-de-Provence",
+   "kana": "サロン＝ド＝プロヴァンス",
+   "box": [
+    [
+     43.609,
+     5.044
+    ],
+    [
+     43.669,
+     5.134
+    ]
+   ],
+   "home": "Salon"
+  },
+  {
+   "key": "istres",
+   "label": "Istres",
+   "kana": "イストル",
+   "box": [
+    [
+     43.485,
+     4.935
+    ],
+    [
+     43.545,
+     5.025
+    ]
+   ],
+   "home": "Istres"
+  },
+  {
+   "key": "arles",
+   "label": "Arles",
+   "kana": "アルル",
+   "box": [
+    [
+     43.655,
+     4.587
+    ],
+    [
+     43.715,
+     4.677
+    ]
+   ],
+   "home": "Arles"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_france.py",
+  "check": "scripts/validate_france.py",
+  "arg": "marseille",
+  "settings": "assets/fr_areas.json",
+  "inputs": [
+   "cache:france/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales: Demandes de valeurs foncières, Direction générale des Finances publiques (DGFiP), as structured by Cerema in <a href=\"https://www.data.gouv.fr/datasets/dvf-open-data\" target=\"_blank\" rel=\"noopener\">DVF+ open data</a> (October 2026 release), Licence Ouverte 2.0.</span><span>Stations and lines: RTM, GTFS timetables published by the Aix-Marseille-Provence metropolis (Licence Ouverte 2.0); SNCF timetables (ODbL); track: SNCF Réseau, shapes of the lines of the national rail network (ODbL). The stations and lines in this map's data files are derived from these sources and are available under the ODbL. Département outlines: IGN Admin Express, via Etalab, Licence Ouverte 2.0. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: DVF+ open data (Cerema, from DGFiP), Licence Ouverte 2.0",
+   "ja": "価格：DVF+ open data（Cerema、DGFiP の DVF から作成）、Licence Ouverte 2.0"
+  },
+  "attribution": "Stations: RTM (Licence Ouverte) and SNCF (ODbL) · Track: SNCF Réseau (ODbL) · Outlines: IGN via Etalab"
+ }
+}

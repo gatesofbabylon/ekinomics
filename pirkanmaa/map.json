@@ -1,0 +1,103 @@
+{
+ "key": "tampere",
+ "country": "Finland",
+ "order": 1,
+ "path": "pirkanmaa/",
+ "en": "Tampere region",
+ "population": 446123,
+ "tag": {
+  "en": "Pirkanmaa",
+  "ja": "ピルカンマー"
+ },
+ "cities": [
+  {
+   "key": "tampere",
+   "en": "Tampere",
+   "ja": "タンペレ",
+   "population": 263337
+  }
+ ],
+ "goto": [
+  {
+   "key": "tampere",
+   "label": "Tampere",
+   "kana": "タンペレ",
+   "box": [
+    [
+     61.47,
+     23.7
+    ],
+    [
+     61.52,
+     23.84
+    ]
+   ],
+   "home": "Tampere"
+  },
+  {
+   "key": "hervanta",
+   "label": "Hervanta",
+   "kana": "ヘルヴァンタ",
+   "box": [
+    [
+     61.425,
+     23.8
+    ],
+    [
+     61.475,
+     23.9
+    ]
+   ],
+   "home": "Hervantakeskus"
+  },
+  {
+   "key": "nokia",
+   "label": "Nokia",
+   "kana": "ノキア",
+   "box": [
+    [
+     61.456,
+     23.449
+    ],
+    [
+     61.506,
+     23.549
+    ]
+   ],
+   "home": "Nokia"
+  },
+  {
+   "key": "lempaala",
+   "label": "Lempäälä",
+   "kana": "レンパーラ",
+   "box": [
+    [
+     61.289,
+     23.705
+    ],
+    [
+     61.339,
+     23.805
+    ]
+   ],
+   "home": "Lempäälä"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_finland.py",
+  "check": "scripts/validate_finland.py",
+  "arg": "tampere",
+  "settings": "assets/fi_areas.json",
+  "inputs": [
+   "cache:finland/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Prices per square metre and numbers of sales by postal code area (table 13mu), Paavo postal code areas and the sub-region classification: Statistics Finland (CC BY 4.0). Tram stops and lines: Nysse, City of Tampere, via ITS Factory (CC BY 4.0). Railway stations and lines: Fintraffic, rata.digitraffic.fi (CC BY 4.0).</span><span>Land beyond Finland: Natural Earth. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: Statistics Finland, table 13mu (CC BY 4.0)",
+   "ja": "価格：フィンランド統計局 表13mu（CC BY 4.0）"
+  },
+  "attribution": "Trams: Nysse (ITS Factory, CC BY 4.0) · Trains: Fintraffic (CC BY 4.0) · Outlines: Statistics Finland (CC BY 4.0)"
+ }
+}
