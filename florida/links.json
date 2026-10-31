@@ -1,1 +1,1 @@
-[{"name":"New York","href":"../newyork/newyork/","label":[-80.0974,26.0139],"arrow":"↑","from":"miami","route":"Amtrak Silver Meteor"}]
+[{"name":"New York","href":"../newyork/newyork/","label":[-80.0974,26.0139],"arrow":"↑","from":"miami","route":"Amtrak Silver Meteor"},{"name":"Orlando","href":"../centralflorida/orlando/","label":[-80.6718,26.8854],"arrow":"↑","from":"miami","route":"Brightline"},{"name":"Tampa","href":"../tampabay/tampa/","label":[-80.9222,26.4721],"arrow":"↖","from":"miami","route":"Amtrak Floridian"}]
