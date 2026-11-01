@@ -1,0 +1,155 @@
+{
+ "key": "poznan",
+ "country": "Poland",
+ "order": 1,
+ "path": "poznan/",
+ "en": "Poznań",
+ "population": 546859,
+ "tag": {
+  "en": "Poznań",
+  "ja": "ポズナン"
+ },
+ "cities": [
+  {
+   "key": "poznan",
+   "en": "Poznań",
+   "ja": "ポズナン",
+   "population": 546859
+  }
+ ],
+ "goto": [
+  {
+   "key": "poznan",
+   "label": "Poznań",
+   "kana": "ポズナン",
+   "box": [
+    [
+     52.398,
+     16.905
+    ],
+    [
+     52.418,
+     16.945
+    ]
+   ],
+   "home": "Pl. Wielkopolski"
+  },
+  {
+   "key": "jezyce",
+   "label": "Jeżyce",
+   "kana": "イェジツェ",
+   "box": [
+    [
+     52.404,
+     16.885
+    ],
+    [
+     52.42,
+     16.915
+    ]
+   ],
+   "home": "Rynek Jeżycki"
+  },
+  {
+   "key": "lazarz",
+   "label": "Łazarz",
+   "kana": "ワザシュ",
+   "box": [
+    [
+     52.385,
+     16.88
+    ],
+    [
+     52.402,
+     16.91
+    ]
+   ],
+   "home": "Rynek Łazarski"
+  },
+  {
+   "key": "wilda",
+   "label": "Wilda",
+   "kana": "ヴィルダ",
+   "box": [
+    [
+     52.378,
+     16.905
+    ],
+    [
+     52.4,
+     16.932
+    ]
+   ],
+   "home": "Rynek Wildecki"
+  },
+  {
+   "key": "rataje",
+   "label": "Rataje",
+   "kana": "ラタイェ",
+   "box": [
+    [
+     52.38,
+     16.94
+    ],
+    [
+     52.4,
+     16.98
+    ]
+   ],
+   "home": "Polanka"
+  },
+  {
+   "key": "winogrady",
+   "label": "Winogrady",
+   "kana": "ヴィノグラディ",
+   "box": [
+    [
+     52.42,
+     16.91
+    ],
+    [
+     52.445,
+     16.955
+    ]
+   ],
+   "home": "Słowiańska"
+  },
+  {
+   "key": "piatkowo",
+   "label": "Piątkowo",
+   "kana": "ピョントコヴォ",
+   "box": [
+    [
+     52.44,
+     16.9
+    ],
+    [
+     52.47,
+     16.935
+    ]
+   ],
+   "home": "Os. Sobieskiego"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_poland.py",
+  "check": "scripts/validate_poland.py",
+  "arg": "poznan",
+  "settings": "assets/pl_areas.json",
+  "helpers": [
+   "scripts/rcn.py"
+  ],
+  "inputs": [
+   "cache:poland/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales, floor areas, rooms, floors and positions of flats: Zarząd Geodezji i Katastru Miejskiego GEOPOZ (City of Poznań, Urząd Miasta Poznania), Rejestr Cen Nieruchomości (register of real estate prices), GML files on its Public Information Bulletin, listed on dane.gov.pl under CC BY 4.0; station medians are Ekinomics' own calculation. Tram stops and lines: ZTM Poznań GTFS. Railway stations and lines: PKP Polskie Linie Kolejowe timetables, as GTFS compiled by mkuran.pl. Osiedla, city boundary and neighbouring municipalities: City of Poznań, Spatial Information System (sip.poznan.pl).</span><span>This site is not sponsored by, affiliated with or operated by any of these bodies, and none of them produced or endorses it. The data are provided as is, without any warranty that they are accurate, current or complete, and are used here at the reader's own risk.</span>",
+  "priceSource": {
+   "en": "Prices: GEOPOZ, City of Poznań, register of real estate prices (RCN, CC BY 4.0)",
+   "ja": "価格：ポズナン市 GEOPOZ 不動産価格登録簿（RCN、CC BY 4.0）"
+  },
+  "attribution": "Stations and lines: ZTM Poznań and PKP PLK GTFS (mkuran.pl) · Outlines: City of Poznań SIP"
+ }
+}

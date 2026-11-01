@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://ekinomics.com/</loc><lastmod>2026-10-31</lastmod></url>
-<url><loc>https://ekinomics.com/japan/</loc><lastmod>2026-10-31</lastmod></url>
-<url><loc>https://ekinomics.com/uk/</loc><lastmod>2026-10-31</lastmod></url>
-<url><loc>https://ekinomics.com/france/</loc><lastmod>2026-10-31</lastmod></url>
-<url><loc>https://ekinomics.com/australia/</loc><lastmod>2026-10-31</lastmod></url>
-<url><loc>https://ekinomics.com/finland/</loc><lastmod>2026-10-31</lastmod></url>
-<url><loc>https://ekinomics.com/us/</loc><lastmod>2026-10-31</lastmod></url>
-<url><loc>https://ekinomics.com/spain/</loc><lastmod>2026-10-31</lastmod></url>
+<url><loc>https://ekinomics.com/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/japan/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/uk/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/france/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/australia/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/finland/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/us/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/spain/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/latvia/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/poland/</loc><lastmod>2026-11-01</lastmod></url>
 <url><loc>https://ekinomics.com/aberdeen/</loc><lastmod>2026-10-29</lastmod></url>
 <url><loc>https://ekinomics.com/allegheny/</loc><lastmod>2026-10-30</lastmod></url>
 <url><loc>https://ekinomics.com/alpesmaritimes/</loc><lastmod>2026-10-31</lastmod></url>
@@ -47,6 +49,7 @@
 <url><loc>https://ekinomics.com/nagasaki/</loc><lastmod>2026-10-29</lastmod></url>
 <url><loc>https://ekinomics.com/newsouthwales/</loc><lastmod>2026-10-31</lastmod></url>
 <url><loc>https://ekinomics.com/newyork/</loc><lastmod>2026-10-30</lastmod></url>
+<url><loc>https://ekinomics.com/niigata/</loc><lastmod>2026-11-01</lastmod></url>
 <url><loc>https://ekinomics.com/nord/</loc><lastmod>2026-10-31</lastmod></url>
 <url><loc>https://ekinomics.com/northcarolina/</loc><lastmod>2026-10-30</lastmod></url>
 <url><loc>https://ekinomics.com/northeast/</loc><lastmod>2026-10-29</lastmod></url>
@@ -59,8 +62,10 @@
 <url><loc>https://ekinomics.com/okinawa/</loc><lastmod>2026-10-29</lastmod></url>
 <url><loc>https://ekinomics.com/pennsylvania/</loc><lastmod>2026-10-30</lastmod></url>
 <url><loc>https://ekinomics.com/pirkanmaa/</loc><lastmod>2026-10-30</lastmod></url>
+<url><loc>https://ekinomics.com/poznan/</loc><lastmod>2026-11-01</lastmod></url>
 <url><loc>https://ekinomics.com/queensland/</loc><lastmod>2026-10-31</lastmod></url>
 <url><loc>https://ekinomics.com/rhone/</loc><lastmod>2026-10-31</lastmod></url>
+<url><loc>https://ekinomics.com/riga/</loc><lastmod>2026-11-01</lastmod></url>
 <url><loc>https://ekinomics.com/shikoku/</loc><lastmod>2026-10-29</lastmod></url>
 <url><loc>https://ekinomics.com/shizuoka/</loc><lastmod>2026-10-29</lastmod></url>
 <url><loc>https://ekinomics.com/shutoken/</loc><lastmod>2026-10-29</lastmod></url>
@@ -580,6 +585,10 @@
 <url><loc>https://ekinomics.com/newyork/riverdale/</loc><lastmod>2026-10-30</lastmod></url>
 <url><loc>https://ekinomics.com/newyork/statenisland/</loc><lastmod>2026-10-30</lastmod></url>
 <url><loc>https://ekinomics.com/newyork/williamsburg/</loc><lastmod>2026-10-30</lastmod></url>
+<url><loc>https://ekinomics.com/niigata/joetsu/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/niigata/nagaoka/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/niigata/niigata/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/niigata/sanjo/</loc><lastmod>2026-11-01</lastmod></url>
 <url><loc>https://ekinomics.com/nord/armentieres/</loc><lastmod>2026-10-31</lastmod></url>
 <url><loc>https://ekinomics.com/nord/cambrai/</loc><lastmod>2026-10-31</lastmod></url>
 <url><loc>https://ekinomics.com/nord/douai/</loc><lastmod>2026-10-31</lastmod></url>
@@ -685,6 +694,13 @@
 <url><loc>https://ekinomics.com/pirkanmaa/lempaala/</loc><lastmod>2026-10-30</lastmod></url>
 <url><loc>https://ekinomics.com/pirkanmaa/nokia/</loc><lastmod>2026-10-30</lastmod></url>
 <url><loc>https://ekinomics.com/pirkanmaa/tampere/</loc><lastmod>2026-10-30</lastmod></url>
+<url><loc>https://ekinomics.com/poznan/jezyce/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/poznan/lazarz/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/poznan/piatkowo/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/poznan/poznan/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/poznan/rataje/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/poznan/wilda/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/poznan/winogrady/</loc><lastmod>2026-11-01</lastmod></url>
 <url><loc>https://ekinomics.com/queensland/beenleigh/</loc><lastmod>2026-10-31</lastmod></url>
 <url><loc>https://ekinomics.com/queensland/brisbane/</loc><lastmod>2026-10-31</lastmod></url>
 <url><loc>https://ekinomics.com/queensland/broadbeach/</loc><lastmod>2026-10-31</lastmod></url>
@@ -712,6 +728,12 @@
 <url><loc>https://ekinomics.com/rhone/venissieux/</loc><lastmod>2026-10-31</lastmod></url>
 <url><loc>https://ekinomics.com/rhone/villefranche/</loc><lastmod>2026-10-31</lastmod></url>
 <url><loc>https://ekinomics.com/rhone/villeurbanne/</loc><lastmod>2026-10-31</lastmod></url>
+<url><loc>https://ekinomics.com/riga/agenskalns/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/riga/imanta/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/riga/kengarags/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/riga/riga/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/riga/sarkandaugava/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/riga/teika/</loc><lastmod>2026-11-01</lastmod></url>
 <url><loc>https://ekinomics.com/shikoku/kochi/</loc><lastmod>2026-10-29</lastmod></url>
 <url><loc>https://ekinomics.com/shikoku/matsuyama/</loc><lastmod>2026-10-29</lastmod></url>
 <url><loc>https://ekinomics.com/shikoku/takamatsu/</loc><lastmod>2026-10-29</lastmod></url>
@@ -877,5 +899,5 @@
 <url><loc>https://ekinomics.com/yorkshire/sheffield/</loc><lastmod>2026-10-29</lastmod></url>
 <url><loc>https://ekinomics.com/yorkshire/wakefield/</loc><lastmod>2026-10-29</lastmod></url>
 <url><loc>https://ekinomics.com/yorkshire/york/</loc><lastmod>2026-10-29</lastmod></url>
-<url><loc>https://ekinomics.com/sources/</loc><lastmod>2026-10-31</lastmod></url>
+<url><loc>https://ekinomics.com/sources/</loc><lastmod>2026-11-01</lastmod></url>
 </urlset>

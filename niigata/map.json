@@ -1,0 +1,110 @@
+{
+ "key": "niigata",
+ "country": "Japan",
+ "order": 15,
+ "path": "niigata/",
+ "en": "Niigata",
+ "ja": "新潟県",
+ "population": 2201272,
+ "tag": {
+  "en": "Hokuriku and Shin’etsu",
+  "ja": "北陸・信越"
+ },
+ "cities": [
+  {
+   "key": "niigata",
+   "en": "Niigata",
+   "ja": "新潟",
+   "population": 789275
+  }
+ ],
+ "goto": [
+  {
+   "key": "niigata",
+   "label": "Niigata",
+   "ja": "新潟",
+   "box": [
+    [
+     37.87,
+     139.0
+    ],
+    [
+     37.96,
+     139.13
+    ]
+   ],
+   "home": "新潟"
+  },
+  {
+   "key": "nagaoka",
+   "label": "Nagaoka",
+   "ja": "長岡",
+   "box": [
+    [
+     37.41,
+     138.8
+    ],
+    [
+     37.49,
+     138.9
+    ]
+   ],
+   "home": "長岡"
+  },
+  {
+   "key": "joetsu",
+   "label": "Jōetsu",
+   "ja": "上越",
+   "box": [
+    [
+     37.1,
+     138.2
+    ],
+    [
+     37.2,
+     138.3
+    ]
+   ],
+   "home": "高田"
+  },
+  {
+   "key": "sanjo",
+   "label": "Sanjō",
+   "ja": "三条",
+   "box": [
+    [
+     37.6,
+     138.9
+    ],
+    [
+     37.7,
+     139.0
+    ]
+   ],
+   "home": "燕三条"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "niigata",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:niigata/*_20053_20262.*",
+   "cache:niigata/residential/*_20053_20262.*",
+   "cache:wikidata/niigata/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

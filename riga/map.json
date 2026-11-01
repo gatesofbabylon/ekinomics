@@ -1,0 +1,135 @@
+{
+ "key": "riga",
+ "country": "Latvia",
+ "order": 1,
+ "path": "riga/",
+ "en": "Riga",
+ "population": 588911,
+ "tag": {
+  "en": "Riga",
+  "ja": "リガ"
+ },
+ "cities": [
+  {
+   "key": "riga",
+   "en": "Riga",
+   "ja": "リガ",
+   "population": 588911
+  }
+ ],
+ "goto": [
+  {
+   "key": "riga",
+   "label": "Riga",
+   "kana": "リガ",
+   "box": [
+    [
+     56.94,
+     24.095
+    ],
+    [
+     56.962,
+     24.14
+    ]
+   ],
+   "home": "Nacionālā opera"
+  },
+  {
+   "key": "agenskalns",
+   "label": "Āgenskalns",
+   "kana": "アーゲンスカルンス",
+   "box": [
+    [
+     56.928,
+     24.054
+    ],
+    [
+     56.944,
+     24.086
+    ]
+   ],
+   "home": "Āgenskalna tirgus"
+  },
+  {
+   "key": "teika",
+   "label": "Teika",
+   "kana": "テイカ",
+   "box": [
+    [
+     56.973,
+     24.167
+    ],
+    [
+     56.989,
+     24.199
+    ]
+   ],
+   "home": "Džutas iela"
+  },
+  {
+   "key": "kengarags",
+   "label": "Ķengarags",
+   "kana": "ケンガラグス",
+   "box": [
+    [
+     56.902,
+     24.164
+    ],
+    [
+     56.918,
+     24.196
+    ]
+   ],
+   "home": "Rušonu iela"
+  },
+  {
+   "key": "imanta",
+   "label": "Imanta",
+   "kana": "イマンタ",
+   "box": [
+    [
+     56.95,
+     24.011
+    ],
+    [
+     56.966,
+     24.043
+    ]
+   ],
+   "home": "Imantas iela"
+  },
+  {
+   "key": "sarkandaugava",
+   "label": "Sarkandaugava",
+   "kana": "サルカンダウガワ",
+   "box": [
+    [
+     56.995,
+     24.11
+    ],
+    [
+     57.011,
+     24.142
+    ]
+   ],
+   "home": "Dauderi"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_riga.py",
+  "check": "scripts/validate_riga.py",
+  "arg": "riga",
+  "inputs": [
+   "cache:latvia/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales, floor areas, years built and building positions: State Land Service of Latvia (VZD), real estate market database open data (data.gov.lv), CC BY 4.0; station medians are Ekinomics' own calculation. Tram stops and lines: Rīgas satiksme GTFS. Railway stations and lines: Pasažieru vilciens GTFS (vivi.lv). Neighbourhoods: Central Statistical Bureau of Latvia. City outline: Ministry of Smart Administration and Regional Development.</span><span>This site is not sponsored by, affiliated with or operated by any of these bodies, and none of them produced or endorses it. The data are provided as is, without any warranty that they are accurate, current or complete, and are used here at the reader's own risk.</span>",
+  "priceSource": {
+   "en": "Prices: State Land Service of Latvia (VZD), real estate market database (data.gov.lv, CC BY 4.0)",
+   "ja": "価格：ラトビア国家土地局（VZD）不動産市場データベース（data.gov.lv、CC BY 4.0）"
+  },
+  "attribution": "Stations and lines: Rīgas satiksme and Pasažieru vilciens GTFS · Outlines: CSP, VARAM"
+ }
+}
