@@ -1,0 +1,154 @@
+{
+ "key": "dublin",
+ "country": "Ireland",
+ "order": 1,
+ "path": "dublin/",
+ "en": "Dublin",
+ "population": 1458154,
+ "tag": {
+  "en": "Dublin",
+  "ja": "ダブリン"
+ },
+ "cities": [
+  {
+   "key": "dublin",
+   "en": "Dublin",
+   "ja": "ダブリン",
+   "population": 592713
+  }
+ ],
+ "goto": [
+  {
+   "key": "dublin",
+   "label": "Dublin",
+   "kana": "ダブリン",
+   "box": [
+    [
+     53.335,
+     -6.29
+    ],
+    [
+     53.36,
+     -6.23
+    ]
+   ],
+   "home": "Connolly"
+  },
+  {
+   "key": "dunlaoghaire",
+   "label": "Dún Laoghaire",
+   "kana": "ダン・レアリー",
+   "box": [
+    [
+     53.28,
+     -6.16
+    ],
+    [
+     53.3,
+     -6.12
+    ]
+   ],
+   "home": "Dún Laoghaire"
+  },
+  {
+   "key": "dundrum",
+   "label": "Dundrum",
+   "kana": "ダンドラム",
+   "box": [
+    [
+     53.28,
+     -6.26
+    ],
+    [
+     53.3,
+     -6.23
+    ]
+   ],
+   "home": "Dundrum"
+  },
+  {
+   "key": "tallaght",
+   "label": "Tallaght",
+   "kana": "タラト",
+   "box": [
+    [
+     53.28,
+     -6.39
+    ],
+    [
+     53.3,
+     -6.35
+    ]
+   ],
+   "home": "Tallaght"
+  },
+  {
+   "key": "malahide",
+   "label": "Malahide",
+   "kana": "マラハイド",
+   "box": [
+    [
+     53.44,
+     -6.18
+    ],
+    [
+     53.46,
+     -6.14
+    ]
+   ],
+   "home": "Malahide"
+  },
+  {
+   "key": "howth",
+   "label": "Howth",
+   "kana": "ホウス",
+   "box": [
+    [
+     53.37,
+     -6.08
+    ],
+    [
+     53.395,
+     -6.05
+    ]
+   ],
+   "home": "Howth"
+  },
+  {
+   "key": "balbriggan",
+   "label": "Balbriggan",
+   "kana": "バルブリガン",
+   "box": [
+    [
+     53.6,
+     -6.2
+    ],
+    [
+     53.62,
+     -6.17
+    ]
+   ],
+   "home": "Balbriggan"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_ireland.py",
+  "check": "scripts/validate_ireland.py",
+  "arg": "dublin",
+  "settings": "assets/ie_areas.json",
+  "helpers": [
+   "scripts/ie.py"
+  ],
+  "inputs": [
+   "cache:ireland/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales: Property Services Regulatory Authority, Residential Property Price Register (propertypriceregister.ie), 1 January 2010–23 October 2026, listed on data.gov.ie under <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>; each sale is placed on the street its address names, and the station figures are Ekinomics' own calculation. Stations and lines: National Transport Authority, GTFS for Irish Rail and Luas (<a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>). Local authority outlines: © Tailte Éireann, Administrative Areas (CC BY 4.0). Population: CSO, Census 2022 (CC BY 4.0).</span><span>Streets, housing estates and place names used to place the addresses: © <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\" rel=\"noopener\">OpenStreetMap</a> contributors, as mapped in 2026, under the Open Database License; the street placements derived from them are available under the same licence. Land beyond County Dublin: Natural Earth. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: Property Price Register (PSRA), second-hand homes (CC BY 4.0)",
+   "ja": "価格：アイルランド不動産サービス規制庁 不動産価格登録簿 中古住宅（CC BY 4.0）"
+  },
+  "attribution": "Prices: Property Price Register, PSRA (CC BY 4.0) · Stations: NTA (CC BY 4.0) · Streets: © OpenStreetMap contributors (ODbL) · Outlines: © Tailte Éireann"
+ }
+}
