@@ -1,0 +1,155 @@
+{
+ "key": "cologne",
+ "country": "Germany",
+ "order": 1,
+ "path": "cologne/",
+ "en": "Cologne",
+ "population": 1024621,
+ "tag": {
+  "en": "Cologne",
+  "ja": "ケルン"
+ },
+ "cities": [
+  {
+   "key": "cologne",
+   "en": "Cologne",
+   "ja": "ケルン",
+   "population": 1024621
+  }
+ ],
+ "goto": [
+  {
+   "key": "cologne",
+   "label": "Cologne",
+   "kana": "ケルン",
+   "box": [
+    [
+     50.923,
+     6.924
+    ],
+    [
+     50.963,
+     6.994
+    ]
+   ],
+   "home": "Köln Hbf"
+  },
+  {
+   "key": "ehrenfeld",
+   "label": "Ehrenfeld",
+   "kana": "エーレンフェルト",
+   "box": [
+    [
+     50.942,
+     6.901
+    ],
+    [
+     50.962,
+     6.933
+    ]
+   ],
+   "home": "Köln-Ehrenfeld"
+  },
+  {
+   "key": "deutz",
+   "label": "Deutz",
+   "kana": "ドイツ（ケルン）",
+   "box": [
+    [
+     50.931,
+     6.959
+    ],
+    [
+     50.951,
+     6.991
+    ]
+   ],
+   "home": "Köln-Messe/Deutz"
+  },
+  {
+   "key": "nippes",
+   "label": "Nippes",
+   "kana": "ニッペス",
+   "box": [
+    [
+     50.949,
+     6.926
+    ],
+    [
+     50.969,
+     6.958
+    ]
+   ],
+   "home": "Köln-Nippes"
+  },
+  {
+   "key": "lindenthal",
+   "label": "Lindenthal",
+   "kana": "リンデンタール",
+   "box": [
+    [
+     50.927,
+     6.901
+    ],
+    [
+     50.947,
+     6.933
+    ]
+   ],
+   "home": "Lindenthal Melaten"
+  },
+  {
+   "key": "muelheim",
+   "label": "Mülheim",
+   "kana": "ミュールハイム",
+   "box": [
+    [
+     50.948,
+     6.997
+    ],
+    [
+     50.968,
+     7.029
+    ]
+   ],
+   "home": "Köln-Mülheim"
+  },
+  {
+   "key": "porz",
+   "label": "Porz",
+   "kana": "ポルツ",
+   "box": [
+    [
+     50.873,
+     7.049
+    ],
+    [
+     50.893,
+     7.081
+    ]
+   ],
+   "home": "Köln-Porz"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_germany_nrw.py",
+  "check": "scripts/validate_germany_nrw.py",
+  "arg": "cologne",
+  "settings": "assets/de_nrw_areas.json",
+  "helpers": [
+   "scripts/de_nrw.py",
+   "scripts/pt.py"
+  ],
+  "inputs": [
+   "cache:germany/nrw/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Standard values per m² of living area of owner-occupied flats (Immobilienrichtwerte, Teilmarkt Eigentumswohnungen), by zone, valued on 1 January 2022–2026: Gutachterausschuss für Grundstückswerte in der Stadt Köln, published by the Gutachterausschüsse für Grundstückswerte in NRW through <a href=\"https://www.boris.nrw.de/\" target=\"_blank\" rel=\"noopener\">BORIS-NRW</a> and <a href=\"https://www.opengeodata.nrw.de/produkte/infrastruktur_bauen_wohnen/boris/IRW/\" target=\"_blank\" rel=\"noopener\">opengeodata.nrw.de</a>, <a href=\"https://www.govdata.de/dl-de/zero-2-0\" target=\"_blank\" rel=\"noopener\">dl-de/zero-2.0</a>; the station figures are Ekinomics' own calculation from them. Check figures: Grundstücksmarktdaten NRW (dl-de/zero-2.0). Population: Statistisches Bundesamt (Destatis), Gemeindeverzeichnis, 31 December 2024 (dl-de/by-2.0). City outline and municipalities around: © EuroGeographics for the administrative boundaries (Eurostat GISCO, LAU 2024). Land beyond Germany: Natural Earth.</span><span>Stations and lines, processed from the national timetable of DELFI e.V. (NeTEx) as converted to GTFS by <a href=\"https://gtfs.de/\" target=\"_blank\" rel=\"noopener\">gtfs.de</a>, under <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>, 2026. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: NRW Immobilienrichtwerte, standard values for flats (BORIS-NRW, dl-de/zero-2.0), low confidence",
+   "ja": "価格：NRW 州の不動産標準価格（Immobilienrichtwerte、BORIS-NRW、dl-de/zero-2.0）、低信頼度"
+  },
+  "attribution": "Stations: DELFI e.V. via gtfs.de (CC BY 4.0) · Prices: Gutachterausschüsse NRW, BORIS-NRW (dl-de/zero-2.0) · Outlines: © EuroGeographics"
+ }
+}

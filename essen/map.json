@@ -1,0 +1,155 @@
+{
+ "key": "essen",
+ "country": "Germany",
+ "order": 4,
+ "path": "essen/",
+ "en": "Essen",
+ "population": 574682,
+ "tag": {
+  "en": "Essen",
+  "ja": "エッセン"
+ },
+ "cities": [
+  {
+   "key": "essen",
+   "en": "Essen",
+   "ja": "エッセン",
+   "population": 574682
+  }
+ ],
+ "goto": [
+  {
+   "key": "essen",
+   "label": "Essen",
+   "kana": "エッセン",
+   "box": [
+    [
+     51.43,
+     6.977
+    ],
+    [
+     51.47,
+     7.047
+    ]
+   ],
+   "home": "Essen Hbf"
+  },
+  {
+   "key": "ruettenscheid",
+   "label": "Rüttenscheid",
+   "kana": "リュッテンシャイト",
+   "box": [
+    [
+     51.428,
+     6.99
+    ],
+    [
+     51.448,
+     7.022
+    ]
+   ],
+   "home": "Rüttenscheider Stern"
+  },
+  {
+   "key": "altenessen",
+   "label": "Altenessen",
+   "kana": "アルテンエッセン",
+   "box": [
+    [
+     51.474,
+     6.993
+    ],
+    [
+     51.494,
+     7.025
+    ]
+   ],
+   "home": "Essen-Altenessen"
+  },
+  {
+   "key": "borbeck",
+   "label": "Borbeck",
+   "kana": "ボルベック",
+   "box": [
+    [
+     51.462,
+     6.933
+    ],
+    [
+     51.482,
+     6.965
+    ]
+   ],
+   "home": "Essen-Borbeck"
+  },
+  {
+   "key": "steele",
+   "label": "Steele",
+   "kana": "シュテーレ",
+   "box": [
+    [
+     51.441,
+     7.059
+    ],
+    [
+     51.461,
+     7.091
+    ]
+   ],
+   "home": "Essen-Steele"
+  },
+  {
+   "key": "werden",
+   "label": "Werden",
+   "kana": "ヴェルデン",
+   "box": [
+    [
+     51.377,
+     6.982
+    ],
+    [
+     51.397,
+     7.014
+    ]
+   ],
+   "home": "Essen-Werden"
+  },
+  {
+   "key": "kettwig",
+   "label": "Kettwig",
+   "kana": "ケットヴィヒ",
+   "box": [
+    [
+     51.354,
+     6.938
+    ],
+    [
+     51.374,
+     6.97
+    ]
+   ],
+   "home": "Essen-Kettwig"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_germany_nrw.py",
+  "check": "scripts/validate_germany_nrw.py",
+  "arg": "essen",
+  "settings": "assets/de_nrw_areas.json",
+  "helpers": [
+   "scripts/de_nrw.py",
+   "scripts/pt.py"
+  ],
+  "inputs": [
+   "cache:germany/nrw/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Standard values per m² of living area of owner-occupied flats (Immobilienrichtwerte, Teilmarkt Eigentumswohnungen), by zone, valued on 1 January 2017–2026: Gutachterausschuss für Grundstückswerte in der Stadt Essen, published by the Gutachterausschüsse für Grundstückswerte in NRW through <a href=\"https://www.boris.nrw.de/\" target=\"_blank\" rel=\"noopener\">BORIS-NRW</a> and <a href=\"https://www.opengeodata.nrw.de/produkte/infrastruktur_bauen_wohnen/boris/IRW/\" target=\"_blank\" rel=\"noopener\">opengeodata.nrw.de</a>, <a href=\"https://www.govdata.de/dl-de/zero-2-0\" target=\"_blank\" rel=\"noopener\">dl-de/zero-2.0</a>; the station figures are Ekinomics' own calculation from them. Check figures: Grundstücksmarktdaten NRW (dl-de/zero-2.0). Population: Statistisches Bundesamt (Destatis), Gemeindeverzeichnis, 31 December 2024 (dl-de/by-2.0). City outline and municipalities around: © EuroGeographics for the administrative boundaries (Eurostat GISCO, LAU 2024). Land beyond Germany: Natural Earth.</span><span>Stations and lines, processed from the national timetable of DELFI e.V. (NeTEx) as converted to GTFS by <a href=\"https://gtfs.de/\" target=\"_blank\" rel=\"noopener\">gtfs.de</a>, under <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>, 2026. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: NRW Immobilienrichtwerte, standard values for flats (BORIS-NRW, dl-de/zero-2.0), low confidence",
+   "ja": "価格：NRW 州の不動産標準価格（Immobilienrichtwerte、BORIS-NRW、dl-de/zero-2.0）、低信頼度"
+  },
+  "attribution": "Stations: DELFI e.V. via gtfs.de (CC BY 4.0) · Prices: Gutachterausschüsse NRW, BORIS-NRW (dl-de/zero-2.0) · Outlines: © EuroGeographics"
+ }
+}

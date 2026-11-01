@@ -1,0 +1,140 @@
+{
+ "key": "hamburg",
+ "country": "Germany",
+ "order": 1,
+ "path": "hamburg/",
+ "en": "Hamburg",
+ "population": 1862565,
+ "tag": {
+  "en": "Hamburg",
+  "ja": "ハンブルク"
+ },
+ "cities": [
+  {
+   "key": "hamburg",
+   "en": "Hamburg",
+   "ja": "ハンブルク",
+   "population": 1862565
+  }
+ ],
+ "goto": [
+  {
+   "key": "hamburg",
+   "label": "Hamburg",
+   "kana": "ハンブルク",
+   "box": [
+    [
+     53.53,
+     9.95
+    ],
+    [
+     53.575,
+     10.04
+    ]
+   ],
+   "home": "Jungfernstieg"
+  },
+  {
+   "key": "altona",
+   "label": "Altona",
+   "kana": "アルトナ",
+   "box": [
+    [
+     53.54,
+     9.9
+    ],
+    [
+     53.565,
+     9.96
+    ]
+   ],
+   "home": "Altona"
+  },
+  {
+   "key": "harburg",
+   "label": "Harburg",
+   "kana": "ハールブルク",
+   "box": [
+    [
+     53.45,
+     9.95
+    ],
+    [
+     53.475,
+     10.0
+    ]
+   ],
+   "home": "Harburg"
+  },
+  {
+   "key": "bergedorf",
+   "label": "Bergedorf",
+   "kana": "ベルゲドルフ",
+   "box": [
+    [
+     53.475,
+     10.19
+    ],
+    [
+     53.5,
+     10.24
+    ]
+   ],
+   "home": "Bergedorf"
+  },
+  {
+   "key": "wandsbek",
+   "label": "Wandsbek",
+   "kana": "ヴァンツベック",
+   "box": [
+    [
+     53.56,
+     10.05
+    ],
+    [
+     53.59,
+     10.1
+    ]
+   ],
+   "home": "Wandsbek Markt"
+  },
+  {
+   "key": "blankenese",
+   "label": "Blankenese",
+   "kana": "ブランケネーゼ",
+   "box": [
+    [
+     53.55,
+     9.78
+    ],
+    [
+     53.575,
+     9.83
+    ]
+   ],
+   "home": "Blankenese"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_germany.py",
+  "check": "scripts/validate_germany.py",
+  "arg": "hamburg",
+  "settings": "assets/de_areas.json",
+  "helpers": [
+   "scripts/de.py",
+   "scripts/pt.py"
+  ],
+  "inputs": [
+   "cache:germany/hamburg/",
+   "cache:germany/gtfs/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Mean prices per m² of living area of resold flats, and numbers of flats sold, by Stadtteil: Gutachterausschuss für Grundstückswerte in Hamburg, Immobilienmarktbericht Hamburg 2014–2025 (figures for 2013–2024), from the Transparenzportal Hamburg under the <a href=\"https://www.govdata.de/dl-de/by-2-0\" target=\"_blank\" rel=\"noopener\">Datenlizenz Deutschland – Namensnennung – Version 2.0</a>; the station figures are Ekinomics' own calculation from them. Stadtteile and Bezirke: Freie und Hansestadt Hamburg, Landesbetrieb Geoinformation und Vermessung (ALKIS Verwaltungsgrenzen, dl-de/by-2.0). Population: Statistisches Bundesamt (Destatis), Gemeindeverzeichnis, 31 December 2024 (dl-de/by-2.0).</span><span>Stations and lines, processed from gtfs.de's Germany-wide regional and local timetables (GTFS, built from DELFI's open data) as published in October 2026, under <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>. Land beyond Hamburg: Natural Earth. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: Gutachterausschuss für Grundstückswerte in Hamburg, Immobilienmarktbericht (dl-de/by-2.0)",
+   "ja": "価格：ハンブルク不動産価格評価委員会『不動産市場報告』（dl-de/by-2.0）"
+  },
+  "attribution": "Stations: gtfs.de (CC BY 4.0) · Prices: Gutachterausschuss Hamburg (dl-de/by-2.0) · Stadtteile: LGV Hamburg (dl-de/by-2.0)"
+ }
+}
