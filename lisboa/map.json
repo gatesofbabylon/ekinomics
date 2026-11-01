@@ -1,0 +1,186 @@
+{
+ "key": "lisbon",
+ "country": "Portugal",
+ "order": 1,
+ "path": "lisboa/",
+ "en": "Lisbon metropolitan area",
+ "population": 2870208,
+ "tag": {
+  "en": "Lisbon region",
+  "ja": "リスボン都市圏"
+ },
+ "cities": [
+  {
+   "key": "lisbon",
+   "en": "Lisbon",
+   "ja": "リスボン",
+   "population": 545796
+  }
+ ],
+ "goto": [
+  {
+   "key": "lisbon",
+   "label": "Lisbon",
+   "kana": "リスボン",
+   "box": [
+    [
+     38.7,
+     -9.185
+    ],
+    [
+     38.76,
+     -9.1
+    ]
+   ],
+   "home": "Rossio"
+  },
+  {
+   "key": "parquedasnacoes",
+   "label": "Parque das Nações",
+   "kana": "パルケ・ダス・ナソインス",
+   "box": [
+    [
+     38.75,
+     -9.115
+    ],
+    [
+     38.785,
+     -9.085
+    ]
+   ],
+   "home": "Oriente"
+  },
+  {
+   "key": "almada",
+   "label": "Almada",
+   "kana": "アルマダ",
+   "box": [
+    [
+     38.655,
+     -9.19
+    ],
+    [
+     38.695,
+     -9.14
+    ]
+   ],
+   "home": "Almada"
+  },
+  {
+   "key": "cascais",
+   "label": "Cascais",
+   "kana": "カスカイス",
+   "box": [
+    [
+     38.68,
+     -9.44
+    ],
+    [
+     38.72,
+     -9.39
+    ]
+   ],
+   "home": "Cascais"
+  },
+  {
+   "key": "sintra",
+   "label": "Sintra",
+   "kana": "シントラ",
+   "box": [
+    [
+     38.78,
+     -9.41
+    ],
+    [
+     38.82,
+     -9.36
+    ]
+   ],
+   "home": "Sintra"
+  },
+  {
+   "key": "oeiras",
+   "label": "Oeiras",
+   "kana": "オエイラス",
+   "box": [
+    [
+     38.67,
+     -9.34
+    ],
+    [
+     38.71,
+     -9.29
+    ]
+   ],
+   "home": "Oeiras"
+  },
+  {
+   "key": "amadora",
+   "label": "Amadora",
+   "kana": "アマドーラ",
+   "box": [
+    [
+     38.74,
+     -9.26
+    ],
+    [
+     38.78,
+     -9.21
+    ]
+   ],
+   "home": "Amadora"
+  },
+  {
+   "key": "barreiro",
+   "label": "Barreiro",
+   "kana": "バレイロ",
+   "box": [
+    [
+     38.63,
+     -9.1
+    ],
+    [
+     38.67,
+     -9.05
+    ]
+   ],
+   "home": "Barreiro"
+  },
+  {
+   "key": "setubal",
+   "label": "Setúbal",
+   "kana": "セトゥーバル",
+   "box": [
+    [
+     38.51,
+     -8.91
+    ],
+    [
+     38.55,
+     -8.86
+    ]
+   ],
+   "home": "Setúbal"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_portugal.py",
+  "check": "scripts/validate_portugal.py",
+  "arg": "lisbon",
+  "settings": "assets/pt_areas.json",
+  "helpers": [
+   "scripts/pt.py"
+  ],
+  "inputs": [
+   "cache:portugal/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Median values per m² and numbers of family dwellings sold, by parish: Statistics Portugal (INE), Estatísticas de preços da habitação ao nível local, 12 months to each December, 2019–2025, under <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>; the station figures are Ekinomics' own calculation from them. Parish outlines: © EuroGeographics for the administrative boundaries (Eurostat GISCO, LAU 2024). Population: INE, Censos 2021.</span><span>Stations and lines, processed from the operators' timetables (GTFS) as published in 2026: Metropolitano de Lisboa, CP – Comboios de Portugal, Fertagus, Metro Transportes do Sul (from NAP Portugal, via the Mobility Database) and Carris (trams). Accents of CP's station names: Wikidata (CC0). Land beyond Portugal: Natural Earth. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: Statistics Portugal (INE), local housing price statistics (CC BY 4.0)",
+   "ja": "価格：ポルトガル統計局（INE）地域別住宅価格統計（CC BY 4.0）"
+  },
+  "attribution": "Stations: Metro de Lisboa, CP, Fertagus, MTS, Carris GTFS · Prices: INE (CC BY 4.0) · Outlines: © EuroGeographics"
+ }
+}

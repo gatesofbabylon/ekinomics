@@ -1,0 +1,170 @@
+{
+ "key": "porto",
+ "country": "Portugal",
+ "order": 2,
+ "path": "porto/",
+ "en": "Porto metropolitan area",
+ "population": 1736228,
+ "tag": {
+  "en": "Porto region",
+  "ja": "ポルト都市圏"
+ },
+ "cities": [
+  {
+   "key": "porto",
+   "en": "Porto",
+   "ja": "ポルト",
+   "population": 231800
+  }
+ ],
+ "goto": [
+  {
+   "key": "porto",
+   "label": "Porto",
+   "kana": "ポルト",
+   "box": [
+    [
+     41.135,
+     -8.64
+    ],
+    [
+     41.17,
+     -8.58
+    ]
+   ],
+   "home": "São Bento"
+  },
+  {
+   "key": "gaia",
+   "label": "Vila Nova de Gaia",
+   "kana": "ヴィラ・ノヴァ・デ・ガイア",
+   "box": [
+    [
+     41.115,
+     -8.63
+    ],
+    [
+     41.145,
+     -8.59
+    ]
+   ],
+   "home": "Jardim do Morro"
+  },
+  {
+   "key": "matosinhos",
+   "label": "Matosinhos",
+   "kana": "マトジーニョス",
+   "box": [
+    [
+     41.165,
+     -8.71
+    ],
+    [
+     41.2,
+     -8.67
+    ]
+   ],
+   "home": "Matosinhos Sul"
+  },
+  {
+   "key": "maia",
+   "label": "Maia",
+   "kana": "マイア",
+   "box": [
+    [
+     41.215,
+     -8.65
+    ],
+    [
+     41.255,
+     -8.6
+    ]
+   ],
+   "home": "Fórum Maia"
+  },
+  {
+   "key": "gondomar",
+   "label": "Gondomar",
+   "kana": "ゴンドマール",
+   "box": [
+    [
+     41.155,
+     -8.56
+    ],
+    [
+     41.19,
+     -8.52
+    ]
+   ],
+   "home": "Fânzeres"
+  },
+  {
+   "key": "povoa",
+   "label": "Póvoa de Varzim",
+   "kana": "ポヴォア・デ・ヴァルジン",
+   "box": [
+    [
+     41.36,
+     -8.78
+    ],
+    [
+     41.4,
+     -8.74
+    ]
+   ],
+   "home": "Póvoa de Varzim"
+  },
+  {
+   "key": "viladoconde",
+   "label": "Vila do Conde",
+   "kana": "ヴィラ・ド・コンデ",
+   "box": [
+    [
+     41.34,
+     -8.76
+    ],
+    [
+     41.38,
+     -8.72
+    ]
+   ],
+   "home": "Vila do Conde"
+  },
+  {
+   "key": "espinho",
+   "label": "Espinho",
+   "kana": "エスピーニョ",
+   "box": [
+    [
+     40.99,
+     -8.66
+    ],
+    [
+     41.02,
+     -8.63
+    ]
+   ],
+   "home": "Espinho"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_portugal.py",
+  "check": "scripts/validate_portugal.py",
+  "arg": "porto",
+  "settings": "assets/pt_areas.json",
+  "helpers": [
+   "scripts/pt.py"
+  ],
+  "inputs": [
+   "cache:portugal/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Median values per m² and numbers of family dwellings sold, by parish: Statistics Portugal (INE), Estatísticas de preços da habitação ao nível local, 12 months to each December, 2019–2025, under <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>; the station figures are Ekinomics' own calculation from them. Parish outlines: © EuroGeographics for the administrative boundaries (Eurostat GISCO, LAU 2024). Population: INE, Censos 2021.</span><span>Stations and lines, processed from the operators' timetables (GTFS) as published in 2026: Metro do Porto and STCP (trams), as published on Porto's open data portal (via the Mobility Database), and CP – Comboios de Portugal. Accents of CP's station names: Wikidata (CC0). Land beyond Portugal: Natural Earth. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: Statistics Portugal (INE), local housing price statistics (CC BY 4.0)",
+   "ja": "価格：ポルトガル統計局（INE）地域別住宅価格統計（CC BY 4.0）"
+  },
+  "attribution": "Stations: Metro do Porto, CP, STCP GTFS · Prices: INE (CC BY 4.0) · Outlines: © EuroGeographics"
+ }
+}

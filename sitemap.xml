@@ -10,6 +10,7 @@
 <url><loc>https://ekinomics.com/spain/</loc><lastmod>2026-11-01</lastmod></url>
 <url><loc>https://ekinomics.com/latvia/</loc><lastmod>2026-11-01</lastmod></url>
 <url><loc>https://ekinomics.com/poland/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/portugal/</loc><lastmod>2026-11-01</lastmod></url>
 <url><loc>https://ekinomics.com/aberdeen/</loc><lastmod>2026-10-29</lastmod></url>
 <url><loc>https://ekinomics.com/allegheny/</loc><lastmod>2026-10-30</lastmod></url>
 <url><loc>https://ekinomics.com/alpesmaritimes/</loc><lastmod>2026-10-31</lastmod></url>
@@ -39,6 +40,7 @@
 <url><loc>https://ekinomics.com/kansai/</loc><lastmod>2026-10-29</lastmod></url>
 <url><loc>https://ekinomics.com/kumamoto/</loc><lastmod>2026-10-29</lastmod></url>
 <url><loc>https://ekinomics.com/leicester/</loc><lastmod>2026-10-29</lastmod></url>
+<url><loc>https://ekinomics.com/lisboa/</loc><lastmod>2026-11-01</lastmod></url>
 <url><loc>https://ekinomics.com/loireatlantique/</loc><lastmod>2026-10-31</lastmod></url>
 <url><loc>https://ekinomics.com/losangeles/</loc><lastmod>2026-10-31</lastmod></url>
 <url><loc>https://ekinomics.com/madrid/</loc><lastmod>2026-10-31</lastmod></url>
@@ -62,6 +64,7 @@
 <url><loc>https://ekinomics.com/okinawa/</loc><lastmod>2026-10-29</lastmod></url>
 <url><loc>https://ekinomics.com/pennsylvania/</loc><lastmod>2026-10-30</lastmod></url>
 <url><loc>https://ekinomics.com/pirkanmaa/</loc><lastmod>2026-10-30</lastmod></url>
+<url><loc>https://ekinomics.com/porto/</loc><lastmod>2026-11-01</lastmod></url>
 <url><loc>https://ekinomics.com/poznan/</loc><lastmod>2026-11-01</lastmod></url>
 <url><loc>https://ekinomics.com/queensland/</loc><lastmod>2026-10-31</lastmod></url>
 <url><loc>https://ekinomics.com/rhone/</loc><lastmod>2026-10-31</lastmod></url>
@@ -395,6 +398,15 @@
 <url><loc>https://ekinomics.com/leicester/loughborough/</loc><lastmod>2026-10-29</lastmod></url>
 <url><loc>https://ekinomics.com/leicester/marketharborough/</loc><lastmod>2026-10-29</lastmod></url>
 <url><loc>https://ekinomics.com/leicester/melton/</loc><lastmod>2026-10-29</lastmod></url>
+<url><loc>https://ekinomics.com/lisboa/almada/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/lisboa/amadora/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/lisboa/barreiro/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/lisboa/cascais/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/lisboa/lisbon/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/lisboa/oeiras/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/lisboa/parquedasnacoes/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/lisboa/setubal/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/lisboa/sintra/</loc><lastmod>2026-11-01</lastmod></url>
 <url><loc>https://ekinomics.com/loireatlantique/ancenis/</loc><lastmod>2026-10-31</lastmod></url>
 <url><loc>https://ekinomics.com/loireatlantique/chateaubriant/</loc><lastmod>2026-10-31</lastmod></url>
 <url><loc>https://ekinomics.com/loireatlantique/clisson/</loc><lastmod>2026-10-31</lastmod></url>
@@ -694,6 +706,14 @@
 <url><loc>https://ekinomics.com/pirkanmaa/lempaala/</loc><lastmod>2026-10-30</lastmod></url>
 <url><loc>https://ekinomics.com/pirkanmaa/nokia/</loc><lastmod>2026-10-30</lastmod></url>
 <url><loc>https://ekinomics.com/pirkanmaa/tampere/</loc><lastmod>2026-10-30</lastmod></url>
+<url><loc>https://ekinomics.com/porto/espinho/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/porto/gaia/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/porto/gondomar/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/porto/maia/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/porto/matosinhos/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/porto/porto/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/porto/povoa/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://ekinomics.com/porto/viladoconde/</loc><lastmod>2026-11-01</lastmod></url>
 <url><loc>https://ekinomics.com/poznan/jezyce/</loc><lastmod>2026-11-01</lastmod></url>
 <url><loc>https://ekinomics.com/poznan/lazarz/</loc><lastmod>2026-11-01</lastmod></url>
 <url><loc>https://ekinomics.com/poznan/piatkowo/</loc><lastmod>2026-11-01</lastmod></url>

@@ -1,0 +1,24 @@
+(self.EKI_EDITIONS=self.EKI_EDITIONS||[]).push(EDITIONS=>{
+// Lisbon (2026-11-01; a draft): Area statistics. Statistics Portugal's median value per m² of the family dwellings sold in the
+// 12 months to each December, by parish (freguesia), with the number sold, blended around each station; 2019–2025, yearly.
+EDITIONS.lisbon={...EDITIONS.helsinki,obs:{en:'Blended parish median',ja:'教区中央値の合成'},priceBreaks:[2800,3400,4000,4600,5200,5800],countBreaks:[100,200,400,650,900,1200],
+  view:[38.72,-9.14,11],home:'Rossio',region:{en:'Municipality',ja:'自治体'},ranges:{type:0,size:0,age:0},mixLabels:{en:['All homes'],ja:['すべての住宅']},
+  noRange:{en:'The source publishes each parish\'s median only, so there is no range.',ja:'出典は教区ごとの中央値だけを公表しており、範囲はない。'},
+  stats:[[{en:'Parishes blended',ja:'合わせた教区'},v=>fmt(v),{en:'Parishes (freguesias) blended',ja:'合わせた教区（フレゲジア）の数'}],[{en:'To parish centres',ja:'教区の中心まで'},v=>`${fmt(v)} m`,{en:'Weighted median distance from the station to the parish centres (m)',ja:'駅から教区の中心までの距離の加重中央値（m）'}]],
+  note:{en:'Gaps mean too few sales; hollow points are indicative (5–9 sales). Area statistics: each price blends the median prices per m² of the parishes within 1.2 km of the station, weighted by their sales and the share of their land inside the circle; it is an average of medians, not a median of individual sales. Prices reflect the mix of homes sold.',ja:'空白は取引が少なすぎること、白抜きの点は参考値（5〜9件）を示す。地域統計：各価格は駅から1.2 km以内の教区の㎡単価の中央値を、取引件数と円に入る陸地の割合で重み付けして合わせたもので、中央値の平均であり個々の取引の中央値ではない。価格は取引された住宅の構成を反映する。'},
+  noSales:{en:'No parish within 1.2 km has a published median for this year.',ja:'この年は、1.2 km以内に中央値が公表された教区がない。'},
+  pooled:{en:'Stations of different networks with the same name within 400 m are one station (such as Oriente, Cais do Sodré and Entrecampos); a tram stop within 250 m of a station shares its price area.',ja:'同じ名前で400 m以内にある別の路線網の駅は1駅とする（Oriente、Cais do Sodré、Entrecampos など）。駅から250 m以内のトラム停留所は、その駅と価格エリアを共有する。'},
+  legend:()=>JA?'住宅の㎡単価・教区中央値の合成（€）':'Home price per m², blend of parish medians (€)',
+  priceSource:{en:'Prices: Statistics Portugal (INE), local housing price statistics (CC BY 4.0)',ja:'価格：ポルトガル統計局（INE）地域別住宅価格統計（CC BY 4.0）'},
+  attribution:'Stations: Metro de Lisboa, CP, Fertagus, MTS, Carris GTFS · Prices: INE (CC BY 4.0) · Outlines: © EuroGeographics',
+  coverage:()=>ptCoverage({en:'the Lisbon metropolitan area',ja:'リスボン都市圏'}),
+  area:{en:'the Lisbon metropolitan area',ja:'リスボン都市圏'},
+  headline:()=>JA?`住宅の売買${fmt(D.coverage.counts.in_windows)}件 · ${fmt(D.stations.length)}駅 · リスボン都市圏`:`${fmt(D.coverage.counts.in_windows)} home sales · ${fmt(D.stations.length)} stations · the Lisbon metropolitan area`,
+  presets:[[{en:'Biggest risers since 2019',ja:'2019年からの上昇率上位'},{metric:'growth',baseline:0,sortKey:'change',sortDir:-1}],[{en:'Cheapest on the Metro Green line',ja:'地下鉄グリーンラインで価格の安い駅'},{line:'metro-green',sortKey:'price',sortDir:1}],
+    [{en:'Priciest on the Cascais line',ja:'カスカイス線で価格の高い駅'},{line:'cp-cais-do-sodre-cascais',sortKey:'price',sortDir:-1}],[{en:'Cheapest on Fertagus',ja:'Fertagus で価格の安い駅'},{line:'fertagus-fertagus',sortKey:'price',sortDir:1}],[{en:'Busiest markets',ja:'取引の多いエリア'},{metric:'count',sortKey:'sales',sortDir:-1}]]};
+// The coverage notes shared by the Portuguese maps (Porto's edition.js uses it too).
+self.ptCoverage=self.ptCoverage||(where=>{const c=D.coverage,k=c.counts,far=k['in a parish more than 1.2 km from every station']||0,held=k['median withheld']||0,
+  table=`<div class="tablewrap"><table>${heads(JA?['年','教区の取引','中央値非公表','駅に示した教区の取引']:['Year','Sales in the parishes','Medians withheld','Sales in parishes a station shows'])}<tbody>${Object.entries(c.by_year).map(([y,v])=>`<tr><td>${y}</td><td>${fmt(v.sales)}</td><td>${fmt(v.withheld||0)}</td><td>${fmt(v.used||0)}</td></tr>`).join('')}</tbody></table></div>`;
+  return JA?`<p>2026年11月1日作成。地域統計（Area statistics）の地図である。ポルトガル統計局（INE）によると、${where.ja}の${fmt(c.zones)}の教区で2019年から2025年までに住宅が${fmt(k.raw)}戸売買された。そのうち中央値が公表され、駅の半径1.2 kmの円に重なる教区の取引${fmt(k.in_windows)}戸を使い、${fmt(c.sites_shown)}駅に示す。各駅の価格は、円に重なる教区の㎡単価の中央値を、取引件数と円に入る陸地の割合で重み付けして合わせたものである。</p>${table}<p>使っていないもの：中央値が公表されていない教区と年の取引${fmt(held)}戸、どの駅からも1.2 kmより遠い教区の取引${fmt(far)}戸。</p>`
+    :`<p>Built 1 November 2026. An Area statistics map. Statistics Portugal (INE) counts ${fmt(k.raw)} family dwellings sold from 2019 to 2025 in the ${fmt(c.zones)} parishes of ${where.en}. ${fmt(k.in_windows)} of them, in parishes with a published median that a station's 1.2 km circle overlaps, are shown at ${fmt(c.sites_shown)} stations, each station blending the medians of those parishes, weighted by their sales and the share of their land inside the circle.</p>${table}<p>Left out: ${fmt(held)} sales in parish-years whose medians are withheld, and ${fmt(far)} sales in parishes more than 1.2 km from every station.</p>`});
+});
