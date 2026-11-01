@@ -1,0 +1,155 @@
+{
+ "key": "zurich",
+ "country": "Switzerland",
+ "order": 1,
+ "path": "zurich/",
+ "en": "City of Zurich",
+ "population": 452421,
+ "tag": {
+  "en": "Zurich",
+  "ja": "チューリッヒ"
+ },
+ "cities": [
+  {
+   "key": "zurich",
+   "en": "Zurich",
+   "ja": "チューリッヒ",
+   "population": 452421
+  }
+ ],
+ "goto": [
+  {
+   "key": "zurich",
+   "label": "Zurich",
+   "kana": "チューリッヒ",
+   "box": [
+    [
+     47.355,
+     8.515
+    ],
+    [
+     47.395,
+     8.565
+    ]
+   ],
+   "home": "Zürich HB"
+  },
+  {
+   "key": "oerlikon",
+   "label": "Oerlikon",
+   "kana": "エーリコン",
+   "box": [
+    [
+     47.4,
+     8.53
+    ],
+    [
+     47.425,
+     8.565
+    ]
+   ],
+   "home": "Zürich Oerlikon"
+  },
+  {
+   "key": "altstetten",
+   "label": "Altstetten",
+   "kana": "アルトシュテッテン",
+   "box": [
+    [
+     47.38,
+     8.47
+    ],
+    [
+     47.4,
+     8.5
+    ]
+   ],
+   "home": "Zürich Altstetten"
+  },
+  {
+   "key": "seefeld",
+   "label": "Seefeld",
+   "kana": "ゼーフェルト",
+   "box": [
+    [
+     47.345,
+     8.545
+    ],
+    [
+     47.365,
+     8.57
+    ]
+   ],
+   "home": "Zürich Tiefenbrunnen"
+  },
+  {
+   "key": "wollishofen",
+   "label": "Wollishofen",
+   "kana": "ヴォリスホーフェン",
+   "box": [
+    [
+     47.335,
+     8.52
+    ],
+    [
+     47.355,
+     8.545
+    ]
+   ],
+   "home": "Zürich Wollishofen"
+  },
+  {
+   "key": "hoengg",
+   "label": "Höngg",
+   "kana": "ヘング",
+   "box": [
+    [
+     47.395,
+     8.48
+    ],
+    [
+     47.41,
+     8.51
+    ]
+   ],
+   "home": "Meierhofplatz"
+  },
+  {
+   "key": "schwamendingen",
+   "label": "Schwamendingen",
+   "kana": "シュヴァメンディンゲン",
+   "box": [
+    [
+     47.4,
+     8.56
+    ],
+    [
+     47.415,
+     8.59
+    ]
+   ],
+   "home": "Schwamendingerplatz"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_switzerland.py",
+  "check": "scripts/validate_switzerland.py",
+  "arg": "zurich",
+  "settings": "assets/ch_areas.json",
+  "helpers": [
+   "scripts/ch.py",
+   "scripts/pt.py"
+  ],
+  "inputs": [
+   "cache:switzerland/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Median prices per m² of living area and per flat, and numbers of condominium flats sold freehand, by quartier: Statistik Stadt Zürich, Verkaufspreise (Median) im Stockwerkeigentum nach Quartier, 2009–2025, under <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\" target=\"_blank\" rel=\"noopener\">CC0</a>; the station figures are Ekinomics' own calculation from them. Quartier outlines: City of Zurich, Statistische Quartiere (CC0). Population: Statistik Stadt Zürich, 2025. Municipalities around: © EuroGeographics for the administrative boundaries (Eurostat GISCO, LAU 2024). Lakes and land beyond Switzerland: Natural Earth.</span><span>Stations and lines, processed from the Swiss national timetable (GTFS, 2026). Source: <a href=\"https://opentransportdata.swiss/\" target=\"_blank\" rel=\"noopener\">opentransportdata.swiss</a>. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: Statistik Stadt Zürich, condominium sale prices by quartier (CC0)",
+   "ja": "価格：チューリッヒ市統計局 地区別分譲マンション売買価格（CC0）"
+  },
+  "attribution": "Stations: opentransportdata.swiss · Prices: Statistik Stadt Zürich (CC0) · Outlines: City of Zurich, © EuroGeographics"
+ }
+}

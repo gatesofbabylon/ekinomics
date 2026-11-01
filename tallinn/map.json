@@ -1,0 +1,155 @@
+{
+ "key": "tallinn",
+ "country": "Estonia",
+ "order": 1,
+ "path": "tallinn/",
+ "en": "Harju county (Tallinn region)",
+ "population": 614567,
+ "tag": {
+  "en": "Tallinn region",
+  "ja": "タリン都市圏"
+ },
+ "cities": [
+  {
+   "key": "tallinn",
+   "en": "Tallinn",
+   "ja": "タリン",
+   "population": 437817
+  }
+ ],
+ "goto": [
+  {
+   "key": "tallinn",
+   "label": "Tallinn",
+   "kana": "タリン",
+   "box": [
+    [
+     59.419,
+     24.707
+    ],
+    [
+     59.455,
+     24.797
+    ]
+   ],
+   "home": "Balti jaam"
+  },
+  {
+   "key": "kadriorg",
+   "label": "Kadriorg",
+   "kana": "カドリオルグ",
+   "box": [
+    [
+     59.429,
+     24.759
+    ],
+    [
+     59.449,
+     24.809
+    ]
+   ],
+   "home": "Kadriorg"
+  },
+  {
+   "key": "nomme",
+   "label": "Nõmme",
+   "kana": "ヌンメ",
+   "box": [
+    [
+     59.374,
+     24.656
+    ],
+    [
+     59.398,
+     24.716
+    ]
+   ],
+   "home": "Nõmme"
+  },
+  {
+   "key": "ulemiste",
+   "label": "Ülemiste",
+   "kana": "ウレミステ",
+   "box": [
+    [
+     59.413,
+     24.77
+    ],
+    [
+     59.433,
+     24.82
+    ]
+   ],
+   "home": "Ülemiste"
+  },
+  {
+   "key": "keila",
+   "label": "Keila",
+   "kana": "ケイラ",
+   "box": [
+    [
+     59.294,
+     24.387
+    ],
+    [
+     59.318,
+     24.447
+    ]
+   ],
+   "home": "Keila"
+  },
+  {
+   "key": "saue",
+   "label": "Saue",
+   "kana": "サウエ",
+   "box": [
+    [
+     59.315,
+     24.524
+    ],
+    [
+     59.335,
+     24.574
+    ]
+   ],
+   "home": "Saue"
+  },
+  {
+   "key": "saku",
+   "label": "Saku",
+   "kana": "サク",
+   "box": [
+    [
+     59.291,
+     24.652
+    ],
+    [
+     59.311,
+     24.702
+    ]
+   ],
+   "home": "Saku"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_estonia.py",
+  "check": "scripts/validate_estonia.py",
+  "arg": "tallinn",
+  "settings": "assets/ee_areas.json",
+  "helpers": [
+   "scripts/ee.py",
+   "scripts/pt.py"
+  ],
+  "inputs": [
+   "cache:estonia/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Apartment sales and median prices per m², by neighbourhood and settlement unit, 2014–2025: Tehingute andmebaas, Maa- ja Ruumiamet (informative statistics); the station figures are Ekinomics' own calculation from them. Settlement units: Haldus- ja asustusjaotus, Maa- ja Ruumiamet. Tallinn's neighbourhood outlines: Tallinn City Government, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 3.0</a> (the outlines shown here are available under the same licence). Population: Statistics Estonia, 2021 Census.</span><span>Stations and lines, processed from the national public transport register's timetables (GTFS, peatus.ee) as published in 2026, via the Mobility Database: Elron and Tallinn (trams). Land beyond Harju county: Maa- ja Ruumiamet and Natural Earth. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: Tehingute andmebaas, Maa- ja Ruumiamet (Land and Spatial Board)",
+   "ja": "価格：エストニア土地・空間庁（Maa- ja Ruumiamet）取引データベース"
+  },
+  "attribution": "Stations: Elron, Tallinn GTFS (peatus.ee) · Prices: Maa- ja Ruumiamet · Outlines: Maa- ja Ruumiamet, Tallinn (CC BY-SA 3.0)"
+ }
+}
