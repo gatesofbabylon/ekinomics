@@ -1,0 +1,139 @@
+{
+ "key": "basel",
+ "country": "Switzerland",
+ "order": 2,
+ "path": "basel/",
+ "en": "Basel",
+ "population": 210529,
+ "tag": {
+  "en": "Basel",
+  "ja": "バーゼル"
+ },
+ "cities": [
+  {
+   "key": "basel",
+   "en": "Basel",
+   "ja": "バーゼル",
+   "population": 186332
+  }
+ ],
+ "goto": [
+  {
+   "key": "basel",
+   "label": "Basel",
+   "kana": "バーゼル",
+   "box": [
+    [
+     47.543,
+     7.572
+    ],
+    [
+     47.568,
+     7.615
+    ]
+   ],
+   "home": "Basel SBB"
+  },
+  {
+   "key": "riehen",
+   "label": "Riehen",
+   "kana": "リーエン",
+   "box": [
+    [
+     47.57,
+     7.625
+    ],
+    [
+     47.6,
+     7.665
+    ]
+   ],
+   "home": "Riehen"
+  },
+  {
+   "key": "stjohann",
+   "label": "St. Johann",
+   "kana": "ザンクト・ヨハン",
+   "box": [
+    [
+     47.568,
+     7.565
+    ],
+    [
+     47.58,
+     7.59
+    ]
+   ],
+   "home": "Bahnhof St. Johann"
+  },
+  {
+   "key": "kleinhueningen",
+   "label": "Kleinhüningen",
+   "kana": "クラインヒューニンゲン",
+   "box": [
+    [
+     47.58,
+     7.58
+    ],
+    [
+     47.592,
+     7.605
+    ]
+   ],
+   "home": "Kleinhüningen"
+  },
+  {
+   "key": "stjakob",
+   "label": "St. Jakob",
+   "kana": "ザンクト・ヤーコプ",
+   "box": [
+    [
+     47.535,
+     7.605
+    ],
+    [
+     47.55,
+     7.635
+    ]
+   ],
+   "home": "Basel St. Jakob"
+  },
+  {
+   "key": "bruderholz",
+   "label": "Bruderholz",
+   "kana": "ブルーダーホルツ",
+   "box": [
+    [
+     47.527,
+     7.58
+    ],
+    [
+     47.543,
+     7.61
+    ]
+   ],
+   "home": "Bruderholz"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_switzerland.py",
+  "check": "scripts/validate_switzerland.py",
+  "arg": "basel",
+  "settings": "assets/ch_areas.json",
+  "helpers": [
+   "scripts/ch.py",
+   "scripts/pt.py"
+  ],
+  "inputs": [
+   "cache:switzerland/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Median prices per m² of condominium flats, existing flats (over 10 years old) and new builds apart, with the numbers sold, by area, 27 November 2021 to 27 May 2025: Kanton Basel-Stadt, Grundbuch- und Vermessungsamt, Eigentumswohnungen Medianpreise, under <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>; the station figures are Ekinomics' own calculation from them. Area outlines: the same dataset. Population: Statistisches Amt Basel-Stadt, 2025 (CC BY 4.0). Municipalities around: © EuroGeographics for the administrative boundaries (Eurostat GISCO, LAU 2024). Land beyond Switzerland: Natural Earth.</span><span>Stations and lines, processed from the Swiss national timetable (GTFS, 2026). Source: <a href=\"https://opentransportdata.swiss/\" target=\"_blank\" rel=\"noopener\">opentransportdata.swiss</a>. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: Canton of Basel-Stadt, Eigentumswohnungen Medianpreise (CC BY 4.0)",
+   "ja": "価格：バーゼル・シュタット準州 分譲マンション価格中央値（CC BY 4.0）"
+  },
+  "attribution": "Stations: opentransportdata.swiss · Prices and outlines: Kanton Basel-Stadt (CC BY 4.0) · © EuroGeographics"
+ }
+}
