@@ -1,0 +1,250 @@
+{
+ "key": "saltlake",
+ "country": "United States",
+ "order": 23,
+ "path": "utah/",
+ "en": "Salt Lake County",
+ "population": 1220916,
+ "tag": {
+  "en": "Utah",
+  "ja": "ユタ州"
+ },
+ "cities": [
+  {
+   "key": "saltlake",
+   "en": "Salt Lake City",
+   "ja": "ソルトレイクシティ",
+   "population": 218428
+  }
+ ],
+ "goto": [
+  {
+   "key": "saltlake",
+   "label": "Salt Lake City",
+   "kana": "ソルトレイクシティ",
+   "box": [
+    [
+     40.748,
+     -111.915
+    ],
+    [
+     40.784,
+     -111.871
+    ]
+   ],
+   "home": "Gallivan Plaza"
+  },
+  {
+   "key": "central",
+   "label": "Salt Lake Central",
+   "kana": "ソルトレイク・セントラル",
+   "box": [
+    [
+     40.744,
+     -111.931
+    ],
+    [
+     40.78,
+     -111.887
+    ]
+   ],
+   "home": "Salt Lake Central"
+  },
+  {
+   "key": "university",
+   "label": "University of Utah",
+   "kana": "ユタ大学",
+   "box": [
+    [
+     40.742,
+     -111.874
+    ],
+    [
+     40.778,
+     -111.83
+    ]
+   ],
+   "home": "Stadium"
+  },
+  {
+   "key": "sugarhouse",
+   "label": "Sugar House",
+   "kana": "シュガーハウス",
+   "box": [
+    [
+     40.705,
+     -111.887
+    ],
+    [
+     40.741,
+     -111.843
+    ]
+   ],
+   "home": "Sugarmont"
+  },
+  {
+   "key": "southsaltlake",
+   "label": "South Salt Lake",
+   "kana": "サウスソルトレイク",
+   "box": [
+    [
+     40.706,
+     -111.919
+    ],
+    [
+     40.742,
+     -111.875
+    ]
+   ],
+   "home": "Central Pointe"
+  },
+  {
+   "key": "millcreek",
+   "label": "Millcreek",
+   "kana": "ミルクリーク",
+   "box": [
+    [
+     40.683,
+     -111.919
+    ],
+    [
+     40.719,
+     -111.875
+    ]
+   ],
+   "home": "Millcreek"
+  },
+  {
+   "key": "murray",
+   "label": "Murray",
+   "kana": "マレー",
+   "box": [
+    [
+     40.642,
+     -111.918
+    ],
+    [
+     40.678,
+     -111.874
+    ]
+   ],
+   "home": "Murray Central"
+  },
+  {
+   "key": "midvale",
+   "label": "Midvale",
+   "kana": "ミッドベール",
+   "box": [
+    [
+     40.592,
+     -111.915
+    ],
+    [
+     40.628,
+     -111.871
+    ]
+   ],
+   "home": "Midvale Center"
+  },
+  {
+   "key": "sandy",
+   "label": "Sandy",
+   "kana": "サンディ",
+   "box": [
+    [
+     40.571,
+     -111.908
+    ],
+    [
+     40.607,
+     -111.864
+    ]
+   ],
+   "home": "Historic Sandy"
+  },
+  {
+   "key": "draper",
+   "label": "Draper",
+   "kana": "ドレイパー",
+   "box": [
+    [
+     40.508,
+     -111.881
+    ],
+    [
+     40.544,
+     -111.837
+    ]
+   ],
+   "home": "Draper Town Center"
+  },
+  {
+   "key": "westjordan",
+   "label": "West Jordan",
+   "kana": "ウェストジョーダン",
+   "box": [
+    [
+     40.587,
+     -111.958
+    ],
+    [
+     40.623,
+     -111.914
+    ]
+   ],
+   "home": "West Jordan City Center"
+  },
+  {
+   "key": "southjordan",
+   "label": "South Jordan",
+   "kana": "サウスジョーダン",
+   "box": [
+    [
+     40.532,
+     -112.042
+    ],
+    [
+     40.568,
+     -111.998
+    ]
+   ],
+   "home": "South Jordan Downtown"
+  },
+  {
+   "key": "westvalley",
+   "label": "West Valley City",
+   "kana": "ウェストバレーシティ",
+   "box": [
+    [
+     40.676,
+     -111.981
+    ],
+    [
+     40.712,
+     -111.937
+    ]
+   ],
+   "home": "West Valley Central"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_saltlake.py",
+  "check": "scripts/validate_saltlake.py",
+  "arg": "saltlake",
+  "helpers": [
+   "scripts/hmda.py"
+  ],
+  "inputs": [
+   "cache:us/saltlake/"
+  ]
+ },
+ "credits": {
+  "block": "<span>HMDA public loan-level data (Consumer Financial Protection Bureau and FFIEC), 2018–2025, the property values lenders reported for home-purchase loans. Census tracts, cities, counties and water: US Census Bureau TIGER/Line and cartographic boundary files. Stations and lines: Utah Transit Authority static GTFS, as published, without warranty of any kind.</span><span>This site is not produced, commissioned, sponsored or endorsed by the CFPB, the FFIEC, the Census Bureau or the Utah Transit Authority, and uses none of the Authority's trademarks or logos.</span>",
+  "priceSource": {
+   "en": "Prices: HMDA mortgage records (CFPB, FFIEC), low confidence",
+   "ja": "価格：HMDA 住宅ローン記録（CFPB、FFIEC）、低信頼度"
+  },
+  "attribution": "Stations and lines: Utah Transit Authority GTFS, as is · Outlines: US Census Bureau"
+ }
+}

@@ -1,0 +1,186 @@
+{
+ "key": "austin",
+ "country": "United States",
+ "order": 32,
+ "path": "austin/",
+ "en": "Travis and Williamson",
+ "population": 2142497,
+ "tag": {
+  "en": "Texas",
+  "ja": "テキサス州"
+ },
+ "cities": [
+  {
+   "key": "austin",
+   "en": "Austin",
+   "ja": "オースティン",
+   "population": 1002632
+  }
+ ],
+ "goto": [
+  {
+   "key": "austin",
+   "label": "Downtown Austin",
+   "kana": "ダウンタウン・オースティン",
+   "box": [
+    [
+     30.2468,
+     -97.7634
+    ],
+    [
+     30.2828,
+     -97.7134
+    ]
+   ],
+   "home": "Downtown Austin"
+  },
+  {
+   "key": "plazasaltillo",
+   "label": "Plaza Saltillo",
+   "kana": "プラザ・サルティーヨ",
+   "box": [
+    [
+     30.2442,
+     -97.7526
+    ],
+    [
+     30.2802,
+     -97.70259999999999
+    ]
+   ],
+   "home": "Plaza Saltillo"
+  },
+  {
+   "key": "mlk",
+   "label": "MLK Jr.",
+   "kana": "MLKジュニア",
+   "box": [
+    [
+     30.2618,
+     -97.73400000000001
+    ],
+    [
+     30.297800000000002,
+     -97.684
+    ]
+   ],
+   "home": "MLK Jr."
+  },
+  {
+   "key": "highland",
+   "label": "Highland",
+   "kana": "ハイランド",
+   "box": [
+    [
+     30.3106,
+     -97.7412
+    ],
+    [
+     30.346600000000002,
+     -97.6912
+    ]
+   ],
+   "home": "Highland"
+  },
+  {
+   "key": "crestview",
+   "label": "Crestview",
+   "kana": "クレストビュー",
+   "box": [
+    [
+     30.3206,
+     -97.74470000000001
+    ],
+    [
+     30.3566,
+     -97.6947
+    ]
+   ],
+   "home": "Crestview"
+  },
+  {
+   "key": "kramer",
+   "label": "Kramer",
+   "kana": "クレイマー",
+   "box": [
+    [
+     30.3748,
+     -97.7414
+    ],
+    [
+     30.410800000000002,
+     -97.69139999999999
+    ]
+   ],
+   "home": "Kramer"
+  },
+  {
+   "key": "howard",
+   "label": "Howard",
+   "kana": "ハワード",
+   "box": [
+    [
+     30.422,
+     -97.72670000000001
+    ],
+    [
+     30.458000000000002,
+     -97.6767
+    ]
+   ],
+   "home": "Howard"
+  },
+  {
+   "key": "lakeline",
+   "label": "Lakeline",
+   "kana": "レイクライン",
+   "box": [
+    [
+     30.463,
+     -97.81150000000001
+    ],
+    [
+     30.499000000000002,
+     -97.7615
+    ]
+   ],
+   "home": "Lakeline"
+  },
+  {
+   "key": "leander",
+   "label": "Leander",
+   "kana": "リアンダー",
+   "box": [
+    [
+     30.5684,
+     -97.8807
+    ],
+    [
+     30.604400000000002,
+     -97.8307
+    ]
+   ],
+   "home": "Leander"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_austin.py",
+  "check": "scripts/validate_austin.py",
+  "arg": "austin",
+  "helpers": [
+   "scripts/hmda.py"
+  ],
+  "inputs": [
+   "cache:us/austin/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Prices: HMDA public loan-level data (Consumer Financial Protection Bureau and FFIEC), 2018–2025, the property values lenders reported for home-purchase loans. Census tracts, cities, counties and water: US Census Bureau TIGER/Line and cartographic boundary files. Stations and lines: Capital Metropolitan Transportation Authority (Capital Metro) static GTFS as published on the State of Texas open data portal.</span><span>This site is not produced, commissioned, sponsored or endorsed by the CFPB, the FFIEC, the Census Bureau or Capital Metro, and uses none of Capital Metro's trademarks or logos.</span>",
+  "priceSource": {
+   "en": "Prices: HMDA mortgage records (CFPB, FFIEC), low confidence",
+   "ja": "価格：HMDA 住宅ローン記録（CFPB、FFIEC）、低信頼度"
+  },
+  "attribution": "Stations and lines: Capital Metro GTFS, as is · Outlines: US Census Bureau"
+ }
+}
