@@ -1,0 +1,170 @@
+{
+ "key": "seoul",
+ "country": "South Korea",
+ "order": 1,
+ "path": "seoul/",
+ "en": "Seoul",
+ "population": 9586195,
+ "tag": {
+  "en": "Seoul",
+  "ja": "ソウル"
+ },
+ "cities": [
+  {
+   "key": "seoul",
+   "en": "Seoul",
+   "ja": "ソウル",
+   "population": 9586195
+  }
+ ],
+ "goto": [
+  {
+   "key": "seoul",
+   "label": "Seoul",
+   "kana": "ソウル",
+   "box": [
+    [
+     37.552,
+     126.965
+    ],
+    [
+     37.575,
+     126.995
+    ]
+   ],
+   "home": "서울역"
+  },
+  {
+   "key": "gangnam",
+   "label": "Gangnam",
+   "kana": "カンナム",
+   "box": [
+    [
+     37.49,
+     127.015
+    ],
+    [
+     37.515,
+     127.05
+    ]
+   ],
+   "home": "강남"
+  },
+  {
+   "key": "jamsil",
+   "label": "Jamsil",
+   "kana": "チャムシル",
+   "box": [
+    [
+     37.505,
+     127.075
+    ],
+    [
+     37.522,
+     127.11
+    ]
+   ],
+   "home": "잠실"
+  },
+  {
+   "key": "yeouido",
+   "label": "Yeouido",
+   "kana": "ヨイド",
+   "box": [
+    [
+     37.515,
+     126.91
+    ],
+    [
+     37.535,
+     126.94
+    ]
+   ],
+   "home": "여의도"
+  },
+  {
+   "key": "hongdae",
+   "label": "Hongdae",
+   "kana": "ホンデ",
+   "box": [
+    [
+     37.548,
+     126.91
+    ],
+    [
+     37.565,
+     126.935
+    ]
+   ],
+   "home": "홍대입구"
+  },
+  {
+   "key": "konkuk",
+   "label": "Konkuk University",
+   "kana": "コンデ",
+   "box": [
+    [
+     37.533,
+     127.06
+    ],
+    [
+     37.55,
+     127.08
+    ]
+   ],
+   "home": "건대입구"
+  },
+  {
+   "key": "mokdong",
+   "label": "Mok-dong",
+   "kana": "モクトン",
+   "box": [
+    [
+     37.52,
+     126.86
+    ],
+    [
+     37.54,
+     126.885
+    ]
+   ],
+   "home": "목동"
+  },
+  {
+   "key": "nowon",
+   "label": "Nowon",
+   "kana": "ノウォン",
+   "box": [
+    [
+     37.645,
+     127.05
+    ],
+    [
+     37.665,
+     127.075
+    ]
+   ],
+   "home": "노원"
+  }
+ ],
+ "build": {
+  "script": "scripts/build_seoul.py",
+  "check": "scripts/validate_seoul.py",
+  "arg": "seoul",
+  "settings": "assets/kr_areas.json",
+  "helpers": [
+   "scripts/kr.py"
+  ],
+  "inputs": [
+   "cache:korea/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales: Ministry of Land, Infrastructure and Transport (MOLIT), real transaction prices (국토교통부 실거래가 공개시스템, rt.molit.go.kr), Seoul, contract dates 2015–2025: apartments, row and multi-household houses (villas) and detached and multi-unit houses, under the <a href=\"https://www.kogl.or.kr/info/licenseType1.do\" target=\"_blank\" rel=\"noopener\">Korea Open Government License Type 1</a>. MOLIT provides the records for reference only, without legal effect; the station figures are Ekinomics' own calculation from the individual records, not MOLIT's official statistics. Population: Statistics Korea, 2020 Census.</span><span>Buildings, addresses, streets, district outlines, stations and lines: © <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\" rel=\"noopener\">OpenStreetMap</a> contributors, as mapped on 2 November 2026, under the Open Database License; the sale placements, station and line data derived from them are available under the same licence. Land beyond Seoul: Natural Earth. None of these bodies produced or endorses this site.</span>",
+  "priceSource": {
+   "en": "Prices: MOLIT real transaction prices (KOGL Type 1)",
+   "ja": "価格：韓国国土交通部 実取引価格（KOGL Type 1）"
+  },
+  "attribution": "Prices: MOLIT real transaction prices (KOGL Type 1) · Stations, lines, streets and outlines: © OpenStreetMap contributors (ODbL)"
+ }
+}
