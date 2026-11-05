@@ -162,9 +162,9 @@
  "credits": {
   "block": "<span>Sales: Ministry of Land, Infrastructure and Transport (MOLIT), real transaction prices (국토교통부 실거래가 공개시스템, rt.molit.go.kr), Seoul, contract dates 2015–2025: apartments, row and multi-household houses (villas) and detached and multi-unit houses, under the <a href=\"https://www.kogl.or.kr/info/licenseType1.do\" target=\"_blank\" rel=\"noopener\">Korea Open Government License Type 1</a>. MOLIT provides the records for reference only, without legal effect; the station figures are Ekinomics' own calculation from the individual records, not MOLIT's official statistics. Population: Statistics Korea, 2020 Census.</span><span>Buildings, addresses, streets, district outlines, stations and lines: © <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\" rel=\"noopener\">OpenStreetMap</a> contributors, as mapped on 2 November 2026, under the Open Database License; the sale placements, station and line data derived from them are available under the same licence. Land beyond Seoul: Natural Earth. None of these bodies produced or endorses this site.</span>",
   "priceSource": {
-   "en": "Prices: MOLIT real transaction prices (KOGL Type 1)",
-   "ja": "価格：韓国国土交通部 実取引価格（KOGL Type 1）"
+   "en": "Prices: MOLIT real transaction prices (public data, no restriction on use)",
+   "ja": "価格：韓国国土交通部 実取引価格（公共データ、利用制限なし）"
   },
-  "attribution": "Prices: MOLIT real transaction prices (KOGL Type 1) · Stations, lines, streets and outlines: © OpenStreetMap contributors (ODbL)"
+  "attribution": "Prices: MOLIT real transaction prices (public data, no restriction on use) · Stations, lines, streets and outlines: © OpenStreetMap contributors (ODbL)"
  }
 }
