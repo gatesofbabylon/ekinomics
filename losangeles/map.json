@@ -3,6 +3,7 @@
  "country": "United States",
  "order": 10,
  "path": "losangeles/",
+ "tier": "observed",
  "en": "Los Angeles County",
  "population": 9694934,
  "tag": {

@@ -3,6 +3,7 @@
  "country": "United States",
  "order": 14,
  "path": "massachusetts/",
+ "tier": "observed",
  "en": "Greater Boston",
  "population": 4460526,
  "tag": {

@@ -3,6 +3,7 @@
  "country": "United States",
  "order": 0,
  "path": "newyork/",
+ "tier": "observed",
  "en": "New York City",
  "population": 8584629,
  "tag": {

@@ -3,6 +3,7 @@
  "country": "Australia",
  "order": 4,
  "path": "westernaustralia/",
+ "tier": "area",
  "en": "Greater Perth",
  "population": 2452765,
  "tag": {

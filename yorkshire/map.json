@@ -3,6 +3,7 @@
  "country": "United Kingdom",
  "order": 3,
  "path": "yorkshire/",
+ "tier": "observed",
  "en": "Yorkshire",
  "population": 5765802,
  "tag": {

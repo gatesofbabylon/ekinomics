@@ -3,6 +3,7 @@
  "country": "Japan",
  "order": 4,
  "path": "fukuoka/",
+ "tier": "observed",
  "en": "Greater Fukuoka",
  "ja": "福岡圏",
  "population": 5135214,

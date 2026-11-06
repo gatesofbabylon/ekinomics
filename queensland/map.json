@@ -3,6 +3,7 @@
  "country": "Australia",
  "order": 3,
  "path": "queensland/",
+ "tier": "area",
  "en": "Greater Brisbane",
  "population": 3906711,
  "tag": {

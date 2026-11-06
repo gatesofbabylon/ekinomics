@@ -3,6 +3,7 @@
  "country": "Singapore",
  "order": 0,
  "path": "singapore/",
+ "tier": "observed",
  "en": "Singapore",
  "population": 6208523,
  "tag": {

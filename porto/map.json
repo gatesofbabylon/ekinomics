@@ -3,6 +3,7 @@
  "country": "Portugal",
  "order": 2,
  "path": "porto/",
+ "tier": "area",
  "en": "Porto metropolitan area",
  "population": 1736228,
  "tag": {

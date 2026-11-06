@@ -3,6 +3,7 @@
  "country": "United States",
  "order": 15,
  "path": "centralflorida/",
+ "tier": "observed",
  "en": "Central Florida",
  "population": 3108177,
  "tag": {

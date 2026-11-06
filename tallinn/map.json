@@ -3,6 +3,7 @@
  "country": "Estonia",
  "order": 1,
  "path": "tallinn/",
+ "tier": "area",
  "en": "Harju county (Tallinn region)",
  "population": 614567,
  "tag": {

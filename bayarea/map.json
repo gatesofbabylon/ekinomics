@@ -3,6 +3,7 @@
  "country": "United States",
  "order": 20,
  "path": "bayarea/",
+ "tier": "observed",
  "en": "San Francisco and Alameda",
  "population": 2462709,
  "tag": {

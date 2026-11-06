@@ -3,6 +3,7 @@
  "country": "United Kingdom",
  "order": 8,
  "path": "southscotland/",
+ "tier": "area",
  "en": "South Scotland",
  "population": 3833670,
  "tag": {

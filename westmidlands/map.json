@@ -3,6 +3,7 @@
  "country": "United Kingdom",
  "order": 2,
  "path": "westmidlands/",
+ "tier": "observed",
  "en": "Greater Birmingham",
  "population": 5480775,
  "tag": {

@@ -3,6 +3,7 @@
  "country": "United Kingdom",
  "order": 6,
  "path": "southwales/",
+ "tier": "observed",
  "en": "South Wales",
  "population": 2146292,
  "tag": {

@@ -3,6 +3,7 @@
  "country": "United States",
  "order": 16,
  "path": "tampabay/",
+ "tier": "observed",
  "en": "Hillsborough County",
  "population": 1574115,
  "tag": {

@@ -3,6 +3,7 @@
  "country": "Japan",
  "order": 6,
  "path": "shikoku/",
+ "tier": "observed",
  "en": "Shikoku",
  "ja": "四国",
  "population": 2976612,

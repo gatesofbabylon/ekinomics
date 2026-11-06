@@ -3,6 +3,7 @@
  "country": "Japan",
  "order": 12,
  "path": "kagoshima/",
+ "tier": "observed",
  "en": "Greater Kagoshima",
  "ja": "鹿児島圏",
  "population": 1588256,

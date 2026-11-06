@@ -3,6 +3,7 @@
  "country": "France",
  "order": 10,
  "path": "isere/",
+ "tier": "observed",
  "en": "Isère",
  "population": 1298990,
  "tag": {

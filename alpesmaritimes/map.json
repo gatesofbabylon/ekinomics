@@ -3,6 +3,7 @@
  "country": "France",
  "order": 9,
  "path": "alpesmaritimes/",
+ "tier": "observed",
  "en": "Alpes-Maritimes",
  "population": 1128418,
  "tag": {

@@ -3,6 +3,7 @@
  "country": "Poland",
  "order": 1,
  "path": "poznan/",
+ "tier": "observed",
  "en": "Poznań",
  "population": 546859,
  "tag": {

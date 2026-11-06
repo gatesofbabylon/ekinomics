@@ -3,6 +3,7 @@
  "country": "Japan",
  "order": 2,
  "path": "tokai/",
+ "tier": "observed",
  "en": "Greater Nagoya",
  "ja": "中京圏",
  "population": 11291411,

@@ -3,6 +3,7 @@
  "country": "United Kingdom",
  "order": 10,
  "path": "hampshiredorset/",
+ "tier": "observed",
  "en": "Hampshire and Dorset",
  "population": 2315716,
  "tag": {

@@ -3,6 +3,7 @@
  "country": "Finland",
  "order": 0,
  "path": "uusimaa/",
+ "tier": "area",
  "en": "Helsinki region",
  "population": 1683184,
  "tag": {

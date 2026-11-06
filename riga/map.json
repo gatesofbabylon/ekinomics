@@ -3,6 +3,7 @@
  "country": "Latvia",
  "order": 1,
  "path": "riga/",
+ "tier": "observed",
  "en": "Riga",
  "population": 588911,
  "tag": {

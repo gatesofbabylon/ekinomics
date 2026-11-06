@@ -3,6 +3,7 @@
  "country": "United Kingdom",
  "order": 5,
  "path": "nottingham/",
+ "tier": "observed",
  "en": "Greater Nottingham",
  "population": 1773818,
  "tag": {

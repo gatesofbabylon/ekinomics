@@ -3,6 +3,7 @@
  "country": "France",
  "order": 4,
  "path": "nord/",
+ "tier": "observed",
  "en": "Nord",
  "population": 2615635,
  "tag": {

@@ -3,6 +3,7 @@
  "country": "France",
  "order": 6,
  "path": "gironde/",
+ "tier": "observed",
  "en": "Gironde",
  "population": 1690493,
  "tag": {

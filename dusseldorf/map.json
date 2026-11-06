@@ -3,6 +3,8 @@
  "country": "Germany",
  "order": 2,
  "path": "dusseldorf/",
+ "tier": "low",
+ "kind": "standard values",
  "en": "Düsseldorf",
  "population": 618685,
  "tag": {

@@ -3,6 +3,7 @@
  "country": "Spain",
  "order": 2,
  "path": "bilbao/",
+ "tier": "area",
  "en": "Bilbao",
  "population": 351124,
  "tag": {

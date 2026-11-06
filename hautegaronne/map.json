@@ -3,6 +3,7 @@
  "country": "France",
  "order": 3,
  "path": "hautegaronne/",
+ "tier": "observed",
  "en": "Haute-Garonne",
  "population": 1471468,
  "tag": {

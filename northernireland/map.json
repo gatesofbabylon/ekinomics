@@ -3,6 +3,7 @@
  "country": "United Kingdom",
  "order": 13,
  "path": "northernireland/",
+ "tier": "area",
  "en": "Belfast",
  "population": 1364080,
  "tag": {

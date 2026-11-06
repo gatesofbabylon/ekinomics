@@ -3,6 +3,7 @@
  "country": "United States",
  "order": 7,
  "path": "dc/",
+ "tier": "observed",
  "en": "Washington, DC",
  "population": 693645,
  "tag": {

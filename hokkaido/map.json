@@ -3,6 +3,7 @@
  "country": "Japan",
  "order": 3,
  "path": "hokkaido/",
+ "tier": "observed",
  "en": "Hokkaido",
  "ja": "北海道",
  "population": 5224614,

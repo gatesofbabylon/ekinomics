@@ -3,6 +3,7 @@
  "country": "South Korea",
  "order": 1,
  "path": "seoul/",
+ "tier": "observed",
  "en": "Seoul",
  "population": 9586195,
  "tag": {

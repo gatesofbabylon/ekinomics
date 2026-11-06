@@ -3,6 +3,7 @@
  "country": "Ireland",
  "order": 1,
  "path": "dublin/",
+ "tier": "observed",
  "en": "Dublin",
  "population": 1458154,
  "tag": {

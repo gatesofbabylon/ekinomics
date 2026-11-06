@@ -3,6 +3,7 @@
  "country": "France",
  "order": 1,
  "path": "bouchesdurhone/",
+ "tier": "observed",
  "en": "Bouches-du-Rhône",
  "population": 2087658,
  "tag": {

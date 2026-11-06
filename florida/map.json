@@ -3,6 +3,7 @@
  "country": "United States",
  "order": 4,
  "path": "florida/",
+ "tier": "observed",
  "en": "South Florida",
  "population": 6391072,
  "tag": {

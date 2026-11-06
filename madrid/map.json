@@ -3,6 +3,7 @@
  "country": "Spain",
  "order": 0,
  "path": "madrid/",
+ "tier": "area",
  "en": "Madrid",
  "population": 3506730,
  "tag": {

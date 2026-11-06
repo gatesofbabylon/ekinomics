@@ -3,6 +3,7 @@
  "country": "France",
  "order": 2,
  "path": "rhone/",
+ "tier": "observed",
  "en": "Rhône",
  "population": 1914667,
  "tag": {

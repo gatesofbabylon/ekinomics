@@ -3,6 +3,7 @@
  "country": "United States",
  "order": 17,
  "path": "michigan/",
+ "tier": "observed",
  "en": "City of Detroit",
  "population": 649095,
  "tag": {

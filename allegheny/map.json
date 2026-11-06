@@ -3,6 +3,7 @@
  "country": "United States",
  "order": 6,
  "path": "allegheny/",
+ "tier": "observed",
  "en": "Allegheny County",
  "population": 1225035,
  "tag": {

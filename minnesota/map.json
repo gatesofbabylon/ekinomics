@@ -3,6 +3,7 @@
  "country": "United States",
  "order": 18,
  "path": "minnesota/",
+ "tier": "observed",
  "en": "Twin Cities",
  "population": 3226013,
  "tag": {

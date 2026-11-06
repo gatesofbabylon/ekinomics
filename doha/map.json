@@ -3,6 +3,7 @@
  "country": "Qatar",
  "order": 1,
  "path": "doha/",
+ "tier": "area",
  "en": "Doha",
  "population": 2377994,
  "tag": {

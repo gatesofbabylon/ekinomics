@@ -3,6 +3,7 @@
  "country": "Australia",
  "order": 2,
  "path": "newsouthwales/",
+ "tier": "observed",
  "en": "Greater Sydney",
  "population": 5638830,
  "tag": {

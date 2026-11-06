@@ -3,6 +3,7 @@
  "country": "Norway",
  "order": 1,
  "path": "oslo/",
+ "tier": "area",
  "en": "Oslo",
  "population": 728714,
  "tag": {
@@ -18,18 +19,82 @@
   }
  ],
  "goto": [
-  {"key": "oslo", "label": "Oslo", "kana": "オスロ", "box": [[59.895, 10.69], [59.935, 10.8]], "home": "Oslo S"},
-  {"key": "majorstuen", "label": "Majorstuen", "kana": "マヨルストゥエン", "box": [[59.915, 10.69], [59.94, 10.74]], "home": "Majorstuen"},
-  {"key": "grorud", "label": "Grorud", "kana": "グロールド", "box": [[59.94, 10.85], [59.975, 10.92]], "home": "Grorud"},
-  {"key": "lambertseter", "label": "Lambertseter", "kana": "ランベルトセーテル", "box": [[59.865, 10.78], [59.885, 10.83]], "home": "Lambertseter"}
+  {
+   "key": "oslo",
+   "label": "Oslo",
+   "kana": "オスロ",
+   "box": [
+    [
+     59.895,
+     10.69
+    ],
+    [
+     59.935,
+     10.8
+    ]
+   ],
+   "home": "Oslo S"
+  },
+  {
+   "key": "majorstuen",
+   "label": "Majorstuen",
+   "kana": "マヨルストゥエン",
+   "box": [
+    [
+     59.915,
+     10.69
+    ],
+    [
+     59.94,
+     10.74
+    ]
+   ],
+   "home": "Majorstuen"
+  },
+  {
+   "key": "grorud",
+   "label": "Grorud",
+   "kana": "グロールド",
+   "box": [
+    [
+     59.94,
+     10.85
+    ],
+    [
+     59.975,
+     10.92
+    ]
+   ],
+   "home": "Grorud"
+  },
+  {
+   "key": "lambertseter",
+   "label": "Lambertseter",
+   "kana": "ランベルトセーテル",
+   "box": [
+    [
+     59.865,
+     10.78
+    ],
+    [
+     59.885,
+     10.83
+    ]
+   ],
+   "home": "Lambertseter"
+  }
  ],
  "build": {
   "script": "scripts/build_norway.py",
   "check": "scripts/validate_norway.py",
   "arg": "oslo",
   "settings": "assets/no_areas.json",
-  "helpers": ["scripts/no.py"],
-  "inputs": ["cache:norway/"]
+  "helpers": [
+   "scripts/no.py"
+  ],
+  "inputs": [
+   "cache:norway/"
+  ]
  },
  "credits": {
   "block": "<span>Numbers of homes sold, mean prices per m² and median total prices, by grunnkretsområde: Oslo kommune, Statistikkbanken (tables BOL018 and BOL013, 2018–2025, from Boligmappa AS's sales data); the station figures are Ekinomics' own calculation from them. Area outlines: Oslo kommune (grunnkretsområder 2023). Population: Statistics Norway (SSB), table 07459 (CC BY 4.0).</span><span>Stations and lines, processed from Entur's timetable data (GTFS) for Ruter, Vy and Flytoget as published in 2026, under the <a href=\"https://data.norge.no/nlod/en/2.0\" target=\"_blank\" rel=\"noopener\">Norwegian Licence for Open Government Data (NLOD) 2.0</a>. Land beyond Oslo: Natural Earth. None of these bodies produced or endorses this site.</span>",

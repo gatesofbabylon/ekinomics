@@ -3,6 +3,7 @@
  "country": "Portugal",
  "order": 1,
  "path": "lisboa/",
+ "tier": "area",
  "en": "Lisbon metropolitan area",
  "population": 2870208,
  "tag": {

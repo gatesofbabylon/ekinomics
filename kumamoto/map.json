@@ -3,6 +3,7 @@
  "country": "Japan",
  "order": 11,
  "path": "kumamoto/",
+ "tier": "observed",
  "en": "Greater Kumamoto",
  "ja": "熊本圏",
  "population": 1738301,

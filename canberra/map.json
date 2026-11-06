@@ -3,6 +3,7 @@
  "country": "Australia",
  "order": 5,
  "path": "canberra/",
+ "tier": "area",
  "en": "Canberra",
  "population": 552263,
  "tag": {

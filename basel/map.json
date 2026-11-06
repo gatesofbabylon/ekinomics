@@ -3,6 +3,7 @@
  "country": "Switzerland",
  "order": 2,
  "path": "basel/",
+ "tier": "area",
  "en": "Basel",
  "population": 210529,
  "tag": {

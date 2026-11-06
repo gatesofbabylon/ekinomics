@@ -3,6 +3,7 @@
  "country": "United Kingdom",
  "order": 9,
  "path": "leicester/",
+ "tier": "observed",
  "en": "Greater Leicester",
  "population": 1135564,
  "tag": {

@@ -3,6 +3,7 @@
  "country": "France",
  "order": 8,
  "path": "herault/",
+ "tier": "observed",
  "en": "Hérault",
  "population": 1230289,
  "tag": {

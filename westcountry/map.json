@@ -3,6 +3,7 @@
  "country": "United Kingdom",
  "order": 7,
  "path": "westcountry/",
+ "tier": "observed",
  "en": "Greater Bristol",
  "population": 1232105,
  "tag": {

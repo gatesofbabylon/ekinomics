@@ -3,6 +3,7 @@
  "country": "United States",
  "order": 2,
  "path": "pennsylvania/",
+ "tier": "observed",
  "en": "Philadelphia",
  "population": 1574281,
  "tag": {

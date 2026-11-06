@@ -3,6 +3,8 @@
  "country": "Germany",
  "order": 4,
  "path": "essen/",
+ "tier": "low",
+ "kind": "standard values",
  "en": "Essen",
  "population": 574682,
  "tag": {

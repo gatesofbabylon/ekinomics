@@ -3,6 +3,7 @@
  "country": "France",
  "order": 0,
  "path": "iledefrance/",
+ "tier": "observed",
  "en": "Île-de-France",
  "population": 12463067,
  "tag": {

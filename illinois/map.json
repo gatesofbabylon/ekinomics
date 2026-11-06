@@ -3,6 +3,7 @@
  "country": "United States",
  "order": 1,
  "path": "illinois/",
+ "tier": "observed",
  "en": "Cook County",
  "population": 5194625,
  "tag": {

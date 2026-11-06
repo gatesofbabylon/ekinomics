@@ -3,6 +3,7 @@
  "country": "United Kingdom",
  "order": 0,
  "path": "southeast/",
+ "tier": "observed",
  "en": "Greater London",
  "population": 23552500,
  "tag": {

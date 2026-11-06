@@ -3,6 +3,7 @@
  "country": "Australia",
  "order": 1,
  "path": "southaustralia/",
+ "tier": "area",
  "en": "Greater Adelaide",
  "population": 1491015,
  "tag": {

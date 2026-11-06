@@ -3,6 +3,7 @@
  "country": "France",
  "order": 7,
  "path": "loireatlantique/",
+ "tier": "observed",
  "en": "Loire-Atlantique",
  "population": 1487570,
  "tag": {

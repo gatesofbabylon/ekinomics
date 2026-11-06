@@ -3,6 +3,8 @@
  "country": "United States",
  "order": 12,
  "path": "northtexas/",
+ "tier": "low",
+ "kind": "hmda",
  "en": "Dallas–Fort Worth",
  "population": 7276388,
  "tag": {

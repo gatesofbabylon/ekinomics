@@ -3,6 +3,7 @@
  "country": "United States",
  "order": 5,
  "path": "washington/",
+ "tier": "observed",
  "en": "King County",
  "population": 2344939,
  "tag": {

@@ -3,6 +3,7 @@
  "country": "Germany",
  "order": 1,
  "path": "cologne/",
+ "tier": "area",
  "en": "Cologne",
  "population": 1024621,
  "tag": {
@@ -132,24 +133,26 @@
   }
  ],
  "build": {
-  "script": "scripts/build_germany_nrw.py",
-  "check": "scripts/validate_germany_nrw.py",
+  "script": "scripts/build_germany.py",
+  "check": "scripts/validate_germany.py",
   "arg": "cologne",
-  "settings": "assets/de_nrw_areas.json",
+  "settings": "assets/de_areas.json",
   "helpers": [
+   "scripts/de.py",
    "scripts/de_nrw.py",
    "scripts/pt.py"
   ],
   "inputs": [
-   "cache:germany/nrw/"
+   "cache:germany/cologne/",
+   "cache:germany/nrw/gtfs/rhineruhr_cut.zip"
   ]
  },
  "credits": {
-  "block": "<span>Standard values per m² of living area of owner-occupied flats (Immobilienrichtwerte, Teilmarkt Eigentumswohnungen), by zone, valued on 1 January 2022–2026: Gutachterausschuss für Grundstückswerte in der Stadt Köln, published by the Gutachterausschüsse für Grundstückswerte in NRW through <a href=\"https://www.boris.nrw.de/\" target=\"_blank\" rel=\"noopener\">BORIS-NRW</a> and <a href=\"https://www.opengeodata.nrw.de/produkte/infrastruktur_bauen_wohnen/boris/IRW/\" target=\"_blank\" rel=\"noopener\">opengeodata.nrw.de</a>, <a href=\"https://www.govdata.de/dl-de/zero-2-0\" target=\"_blank\" rel=\"noopener\">dl-de/zero-2.0</a>; the station figures are Ekinomics' own calculation from them. Check figures: Grundstücksmarktdaten NRW (dl-de/zero-2.0). Population: Statistisches Bundesamt (Destatis), Gemeindeverzeichnis, 31 December 2024 (dl-de/by-2.0). City outline and municipalities around: © EuroGeographics for the administrative boundaries (Eurostat GISCO, LAU 2024). Land beyond Germany: Natural Earth.</span><span>Stations and lines, processed from the national timetable of DELFI e.V. (NeTEx) as converted to GTFS by <a href=\"https://gtfs.de/\" target=\"_blank\" rel=\"noopener\">gtfs.de</a>, under <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>, 2026. None of these bodies produced or endorses this site.</span>",
+  "block": "<span>Contracts and mean prices per m² of living area of flats of 60–100 m², by Stadtteil and build year: Gutachterausschuss für Grundstückswerte in der Stadt Köln, Grundstücksmarktbericht 2018–2024 (contract years 2017–2023), section 6.1.2, as deposited with the Universitäts- und Landesbibliothek Bonn; the 2018 and 2019 reports under <a href=\"https://www.govdata.de/dl-de/by-2-0\" target=\"_blank\" rel=\"noopener\">dl-de/by-2.0</a> (© Daten der Gutachterausschüsse für Grundstückswerte in NRW 2018 and 2019, <a href=\"https://www.boris.nrw.de/\" target=\"_blank\" rel=\"noopener\">www.boris.nrw.de</a>), the 2020–2024 reports under <a href=\"https://www.govdata.de/dl-de/zero-2-0\" target=\"_blank\" rel=\"noopener\">dl-de/zero-2.0</a>; the station figures are Ekinomics' own calculation from them. Stadtteile and Stadtbezirke: Stadt Köln, Amt für Stadtentwicklung und Statistik (<a href=\"https://www.offenedaten-koeln.de/dataset/stadtteile-koeln\" target=\"_blank\" rel=\"noopener\">Offene Daten Köln</a>, <a href=\"https://www.govdata.de/dl-de/zero-2-0\" target=\"_blank\" rel=\"noopener\">dl-de/zero-2.0</a>). Population: Statistisches Bundesamt (Destatis), Gemeindeverzeichnis, 31 December 2024 (dl-de/by-2.0). Land beyond the city: Natural Earth.</span><span>Stations and lines, processed from the national timetable of DELFI e.V. (NeTEx) as converted to GTFS by <a href=\"https://gtfs.de/\" target=\"_blank\" rel=\"noopener\">gtfs.de</a>, under <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>, 2026. None of these bodies produced or endorses this site.</span>",
   "priceSource": {
-   "en": "Prices: NRW Immobilienrichtwerte, standard values for flats (BORIS-NRW, dl-de/zero-2.0), low confidence",
-   "ja": "価格：NRW 州の不動産標準価格（Immobilienrichtwerte、BORIS-NRW、dl-de/zero-2.0）、低信頼度"
+   "en": "Prices: Gutachterausschuss für Grundstückswerte in der Stadt Köln, Grundstücksmarktbericht (dl-de/by-2.0 and dl-de/zero-2.0)",
+   "ja": "価格：ケルン市不動産価格評価委員会『不動産市場報告』（dl-de/by-2.0、dl-de/zero-2.0）"
   },
-  "attribution": "Stations: DELFI e.V. via gtfs.de (CC BY 4.0) · Prices: Gutachterausschüsse NRW, BORIS-NRW (dl-de/zero-2.0) · Outlines: © EuroGeographics"
+  "attribution": "Stations: DELFI e.V. via gtfs.de (CC BY 4.0) · Prices: Gutachterausschuss Köln (dl-de/by-2.0, dl-de/zero-2.0) · Stadtteile: Stadt Köln (dl-de/zero-2.0)"
  }
 }

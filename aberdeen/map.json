@@ -3,6 +3,7 @@
  "country": "United Kingdom",
  "order": 11,
  "path": "aberdeen/",
+ "tier": "area",
  "en": "Aberdeen",
  "population": 494820,
  "tag": {

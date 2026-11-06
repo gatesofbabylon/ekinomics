@@ -3,6 +3,7 @@
  "country": "Japan",
  "order": 8,
  "path": "hiroshima/",
+ "tier": "observed",
  "en": "Greater Hiroshima",
  "ja": "広島圏",
  "population": 2799702,

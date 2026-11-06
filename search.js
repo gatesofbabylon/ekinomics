@@ -49,7 +49,7 @@
     if(!here){// a draft's own page: its map joins the menu here only
       const M=await fetch(new URL('map.json',document.baseURI),{cache:'no-cache'}).then(r=>r.json());const m={key,path:M.path,tag:M.tag,population:M.population,cities:M.cities};
       let c=menu.find(c=>c.name===M.country);if(!c)menu.push(c={name:M.country,maps:[]});c.maps.push(m);c.maps.sort((a,b)=>b.cities[0].population-a.cities[0].population);
-      const sum=(c,f)=>c.maps.reduce((s,m)=>s+f(m),0);menu.sort((a,b)=>sum(b,m=>m.cities.length)-sum(a,m=>m.cities.length)||sum(b,m=>m.population)-sum(a,m=>m.population));here={c:M.country,m}}
+      const sum=(c,f)=>c.maps.reduce((s,m)=>s+f(m),0);const lead=c=>['United Kingdom','Japan'].includes(c.name)?0:1;menu.sort((a,b)=>lead(a)-lead(b)||sum(b,m=>m.cities.length)-sum(a,m=>m.cities.length)||sum(b,m=>m.population)-sum(a,m=>m.population));here={c:M.country,m}}
     // Links are relative to the map's address; city pages carry <base href="../">, so the same links work there.
     const up=here.m.path?'../':'',cur=window.EKI_CITY||here.m.cities[0].key,href=(p,c)=>(p.key===key?'./':up+p.path)+c.key+'/';
     const groups=ps=>'<div class="mcls">'+ps.map(p=>`<span class="mcl" title="${esc(p.tag.en)}">`+p.cities.map(c=>`<a href="${href(p,c)}"${p.key===key&&c.key===cur?' aria-current="true"':''}>${both(c)}</a>`).join('<i aria-hidden="true">·</i>')+'</span>').join('')+'</div>';

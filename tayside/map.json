@@ -3,6 +3,7 @@
  "country": "United Kingdom",
  "order": 12,
  "path": "tayside/",
+ "tier": "area",
  "en": "Tayside",
  "population": 417930,
  "tag": {

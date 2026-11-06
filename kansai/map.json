@@ -3,6 +3,7 @@
  "country": "Japan",
  "order": 1,
  "path": "kansai/",
+ "tier": "observed",
  "en": "Greater Osaka",
  "ja": "関西圏",
  "population": 20541441,

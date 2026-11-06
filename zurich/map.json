@@ -3,6 +3,7 @@
  "country": "Switzerland",
  "order": 1,
  "path": "zurich/",
+ "tier": "area",
  "en": "City of Zurich",
  "population": 452421,
  "tag": {

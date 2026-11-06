@@ -3,6 +3,8 @@
  "country": "United States",
  "order": 32,
  "path": "austin/",
+ "tier": "low",
+ "kind": "hmda",
  "en": "Travis and Williamson",
  "population": 2142497,
  "tag": {

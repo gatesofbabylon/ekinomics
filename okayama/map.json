@@ -3,6 +3,7 @@
  "country": "Japan",
  "order": 10,
  "path": "okayama/",
+ "tier": "observed",
  "en": "Greater Okayama",
  "ja": "岡山圏",
  "population": 1888432,

@@ -3,6 +3,7 @@
  "country": "United States",
  "order": 8,
  "path": "northcarolina/",
+ "tier": "observed",
  "en": "Mecklenburg County",
  "population": 1233383,
  "tag": {

@@ -3,6 +3,7 @@
  "country": "Japan",
  "order": 0,
  "path": "shutoken/",
+ "tier": "observed",
  "en": "Greater Tokyo",
  "ja": "首都圏",
  "population": 43653441,

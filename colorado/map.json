@@ -3,6 +3,7 @@
  "country": "United States",
  "order": 3,
  "path": "colorado/",
+ "tier": "observed",
  "en": "Denver",
  "population": 740613,
  "tag": {

@@ -3,6 +3,7 @@
  "country": "United Kingdom",
  "order": 4,
  "path": "northeast/",
+ "tier": "observed",
  "en": "North East England",
  "population": 2762746,
  "tag": {

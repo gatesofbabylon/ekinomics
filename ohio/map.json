@@ -3,6 +3,7 @@
  "country": "United States",
  "order": 9,
  "path": "ohio/",
+ "tier": "observed",
  "en": "Cuyahoga County",
  "population": 1232925,
  "tag": {

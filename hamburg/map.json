@@ -3,6 +3,7 @@
  "country": "Germany",
  "order": 1,
  "path": "hamburg/",
+ "tier": "area",
  "en": "Hamburg",
  "population": 1862565,
  "tag": {

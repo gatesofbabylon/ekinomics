@@ -3,6 +3,7 @@
  "country": "Finland",
  "order": 1,
  "path": "pirkanmaa/",
+ "tier": "area",
  "en": "Tampere region",
  "population": 446123,
  "tag": {

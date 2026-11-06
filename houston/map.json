@@ -3,6 +3,8 @@
  "country": "United States",
  "order": 13,
  "path": "houston/",
+ "tier": "low",
+ "kind": "hmda",
  "en": "Harris County",
  "population": 5045026,
  "tag": {

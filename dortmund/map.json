@@ -3,6 +3,8 @@
  "country": "Germany",
  "order": 3,
  "path": "dortmund/",
+ "tier": "low",
+ "kind": "standard values",
  "en": "Dortmund",
  "population": 603462,
  "tag": {
