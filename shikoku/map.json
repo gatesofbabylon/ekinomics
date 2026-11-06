@@ -6,7 +6,7 @@
  "tier": "observed",
  "en": "Shikoku",
  "ja": "四国",
- "population": 2976612,
+ "population": 3696171,
  "tag": {
   "en": "Shikoku",
   "ja": "四国"
@@ -29,6 +29,12 @@
    "en": "Kōchi",
    "ja": "高知",
    "population": 326545
+  },
+  {
+   "key": "tokushima",
+   "en": "Tokushima",
+   "ja": "徳島",
+   "population": 252391
   }
  ],
  "goto": [
@@ -79,6 +85,54 @@
     ]
    ],
    "home": "高知"
+  },
+  {
+   "key": "tokushima",
+   "label": "Tokushima",
+   "ja": "徳島",
+   "box": [
+    [
+     34.024,
+     134.481
+    ],
+    [
+     34.124,
+     134.621
+    ]
+   ],
+   "home": "徳島"
+  },
+  {
+   "key": "naruto",
+   "label": "Naruto",
+   "ja": "鳴門",
+   "box": [
+    [
+     34.138,
+     134.553
+    ],
+    [
+     34.218,
+     134.665
+    ]
+   ],
+   "home": "鳴門"
+  },
+  {
+   "key": "anan",
+   "label": "Anan",
+   "ja": "阿南",
+   "box": [
+    [
+     33.881,
+     134.603
+    ],
+    [
+     33.961,
+     134.715
+    ]
+   ],
+   "home": "阿南"
   }
  ],
  "build": {
@@ -98,6 +152,9 @@
    "cache:ehime/residential/*_{MLIT}.*",
    "cache:kochi/residential/*_{MLIT}.*",
    "cache:wikidata/shikoku/*",
+   "cache:tokushima/*_20053_20262.*",
+   "cache:tokushima/residential/*_20053_20262.*",
+   "cache:wikidata/tokushima/*",
    "cache:N03-20250101_*_GML.zip",
    "cache:N02-24_GML.zip",
    "cache:japan-land-prefectures.json",
