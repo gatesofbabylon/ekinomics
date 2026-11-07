@@ -1,0 +1,388 @@
+{
+ "key": "devoncornwall",
+ "country": "United Kingdom",
+ "order": 14,
+ "path": "devoncornwall/",
+ "tier": "observed",
+ "en": "Devon and Cornwall",
+ "population": 1843469,
+ "tag": {
+  "en": "Devon & Cornwall",
+  "ja": "デヴォン・コーンウォール"
+ },
+ "cities": [
+  {
+   "key": "plymouth",
+   "en": "Plymouth",
+   "ja": "プリマス",
+   "population": 271361
+  },
+  {
+   "key": "exeter",
+   "en": "Exeter",
+   "ja": "エクセター",
+   "population": 137894
+  }
+ ],
+ "goto": [
+  {
+   "key": "plymouth",
+   "label": "Plymouth",
+   "kana": "プリマス",
+   "box": [
+    [
+     50.33,
+     -4.25
+    ],
+    [
+     50.44,
+     -4.03
+    ]
+   ],
+   "home": "Plymouth"
+  },
+  {
+   "key": "exeter",
+   "label": "Exeter",
+   "kana": "エクセター",
+   "box": [
+    [
+     50.69,
+     -3.58
+    ],
+    [
+     50.75,
+     -3.47
+    ]
+   ],
+   "home": "Exeter St Davids"
+  },
+  {
+   "key": "torquay",
+   "label": "Torquay",
+   "kana": "トーキー",
+   "box": [
+    [
+     50.44,
+     -3.57
+    ],
+    [
+     50.49,
+     -3.49
+    ]
+   ],
+   "home": "Torquay"
+  },
+  {
+   "key": "paignton",
+   "label": "Paignton",
+   "kana": "ペイントン",
+   "box": [
+    [
+     50.41,
+     -3.6
+    ],
+    [
+     50.45,
+     -3.54
+    ]
+   ],
+   "home": "Paignton"
+  },
+  {
+   "key": "newtonabbot",
+   "label": "Newton Abbot",
+   "kana": "ニュートン・アボット",
+   "box": [
+    [
+     50.51,
+     -3.64
+    ],
+    [
+     50.54,
+     -3.58
+    ]
+   ],
+   "home": "Newton Abbot"
+  },
+  {
+   "key": "teignmouth",
+   "label": "Teignmouth",
+   "kana": "ティンマス",
+   "box": [
+    [
+     50.54,
+     -3.52
+    ],
+    [
+     50.56,
+     -3.48
+    ]
+   ],
+   "home": "Teignmouth"
+  },
+  {
+   "key": "dawlish",
+   "label": "Dawlish",
+   "kana": "ドーリッシュ",
+   "box": [
+    [
+     50.57,
+     -3.48
+    ],
+    [
+     50.59,
+     -3.45
+    ]
+   ],
+   "home": "Dawlish"
+  },
+  {
+   "key": "exmouth",
+   "label": "Exmouth",
+   "kana": "エクスマス",
+   "box": [
+    [
+     50.6,
+     -3.44
+    ],
+    [
+     50.64,
+     -3.38
+    ]
+   ],
+   "home": "Exmouth"
+  },
+  {
+   "key": "honiton",
+   "label": "Honiton",
+   "kana": "ホニトン",
+   "box": [
+    [
+     50.79,
+     -3.21
+    ],
+    [
+     50.81,
+     -3.17
+    ]
+   ],
+   "home": "Honiton"
+  },
+  {
+   "key": "totnes",
+   "label": "Totnes",
+   "kana": "トットネス",
+   "box": [
+    [
+     50.42,
+     -3.71
+    ],
+    [
+     50.44,
+     -3.67
+    ]
+   ],
+   "home": "Totnes"
+  },
+  {
+   "key": "okehampton",
+   "label": "Okehampton",
+   "kana": "オークハンプトン",
+   "box": [
+    [
+     50.72,
+     -4.02
+    ],
+    [
+     50.75,
+     -3.98
+    ]
+   ],
+   "home": "Okehampton"
+  },
+  {
+   "key": "barnstaple",
+   "label": "Barnstaple",
+   "kana": "バーンスタプル",
+   "box": [
+    [
+     51.06,
+     -4.09
+    ],
+    [
+     51.1,
+     -4.03
+    ]
+   ],
+   "home": "Barnstaple"
+  },
+  {
+   "key": "liskeard",
+   "label": "Liskeard",
+   "kana": "リスカード",
+   "box": [
+    [
+     50.44,
+     -4.49
+    ],
+    [
+     50.47,
+     -4.44
+    ]
+   ],
+   "home": "Liskeard"
+  },
+  {
+   "key": "staustell",
+   "label": "St Austell",
+   "kana": "セント・オーステル",
+   "box": [
+    [
+     50.32,
+     -4.82
+    ],
+    [
+     50.36,
+     -4.76
+    ]
+   ],
+   "home": "St Austell"
+  },
+  {
+   "key": "newquay",
+   "label": "Newquay",
+   "kana": "ニューキー",
+   "box": [
+    [
+     50.4,
+     -5.11
+    ],
+    [
+     50.43,
+     -5.05
+    ]
+   ],
+   "home": "Newquay"
+  },
+  {
+   "key": "truro",
+   "label": "Truro",
+   "kana": "トルーロ",
+   "box": [
+    [
+     50.25,
+     -5.08
+    ],
+    [
+     50.28,
+     -5.02
+    ]
+   ],
+   "home": "Truro"
+  },
+  {
+   "key": "falmouth",
+   "label": "Falmouth",
+   "kana": "ファルマス",
+   "box": [
+    [
+     50.13,
+     -5.1
+    ],
+    [
+     50.17,
+     -5.05
+    ]
+   ],
+   "home": "Falmouth Town"
+  },
+  {
+   "key": "redruth",
+   "label": "Redruth",
+   "kana": "レドルース",
+   "box": [
+    [
+     50.22,
+     -5.25
+    ],
+    [
+     50.245,
+     -5.2
+    ]
+   ],
+   "home": "Redruth"
+  },
+  {
+   "key": "camborne",
+   "label": "Camborne",
+   "kana": "カムボーン",
+   "box": [
+    [
+     50.2,
+     -5.32
+    ],
+    [
+     50.225,
+     -5.28
+    ]
+   ],
+   "home": "Camborne"
+  },
+  {
+   "key": "stives",
+   "label": "St Ives",
+   "kana": "セント・アイヴス",
+   "box": [
+    [
+     50.19,
+     -5.5
+    ],
+    [
+     50.22,
+     -5.46
+    ]
+   ],
+   "home": "St Ives"
+  },
+  {
+   "key": "penzance",
+   "label": "Penzance",
+   "kana": "ペンザンス",
+   "box": [
+    [
+     50.1,
+     -5.56
+    ],
+    [
+     50.135,
+     -5.5
+    ]
+   ],
+   "home": "Penzance"
+  }
+ ],
+ "build": {
+  "family": "uk",
+  "script": "scripts/build_london.py",
+  "check": "scripts/validate_london.py",
+  "arg": "devoncornwall",
+  "inputs": [
+   "assets/uk_areas.json",
+   "assets/london_station_lines_overrides.csv",
+   "assets/belfast_stations.csv",
+   "assets/*_districts.csv",
+   "cache:london/*",
+   "cache:london/tfl",
+   "cache:london/boundaries",
+   "cache:london/bods",
+   "cache:london/vmd",
+   "cache:london/scotland",
+   "cache:london/ni"
+  ]
+ },
+ "credits": {
+  "block": "<span>Contains HM Land Registry data © Crown copyright and database right 2024. This data is licensed under the Open Government Licence v3.0. Floor areas: Chi, Dennett, Oléron-Evans and Morphet (2025), <a href=\"https://doi.org/10.5255/UKDA-SN-857911\" target=\"_blank\" rel=\"noopener\">House Price Per Square Metre in England and Wales, 1995–2024</a>, UK Data Service, CC BY 4.0, which links Land Registry sales to Energy Performance Certificates (MHCLG, Open Government Licence).</span><span>Postcodes and borough boundaries: Office for National Statistics, Open Government Licence; contains OS data © Crown copyright and database right 2024, Royal Mail data © Royal Mail copyright and database right 2024 and GeoPlace data © Local Government Information House Limited copyright and database right 2024. Stations: NaPTAN, Department for Transport, Open Government Licence. Rail lines: Powered by TfL Open Data; contains OS data © Crown copyright and database rights 2016 and Geomni UK Map data © and database rights [2019]. None of these bodies produced or endorses this site.</span>",
+  "attribution": "Contains OS data © Crown copyright and database right 2026 · Powered by TfL Open Data"
+ }
+}

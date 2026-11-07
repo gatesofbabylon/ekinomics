@@ -1,0 +1,372 @@
+{
+ "key": "eastanglia",
+ "country": "United Kingdom",
+ "order": 15,
+ "path": "eastanglia/",
+ "tier": "observed",
+ "en": "East Anglia",
+ "population": 1735277,
+ "tag": {
+  "en": "East Anglia",
+  "ja": "イースト・アングリア"
+ },
+ "cities": [
+  {
+   "key": "norwich",
+   "en": "Norwich",
+   "ja": "ノリッジ",
+   "population": 145676
+  },
+  {
+   "key": "ipswich",
+   "en": "Ipswich",
+   "ja": "イプスウィッチ",
+   "population": 139457
+  }
+ ],
+ "goto": [
+  {
+   "key": "norwich",
+   "label": "Norwich",
+   "kana": "ノリッジ",
+   "box": [
+    [
+     52.59,
+     1.2
+    ],
+    [
+     52.67,
+     1.38
+    ]
+   ],
+   "home": "Norwich"
+  },
+  {
+   "key": "ipswich",
+   "label": "Ipswich",
+   "kana": "イプスウィッチ",
+   "box": [
+    [
+     52.03,
+     1.1
+    ],
+    [
+     52.08,
+     1.21
+    ]
+   ],
+   "home": "Ipswich"
+  },
+  {
+   "key": "greatyarmouth",
+   "label": "Great Yarmouth",
+   "kana": "グレート・ヤーマス",
+   "box": [
+    [
+     52.58,
+     1.7
+    ],
+    [
+     52.63,
+     1.75
+    ]
+   ],
+   "home": "Great Yarmouth"
+  },
+  {
+   "key": "lowestoft",
+   "label": "Lowestoft",
+   "kana": "ローストフト",
+   "box": [
+    [
+     52.45,
+     1.7
+    ],
+    [
+     52.5,
+     1.77
+    ]
+   ],
+   "home": "Lowestoft"
+  },
+  {
+   "key": "kingslynn",
+   "label": "King's Lynn",
+   "kana": "キングズ・リン",
+   "box": [
+    [
+     52.73,
+     0.37
+    ],
+    [
+     52.78,
+     0.44
+    ]
+   ],
+   "home": "King's Lynn"
+  },
+  {
+   "key": "burystedmunds",
+   "label": "Bury St Edmunds",
+   "kana": "ベリー・セント・エドマンズ",
+   "box": [
+    [
+     52.23,
+     0.68
+    ],
+    [
+     52.26,
+     0.74
+    ]
+   ],
+   "home": "Bury St Edmunds"
+  },
+  {
+   "key": "thetford",
+   "label": "Thetford",
+   "kana": "セットフォード",
+   "box": [
+    [
+     52.4,
+     0.72
+    ],
+    [
+     52.43,
+     0.78
+    ]
+   ],
+   "home": "Thetford"
+  },
+  {
+   "key": "newmarket",
+   "label": "Newmarket",
+   "kana": "ニューマーケット",
+   "box": [
+    [
+     52.23,
+     0.38
+    ],
+    [
+     52.26,
+     0.43
+    ]
+   ],
+   "home": "Newmarket"
+  },
+  {
+   "key": "cromer",
+   "label": "Cromer",
+   "kana": "クローマー",
+   "box": [
+    [
+     52.92,
+     1.28
+    ],
+    [
+     52.94,
+     1.32
+    ]
+   ],
+   "home": "Cromer"
+  },
+  {
+   "key": "sheringham",
+   "label": "Sheringham",
+   "kana": "シェリンガム",
+   "box": [
+    [
+     52.93,
+     1.19
+    ],
+    [
+     52.95,
+     1.23
+    ]
+   ],
+   "home": "Sheringham"
+  },
+  {
+   "key": "northwalsham",
+   "label": "North Walsham",
+   "kana": "ノース・ウォルシャム",
+   "box": [
+    [
+     52.81,
+     1.37
+    ],
+    [
+     52.83,
+     1.4
+    ]
+   ],
+   "home": "North Walsham"
+  },
+  {
+   "key": "wymondham",
+   "label": "Wymondham",
+   "kana": "ワイモンダム",
+   "box": [
+    [
+     52.56,
+     1.09
+    ],
+    [
+     52.58,
+     1.13
+    ]
+   ],
+   "home": "Wymondham"
+  },
+  {
+   "key": "attleborough",
+   "label": "Attleborough",
+   "kana": "アトルバラ",
+   "box": [
+    [
+     52.51,
+     1.0
+    ],
+    [
+     52.525,
+     1.04
+    ]
+   ],
+   "home": "Attleborough"
+  },
+  {
+   "key": "diss",
+   "label": "Diss",
+   "kana": "ディス",
+   "box": [
+    [
+     52.36,
+     1.09
+    ],
+    [
+     52.39,
+     1.13
+    ]
+   ],
+   "home": "Diss"
+  },
+  {
+   "key": "downhammarket",
+   "label": "Downham Market",
+   "kana": "ダウナム・マーケット",
+   "box": [
+    [
+     52.59,
+     0.36
+    ],
+    [
+     52.62,
+     0.4
+    ]
+   ],
+   "home": "Downham Market"
+  },
+  {
+   "key": "stowmarket",
+   "label": "Stowmarket",
+   "kana": "ストウマーケット",
+   "box": [
+    [
+     52.18,
+     0.97
+    ],
+    [
+     52.2,
+     1.02
+    ]
+   ],
+   "home": "Stowmarket"
+  },
+  {
+   "key": "sudbury",
+   "label": "Sudbury",
+   "kana": "サドベリー",
+   "box": [
+    [
+     52.03,
+     0.71
+    ],
+    [
+     52.05,
+     0.75
+    ]
+   ],
+   "home": "Sudbury"
+  },
+  {
+   "key": "woodbridge",
+   "label": "Woodbridge",
+   "kana": "ウッドブリッジ",
+   "box": [
+    [
+     52.08,
+     1.3
+    ],
+    [
+     52.1,
+     1.34
+    ]
+   ],
+   "home": "Woodbridge"
+  },
+  {
+   "key": "felixstowe",
+   "label": "Felixstowe",
+   "kana": "フィーリクストウ",
+   "box": [
+    [
+     51.95,
+     1.3
+    ],
+    [
+     51.98,
+     1.37
+    ]
+   ],
+   "home": "Felixstowe"
+  },
+  {
+   "key": "beccles",
+   "label": "Beccles",
+   "kana": "ベックルズ",
+   "box": [
+    [
+     52.44,
+     1.55
+    ],
+    [
+     52.47,
+     1.58
+    ]
+   ],
+   "home": "Beccles"
+  }
+ ],
+ "build": {
+  "family": "uk",
+  "script": "scripts/build_london.py",
+  "check": "scripts/validate_london.py",
+  "arg": "eastanglia",
+  "inputs": [
+   "assets/uk_areas.json",
+   "assets/london_station_lines_overrides.csv",
+   "assets/belfast_stations.csv",
+   "assets/*_districts.csv",
+   "cache:london/*",
+   "cache:london/tfl",
+   "cache:london/boundaries",
+   "cache:london/bods",
+   "cache:london/vmd",
+   "cache:london/scotland",
+   "cache:london/ni"
+  ]
+ },
+ "credits": {
+  "block": "<span>Contains HM Land Registry data © Crown copyright and database right 2024. This data is licensed under the Open Government Licence v3.0. Floor areas: Chi, Dennett, Oléron-Evans and Morphet (2025), <a href=\"https://doi.org/10.5255/UKDA-SN-857911\" target=\"_blank\" rel=\"noopener\">House Price Per Square Metre in England and Wales, 1995–2024</a>, UK Data Service, CC BY 4.0, which links Land Registry sales to Energy Performance Certificates (MHCLG, Open Government Licence).</span><span>Postcodes and borough boundaries: Office for National Statistics, Open Government Licence; contains OS data © Crown copyright and database right 2024, Royal Mail data © Royal Mail copyright and database right 2024 and GeoPlace data © Local Government Information House Limited copyright and database right 2024. Stations: NaPTAN, Department for Transport, Open Government Licence. Rail lines: Powered by TfL Open Data; contains OS data © Crown copyright and database rights 2016 and Geomni UK Map data © and database rights [2019]. None of these bodies produced or endorses this site.</span>",
+  "attribution": "Contains OS data © Crown copyright and database right 2026 · Powered by TfL Open Data"
+ }
+}

@@ -1,0 +1,181 @@
+{
+ "key": "nagano",
+ "country": "Japan",
+ "order": 20,
+ "path": "nagano/",
+ "tier": "observed",
+ "en": "Nagano",
+ "ja": "長野県",
+ "population": 2048011,
+ "tag": {
+  "en": "Hokuriku and Shin’etsu",
+  "ja": "北陸・信越"
+ },
+ "cities": [
+  {
+   "key": "nagano",
+   "en": "Nagano",
+   "ja": "長野",
+   "population": 372760
+  },
+  {
+   "key": "matsumoto",
+   "en": "Matsumoto",
+   "ja": "松本",
+   "population": 241145
+  }
+ ],
+ "goto": [
+  {
+   "key": "nagano",
+   "label": "Nagano",
+   "ja": "長野",
+   "box": [
+    [
+     36.594,
+     138.119
+    ],
+    [
+     36.694,
+     138.259
+    ]
+   ],
+   "home": "長野"
+  },
+  {
+   "key": "matsumoto",
+   "label": "Matsumoto",
+   "ja": "松本",
+   "box": [
+    [
+     36.181,
+     137.894
+    ],
+    [
+     36.281,
+     138.034
+    ]
+   ],
+   "home": "松本"
+  },
+  {
+   "key": "ueda",
+   "label": "Ueda",
+   "ja": "上田",
+   "box": [
+    [
+     36.356,
+     138.194
+    ],
+    [
+     36.436,
+     138.306
+    ]
+   ],
+   "home": "上田"
+  },
+  {
+   "key": "iida",
+   "label": "Iida",
+   "ja": "飯田",
+   "box": [
+    [
+     35.48,
+     137.765
+    ],
+    [
+     35.56,
+     137.877
+    ]
+   ],
+   "home": "飯田"
+  },
+  {
+   "key": "saku",
+   "label": "Saku",
+   "ja": "佐久",
+   "box": [
+    [
+     36.238,
+     138.408
+    ],
+    [
+     36.318,
+     138.52
+    ]
+   ],
+   "home": "佐久平"
+  },
+  {
+   "key": "suwa",
+   "label": "Suwa",
+   "ja": "諏訪",
+   "box": [
+    [
+     36.007,
+     138.06
+    ],
+    [
+     36.087,
+     138.172
+    ]
+   ],
+   "home": "上諏訪"
+  },
+  {
+   "key": "ina",
+   "label": "Ina",
+   "ja": "伊那",
+   "box": [
+    [
+     35.798,
+     137.903
+    ],
+    [
+     35.878,
+     138.015
+    ]
+   ],
+   "home": "伊那市"
+  },
+  {
+   "key": "azumino",
+   "label": "Azumino",
+   "ja": "安曇野",
+   "box": [
+    [
+     36.26,
+     137.845
+    ],
+    [
+     36.34,
+     137.957
+    ]
+   ],
+   "home": "豊科"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "nagano",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:nagano/*_20053_20262.*",
+   "cache:nagano/residential/*_20053_20262.*",
+   "cache:wikidata/nagano/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

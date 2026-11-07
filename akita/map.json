@@ -1,0 +1,143 @@
+{
+ "key": "akita",
+ "country": "Japan",
+ "order": 19,
+ "path": "akita/",
+ "tier": "observed",
+ "en": "Akita",
+ "ja": "秋田県",
+ "population": 959502,
+ "tag": {
+  "en": "Tōhoku",
+  "ja": "東北"
+ },
+ "cities": [
+  {
+   "key": "akita",
+   "en": "Akita",
+   "ja": "秋田",
+   "population": 307672
+  }
+ ],
+ "goto": [
+  {
+   "key": "akita",
+   "label": "Akita",
+   "ja": "秋田",
+   "box": [
+    [
+     39.667,
+     140.06
+    ],
+    [
+     39.767,
+     140.2
+    ]
+   ],
+   "home": "秋田"
+  },
+  {
+   "key": "yokote",
+   "label": "Yokote",
+   "ja": "横手",
+   "box": [
+    [
+     39.27,
+     140.504
+    ],
+    [
+     39.35,
+     140.616
+    ]
+   ],
+   "home": "横手"
+  },
+  {
+   "key": "odate",
+   "label": "Ōdate",
+   "ja": "大館",
+   "box": [
+    [
+     40.248,
+     140.5
+    ],
+    [
+     40.328,
+     140.612
+    ]
+   ],
+   "home": "大館"
+  },
+  {
+   "key": "daisen",
+   "label": "Daisen",
+   "ja": "大仙",
+   "box": [
+    [
+     39.426,
+     140.424
+    ],
+    [
+     39.506,
+     140.536
+    ]
+   ],
+   "home": "大曲"
+  },
+  {
+   "key": "noshiro",
+   "label": "Noshiro",
+   "ja": "能代",
+   "box": [
+    [
+     40.166,
+     139.977
+    ],
+    [
+     40.246,
+     140.089
+    ]
+   ],
+   "home": "能代"
+  },
+  {
+   "key": "yurihonjo",
+   "label": "Yurihonjō",
+   "ja": "由利本荘",
+   "box": [
+    [
+     39.347,
+     140.002
+    ],
+    [
+     39.427,
+     140.114
+    ]
+   ],
+   "home": "羽後本荘"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "akita",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:akita/*_20053_20262.*",
+   "cache:akita/residential/*_20053_20262.*",
+   "cache:wikidata/akita/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

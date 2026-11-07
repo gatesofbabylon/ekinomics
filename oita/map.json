@@ -1,0 +1,143 @@
+{
+ "key": "oita",
+ "country": "Japan",
+ "order": 16,
+ "path": "oita/",
+ "tier": "observed",
+ "en": "Ōita",
+ "ja": "大分県",
+ "population": 1123852,
+ "tag": {
+  "en": "Kyūshū",
+  "ja": "九州"
+ },
+ "cities": [
+  {
+   "key": "oita",
+   "en": "Ōita",
+   "ja": "大分",
+   "population": 475614
+  }
+ ],
+ "goto": [
+  {
+   "key": "oita",
+   "label": "Ōita",
+   "ja": "大分",
+   "box": [
+    [
+     33.183,
+     131.537
+    ],
+    [
+     33.283,
+     131.677
+    ]
+   ],
+   "home": "大分"
+  },
+  {
+   "key": "beppu",
+   "label": "Beppu",
+   "ja": "別府",
+   "box": [
+    [
+     33.239,
+     131.444
+    ],
+    [
+     33.319,
+     131.556
+    ]
+   ],
+   "home": "別府"
+  },
+  {
+   "key": "nakatsu",
+   "label": "Nakatsu",
+   "ja": "中津",
+   "box": [
+    [
+     33.559,
+     131.135
+    ],
+    [
+     33.639,
+     131.247
+    ]
+   ],
+   "home": "中津"
+  },
+  {
+   "key": "saiki",
+   "label": "Saiki",
+   "ja": "佐伯",
+   "box": [
+    [
+     32.933,
+     131.846
+    ],
+    [
+     33.013,
+     131.958
+    ]
+   ],
+   "home": "佐伯"
+  },
+  {
+   "key": "hita",
+   "label": "Hita",
+   "ja": "日田",
+   "box": [
+    [
+     33.278,
+     130.882
+    ],
+    [
+     33.358,
+     130.994
+    ]
+   ],
+   "home": "日田"
+  },
+  {
+   "key": "usa",
+   "label": "Usa",
+   "ja": "宇佐",
+   "box": [
+    [
+     33.491,
+     131.356
+    ],
+    [
+     33.571,
+     131.468
+    ]
+   ],
+   "home": "宇佐"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "oita",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:oita/*_20053_20262.*",
+   "cache:oita/residential/*_20053_20262.*",
+   "cache:wikidata/oita/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

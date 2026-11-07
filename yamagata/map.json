@@ -1,0 +1,143 @@
+{
+ "key": "yamagata",
+ "country": "Japan",
+ "order": 22,
+ "path": "yamagata/",
+ "tier": "observed",
+ "en": "Yamagata",
+ "ja": "山形県",
+ "population": 1068027,
+ "tag": {
+  "en": "Tōhoku",
+  "ja": "東北"
+ },
+ "cities": [
+  {
+   "key": "yamagata",
+   "en": "Yamagata",
+   "ja": "山形",
+   "population": 247590
+  }
+ ],
+ "goto": [
+  {
+   "key": "yamagata",
+   "label": "Yamagata",
+   "ja": "山形",
+   "box": [
+    [
+     38.198,
+     140.257
+    ],
+    [
+     38.298,
+     140.397
+    ]
+   ],
+   "home": "山形"
+  },
+  {
+   "key": "yonezawa",
+   "label": "Yonezawa",
+   "ja": "米沢",
+   "box": [
+    [
+     37.869,
+     140.072
+    ],
+    [
+     37.949,
+     140.184
+    ]
+   ],
+   "home": "米沢"
+  },
+  {
+   "key": "tsuruoka",
+   "label": "Tsuruoka",
+   "ja": "鶴岡",
+   "box": [
+    [
+     38.7,
+     139.779
+    ],
+    [
+     38.78,
+     139.891
+    ]
+   ],
+   "home": "鶴岡"
+  },
+  {
+   "key": "sakata",
+   "label": "Sakata",
+   "ja": "酒田",
+   "box": [
+    [
+     38.882,
+     139.79
+    ],
+    [
+     38.962,
+     139.902
+    ]
+   ],
+   "home": "酒田"
+  },
+  {
+   "key": "tendo",
+   "label": "Tendō",
+   "ja": "天童",
+   "box": [
+    [
+     38.32,
+     140.313
+    ],
+    [
+     38.4,
+     140.425
+    ]
+   ],
+   "home": "天童"
+  },
+  {
+   "key": "shinjo",
+   "label": "Shinjō",
+   "ja": "新庄",
+   "box": [
+    [
+     38.723,
+     140.25
+    ],
+    [
+     38.803,
+     140.362
+    ]
+   ],
+   "home": "新庄"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "yamagata",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:yamagata/*_20053_20262.*",
+   "cache:yamagata/residential/*_20053_20262.*",
+   "cache:wikidata/yamagata/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

@@ -1,0 +1,127 @@
+{
+ "key": "yamanashi",
+ "country": "Japan",
+ "order": 25,
+ "path": "yamanashi/",
+ "tier": "observed",
+ "en": "Yamanashi",
+ "ja": "山梨県",
+ "population": 809974,
+ "tag": {
+  "en": "Kōshin",
+  "ja": "甲信"
+ },
+ "cities": [
+  {
+   "key": "kofu",
+   "en": "Kōfu",
+   "ja": "甲府",
+   "population": 189591
+  }
+ ],
+ "goto": [
+  {
+   "key": "kofu",
+   "label": "Kōfu",
+   "ja": "甲府",
+   "box": [
+    [
+     35.617,
+     138.5
+    ],
+    [
+     35.717,
+     138.64
+    ]
+   ],
+   "home": "甲府"
+  },
+  {
+   "key": "fujiyoshida",
+   "label": "Fujiyoshida",
+   "ja": "富士吉田",
+   "box": [
+    [
+     35.444,
+     138.739
+    ],
+    [
+     35.524,
+     138.851
+    ]
+   ],
+   "home": "富士山"
+  },
+  {
+   "key": "otsuki",
+   "label": "Ōtsuki",
+   "ja": "大月",
+   "box": [
+    [
+     35.573,
+     138.886
+    ],
+    [
+     35.653,
+     138.998
+    ]
+   ],
+   "home": "大月"
+  },
+  {
+   "key": "nirasaki",
+   "label": "Nirasaki",
+   "ja": "韮崎",
+   "box": [
+    [
+     35.67,
+     138.395
+    ],
+    [
+     35.75,
+     138.507
+    ]
+   ],
+   "home": "韮崎"
+  },
+  {
+   "key": "koshu",
+   "label": "Kōshū",
+   "ja": "甲州",
+   "box": [
+    [
+     35.665,
+     138.679
+    ],
+    [
+     35.745,
+     138.791
+    ]
+   ],
+   "home": "塩山"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "yamanashi",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:yamanashi/*_20053_20262.*",
+   "cache:yamanashi/residential/*_20053_20262.*",
+   "cache:wikidata/yamanashi/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

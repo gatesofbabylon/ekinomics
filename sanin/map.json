@@ -1,0 +1,189 @@
+{
+ "key": "sanin",
+ "country": "Japan",
+ "order": 23,
+ "path": "sanin/",
+ "tier": "observed",
+ "en": "San’in",
+ "ja": "山陰",
+ "population": 1224533,
+ "tag": {
+  "en": "Chūgoku",
+  "ja": "中国"
+ },
+ "cities": [
+  {
+   "key": "matsue",
+   "en": "Matsue",
+   "ja": "松江",
+   "population": 203616
+  },
+  {
+   "key": "tottori",
+   "en": "Tottori",
+   "ja": "鳥取",
+   "population": 188465
+  },
+  {
+   "key": "yonago",
+   "en": "Yonago",
+   "ja": "米子",
+   "population": 147317
+  }
+ ],
+ "goto": [
+  {
+   "key": "matsue",
+   "label": "Matsue",
+   "ja": "松江",
+   "box": [
+    [
+     35.414,
+     132.994
+    ],
+    [
+     35.514,
+     133.134
+    ]
+   ],
+   "home": "松江"
+  },
+  {
+   "key": "tottori",
+   "label": "Tottori",
+   "ja": "鳥取",
+   "box": [
+    [
+     35.444,
+     134.156
+    ],
+    [
+     35.544,
+     134.296
+    ]
+   ],
+   "home": "鳥取"
+  },
+  {
+   "key": "yonago",
+   "label": "Yonago",
+   "ja": "米子",
+   "box": [
+    [
+     35.373,
+     133.267
+    ],
+    [
+     35.473,
+     133.407
+    ]
+   ],
+   "home": "米子"
+  },
+  {
+   "key": "izumo",
+   "label": "Izumo",
+   "ja": "出雲",
+   "box": [
+    [
+     35.321,
+     132.7
+    ],
+    [
+     35.401,
+     132.812
+    ]
+   ],
+   "home": "出雲市"
+  },
+  {
+   "key": "kurayoshi",
+   "label": "Kurayoshi",
+   "ja": "倉吉",
+   "box": [
+    [
+     35.415,
+     133.793
+    ],
+    [
+     35.495,
+     133.905
+    ]
+   ],
+   "home": "倉吉"
+  },
+  {
+   "key": "hamada",
+   "label": "Hamada",
+   "ja": "浜田",
+   "box": [
+    [
+     34.863,
+     132.032
+    ],
+    [
+     34.943,
+     132.144
+    ]
+   ],
+   "home": "浜田"
+  },
+  {
+   "key": "masuda",
+   "label": "Masuda",
+   "ja": "益田",
+   "box": [
+    [
+     34.638,
+     131.783
+    ],
+    [
+     34.718,
+     131.895
+    ]
+   ],
+   "home": "益田"
+  },
+  {
+   "key": "sakaiminato",
+   "label": "Sakaiminato",
+   "ja": "境港",
+   "box": [
+    [
+     35.505,
+     133.167
+    ],
+    [
+     35.585,
+     133.279
+    ]
+   ],
+   "home": "境港"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "sanin",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:tottori/*_20053_20262.*",
+   "cache:shimane/*_20053_20262.*",
+   "cache:tottori/residential/*_20053_20262.*",
+   "cache:shimane/residential/*_20053_20262.*",
+   "cache:wikidata/sanin/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

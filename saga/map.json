@@ -1,0 +1,127 @@
+{
+ "key": "saga",
+ "country": "Japan",
+ "order": 26,
+ "path": "saga/",
+ "tier": "observed",
+ "en": "Saga",
+ "ja": "佐賀県",
+ "population": 811442,
+ "tag": {
+  "en": "Kyūshū",
+  "ja": "九州"
+ },
+ "cities": [
+  {
+   "key": "saga",
+   "en": "Saga",
+   "ja": "佐賀",
+   "population": 233301
+  }
+ ],
+ "goto": [
+  {
+   "key": "saga",
+   "label": "Saga",
+   "ja": "佐賀",
+   "box": [
+    [
+     33.214,
+     130.227
+    ],
+    [
+     33.314,
+     130.367
+    ]
+   ],
+   "home": "佐賀"
+  },
+  {
+   "key": "karatsu",
+   "label": "Karatsu",
+   "ja": "唐津",
+   "box": [
+    [
+     33.406,
+     129.912
+    ],
+    [
+     33.486,
+     130.024
+    ]
+   ],
+   "home": "唐津"
+  },
+  {
+   "key": "tosu",
+   "label": "Tosu",
+   "ja": "鳥栖",
+   "box": [
+    [
+     33.334,
+     130.464
+    ],
+    [
+     33.414,
+     130.576
+    ]
+   ],
+   "home": "鳥栖"
+  },
+  {
+   "key": "takeo",
+   "label": "Takeo",
+   "ja": "武雄",
+   "box": [
+    [
+     33.156,
+     129.967
+    ],
+    [
+     33.236,
+     130.079
+    ]
+   ],
+   "home": "武雄温泉"
+  },
+  {
+   "key": "imari",
+   "label": "Imari",
+   "ja": "伊万里",
+   "box": [
+    [
+     33.232,
+     129.82
+    ],
+    [
+     33.312,
+     129.932
+    ]
+   ],
+   "home": "伊万里"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "saga",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:saga/*_20053_20262.*",
+   "cache:saga/residential/*_20053_20262.*",
+   "cache:wikidata/saga/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

@@ -1,0 +1,111 @@
+{
+ "key": "miyazaki",
+ "country": "Japan",
+ "order": 17,
+ "path": "miyazaki/",
+ "tier": "observed",
+ "en": "Miyazaki",
+ "ja": "宮崎県",
+ "population": 1069576,
+ "tag": {
+  "en": "Kyūshū",
+  "ja": "九州"
+ },
+ "cities": [
+  {
+   "key": "miyazaki",
+   "en": "Miyazaki",
+   "ja": "宮崎",
+   "population": 401339
+  }
+ ],
+ "goto": [
+  {
+   "key": "miyazaki",
+   "label": "Miyazaki",
+   "ja": "宮崎",
+   "box": [
+    [
+     31.866,
+     131.362
+    ],
+    [
+     31.966,
+     131.502
+    ]
+   ],
+   "home": "宮崎"
+  },
+  {
+   "key": "miyakonojo",
+   "label": "Miyakonojō",
+   "ja": "都城",
+   "box": [
+    [
+     31.697,
+     131.018
+    ],
+    [
+     31.777,
+     131.13
+    ]
+   ],
+   "home": "都城"
+  },
+  {
+   "key": "nobeoka",
+   "label": "Nobeoka",
+   "ja": "延岡",
+   "box": [
+    [
+     32.55,
+     131.617
+    ],
+    [
+     32.63,
+     131.729
+    ]
+   ],
+   "home": "延岡"
+  },
+  {
+   "key": "hyuga",
+   "label": "Hyūga",
+   "ja": "日向",
+   "box": [
+    [
+     32.386,
+     131.572
+    ],
+    [
+     32.466,
+     131.684
+    ]
+   ],
+   "home": "日向市"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "miyazaki",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:miyazaki/*_20053_20262.*",
+   "cache:miyazaki/residential/*_20053_20262.*",
+   "cache:wikidata/miyazaki/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

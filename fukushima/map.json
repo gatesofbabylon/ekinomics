@@ -1,0 +1,155 @@
+{
+ "key": "fukushima",
+ "country": "Japan",
+ "order": 18,
+ "path": "fukushima/",
+ "tier": "observed",
+ "en": "Fukushima",
+ "ja": "福島県",
+ "population": 1833152,
+ "tag": {
+  "en": "Tōhoku",
+  "ja": "東北"
+ },
+ "cities": [
+  {
+   "key": "iwaki",
+   "en": "Iwaki",
+   "ja": "いわき",
+   "population": 332931
+  },
+  {
+   "key": "koriyama",
+   "en": "Kōriyama",
+   "ja": "郡山",
+   "population": 327692
+  },
+  {
+   "key": "fukushima",
+   "en": "Fukushima",
+   "ja": "福島",
+   "population": 282693
+  }
+ ],
+ "goto": [
+  {
+   "key": "iwaki",
+   "label": "Iwaki",
+   "ja": "いわき",
+   "box": [
+    [
+     37.008,
+     140.822
+    ],
+    [
+     37.108,
+     140.962
+    ]
+   ],
+   "home": "いわき"
+  },
+  {
+   "key": "koriyama",
+   "label": "Kōriyama",
+   "ja": "郡山",
+   "box": [
+    [
+     37.348,
+     140.319
+    ],
+    [
+     37.448,
+     140.459
+    ]
+   ],
+   "home": "郡山"
+  },
+  {
+   "key": "fukushima",
+   "label": "Fukushima",
+   "ja": "福島",
+   "box": [
+    [
+     37.704,
+     140.39
+    ],
+    [
+     37.804,
+     140.53
+    ]
+   ],
+   "home": "福島"
+  },
+  {
+   "key": "aizuwakamatsu",
+   "label": "Aizuwakamatsu",
+   "ja": "会津若松",
+   "box": [
+    [
+     37.469,
+     139.874
+    ],
+    [
+     37.549,
+     139.986
+    ]
+   ],
+   "home": "会津若松"
+  },
+  {
+   "key": "shirakawa",
+   "label": "Shirakawa",
+   "ja": "白河",
+   "box": [
+    [
+     37.09,
+     140.156
+    ],
+    [
+     37.17,
+     140.268
+    ]
+   ],
+   "home": "白河"
+  },
+  {
+   "key": "sukagawa",
+   "label": "Sukagawa",
+   "ja": "須賀川",
+   "box": [
+    [
+     37.26,
+     140.316
+    ],
+    [
+     37.34,
+     140.428
+    ]
+   ],
+   "home": "須賀川"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "fukushima",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:fukushima/*_20053_20262.*",
+   "cache:fukushima/residential/*_20053_20262.*",
+   "cache:wikidata/fukushima/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

@@ -1,0 +1,181 @@
+{
+ "key": "yamaguchi",
+ "country": "Japan",
+ "order": 24,
+ "path": "yamaguchi/",
+ "tier": "observed",
+ "en": "Yamaguchi",
+ "ja": "山口県",
+ "population": 1342059,
+ "tag": {
+  "en": "Chūgoku",
+  "ja": "中国"
+ },
+ "cities": [
+  {
+   "key": "shimonoseki",
+   "en": "Shimonoseki",
+   "ja": "下関",
+   "population": 255051
+  },
+  {
+   "key": "yamaguchi",
+   "en": "Yamaguchi",
+   "ja": "山口",
+   "population": 193966
+  }
+ ],
+ "goto": [
+  {
+   "key": "shimonoseki",
+   "label": "Shimonoseki",
+   "ja": "下関",
+   "box": [
+    [
+     33.899,
+     130.852
+    ],
+    [
+     33.999,
+     130.992
+    ]
+   ],
+   "home": "下関"
+  },
+  {
+   "key": "yamaguchi",
+   "label": "Yamaguchi",
+   "ja": "山口",
+   "box": [
+    [
+     34.123,
+     131.411
+    ],
+    [
+     34.223,
+     131.551
+    ]
+   ],
+   "home": "山口"
+  },
+  {
+   "key": "ube",
+   "label": "Ube",
+   "ja": "宇部",
+   "box": [
+    [
+     33.919,
+     131.186
+    ],
+    [
+     33.999,
+     131.298
+    ]
+   ],
+   "home": "宇部新川"
+  },
+  {
+   "key": "shunan",
+   "label": "Shūnan",
+   "ja": "周南",
+   "box": [
+    [
+     34.011,
+     131.746
+    ],
+    [
+     34.091,
+     131.858
+    ]
+   ],
+   "home": "徳山"
+  },
+  {
+   "key": "iwakuni",
+   "label": "Iwakuni",
+   "ja": "岩国",
+   "box": [
+    [
+     34.132,
+     132.17
+    ],
+    [
+     34.212,
+     132.282
+    ]
+   ],
+   "home": "岩国"
+  },
+  {
+   "key": "hofu",
+   "label": "Hōfu",
+   "ja": "防府",
+   "box": [
+    [
+     34.013,
+     131.513
+    ],
+    [
+     34.093,
+     131.625
+    ]
+   ],
+   "home": "防府"
+  },
+  {
+   "key": "hagi",
+   "label": "Hagi",
+   "ja": "萩",
+   "box": [
+    [
+     34.377,
+     131.355
+    ],
+    [
+     34.457,
+     131.467
+    ]
+   ],
+   "home": "東萩"
+  },
+  {
+   "key": "nagato",
+   "label": "Nagato",
+   "ja": "長門",
+   "box": [
+    [
+     34.348,
+     131.143
+    ],
+    [
+     34.428,
+     131.255
+    ]
+   ],
+   "home": "仙崎"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "yamaguchi",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:yamaguchi/*_20053_20262.*",
+   "cache:yamaguchi/residential/*_20053_20262.*",
+   "cache:wikidata/yamaguchi/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}

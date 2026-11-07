@@ -1,0 +1,221 @@
+{
+ "key": "kitatohoku",
+ "country": "Japan",
+ "order": 21,
+ "path": "kitatohoku/",
+ "tier": "observed",
+ "en": "Iwate and Aomori",
+ "ja": "岩手・青森",
+ "population": 2448518,
+ "tag": {
+  "en": "Tōhoku",
+  "ja": "東北"
+ },
+ "cities": [
+  {
+   "key": "morioka",
+   "en": "Morioka",
+   "ja": "盛岡",
+   "population": 289731
+  },
+  {
+   "key": "aomori",
+   "en": "Aomori",
+   "ja": "青森",
+   "population": 275192
+  },
+  {
+   "key": "hachinohe",
+   "en": "Hachinohe",
+   "ja": "八戸",
+   "population": 223415
+  }
+ ],
+ "goto": [
+  {
+   "key": "morioka",
+   "label": "Morioka",
+   "ja": "盛岡",
+   "box": [
+    [
+     39.651,
+     141.066
+    ],
+    [
+     39.751,
+     141.206
+    ]
+   ],
+   "home": "盛岡"
+  },
+  {
+   "key": "aomori",
+   "label": "Aomori",
+   "ja": "青森",
+   "box": [
+    [
+     40.78,
+     140.665
+    ],
+    [
+     40.88,
+     140.805
+    ]
+   ],
+   "home": "青森"
+  },
+  {
+   "key": "hachinohe",
+   "label": "Hachinohe",
+   "ja": "八戸",
+   "box": [
+    [
+     40.459,
+     141.361
+    ],
+    [
+     40.559,
+     141.501
+    ]
+   ],
+   "home": "八戸"
+  },
+  {
+   "key": "hirosaki",
+   "label": "Hirosaki",
+   "ja": "弘前",
+   "box": [
+    [
+     40.559,
+     140.429
+    ],
+    [
+     40.639,
+     140.541
+    ]
+   ],
+   "home": "弘前"
+  },
+  {
+   "key": "ichinoseki",
+   "label": "Ichinoseki",
+   "ja": "一関",
+   "box": [
+    [
+     38.887,
+     141.082
+    ],
+    [
+     38.967,
+     141.194
+    ]
+   ],
+   "home": "一ノ関"
+  },
+  {
+   "key": "oshu",
+   "label": "Ōshū",
+   "ja": "奥州",
+   "box": [
+    [
+     39.099,
+     141.09
+    ],
+    [
+     39.179,
+     141.202
+    ]
+   ],
+   "home": "水沢"
+  },
+  {
+   "key": "kitakami",
+   "label": "Kitakami",
+   "ja": "北上",
+   "box": [
+    [
+     39.242,
+     141.066
+    ],
+    [
+     39.322,
+     141.178
+    ]
+   ],
+   "home": "北上"
+  },
+  {
+   "key": "hanamaki",
+   "label": "Hanamaki",
+   "ja": "花巻",
+   "box": [
+    [
+     39.354,
+     141.054
+    ],
+    [
+     39.434,
+     141.166
+    ]
+   ],
+   "home": "花巻"
+  },
+  {
+   "key": "miyako",
+   "label": "Miyako",
+   "ja": "宮古",
+   "box": [
+    [
+     39.6,
+     141.891
+    ],
+    [
+     39.68,
+     142.003
+    ]
+   ],
+   "home": "宮古"
+  },
+  {
+   "key": "goshogawara",
+   "label": "Goshogawara",
+   "ja": "五所川原",
+   "box": [
+    [
+     40.769,
+     140.392
+    ],
+    [
+     40.849,
+     140.504
+    ]
+   ],
+   "home": "五所川原"
+  }
+ ],
+ "build": {
+  "family": "japan",
+  "script": "scripts/build_data.py",
+  "check": "scripts/validate_data.py",
+  "arg": "kitatohoku",
+  "inputs": [
+   "assets/line_names_en.csv",
+   "assets/station_names_en_overrides.csv",
+   "assets/station_events.csv",
+   "assets/service_lines.csv",
+   "cache:aomori/*_20053_20262.*",
+   "cache:iwate/*_20053_20262.*",
+   "cache:aomori/residential/*_20053_20262.*",
+   "cache:iwate/residential/*_20053_20262.*",
+   "cache:wikidata/kitatohoku/*",
+   "cache:N03-20250101_*_GML.zip",
+   "cache:N02-24_GML.zip",
+   "cache:japan-land-prefectures.json",
+   "cache:lakes/W09-05_GML.zip"
+  ]
+ },
+ "credits": {
+  "block": "<span lang=\"ja\">出典：国土交通省 不動産情報ライブラリ（<a href=\"https://www.reinfolib.mlit.go.jp/\" target=\"_blank\" rel=\"noopener\">https://www.reinfolib.mlit.go.jp/</a>）。「不動産取引価格情報」（国土交通省）をもとにEkinomics作成（加工）。</span><span class=\"l-en\">Source: MLIT Real Estate Information Library, Real Estate Transaction Price Information, processed by Ekinomics. MLIT did not produce or endorse this site.</span>",
+  "attribution": "Geography: <a href=\"https://nlftp.mlit.go.jp/ksj/\">MLIT</a> (adapted, CC BY 4.0)"
+ }
+}
