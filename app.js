@@ -306,7 +306,8 @@ const step=(v,breaks)=>breaks.filter(b=>v>=b).length;
 // Melbourne's cells count suburb-year medians, not sales (D.counts 'medians', Phil 2026-10-30): no sales threshold applies there,
 // so no price is indicative, every station with a price ranks and has a change, and counts read as medians (nSales).
 // Maps built from area medians call their price a blend of suburb medians (E.obs), not an observed median of sales.
-const OBS=()=>E.obs||{en:'Observed median',ja:'観測中央値'},AVGW=()=>E.avg?{en:'Average',ja:'平均'}:{en:'Median',ja:'中央値'};
+const evalFn=v=>typeof v==='function'?v():v;// E.obs and E.avg may be functions of the state (Oslo: mean per m², median per home)
+const OBS=()=>evalFn(E.obs)||{en:'Observed median',ja:'観測中央値'},AVGW=()=>evalFn(E.avg)?{en:'Average',ja:'平均'}:{en:'Median',ja:'中央値'};
 // Blended maps (D.coverage.assign 'overlap', and the HMDA maps' blend) count an area at every station whose circle overlaps
 // it, so the stations' counts added together exceed the real number of sales; the legend says so (2026-10-31).
 const MED=()=>!!D&&D.counts==='medians',BLEND=()=>!!D&&((D.coverage&&D.coverage.assign==='overlap')||!!E.blend),ZN=()=>MED()&&!!E.zones,nSales=n=>ZN()?J(`${fmt(n)} zones`,`地区${fmt(n)}件`):MED()?J(`${fmt(n)} medians`,`中央値${fmt(n)}件`):J(`${fmt(n)} sales`,`取引${fmt(n)}件`);

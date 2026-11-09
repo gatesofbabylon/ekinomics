@@ -3,7 +3,7 @@
 // (BOL018) and median total price (BOL013) by grunnkretsområde, year and home type, from Boligmappa AS's sales, blended around
 // each station; 2018–2025, yearly. Prices in NOK.
 const TY=()=>JA?['住宅','集合住宅（ブロック）','小規模住宅'][state.type]:['Home','Flat','House'][state.type];
-EDITIONS.oslo={...EDITIONS.helsinki,cur:'NOK ',obs:{en:'Blended area average',ja:'地区平均の合成'},
+EDITIONS.oslo={...EDITIONS.helsinki,cur:'NOK ',avg:()=>state.unit!=='home',obs:()=>state.unit==='home'?{en:'Blended area median',ja:'地区中央値の合成'}:{en:'Blended area average',ja:'地区平均の合成'},
   priceBreaks:[75000,85000,95000,105000,115000,125000],countBreaks:[150,300,500,800,1100,1400],
   chartUnit:{en:'NOK thousand per m²',ja:'千クローネ/㎡'},chartAria:{en:'thousand kroner',ja:'千クローネ'},chartDiv:1000,chartStep:20000,
   homeBreaks:[5000000,6000000,7000000,8500000,10000000,12500000],
@@ -13,7 +13,7 @@ EDITIONS.oslo={...EDITIONS.helsinki,cur:'NOK ',obs:{en:'Blended area average',ja
   view:[59.915,10.75,12],home:'Oslo S',region:{en:'District (bydel)',ja:'区（ビデル）'},ranges:{type:2,size:0,age:0},mixLabels:{en:['Flats','Houses'],ja:['集合住宅','小規模住宅']},
   noRange:{en:'The source publishes each area\'s mean or median only, so there is no range.',ja:'出典は地区ごとの平均または中央値だけを公表しており、範囲はない。'},
   stats:[[{en:'Areas blended',ja:'合わせた地区'},v=>fmt(v),{en:'Grunnkretsområder blended',ja:'合わせた基本統計地区（グルンクレツオムローデ）の数'}],[{en:'To area centres',ja:'地区の中心まで'},v=>`${fmt(v)} m`,{en:'Weighted median distance from the station to the area centres (m)',ja:'駅から地区の中心までの距離の加重中央値（m）'}]],
-  note:{en:'Gaps mean too few sales; hollow points are indicative (5–9 sales). Area statistics: each price blends the mean prices per m² of the homes sold in the small areas (grunnkretsområder) within 1.2 km of the station, weighted by their sales and the share of their land inside the circle; it is an average of area figures, not a median of individual sales. Prices reflect the mix of homes sold.',ja:'空白は取引が少なすぎること、白抜きの点は参考値（5〜9件）を示す。地域統計：各価格は駅から1.2 km以内の小地区（グルンクレツオムローデ）で取引された住宅の㎡単価の平均を、取引件数と円に入る陸地の割合で重み付けして合わせたもので、地区の数値の平均であり個々の取引の中央値ではない。価格は取引された住宅の構成を反映する。'},
+  note:{en:'Gaps mean too few sales; hollow points are indicative (5–9 sales). Area statistics: each price blends the mean prices per m² of the homes sold in the small areas (grunnkretsområder) within 1.2 km of the station, weighted by their sales and the share of their land inside the circle; it is a blend of area figures (a weighted mean of means per m², a weighted median of medians per home), not a median of individual sales. Prices reflect the mix of homes sold.',ja:'空白は取引が少なすぎること、白抜きの点は参考値（5〜9件）を示す。地域統計：各価格は駅から1.2 km以内の小地区（グルンクレツオムローデ）で取引された住宅の㎡単価の平均を、取引件数と円に入る陸地の割合で重み付けして合わせたもので、地区の数値の合成（㎡単価は平均の加重平均、1戸あたりは中央値の加重中央値）であり個々の取引の中央値ではない。価格は取引された住宅の構成を反映する。'},
   noSales:{en:'No area within 1.2 km has a published price for this year.',ja:'この年は、1.2 km以内に価格が公表された地区がない。'},
   pooled:{en:'A tram stop within 250 m of a T-bane or railway station shares its price area (such as Jernbanetorget, Nationaltheatret, Majorstuen and Storo).',ja:'地下鉄（T-bane）や鉄道の駅から250 m以内のトラム停留所は、その駅と価格エリアを共有する（Jernbanetorget、Nationaltheatret、Majorstuen、Storo など）。'},
   legend:()=>JA?TY()+'の㎡単価・地区平均の合成（NOK）':`${TY()} price per m², blend of area averages (NOK)`,

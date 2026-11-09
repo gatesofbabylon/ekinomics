@@ -1,7 +1,7 @@
 (self.EKI_EDITIONS=self.EKI_EDITIONS||[]).push(EDITIONS=>{
 // Zurich (2026-11-01; a draft): Area statistics. Statistik Stadt Zürich's yearly medians per m² of living area and per flat of
 // the condominium flats sold freehand, by Stadtquartier, with the number sold, blended around each station; 2009–2025, yearly.
-EDITIONS.zurich={...EDITIONS.helsinki,obs:{en:'Blended quartier median',ja:'地区中央値の合成'},cur:'CHF ',priceBreaks:[15500,17000,18500,20000,21500,23500],countBreaks:[10,15,20,30,40,55],
+EDITIONS.zurich={...EDITIONS.helsinki,avg:false,obs:{en:'Blended quartier median',ja:'地区中央値の合成'},cur:'CHF ',priceBreaks:[15500,17000,18500,20000,21500,23500],countBreaks:[10,15,20,30,40,55],
   chartUnit:{en:'CHF thousand per m²',ja:'千スイスフラン/㎡'},chartAria:{en:'thousand francs',ja:'千スイスフラン'},chartDiv:1000,chartStep:2000,
   homeBreaks:[1500000,1650000,1800000,2000000,2200000,2600000],
   homeX:{chartDiv:1e6,chartStep:500000,chartUnit:{en:'CHF million per home',ja:'百万スイスフラン/戸'},chartAria:{en:'million francs',ja:'百万スイスフラン'},short:b=>`${b/1e6}m`,
@@ -10,7 +10,7 @@ EDITIONS.zurich={...EDITIONS.helsinki,obs:{en:'Blended quartier median',ja:'地�
   view:[47.375,8.54,12],home:'Zürich HB',region:{en:'Kreis',ja:'区（クライス）'},ranges:{type:0,size:0,age:0},mixLabels:{en:['All homes'],ja:['すべての住宅']},
   noRange:{en:'The source publishes each quartier\'s median only, so there is no range.',ja:'出典は地区ごとの中央値だけを公表しており、範囲はない。'},
   stats:[[{en:'Quartiers blended',ja:'合わせた地区'},v=>fmt(v),{en:'Quartiers (Stadtquartiere) blended',ja:'合わせた地区（シュタットクァルティーア）の数'}],[{en:'To quartier centres',ja:'地区の中心まで'},v=>`${fmt(v)} m`,{en:'Weighted median distance from the station to the quartier centres (m)',ja:'駅から地区の中心までの距離の加重中央値（m）'}]],
-  note:{en:'Gaps mean too few sales; hollow points are indicative (5–9 sales). Area statistics: each price blends the median prices of the city quartiers within 1.2 km of the station, weighted by their sales and the share of their land inside the circle; it is an average of medians, not a median of individual sales. Prices are of condominium flats and reflect the mix sold.',ja:'空白は取引が少なすぎること、白抜きの点は参考値（5〜9件）を示す。地域統計：各価格は駅から1.2 km以内の市の地区の価格の中央値を、取引件数と円に入る陸地の割合で重み付けして合わせたもので、中央値の平均であり個々の取引の中央値ではない。価格は分譲マンション（区分所有住宅）のもので、取引された住戸の構成を反映する。'},
+  note:{en:'Gaps mean too few sales; hollow points are indicative (5–9 sales). Area statistics: each price blends the median prices of the city quartiers within 1.2 km of the station, weighted by their sales and the share of their land inside the circle; it is a median of medians, not a median of individual sales. Prices are of condominium flats and reflect the mix sold.',ja:'空白は取引が少なすぎること、白抜きの点は参考値（5〜9件）を示す。地域統計：各価格は駅から1.2 km以内の市の地区の価格の中央値を、取引件数と円に入る陸地の割合で重み付けして合わせたもので、中央値の中央値（加重中央値）であり個々の取引の中央値ではない。価格は分譲マンション（区分所有住宅）のもので、取引された住戸の構成を反映する。'},
   noSales:{en:'No quartier within 1.2 km has a published median for this year.',ja:'この年は、1.2 km以内に中央値が公表された地区がない。'},
   pooled:{en:'A tram stop within 250 m of a railway station shares its price area (such as Bahnhofplatz/HB at Zürich HB).',ja:'鉄道駅から250 m以内のトラム停留所は、その駅と価格エリアを共有する（Zürich HB の Bahnhofplatz/HB など）。'},
   legend:()=>JA?'住宅の㎡単価・地区中央値の合成（CHF）':'Home price per m², blend of quartier medians (CHF)',

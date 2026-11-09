@@ -5,7 +5,7 @@
  "path": "aberdeen/",
  "tier": "area",
  "en": "Aberdeen",
- "population": 494820,
+ "population": 589550,
  "tag": {
   "en": "NE Scotland",
   "ja": "北東スコットランド"
@@ -66,6 +66,22 @@
     ]
    ],
    "home": "Inverurie"
+  },
+  {
+   "key": "elgin",
+   "label": "Elgin",
+   "kana": "エルギン",
+   "box": [
+    [
+     57.635,
+     -3.345
+    ],
+    [
+     57.66,
+     -3.29
+    ]
+   ],
+   "home": "Elgin"
   }
  ],
  "build": {
