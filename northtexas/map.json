@@ -372,6 +372,7 @@
    "scripts/hmda.py"
   ],
   "inputs": [
+   "cache:us/hmda/",
    "cache:us/dallas/"
   ]
  },

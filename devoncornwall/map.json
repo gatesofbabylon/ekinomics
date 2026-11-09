@@ -373,6 +373,7 @@
    "assets/belfast_stations.csv",
    "assets/*_districts.csv",
    "cache:london/*",
+   "cache:london/ppd/",
    "cache:london/tfl",
    "cache:london/boundaries",
    "cache:london/bods",
