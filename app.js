@@ -707,7 +707,9 @@ const prefs=Object.entries(D.prefectures).sort((a,b)=>E.ja?a[0].localeCompare(b[
 if(D.pref_groups){const core=E.outer&&E.outer[0],groups=[...new Set(Object.values(D.pref_groups))].sort((a,b)=>(b===core)-(a===core)||a.localeCompare(b));(E.outer||[]).forEach(g=>$('pref').add(new Option(J(`${g} (all)`,`${OUTER_JA[g]||g}（全域）`),'g:'+g)));
 for(const g of groups){const og=document.createElement('optgroup');og.label=JA&&(E.groupJa||{})[g]||g;if(g!==core)og.append(new Option(J(`All of ${g}`,`${(E.groupJa||{})[g]||g} 全域`),'g:'+g));prefs.filter(([c])=>D.pref_groups[c]===g).forEach(([c,n])=>og.append(new Option(n,c)));$('pref').append(og)}}
 else for(const [code] of prefs)$('pref').add(new Option(prefLabel(code),code));
-const byOperator={};for(const l of new Set(D.stations.flatMap(s=>s.lines))){const [ln,op]=lineLabel(l);(byOperator[op]||=[]).push([ln,l])}
+// A line with fewer than three stations on the page keeps its stations but is not listed (A28, site.md; Phil, 2026-11-10: every map).
+const onPage={};D.stations.forEach(s=>s.lines.forEach(l=>onPage[l]=(onPage[l]||0)+1));
+const byOperator={};for(const l in onPage){if(onPage[l]<3)continue;const [ln,op]=lineLabel(l);(byOperator[op]||=[]).push([ln,l])}
 if(E.ja){const g=document.createElement('optgroup');g.label=J('Line groups','路線グループ');for(const [k,en,ja] of LINE_GROUPS)if(Object.values(LINE_GROUP).includes(k))g.append(new Option(J(en,ja),k));$('line').append(g)}
 for(const op of Object.keys(byOperator).sort(cmp)){const g=document.createElement('optgroup');g.label=op;byOperator[op].sort((a,b)=>cmp(a[0],b[0])).forEach(([ln,l])=>g.append(new Option(ln,l)));$('line').append(g)}
 $('pref').value=pv;$('line').value=lv}
