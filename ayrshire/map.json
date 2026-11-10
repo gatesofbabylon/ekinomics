@@ -1,0 +1,198 @@
+{
+ "key": "ayrshire",
+ "country": "United Kingdom",
+ "order": 21,
+ "path": "ayrshire/",
+ 
+ "tier": "area",
+ "en": "Ayrshire and Galloway",
+ "population": 257770,
+ "tag": {
+  "en": "Ayrshire & Galloway",
+  "ja": "エアシャー・ギャロウェー"
+ },
+ "cities": [
+  {
+   "key": "ayr",
+   "en": "Ayr",
+   "ja": "エア",
+   "population": 112280
+  },
+  {
+   "key": "dumfries",
+   "en": "Dumfries",
+   "ja": "ダムフリース",
+   "population": 145490
+  }
+ ],
+ "goto": [
+  {
+   "key": "ayr",
+   "label": "Ayr",
+   "kana": "エア",
+   "box": [
+    [
+     55.428,
+     -4.686
+    ],
+    [
+     55.488,
+     -4.566
+    ]
+   ],
+   "home": "Ayr"
+  },
+  {
+   "key": "dumfries",
+   "label": "Dumfries",
+   "kana": "ダムフリース",
+   "box": [
+    [
+     55.043,
+     -3.664
+    ],
+    [
+     55.103,
+     -3.544
+    ]
+   ],
+   "home": "Dumfries"
+  },
+  {
+   "key": "troon",
+   "label": "Troon",
+   "kana": "トルーン",
+   "box": [
+    [
+     55.529,
+     -4.68
+    ],
+    [
+     55.557,
+     -4.63
+    ]
+   ],
+   "home": "Troon"
+  },
+  {
+   "key": "prestwick",
+   "label": "Prestwick",
+   "kana": "プレストウィック",
+   "box": [
+    [
+     55.488,
+     -4.64
+    ],
+    [
+     55.516,
+     -4.59
+    ]
+   ],
+   "home": "Prestwick Town"
+  },
+  {
+   "key": "girvan",
+   "label": "Girvan",
+   "kana": "ガーヴァン",
+   "box": [
+    [
+     55.232,
+     -4.873
+    ],
+    [
+     55.26,
+     -4.823
+    ]
+   ],
+   "home": "Girvan"
+  },
+  {
+   "key": "stranraer",
+   "label": "Stranraer",
+   "kana": "ストランラー",
+   "box": [
+    [
+     54.896,
+     -5.05
+    ],
+    [
+     54.924,
+     -5.0
+    ]
+   ],
+   "home": "Stranraer"
+  },
+  {
+   "key": "annan",
+   "label": "Annan",
+   "kana": "アナン",
+   "box": [
+    [
+     54.97,
+     -3.288
+    ],
+    [
+     54.998,
+     -3.238
+    ]
+   ],
+   "home": "Annan"
+  },
+  {
+   "key": "lockerbie",
+   "label": "Lockerbie",
+   "kana": "ロッカビー",
+   "box": [
+    [
+     55.109,
+     -3.379
+    ],
+    [
+     55.137,
+     -3.329
+    ]
+   ],
+   "home": "Lockerbie"
+  },
+  {
+   "key": "gretna",
+   "label": "Gretna",
+   "kana": "グレトナ",
+   "box": [
+    [
+     54.987,
+     -3.09
+    ],
+    [
+     55.015,
+     -3.04
+    ]
+   ],
+   "home": "Gretna Green"
+  }
+ ],
+ "build": {
+  "family": "uk",
+  "script": "scripts/build_london.py",
+  "check": "scripts/validate_london.py",
+  "arg": "ayrshire",
+  "inputs": [
+   "assets/uk_areas.json",
+   "assets/london_station_lines_overrides.csv",
+   "assets/belfast_stations.csv",
+   "assets/*_districts.csv",
+   "cache:london/*",
+   "cache:london/ppd/",
+   "cache:london/tfl",
+   "cache:london/boundaries",
+   "cache:london/bods",
+   "cache:london/vmd",
+   "cache:london/scotland",
+   "cache:london/ni"
+  ]
+ },
+ "credits": {
+  "block": "<span>Contains Registers of Scotland data © Crown copyright and database right 2026. This data is licensed under the Open Government Licence v3.0. Data zone centroids: Scottish Government, Open Government Licence; contains OS data © Crown copyright and database right.</span><span>Council boundaries: Office for National Statistics, Open Government Licence; contains OS data © Crown copyright and database right 2024. Railway track: OS VectorMap District, Open Government Licence; contains OS data © Crown copyright and database right 2026. Stations: NaPTAN, Department for Transport, Open Government Licence. Lines: Powered by TfL Open Data. None of these bodies produced or endorses this site.</span>",
+  "attribution": "Contains OS data © Crown copyright and database right 2026 · Contains Registers of Scotland data © Crown copyright and database right 2026 · Powered by TfL Open Data"
+ }
+}

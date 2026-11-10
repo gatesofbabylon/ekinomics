@@ -1,0 +1,326 @@
+{
+ "key": "northwales",
+ "country": "United Kingdom",
+ "order": 18,
+ "path": "northwales/",
+ 
+ "tier": "observed",
+ "en": "North Wales",
+ "population": 695501,
+ "tag": {
+  "en": "N Wales",
+  "ja": "北ウェールズ"
+ },
+ "cities": [
+  {
+   "key": "wrexham",
+   "en": "Wrexham",
+   "ja": "レクサム",
+   "population": 137977
+  },
+  {
+   "key": "bangor",
+   "en": "Bangor",
+   "ja": "バンガー",
+   "population": 120295
+  }
+ ],
+ "goto": [
+  {
+   "key": "wrexham",
+   "label": "Wrexham",
+   "kana": "レクサム",
+   "box": [
+    [
+     53.02,
+     -3.062
+    ],
+    [
+     53.08,
+     -2.942
+    ]
+   ],
+   "home": "Wrexham General"
+  },
+  {
+   "key": "bangor",
+   "label": "Bangor",
+   "kana": "バンガー",
+   "box": [
+    [
+     53.192,
+     -4.196
+    ],
+    [
+     53.252,
+     -4.076
+    ]
+   ],
+   "home": "Bangor"
+  },
+  {
+   "key": "llandudno",
+   "label": "Llandudno",
+   "kana": "スランディドノ",
+   "box": [
+    [
+     53.307,
+     -3.852
+    ],
+    [
+     53.335,
+     -3.802
+    ]
+   ],
+   "home": "Llandudno"
+  },
+  {
+   "key": "colwynbay",
+   "label": "Colwyn Bay",
+   "kana": "コルウィン・ベイ",
+   "box": [
+    [
+     53.282,
+     -3.75
+    ],
+    [
+     53.31,
+     -3.7
+    ]
+   ],
+   "home": "Colwyn Bay"
+  },
+  {
+   "key": "rhyl",
+   "label": "Rhyl",
+   "kana": "リル",
+   "box": [
+    [
+     53.304,
+     -3.514
+    ],
+    [
+     53.332,
+     -3.464
+    ]
+   ],
+   "home": "Rhyl"
+  },
+  {
+   "key": "prestatyn",
+   "label": "Prestatyn",
+   "kana": "プレスタティン",
+   "box": [
+    [
+     53.322,
+     -3.432
+    ],
+    [
+     53.35,
+     -3.382
+    ]
+   ],
+   "home": "Prestatyn"
+  },
+  {
+   "key": "abergele",
+   "label": "Abergele",
+   "kana": "アバーゲリー",
+   "box": [
+    [
+     53.281,
+     -3.608
+    ],
+    [
+     53.309,
+     -3.558
+    ]
+   ],
+   "home": "Abergele & Pensarn"
+  },
+  {
+   "key": "conwy",
+   "label": "Conwy",
+   "kana": "コンウィ",
+   "box": [
+    [
+     53.266,
+     -3.856
+    ],
+    [
+     53.294,
+     -3.806
+    ]
+   ],
+   "home": "Conwy"
+  },
+  {
+   "key": "flint",
+   "label": "Flint",
+   "kana": "フリント",
+   "box": [
+    [
+     53.236,
+     -3.158
+    ],
+    [
+     53.264,
+     -3.108
+    ]
+   ],
+   "home": "Flint"
+  },
+  {
+   "key": "shotton",
+   "label": "Shotton",
+   "kana": "ショットン",
+   "box": [
+    [
+     53.199,
+     -3.063
+    ],
+    [
+     53.227,
+     -3.013
+    ]
+   ],
+   "home": "Shotton"
+  },
+  {
+   "key": "holyhead",
+   "label": "Holyhead",
+   "kana": "ホーリーヘッド",
+   "box": [
+    [
+     53.294,
+     -4.656
+    ],
+    [
+     53.322,
+     -4.606
+    ]
+   ],
+   "home": "Holyhead"
+  },
+  {
+   "key": "pwllheli",
+   "label": "Pwllheli",
+   "kana": "プスヘリ",
+   "box": [
+    [
+     52.874,
+     -4.442
+    ],
+    [
+     52.902,
+     -4.392
+    ]
+   ],
+   "home": "Pwllheli"
+  },
+  {
+   "key": "porthmadog",
+   "label": "Porthmadog",
+   "kana": "ポースマドッグ",
+   "box": [
+    [
+     52.917,
+     -4.159
+    ],
+    [
+     52.945,
+     -4.109
+    ]
+   ],
+   "home": "Porthmadog"
+  },
+  {
+   "key": "barmouth",
+   "label": "Barmouth",
+   "kana": "バーマス",
+   "box": [
+    [
+     52.709,
+     -4.082
+    ],
+    [
+     52.737,
+     -4.032
+    ]
+   ],
+   "home": "Barmouth"
+  },
+  {
+   "key": "tywyn",
+   "label": "Tywyn",
+   "kana": "タウイン",
+   "box": [
+    [
+     52.572,
+     -4.119
+    ],
+    [
+     52.6,
+     -4.069
+    ]
+   ],
+   "home": "Tywyn"
+  },
+  {
+   "key": "blaenauffestiniog",
+   "label": "Blaenau Ffestiniog",
+   "kana": "ブライナイ・フェスティニオグ",
+   "box": [
+    [
+     52.981,
+     -3.964
+    ],
+    [
+     53.009,
+     -3.914
+    ]
+   ],
+   "home": "Blaenau Ffestiniog"
+  },
+  {
+   "key": "ruabon",
+   "label": "Ruabon",
+   "kana": "ルアボン",
+   "box": [
+    [
+     52.973,
+     -3.068
+    ],
+    [
+     53.001,
+     -3.018
+    ]
+   ],
+   "home": "Ruabon"
+  }
+ ],
+ "build": {
+  "family": "uk",
+  "script": "scripts/build_london.py",
+  "check": "scripts/validate_london.py",
+  "arg": "northwales",
+  "inputs": [
+   "assets/uk_areas.json",
+   "assets/london_station_lines_overrides.csv",
+   "assets/belfast_stations.csv",
+   "assets/*_districts.csv",
+   "cache:london/*",
+   "cache:london/ppd/",
+   "cache:london/tfl",
+   "cache:london/boundaries",
+   "cache:london/bods",
+   "cache:london/vmd",
+   "cache:london/scotland",
+   "cache:london/ni"
+  ]
+ },
+ "credits": {
+  "block": "<span>Contains HM Land Registry data © Crown copyright and database right 2024. This data is licensed under the Open Government Licence v3.0. Floor areas: Chi, Dennett, Oléron-Evans and Morphet (2025), <a href=\"https://doi.org/10.5255/UKDA-SN-857911\" target=\"_blank\" rel=\"noopener\">House Price Per Square Metre in England and Wales, 1995–2024</a>, UK Data Service, CC BY 4.0, which links Land Registry sales to Energy Performance Certificates (MHCLG, Open Government Licence).</span><span>Postcodes and borough boundaries: Office for National Statistics, Open Government Licence; contains OS data © Crown copyright and database right 2024, Royal Mail data © Royal Mail copyright and database right 2024 and GeoPlace data © Local Government Information House Limited copyright and database right 2024. Stations: NaPTAN, Department for Transport, Open Government Licence. Rail lines: Powered by TfL Open Data; contains OS data © Crown copyright and database rights 2016 and Geomni UK Map data © and database rights [2019]. None of these bodies produced or endorses this site.</span>",
+  "attribution": "Contains OS data © Crown copyright and database right 2026 · Powered by TfL Open Data"
+ }
+}

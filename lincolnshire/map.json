@@ -1,0 +1,278 @@
+{
+ "key": "lincolnshire",
+ "country": "United Kingdom",
+ "order": 17,
+ "path": "lincolnshire/",
+ 
+ "tier": "observed",
+ "en": "Lincolnshire",
+ "population": 1125531,
+ "tag": {
+  "en": "Lincolnshire",
+  "ja": "リンカンシャー"
+ },
+ "cities": [
+  {
+   "key": "lincoln",
+   "en": "Lincoln",
+   "ja": "リンカーン",
+   "population": 103351
+  },
+  {
+   "key": "grimsby",
+   "en": "Grimsby",
+   "ja": "グリムズビー",
+   "population": 160101
+  }
+ ],
+ "goto": [
+  {
+   "key": "lincoln",
+   "label": "Lincoln",
+   "kana": "リンカーン",
+   "box": [
+    [
+     53.196,
+     -0.6
+    ],
+    [
+     53.256,
+     -0.48
+    ]
+   ],
+   "home": "Lincoln"
+  },
+  {
+   "key": "grimsby",
+   "label": "Grimsby",
+   "kana": "グリムズビー",
+   "box": [
+    [
+     53.533,
+     -0.147
+    ],
+    [
+     53.593,
+     -0.027
+    ]
+   ],
+   "home": "Grimsby Town"
+  },
+  {
+   "key": "cleethorpes",
+   "label": "Cleethorpes",
+   "kana": "クリーソープス",
+   "box": [
+    [
+     53.548,
+     -0.054
+    ],
+    [
+     53.576,
+     -0.004
+    ]
+   ],
+   "home": "Cleethorpes"
+  },
+  {
+   "key": "scunthorpe",
+   "label": "Scunthorpe",
+   "kana": "スカンソープ",
+   "box": [
+    [
+     53.572,
+     -0.676
+    ],
+    [
+     53.6,
+     -0.626
+    ]
+   ],
+   "home": "Scunthorpe"
+  },
+  {
+   "key": "grantham",
+   "label": "Grantham",
+   "kana": "グランサム",
+   "box": [
+    [
+     52.892,
+     -0.667
+    ],
+    [
+     52.92,
+     -0.617
+    ]
+   ],
+   "home": "Grantham"
+  },
+  {
+   "key": "boston",
+   "label": "Boston",
+   "kana": "ボストン",
+   "box": [
+    [
+     52.964,
+     -0.056
+    ],
+    [
+     52.992,
+     -0.006
+    ]
+   ],
+   "home": "Boston"
+  },
+  {
+   "key": "skegness",
+   "label": "Skegness",
+   "kana": "スケグネス",
+   "box": [
+    [
+     53.129,
+     0.309
+    ],
+    [
+     53.157,
+     0.359
+    ]
+   ],
+   "home": "Skegness"
+  },
+  {
+   "key": "spalding",
+   "label": "Spalding",
+   "kana": "スポールディング",
+   "box": [
+    [
+     52.775,
+     -0.182
+    ],
+    [
+     52.803,
+     -0.132
+    ]
+   ],
+   "home": "Spalding"
+  },
+  {
+   "key": "stamford",
+   "label": "Stamford",
+   "kana": "スタンフォード",
+   "box": [
+    [
+     52.634,
+     -0.505
+    ],
+    [
+     52.662,
+     -0.455
+    ]
+   ],
+   "home": "Stamford"
+  },
+  {
+   "key": "sleaford",
+   "label": "Sleaford",
+   "kana": "スリーフォード",
+   "box": [
+    [
+     52.981,
+     -0.435
+    ],
+    [
+     53.009,
+     -0.385
+    ]
+   ],
+   "home": "Sleaford"
+  },
+  {
+   "key": "gainsborough",
+   "label": "Gainsborough",
+   "kana": "ゲインズバラ",
+   "box": [
+    [
+     53.372,
+     -0.794
+    ],
+    [
+     53.4,
+     -0.744
+    ]
+   ],
+   "home": "Gainsborough Lea Road"
+  },
+  {
+   "key": "barton",
+   "label": "Barton-upon-Humber",
+   "kana": "バートン・アポン・ハンバー",
+   "box": [
+    [
+     53.675,
+     -0.468
+    ],
+    [
+     53.703,
+     -0.418
+    ]
+   ],
+   "home": "Barton-on-Humber"
+  },
+  {
+   "key": "brigg",
+   "label": "Brigg",
+   "kana": "ブリッグ",
+   "box": [
+    [
+     53.535,
+     -0.511
+    ],
+    [
+     53.563,
+     -0.461
+    ]
+   ],
+   "home": "Brigg"
+  },
+  {
+   "key": "marketrasen",
+   "label": "Market Rasen",
+   "kana": "マーケット・レーゼン",
+   "box": [
+    [
+     53.37,
+     -0.362
+    ],
+    [
+     53.398,
+     -0.312
+    ]
+   ],
+   "home": "Market Rasen"
+  }
+ ],
+ "build": {
+  "family": "uk",
+  "script": "scripts/build_london.py",
+  "check": "scripts/validate_london.py",
+  "arg": "lincolnshire",
+  "inputs": [
+   "assets/uk_areas.json",
+   "assets/london_station_lines_overrides.csv",
+   "assets/belfast_stations.csv",
+   "assets/*_districts.csv",
+   "cache:london/*",
+   "cache:london/ppd/",
+   "cache:london/tfl",
+   "cache:london/boundaries",
+   "cache:london/bods",
+   "cache:london/vmd",
+   "cache:london/scotland",
+   "cache:london/ni"
+  ]
+ },
+ "credits": {
+  "block": "<span>Contains HM Land Registry data © Crown copyright and database right 2024. This data is licensed under the Open Government Licence v3.0. Floor areas: Chi, Dennett, Oléron-Evans and Morphet (2025), <a href=\"https://doi.org/10.5255/UKDA-SN-857911\" target=\"_blank\" rel=\"noopener\">House Price Per Square Metre in England and Wales, 1995–2024</a>, UK Data Service, CC BY 4.0, which links Land Registry sales to Energy Performance Certificates (MHCLG, Open Government Licence).</span><span>Postcodes and borough boundaries: Office for National Statistics, Open Government Licence; contains OS data © Crown copyright and database right 2024, Royal Mail data © Royal Mail copyright and database right 2024 and GeoPlace data © Local Government Information House Limited copyright and database right 2024. Stations: NaPTAN, Department for Transport, Open Government Licence. Rail lines: Powered by TfL Open Data; contains OS data © Crown copyright and database rights 2016 and Geomni UK Map data © and database rights [2019]. None of these bodies produced or endorses this site.</span>",
+  "attribution": "Contains OS data © Crown copyright and database right 2026 · Powered by TfL Open Data"
+ }
+}

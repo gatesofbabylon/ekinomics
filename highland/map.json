@@ -1,0 +1,256 @@
+{
+ "key": "highland",
+ "country": "United Kingdom",
+ "order": 22,
+ "path": "highland/",
+ 
+ "tier": "area",
+ "en": "Highland",
+ "population": 237260,
+ "tag": {
+  "en": "Highland",
+  "ja": "ハイランド"
+ },
+ "cities": [
+  {
+   "key": "inverness",
+   "en": "Inverness",
+   "ja": "インヴァネス",
+   "population": 237260
+  }
+ ],
+ "goto": [
+  {
+   "key": "inverness",
+   "label": "Inverness",
+   "kana": "インヴァネス",
+   "box": [
+    [
+     57.45,
+     -4.283
+    ],
+    [
+     57.51,
+     -4.163
+    ]
+   ],
+   "home": "Inverness"
+  },
+  {
+   "key": "fortwilliam",
+   "label": "Fort William",
+   "kana": "フォート・ウィリアム",
+   "box": [
+    [
+     56.806,
+     -5.131
+    ],
+    [
+     56.834,
+     -5.081
+    ]
+   ],
+   "home": "Fort William"
+  },
+  {
+   "key": "aviemore",
+   "label": "Aviemore",
+   "kana": "アヴィモア",
+   "box": [
+    [
+     57.175,
+     -3.854
+    ],
+    [
+     57.203,
+     -3.804
+    ]
+   ],
+   "home": "Aviemore"
+  },
+  {
+   "key": "nairn",
+   "label": "Nairn",
+   "kana": "ネアン",
+   "box": [
+    [
+     57.566,
+     -3.897
+    ],
+    [
+     57.594,
+     -3.847
+    ]
+   ],
+   "home": "Nairn"
+  },
+  {
+   "key": "dingwall",
+   "label": "Dingwall",
+   "kana": "ディングウォール",
+   "box": [
+    [
+     57.58,
+     -4.447
+    ],
+    [
+     57.608,
+     -4.397
+    ]
+   ],
+   "home": "Dingwall"
+  },
+  {
+   "key": "invergordon",
+   "label": "Invergordon",
+   "kana": "インヴァーゴードン",
+   "box": [
+    [
+     57.675,
+     -4.2
+    ],
+    [
+     57.703,
+     -4.15
+    ]
+   ],
+   "home": "Invergordon"
+  },
+  {
+   "key": "tain",
+   "label": "Tain",
+   "kana": "テイン",
+   "box": [
+    [
+     57.8,
+     -4.077
+    ],
+    [
+     57.828,
+     -4.027
+    ]
+   ],
+   "home": "Tain"
+  },
+  {
+   "key": "thurso",
+   "label": "Thurso",
+   "kana": "サーソー",
+   "box": [
+    [
+     58.576,
+     -3.553
+    ],
+    [
+     58.604,
+     -3.503
+    ]
+   ],
+   "home": "Thurso"
+  },
+  {
+   "key": "wick",
+   "label": "Wick",
+   "kana": "ウィック",
+   "box": [
+    [
+     58.428,
+     -3.122
+    ],
+    [
+     58.456,
+     -3.072
+    ]
+   ],
+   "home": "Wick"
+  },
+  {
+   "key": "kyleoflochalsh",
+   "label": "Kyle of Lochalsh",
+   "kana": "カイル・オブ・ロッハルシュ",
+   "box": [
+    [
+     57.266,
+     -5.739
+    ],
+    [
+     57.294,
+     -5.689
+    ]
+   ],
+   "home": "Kyle of Lochalsh"
+  },
+  {
+   "key": "mallaig",
+   "label": "Mallaig",
+   "kana": "マレイグ",
+   "box": [
+    [
+     56.992,
+     -5.855
+    ],
+    [
+     57.02,
+     -5.805
+    ]
+   ],
+   "home": "Mallaig"
+  },
+  {
+   "key": "kingussie",
+   "label": "Kingussie",
+   "kana": "キンガッシー",
+   "box": [
+    [
+     57.064,
+     -4.077
+    ],
+    [
+     57.092,
+     -4.027
+    ]
+   ],
+   "home": "Kingussie"
+  },
+  {
+   "key": "golspie",
+   "label": "Golspie",
+   "kana": "ゴルスピー",
+   "box": [
+    [
+     57.957,
+     -4.012
+    ],
+    [
+     57.985,
+     -3.962
+    ]
+   ],
+   "home": "Golspie"
+  }
+ ],
+ "build": {
+  "family": "uk",
+  "script": "scripts/build_london.py",
+  "check": "scripts/validate_london.py",
+  "arg": "highland",
+  "inputs": [
+   "assets/uk_areas.json",
+   "assets/london_station_lines_overrides.csv",
+   "assets/belfast_stations.csv",
+   "assets/*_districts.csv",
+   "cache:london/*",
+   "cache:london/ppd/",
+   "cache:london/tfl",
+   "cache:london/boundaries",
+   "cache:london/bods",
+   "cache:london/vmd",
+   "cache:london/scotland",
+   "cache:london/ni"
+  ]
+ },
+ "credits": {
+  "block": "<span>Contains Registers of Scotland data © Crown copyright and database right 2026. This data is licensed under the Open Government Licence v3.0. Data zone centroids: Scottish Government, Open Government Licence; contains OS data © Crown copyright and database right.</span><span>Council boundaries: Office for National Statistics, Open Government Licence; contains OS data © Crown copyright and database right 2024. Railway track: OS VectorMap District, Open Government Licence; contains OS data © Crown copyright and database right 2026. Stations: NaPTAN, Department for Transport, Open Government Licence. Lines: Powered by TfL Open Data. None of these bodies produced or endorses this site.</span>",
+  "attribution": "Contains OS data © Crown copyright and database right 2026 · Contains Registers of Scotland data © Crown copyright and database right 2026 · Powered by TfL Open Data"
+ }
+}

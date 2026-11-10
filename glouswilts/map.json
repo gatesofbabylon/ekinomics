@@ -1,0 +1,300 @@
+{
+ "key": "glouswilts",
+ "country": "United Kingdom",
+ "order": 16,
+ "path": "glouswilts/",
+ 
+ "tier": "observed",
+ "en": "Gloucestershire and Wiltshire",
+ "population": 1443586,
+ "tag": {
+  "en": "Gloucestershire & Wiltshire",
+  "ja": "グロスターシャー・ウィルトシャー"
+ },
+ "cities": [
+  {
+   "key": "swindon",
+   "en": "Swindon",
+   "ja": "スウィンドン",
+   "population": 245286
+  },
+  {
+   "key": "gloucester",
+   "en": "Gloucester",
+   "ja": "グロスター",
+   "population": 138565
+  },
+  {
+   "key": "cheltenham",
+   "en": "Cheltenham",
+   "ja": "チェルトナム",
+   "population": 121452
+  }
+ ],
+ "goto": [
+  {
+   "key": "swindon",
+   "label": "Swindon",
+   "kana": "スウィンドン",
+   "box": [
+    [
+     51.535,
+     -1.846
+    ],
+    [
+     51.595,
+     -1.726
+    ]
+   ],
+   "home": "Swindon"
+  },
+  {
+   "key": "gloucester",
+   "label": "Gloucester",
+   "kana": "グロスター",
+   "box": [
+    [
+     51.836,
+     -2.298
+    ],
+    [
+     51.896,
+     -2.178
+    ]
+   ],
+   "home": "Gloucester"
+  },
+  {
+   "key": "cheltenham",
+   "label": "Cheltenham",
+   "kana": "チェルトナム",
+   "box": [
+    [
+     51.867,
+     -2.16
+    ],
+    [
+     51.927,
+     -2.04
+    ]
+   ],
+   "home": "Cheltenham Spa"
+  },
+  {
+   "key": "chippenham",
+   "label": "Chippenham",
+   "kana": "チッペナム",
+   "box": [
+    [
+     51.448,
+     -2.14
+    ],
+    [
+     51.476,
+     -2.09
+    ]
+   ],
+   "home": "Chippenham"
+  },
+  {
+   "key": "salisbury",
+   "label": "Salisbury",
+   "kana": "ソールズベリー",
+   "box": [
+    [
+     51.057,
+     -1.831
+    ],
+    [
+     51.085,
+     -1.781
+    ]
+   ],
+   "home": "Salisbury"
+  },
+  {
+   "key": "trowbridge",
+   "label": "Trowbridge",
+   "kana": "トローブリッジ",
+   "box": [
+    [
+     51.306,
+     -2.239
+    ],
+    [
+     51.334,
+     -2.189
+    ]
+   ],
+   "home": "Trowbridge"
+  },
+  {
+   "key": "melksham",
+   "label": "Melksham",
+   "kana": "メルクシャム",
+   "box": [
+    [
+     51.366,
+     -2.169
+    ],
+    [
+     51.394,
+     -2.119
+    ]
+   ],
+   "home": "Melksham"
+  },
+  {
+   "key": "westbury",
+   "label": "Westbury",
+   "kana": "ウェストベリー",
+   "box": [
+    [
+     51.253,
+     -2.224
+    ],
+    [
+     51.281,
+     -2.174
+    ]
+   ],
+   "home": "Westbury"
+  },
+  {
+   "key": "warminster",
+   "label": "Warminster",
+   "kana": "ウォーミンスター",
+   "box": [
+    [
+     51.193,
+     -2.202
+    ],
+    [
+     51.221,
+     -2.152
+    ]
+   ],
+   "home": "Warminster"
+  },
+  {
+   "key": "bradfordonavon",
+   "label": "Bradford-on-Avon",
+   "kana": "ブラッドフォード・オン・エイヴォン",
+   "box": [
+    [
+     51.331,
+     -2.277
+    ],
+    [
+     51.359,
+     -2.227
+    ]
+   ],
+   "home": "Bradford-on-Avon"
+  },
+  {
+   "key": "stroud",
+   "label": "Stroud",
+   "kana": "ストラウド",
+   "box": [
+    [
+     51.731,
+     -2.244
+    ],
+    [
+     51.759,
+     -2.194
+    ]
+   ],
+   "home": "Stroud"
+  },
+  {
+   "key": "tewkesbury",
+   "label": "Tewkesbury",
+   "kana": "テュークスベリー",
+   "box": [
+    [
+     51.985,
+     -2.134
+    ],
+    [
+     52.013,
+     -2.084
+    ]
+   ],
+   "home": "Ashchurch for Tewkesbury"
+  },
+  {
+   "key": "lydney",
+   "label": "Lydney",
+   "kana": "リドニー",
+   "box": [
+    [
+     51.7,
+     -2.556
+    ],
+    [
+     51.728,
+     -2.506
+    ]
+   ],
+   "home": "Lydney"
+  },
+  {
+   "key": "moretoninmarsh",
+   "label": "Moreton-in-Marsh",
+   "kana": "モートン・イン・マーシュ",
+   "box": [
+    [
+     51.978,
+     -1.725
+    ],
+    [
+     52.006,
+     -1.675
+    ]
+   ],
+   "home": "Moreton-in-Marsh"
+  },
+  {
+   "key": "pewsey",
+   "label": "Pewsey",
+   "kana": "ピュージー",
+   "box": [
+    [
+     51.328,
+     -1.796
+    ],
+    [
+     51.356,
+     -1.746
+    ]
+   ],
+   "home": "Pewsey"
+  }
+ ],
+ "build": {
+  "family": "uk",
+  "script": "scripts/build_london.py",
+  "check": "scripts/validate_london.py",
+  "arg": "glouswilts",
+  "inputs": [
+   "assets/uk_areas.json",
+   "assets/london_station_lines_overrides.csv",
+   "assets/belfast_stations.csv",
+   "assets/*_districts.csv",
+   "cache:london/*",
+   "cache:london/ppd/",
+   "cache:london/tfl",
+   "cache:london/boundaries",
+   "cache:london/bods",
+   "cache:london/vmd",
+   "cache:london/scotland",
+   "cache:london/ni"
+  ]
+ },
+ "credits": {
+  "block": "<span>Contains HM Land Registry data © Crown copyright and database right 2024. This data is licensed under the Open Government Licence v3.0. Floor areas: Chi, Dennett, Oléron-Evans and Morphet (2025), <a href=\"https://doi.org/10.5255/UKDA-SN-857911\" target=\"_blank\" rel=\"noopener\">House Price Per Square Metre in England and Wales, 1995–2024</a>, UK Data Service, CC BY 4.0, which links Land Registry sales to Energy Performance Certificates (MHCLG, Open Government Licence).</span><span>Postcodes and borough boundaries: Office for National Statistics, Open Government Licence; contains OS data © Crown copyright and database right 2024, Royal Mail data © Royal Mail copyright and database right 2024 and GeoPlace data © Local Government Information House Limited copyright and database right 2024. Stations: NaPTAN, Department for Transport, Open Government Licence. Rail lines: Powered by TfL Open Data; contains OS data © Crown copyright and database rights 2016 and Geomni UK Map data © and database rights [2019]. None of these bodies produced or endorses this site.</span>",
+  "attribution": "Contains OS data © Crown copyright and database right 2026 · Powered by TfL Open Data"
+ }
+}

@@ -1,0 +1,262 @@
+{
+ "key": "cumbria",
+ "country": "United Kingdom",
+ "order": 20,
+ "path": "cumbria/",
+ 
+ "tier": "observed",
+ "en": "Cumbria",
+ "population": 513650,
+ "tag": {
+  "en": "Cumbria",
+  "ja": "カンブリア"
+ },
+ "cities": [
+  {
+   "key": "carlisle",
+   "en": "Carlisle",
+   "ja": "カーライル",
+   "population": 282343
+  },
+  {
+   "key": "barrow",
+   "en": "Barrow-in-Furness",
+   "ja": "バロー・イン・ファーネス",
+   "population": 231307
+  }
+ ],
+ "goto": [
+  {
+   "key": "carlisle",
+   "label": "Carlisle",
+   "kana": "カーライル",
+   "box": [
+    [
+     54.861,
+     -2.993
+    ],
+    [
+     54.921,
+     -2.873
+    ]
+   ],
+   "home": "Carlisle"
+  },
+  {
+   "key": "barrow",
+   "label": "Barrow-in-Furness",
+   "kana": "バロー・イン・ファーネス",
+   "box": [
+    [
+     54.089,
+     -3.286
+    ],
+    [
+     54.149,
+     -3.166
+    ]
+   ],
+   "home": "Barrow-in-Furness"
+  },
+  {
+   "key": "kendal",
+   "label": "Kendal",
+   "kana": "ケンダル",
+   "box": [
+    [
+     54.318,
+     -2.765
+    ],
+    [
+     54.346,
+     -2.715
+    ]
+   ],
+   "home": "Kendal"
+  },
+  {
+   "key": "penrith",
+   "label": "Penrith",
+   "kana": "ペンリス",
+   "box": [
+    [
+     54.648,
+     -2.784
+    ],
+    [
+     54.676,
+     -2.734
+    ]
+   ],
+   "home": "Penrith North Lakes"
+  },
+  {
+   "key": "workington",
+   "label": "Workington",
+   "kana": "ワーキントン",
+   "box": [
+    [
+     54.631,
+     -3.584
+    ],
+    [
+     54.659,
+     -3.534
+    ]
+   ],
+   "home": "Workington"
+  },
+  {
+   "key": "whitehaven",
+   "label": "Whitehaven",
+   "kana": "ホワイトヘイヴン",
+   "box": [
+    [
+     54.539,
+     -3.612
+    ],
+    [
+     54.567,
+     -3.562
+    ]
+   ],
+   "home": "Whitehaven"
+  },
+  {
+   "key": "windermere",
+   "label": "Windermere",
+   "kana": "ウィンダミア",
+   "box": [
+    [
+     54.366,
+     -2.928
+    ],
+    [
+     54.394,
+     -2.878
+    ]
+   ],
+   "home": "Windermere"
+  },
+  {
+   "key": "ulverston",
+   "label": "Ulverston",
+   "kana": "アルヴァーストン",
+   "box": [
+    [
+     54.178,
+     -3.123
+    ],
+    [
+     54.206,
+     -3.073
+    ]
+   ],
+   "home": "Ulverston"
+  },
+  {
+   "key": "maryport",
+   "label": "Maryport",
+   "kana": "メアリーポート",
+   "box": [
+    [
+     54.697,
+     -3.519
+    ],
+    [
+     54.725,
+     -3.469
+    ]
+   ],
+   "home": "Maryport"
+  },
+  {
+   "key": "grangeoversands",
+   "label": "Grange-over-Sands",
+   "kana": "グレンジ・オーヴァー・サンズ",
+   "box": [
+    [
+     54.182,
+     -2.928
+    ],
+    [
+     54.21,
+     -2.878
+    ]
+   ],
+   "home": "Grange-over-Sands"
+  },
+  {
+   "key": "appleby",
+   "label": "Appleby",
+   "kana": "アップルビー",
+   "box": [
+    [
+     54.566,
+     -2.512
+    ],
+    [
+     54.594,
+     -2.462
+    ]
+   ],
+   "home": "Appleby"
+  },
+  {
+   "key": "millom",
+   "label": "Millom",
+   "kana": "ミロム",
+   "box": [
+    [
+     54.197,
+     -3.296
+    ],
+    [
+     54.225,
+     -3.246
+    ]
+   ],
+   "home": "Millom"
+  },
+  {
+   "key": "wigton",
+   "label": "Wigton",
+   "kana": "ウィグトン",
+   "box": [
+    [
+     54.815,
+     -3.189
+    ],
+    [
+     54.843,
+     -3.139
+    ]
+   ],
+   "home": "Wigton"
+  }
+ ],
+ "build": {
+  "family": "uk",
+  "script": "scripts/build_london.py",
+  "check": "scripts/validate_london.py",
+  "arg": "cumbria",
+  "inputs": [
+   "assets/uk_areas.json",
+   "assets/london_station_lines_overrides.csv",
+   "assets/belfast_stations.csv",
+   "assets/*_districts.csv",
+   "cache:london/*",
+   "cache:london/ppd/",
+   "cache:london/tfl",
+   "cache:london/boundaries",
+   "cache:london/bods",
+   "cache:london/vmd",
+   "cache:london/scotland",
+   "cache:london/ni"
+  ]
+ },
+ "credits": {
+  "block": "<span>Contains HM Land Registry data © Crown copyright and database right 2024. This data is licensed under the Open Government Licence v3.0. Floor areas: Chi, Dennett, Oléron-Evans and Morphet (2025), <a href=\"https://doi.org/10.5255/UKDA-SN-857911\" target=\"_blank\" rel=\"noopener\">House Price Per Square Metre in England and Wales, 1995–2024</a>, UK Data Service, CC BY 4.0, which links Land Registry sales to Energy Performance Certificates (MHCLG, Open Government Licence).</span><span>Postcodes and borough boundaries: Office for National Statistics, Open Government Licence; contains OS data © Crown copyright and database right 2024, Royal Mail data © Royal Mail copyright and database right 2024 and GeoPlace data © Local Government Information House Limited copyright and database right 2024. Stations: NaPTAN, Department for Transport, Open Government Licence. Rail lines: Powered by TfL Open Data; contains OS data © Crown copyright and database rights 2016 and Geomni UK Map data © and database rights [2019]. None of these bodies produced or endorses this site.</span>",
+  "attribution": "Contains OS data © Crown copyright and database right 2026 · Powered by TfL Open Data"
+ }
+}
