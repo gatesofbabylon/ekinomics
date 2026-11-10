@@ -504,3 +504,17 @@ html.alt .savepanel .seg button[aria-pressed="true"]{background:transparent;colo
 .home main>.hlegend{order:0;margin:0}.hbuckets{align-self:start}
 /* /sources/ (scripts/sources_page.py): each map's credits as its own page shows them. */
 .srcmap{margin:0 0 18px;max-width:900px}.srcmap h3{font-size:15px;margin:10px 0 4px}.srcmap .credit,.srcline,.srcsite{font-size:13px;color:var(--muted);line-height:1.6}.srcline{margin:2px 0}.srcsite{margin:0;padding-left:18px}.srcsite li{margin:0 0 4px}
+/* What a blended price is made of (web/app.js blendBlock; Melbourne first, 2026-11-10): a disclosure under the price in
+   Carbon blue, opening the zones the station's circle overlaps with each one's weight, price and sales; figures in ink. */
+.blend{margin:-6px 0 14px}
+.blendtoggle{border:0;background:none;padding:2px 0;color:var(--link);font:500 13px/1.4 var(--sans);text-align:left}
+.blendtoggle::after{content:" ▸"}.blendtoggle[aria-expanded="true"]::after{content:" ▾"}
+.blendtoggle:hover{background:none;text-decoration:underline}
+.blendlist table{margin:8px 0 6px;font-size:12px}
+.blendlist :is(th,td){background:none;padding:5px 0 5px 10px;text-align:right;color:var(--ink);white-space:nowrap}
+.blendlist th{font-weight:500;color:var(--ink-2);padding-top:2px}.blendlist th small{font-weight:400;margin-left:2px}
+.blendlist :is(th,td):first-child{text-align:left;white-space:normal;min-width:0;padding-left:0}
+.blendlist tr.noprice td{color:var(--muted)}
+.bsw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px;background:var(--line)}
+.noprice .bsw{background:none;box-shadow:inset 0 0 0 1px var(--border)}
+.blendnote{font-size:11.5px;line-height:1.45;color:var(--muted);margin:6px 0 0}

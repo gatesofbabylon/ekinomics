@@ -4,8 +4,8 @@
  "order": 10,
  "path": "losangeles/",
  "tier": "observed",
- "en": "Los Angeles County",
- "population": 9694934,
+ "en": "Los Angeles and San Bernardino counties",
+ "population": 11919025,
  "tag": {
   "en": "California",
   "ja": "カリフォルニア州"
@@ -706,6 +706,102 @@
     ]
    ],
    "home": "Lancaster"
+  },
+  {
+   "key": "montclair",
+   "label": "Montclair",
+   "kana": "モントクレア",
+   "box": [
+    [
+     34.079,
+     -117.716
+    ],
+    [
+     34.109,
+     -117.676
+    ]
+   ],
+   "home": "Montclair"
+  },
+  {
+   "key": "upland",
+   "label": "Upland",
+   "kana": "アップランド",
+   "box": [
+    [
+     34.08,
+     -117.668
+    ],
+    [
+     34.11,
+     -117.628
+    ]
+   ],
+   "home": "Upland"
+  },
+  {
+   "key": "fontana",
+   "label": "Fontana",
+   "kana": "フォンタナ",
+   "box": [
+    [
+     34.08,
+     -117.458
+    ],
+    [
+     34.11,
+     -117.418
+    ]
+   ],
+   "home": "Fontana"
+  },
+  {
+   "key": "rialto",
+   "label": "Rialto",
+   "kana": "リアルト",
+   "box": [
+    [
+     34.082,
+     -117.392
+    ],
+    [
+     34.112,
+     -117.352
+    ]
+   ],
+   "home": "Rialto"
+  },
+  {
+   "key": "sanbernardino",
+   "label": "San Bernardino",
+   "kana": "サンバーナーディーノ",
+   "box": [
+    [
+     34.075,
+     -117.32
+    ],
+    [
+     34.115,
+     -117.26
+    ]
+   ],
+   "home": "San Bernardino Depot"
+  },
+  {
+   "key": "redlands",
+   "label": "Redlands",
+   "kana": "レッドランズ",
+   "box": [
+    [
+     34.047,
+     -117.205
+    ],
+    [
+     34.071,
+     -117.155
+    ]
+   ],
+   "home": "Redlands - Downtown"
   }
  ],
  "unit": "home",
@@ -721,10 +817,10 @@
   ]
  },
  "credits": {
-  "block": "<span>Values at sale: the Los Angeles County Assessor's secured rolls, County of Los Angeles. Areas: County of Los Angeles and its Department of Public Health. Station and line data provided by LA Metro (Los Angeles County Metropolitan Transportation Authority) and by Metrolink (Southern California Regional Rail Authority), as is. Counties and water: US Census Bureau.</span><span>None of these bodies produced or endorses this site. The County of Los Angeles provides its data as is, without warranties of any kind.</span>",
+  "block": "<span>Values at sale: the Los Angeles County Assessor's secured rolls, County of Los Angeles; the San Bernardino County Assessor's secured rolls, transfer dates and property characteristics (read from the Internet Archive's copies of arc.sbcounty.gov), provided for the Assessor's internal use in valuing property for taxation, without warranty; positions in San Bernardino County from the County of San Bernardino's parcel layer. Areas: County of Los Angeles and its Department of Public Health. Station and line data provided by LA Metro (Los Angeles County Metropolitan Transportation Authority) and by Metrolink (Southern California Regional Rail Authority), as is. Cities, counties and water: US Census Bureau.</span><span>None of these bodies produced or endorses this site. The Counties of Los Angeles and San Bernardino provide their data as is, without warranties of any kind.</span>",
   "priceSource": {
-   "en": "Prices: values at sale on the LA County Assessor's rolls",
-   "ja": "価格：ロサンゼルス郡査定官の課税台帳にある売却時の評価額"
+   "en": "Prices: values at sale on the LA and San Bernardino County Assessors' rolls",
+   "ja": "価格：ロサンゼルス郡とサンバーナーディーノ郡の査定官の課税台帳にある売却時の評価額"
   },
   "attribution": "Stations and lines: provided by LA Metro and Metrolink (GTFS), as is · Outlines: County of Los Angeles, US Census Bureau"
  }
