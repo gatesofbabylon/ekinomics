@@ -1,0 +1,221 @@
+{
+ "key": "katowice",
+ "country": "Poland",
+ "order": 4,
+ "path": "katowice/",
+ "tier": "observed",
+ "en": "Katowice",
+ "population": 285711,
+ "tag": {
+  "en": "Katowice",
+  "ja": "カトヴィツェ"
+ },
+ "cities": [
+  {
+   "key": "katowice",
+   "en": "Katowice",
+   "ja": "カトヴィツェ",
+   "population": 285711
+  }
+ ],
+ 
+ "goto": [
+  {
+   "key": "katowice",
+   "label": "Katowice",
+   "kana": "カトヴィツェ",
+   "box": [
+    [
+     50.248,
+     18.995
+    ],
+    [
+     50.27,
+     19.04
+    ]
+   ],
+   "home": "Katowice"
+  },
+  {
+   "key": "koszutka",
+   "label": "Koszutka",
+   "kana": "コシュトカ",
+   "box": [
+    [
+     50.265,
+     19.01
+    ],
+    [
+     50.283,
+     19.038
+    ]
+   ],
+   "home": "Koszutka Jesionowa"
+  },
+  {
+   "key": "ligota",
+   "label": "Ligota",
+   "kana": "リゴタ",
+   "box": [
+    [
+     50.217,
+     18.964
+    ],
+    [
+     50.235,
+     18.992
+    ]
+   ],
+   "home": "Katowice Ligota"
+  },
+  {
+   "key": "brynow",
+   "label": "Brynów",
+   "kana": "ブリヌフ",
+   "box": [
+    [
+     50.234,
+     18.993
+    ],
+    [
+     50.252,
+     19.021
+    ]
+   ],
+   "home": "Katowice Kościuszki Basen"
+  },
+  {
+   "key": "zawodzie",
+   "label": "Zawodzie",
+   "kana": "ザヴォジェ",
+   "box": [
+    [
+     50.249,
+     19.022
+    ],
+    [
+     50.267,
+     19.05
+    ]
+   ],
+   "home": "Katowice Graniczna"
+  },
+  {
+   "key": "welnowiec",
+   "label": "Wełnowiec",
+   "kana": "ヴェウノヴィェツ",
+   "box": [
+    [
+     50.284,
+     19.0
+    ],
+    [
+     50.302,
+     19.028
+    ]
+   ],
+   "home": "Wełnowiec Plac Alfreda"
+  },
+  {
+   "key": "piotrowice",
+   "label": "Piotrowice",
+   "kana": "ピョトロヴィツェ",
+   "box": [
+    [
+     50.204,
+     18.957
+    ],
+    [
+     50.222,
+     18.985
+    ]
+   ],
+   "home": "Katowice Piotrowice"
+  },
+  {
+   "key": "tysiaclecia",
+   "label": "Osiedle Tysiąclecia",
+   "kana": "ティシォンツレチャ団地",
+   "box": [
+    [
+     50.272,
+     18.963
+    ],
+    [
+     50.29,
+     18.991
+    ]
+   ],
+   "home": "Park Śląski Wejście Główne"
+  },
+  {
+   "key": "zaleze",
+   "label": "Załęże",
+   "kana": "ザウェンジェ",
+   "box": [
+    [
+     50.26,
+     18.966
+    ],
+    [
+     50.278,
+     18.994
+    ]
+   ],
+   "home": "Załęże Wiśniowa"
+  },
+  {
+   "key": "dab",
+   "label": "Dąb",
+   "kana": "ドンプ",
+   "box": [
+    [
+     50.262,
+     18.983
+    ],
+    [
+     50.28,
+     19.011
+    ]
+   ],
+   "home": "Dąb Kościół"
+  },
+  {
+   "key": "szopienice",
+   "label": "Szopienice",
+   "kana": "ショピェニツェ",
+   "box": [
+    [
+     50.25,
+     19.078
+    ],
+    [
+     50.268,
+     19.106
+    ]
+   ],
+   "home": "Katowice Szopienice Południowe"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_poland.py",
+  "check": "scripts/validate_poland.py",
+  "arg": "katowice",
+  "settings": "assets/pl_areas.json",
+  "helpers": [
+   "scripts/rcn.py"
+  ],
+  "inputs": [
+   "cache:poland/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales, floor areas, rooms, floors and positions of flats: Urząd Miasta Katowice, Rejestr Cen Nieruchomości (register of real estate prices), the city's GML file on its map portal (emapa.katowice.eu, file of 12 October 2026); station medians are Ekinomics' own calculation. Tram stops and lines: Zarząd Transportu Metropolitalnego (GZM ZTM) GTFS, from the Mobility Database's copy. Railway stations and lines: PKP Polskie Linie Kolejowe timetables, as GTFS compiled by mkuran.pl. Districts (dzielnice) and the city's outline: © OpenStreetMap contributors, under the Open Database Licence; the outlines as drawn here are available under the same licence. Neighbouring municipalities: Eurostat GISCO, Local Administrative Units 2024, © EuroGeographics for the administrative boundaries.</span><span>This site is not sponsored by, affiliated with or operated by any of these bodies, and none of them produced or endorses it. The data are provided as is, without any warranty that they are accurate, current or complete, and are used here at the reader's own risk.</span>",
+  "priceSource": {
+   "en": "Prices: City of Katowice, register of real estate prices (RCN)",
+   "ja": "価格：カトヴィツェ市 不動産価格登録簿（RCN）"
+  },
+  "attribution": "Stations and lines: GZM ZTM (Mobility Database copy) and PKP PLK GTFS (mkuran.pl) · Districts: © OpenStreetMap contributors (ODbL); © EuroGeographics"
+ }
+}

@@ -1,0 +1,205 @@
+{
+ "key": "lodz",
+ "country": "Poland",
+ "order": 2,
+ "path": "lodz/",
+ "tier": "observed",
+ "en": "Łódź",
+ "population": 670642,
+ "tag": {
+  "en": "Łódź",
+  "ja": "ウッチ"
+ },
+ "cities": [
+  {
+   "key": "lodz",
+   "en": "Łódź",
+   "ja": "ウッチ",
+   "population": 670642
+  }
+ ],
+ 
+ "goto": [
+  {
+   "key": "lodz",
+   "label": "Łódź",
+   "kana": "ウッチ",
+   "box": [
+    [
+     51.745,
+     19.435
+    ],
+    [
+     51.785,
+     19.48
+    ]
+   ],
+   "home": "pl. Wolności"
+  },
+  {
+   "key": "baluty",
+   "label": "Bałuty",
+   "kana": "バウティ",
+   "box": [
+    [
+     51.779,
+     19.429
+    ],
+    [
+     51.797,
+     19.457
+    ]
+   ],
+   "home": "Limanowskiego-Piwna"
+  },
+  {
+   "key": "polesie",
+   "label": "Polesie",
+   "kana": "ポレシェ",
+   "box": [
+    [
+     51.735,
+     19.437
+    ],
+    [
+     51.753,
+     19.465
+    ]
+   ],
+   "home": "Politechniki-Wróblewskiego (kampus PŁ)"
+  },
+  {
+   "key": "widzew",
+   "label": "Widzew",
+   "kana": "ヴィジェフ",
+   "box": [
+    [
+     51.755,
+     19.503
+    ],
+    [
+     51.773,
+     19.531
+    ]
+   ],
+   "home": "Piłsudskiego-Widzew Stadion"
+  },
+  {
+   "key": "gorna",
+   "label": "Górna",
+   "kana": "グルナ",
+   "box": [
+    [
+     51.739,
+     19.461
+    ],
+    [
+     51.757,
+     19.489
+    ]
+   ],
+   "home": "Kilińskiego-Senatorska"
+  },
+  {
+   "key": "retkinia",
+   "label": "Retkinia",
+   "kana": "レトキニア",
+   "box": [
+    [
+     51.731,
+     19.393
+    ],
+    [
+     51.749,
+     19.421
+    ]
+   ],
+   "home": "Łódź Retkinia"
+  },
+  {
+   "key": "teofilow",
+   "label": "Teofilów",
+   "kana": "テオフィルフ",
+   "box": [
+    [
+     51.788,
+     19.38
+    ],
+    [
+     51.806,
+     19.408
+    ]
+   ],
+   "home": "Aleksandrowska-Traktorowa"
+  },
+  {
+   "key": "chojny",
+   "label": "Chojny",
+   "kana": "ホイヌィ",
+   "box": [
+    [
+     51.709,
+     19.472
+    ],
+    [
+     51.727,
+     19.5
+    ]
+   ],
+   "home": "Chojny Kurczaki"
+  },
+  {
+   "key": "radogoszcz",
+   "label": "Radogoszcz",
+   "kana": "ラドゴシュチ",
+   "box": [
+    [
+     51.81,
+     19.418
+    ],
+    [
+     51.828,
+     19.446
+    ]
+   ],
+   "home": "Zgierska-Pasieczna"
+  },
+  {
+   "key": "olechow",
+   "label": "Olechów",
+   "kana": "オレフフ",
+   "box": [
+    [
+     51.738,
+     19.558
+    ],
+    [
+     51.756,
+     19.586
+    ]
+   ],
+   "home": "Hetmańska-Zagłoby"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_poland.py",
+  "check": "scripts/validate_poland.py",
+  "arg": "lodz",
+  "settings": "assets/pl_areas.json",
+  "helpers": [
+   "scripts/rcn.py"
+  ],
+  "inputs": [
+   "cache:poland/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales, floor areas, rooms, floors and positions of flats: Łódzki Ośrodek Geodezji (City of Łódź, Urząd Miasta Łodzi), Rejestr Cen Nieruchomości (register of real estate prices), GML files on the city's map portal (nowa.mapa.lodz.pl); flats the register gives no position placed at their building, from the city's land and buildings register (EGiB) service; station medians are Ekinomics' own calculation. Tram stops and lines: City of Łódź open data, MPK-Łódź GTFS. Railway stations and lines: PKP Polskie Linie Kolejowe timetables, as GTFS compiled by mkuran.pl. Osiedla and city boundary: City of Łódź map service (mapa.lodz.pl). Neighbouring municipalities: Eurostat GISCO, Local Administrative Units 2024, © EuroGeographics for the administrative boundaries.</span><span>This site is not sponsored by, affiliated with or operated by any of these bodies, and none of them produced or endorses it. The data are provided as is, without any warranty that they are accurate, current or complete, and are used here at the reader's own risk.</span>",
+  "priceSource": {
+   "en": "Prices: City of Łódź, register of real estate prices (RCN)",
+   "ja": "価格：ウッチ市 不動産価格登録簿（RCN）"
+  },
+  "attribution": "Stations and lines: MPK-Łódź (City of Łódź) and PKP PLK GTFS (mkuran.pl) · Outlines: City of Łódź; © EuroGeographics"
+ }
+}

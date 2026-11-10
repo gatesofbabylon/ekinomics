@@ -1,0 +1,221 @@
+{
+ "key": "gdansk",
+ "country": "Poland",
+ "order": 3,
+ "path": "gdansk/",
+ "tier": "observed",
+ "en": "Gdańsk",
+ "population": 486022,
+ "tag": {
+  "en": "Gdańsk",
+  "ja": "グダニスク"
+ },
+ "cities": [
+  {
+   "key": "gdansk",
+   "en": "Gdańsk",
+   "ja": "グダニスク",
+   "population": 486022
+  }
+ ],
+ 
+ "goto": [
+  {
+   "key": "gdansk",
+   "label": "Gdańsk",
+   "kana": "グダニスク",
+   "box": [
+    [
+     54.34,
+     18.625
+    ],
+    [
+     54.365,
+     18.67
+    ]
+   ],
+   "home": "Gdańsk Główny"
+  },
+  {
+   "key": "wrzeszcz",
+   "label": "Wrzeszcz",
+   "kana": "ヴジェシュチ",
+   "box": [
+    [
+     54.383,
+     18.608
+    ],
+    [
+     54.401,
+     18.636
+    ]
+   ],
+   "home": "Kolonia Uroda"
+  },
+  {
+   "key": "oliwa",
+   "label": "Oliwa",
+   "kana": "オリヴァ",
+   "box": [
+    [
+     54.401,
+     18.558
+    ],
+    [
+     54.419,
+     18.586
+    ]
+   ],
+   "home": "Gdańsk Oliwa"
+  },
+  {
+   "key": "zaspa",
+   "label": "Zaspa",
+   "kana": "ザスパ",
+   "box": [
+    [
+     54.385,
+     18.588
+    ],
+    [
+     54.403,
+     18.616
+    ]
+   ],
+   "home": "Jana Pawła II"
+  },
+  {
+   "key": "przymorze",
+   "label": "Przymorze",
+   "kana": "プシモジェ",
+   "box": [
+    [
+     54.395,
+     18.577
+    ],
+    [
+     54.413,
+     18.605
+    ]
+   ],
+   "home": "Kołobrzeska"
+  },
+  {
+   "key": "letnica",
+   "label": "Letnica",
+   "kana": "レトニツァ",
+   "box": [
+    [
+     54.383,
+     18.643
+    ],
+    [
+     54.401,
+     18.671
+    ]
+   ],
+   "home": "Śnieżna"
+  },
+  {
+   "key": "nowyport",
+   "label": "Nowy Port",
+   "kana": "ノヴィ・ポルト",
+   "box": [
+    [
+     54.396,
+     18.642
+    ],
+    [
+     54.414,
+     18.67
+    ]
+   ],
+   "home": "Latarnia Morska"
+  },
+  {
+   "key": "brzezno",
+   "label": "Brzeźno",
+   "kana": "ブジェジノ",
+   "box": [
+    [
+     54.397,
+     18.63
+    ],
+    [
+     54.415,
+     18.658
+    ]
+   ],
+   "home": "Krasickiego"
+  },
+  {
+   "key": "ujescisko",
+   "label": "Ujeścisko",
+   "kana": "ウイェシチスコ",
+   "box": [
+    [
+     54.319,
+     18.556
+    ],
+    [
+     54.337,
+     18.584
+    ]
+   ],
+   "home": "Lawendowe Wzgórze"
+  },
+  {
+   "key": "jasien",
+   "label": "Jasień",
+   "kana": "ヤシェン",
+   "box": [
+    [
+     54.346,
+     18.515
+    ],
+    [
+     54.364,
+     18.543
+    ]
+   ],
+   "home": "Gdańsk Kiełpinek"
+  },
+  {
+   "key": "siedlce",
+   "label": "Siedlce",
+   "kana": "シェドルツェ",
+   "box": [
+    [
+     54.341,
+     18.616
+    ],
+    [
+     54.359,
+     18.644
+    ]
+   ],
+   "home": "Paska"
+  }
+ ],
+ "unit": "home",
+ "build": {
+  "script": "scripts/build_poland.py",
+  "check": "scripts/validate_poland.py",
+  "arg": "gdansk",
+  "settings": "assets/pl_areas.json",
+  "helpers": [
+   "scripts/rcn.py"
+  ],
+  "inputs": [
+   "cache:poland/"
+  ]
+ },
+ "credits": {
+  "block": "<span>Sales, floor areas, rooms, floors and positions of flats: Urząd Miejski w Gdańsku, Rejestr Cen Nieruchomości (register of real estate prices), the city's weekly GML file on the Otwarty Gdańsk open data portal (file of 2 November 2026, obtained 10 November 2026); station medians are Ekinomics' own calculation. Tram stops and lines: Zarząd Transportu Miejskiego w Gdańsku (ZTM Gdańsk) GTFS, Otwarty Gdańsk. Railway stations and lines: PKP Polskie Linie Kolejowe timetables, as GTFS compiled by mkuran.pl. Districts: City of Gdańsk, Otwarty Gdańsk. Neighbouring municipalities: Eurostat GISCO, Local Administrative Units 2024, © EuroGeographics for the administrative boundaries.</span><span>This site is not sponsored by, affiliated with or operated by any of these bodies, and none of them produced or endorses it. The data are provided as is, without any warranty that they are accurate, current or complete, and are used here at the reader's own risk.</span>",
+  "priceSource": {
+   "en": "Prices: City of Gdańsk, register of real estate prices (RCN, Otwarty Gdańsk; obtained 10 Nov 2026)",
+   "ja": "価格：グダニスク市 不動産価格登録簿（RCN、Otwarty Gdańsk、2026年11月10日取得）"
+  },
+  "attribution": "Stations and lines: ZTM Gdańsk and PKP PLK GTFS (mkuran.pl) · Outlines: City of Gdańsk; © EuroGeographics"
+ }
+}
